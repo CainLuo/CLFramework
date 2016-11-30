@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SimpleTableViewController.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pushButton:(UIButton *)sender {
+    
+    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
+    
+    [self.navigationController pushViewController:simpleTableViewController animated:YES];
 }
-
 
 @end
