@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self cl_setTableViewDelegate:self.simpleTableViewDelegate
                        dataSource:self.simpleTableViewDelegate];
     

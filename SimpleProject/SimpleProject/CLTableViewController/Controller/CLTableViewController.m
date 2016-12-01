@@ -25,7 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+
     [self.view addSubview:self.cl_tableView];
+    
     [self addRefresh];
 }
 
@@ -35,6 +38,7 @@
     if (!_cl_tableView) {
         
         _cl_tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        _cl_tableView.backgroundColor = [UIColor whiteColor];
     }
     
     return _cl_tableView;
@@ -71,13 +75,17 @@
 #pragma mark - Refresh
 - (void)addRefresh {
     
-    self.cl_tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self cl_dropDownRefresh];
     }];
     
-    self.cl_tableView.mj_footer = [MJRefreshBackFooter footerWithRefreshingBlock:^{
+    self.cl_tableView.mj_header = header;
+    
+    MJRefreshBackNormalFooter *refreshFooter = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self cl_pullUpEndRefresh];
     }];
+    
+    self.cl_tableView.mj_footer = refreshFooter;
 }
 
 - (void)cl_dropDownRefresh {}

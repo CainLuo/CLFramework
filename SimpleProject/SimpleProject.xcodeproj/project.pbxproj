@@ -32,6 +32,13 @@
 		A479601A1DEE94FC00CEAA95 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47960191DEE94FC00CEAA95 /* SimpleTableViewController.m */; };
 		A479601D1DEE950A00CEAA95 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A479601C1DEE950A00CEAA95 /* SimpleTableViewDelegate.m */; };
 		A47960201DEE951C00CEAA95 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A479601F1DEE951C00CEAA95 /* SimpleTableViewModel.m */; };
+		A4C50BB41DEEFDA200B41ACB /* CLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BB31DEEFDA200B41ACB /* CLCollectionViewController.m */; };
+		A4C50BB71DEF33C100B41ACB /* CLCollectionViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BB61DEF33C100B41ACB /* CLCollectionViewBaseModel.m */; };
+		A4C50BBA1DEF33CC00B41ACB /* CLCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BB91DEF33CC00B41ACB /* CLCollectionViewDelegate.m */; };
+		A4C50BC21DEFEDF700B41ACB /* SimpleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BC11DEFEDF700B41ACB /* SimpleCollectionViewController.m */; };
+		A4C50BC51DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BC41DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.m */; };
+		A4C50BC81DEFEE1200B41ACB /* SimpleCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BC71DEFEE1200B41ACB /* SimpleCollectionViewModel.m */; };
+		A4C50BCC1DEFF08200B41ACB /* UIViewController+CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C50BCB1DEFF08200B41ACB /* UIViewController+CLViewController.m */; };
 		A4D1CB321DEC4251007B6E59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB311DEC4251007B6E59 /* main.m */; };
 		A4D1CB351DEC4251007B6E59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB341DEC4251007B6E59 /* AppDelegate.m */; };
 		A4D1CB381DEC4251007B6E59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB371DEC4251007B6E59 /* ViewController.m */; };
@@ -125,6 +132,20 @@
 		A479601C1DEE950A00CEAA95 /* SimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewDelegate.m; sourceTree = "<group>"; };
 		A479601E1DEE951C00CEAA95 /* SimpleTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewModel.h; sourceTree = "<group>"; };
 		A479601F1DEE951C00CEAA95 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
+		A4C50BB21DEEFDA200B41ACB /* CLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewController.h; sourceTree = "<group>"; };
+		A4C50BB31DEEFDA200B41ACB /* CLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewController.m; sourceTree = "<group>"; };
+		A4C50BB51DEF33C100B41ACB /* CLCollectionViewBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewBaseModel.h; sourceTree = "<group>"; };
+		A4C50BB61DEF33C100B41ACB /* CLCollectionViewBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewBaseModel.m; sourceTree = "<group>"; };
+		A4C50BB81DEF33CC00B41ACB /* CLCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewDelegate.h; sourceTree = "<group>"; };
+		A4C50BB91DEF33CC00B41ACB /* CLCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewDelegate.m; sourceTree = "<group>"; };
+		A4C50BC01DEFEDF700B41ACB /* SimpleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewController.h; sourceTree = "<group>"; };
+		A4C50BC11DEFEDF700B41ACB /* SimpleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewController.m; sourceTree = "<group>"; };
+		A4C50BC31DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDelegate.h; sourceTree = "<group>"; };
+		A4C50BC41DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewDelegate.m; sourceTree = "<group>"; };
+		A4C50BC61DEFEE1200B41ACB /* SimpleCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewModel.h; sourceTree = "<group>"; };
+		A4C50BC71DEFEE1200B41ACB /* SimpleCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewModel.m; sourceTree = "<group>"; };
+		A4C50BCA1DEFF08200B41ACB /* UIViewController+CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CLViewController.h"; sourceTree = "<group>"; };
+		A4C50BCB1DEFF08200B41ACB /* UIViewController+CLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CLViewController.m"; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB311DEC4251007B6E59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4D1CB331DEC4251007B6E59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -352,6 +373,105 @@
 			path = SimpleTableViewModel;
 			sourceTree = "<group>";
 		};
+		A4C50BAD1DEEFD9300B41ACB /* CLCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BAE1DEEFD9300B41ACB /* Controller */,
+				A4C50BAF1DEEFD9300B41ACB /* ViewModel */,
+			);
+			path = CLCollectionViewController;
+			sourceTree = "<group>";
+		};
+		A4C50BAE1DEEFD9300B41ACB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BB21DEEFDA200B41ACB /* CLCollectionViewController.h */,
+				A4C50BB31DEEFDA200B41ACB /* CLCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4C50BAF1DEEFD9300B41ACB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BB01DEEFD9300B41ACB /* CollectionViewBaseModel */,
+				A4C50BB11DEEFD9300B41ACB /* CollectionViewDelegate */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4C50BB01DEEFD9300B41ACB /* CollectionViewBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BB51DEF33C100B41ACB /* CLCollectionViewBaseModel.h */,
+				A4C50BB61DEF33C100B41ACB /* CLCollectionViewBaseModel.m */,
+			);
+			path = CollectionViewBaseModel;
+			sourceTree = "<group>";
+		};
+		A4C50BB11DEEFD9300B41ACB /* CollectionViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BB81DEF33CC00B41ACB /* CLCollectionViewDelegate.h */,
+				A4C50BB91DEF33CC00B41ACB /* CLCollectionViewDelegate.m */,
+			);
+			path = CollectionViewDelegate;
+			sourceTree = "<group>";
+		};
+		A4C50BBB1DEFEDE300B41ACB /* SimpleCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BBC1DEFEDE300B41ACB /* Controller */,
+				A4C50BBD1DEFEDE300B41ACB /* ViewModel */,
+			);
+			path = SimpleCollectionViewController;
+			sourceTree = "<group>";
+		};
+		A4C50BBC1DEFEDE300B41ACB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BC01DEFEDF700B41ACB /* SimpleCollectionViewController.h */,
+				A4C50BC11DEFEDF700B41ACB /* SimpleCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4C50BBD1DEFEDE300B41ACB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BBE1DEFEDE300B41ACB /* SimpleCollectionViewDelegate */,
+				A4C50BBF1DEFEDE300B41ACB /* SimpleCollectionViewModel */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4C50BBE1DEFEDE300B41ACB /* SimpleCollectionViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BC31DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.h */,
+				A4C50BC41DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.m */,
+			);
+			path = SimpleCollectionViewDelegate;
+			sourceTree = "<group>";
+		};
+		A4C50BBF1DEFEDE300B41ACB /* SimpleCollectionViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BC61DEFEE1200B41ACB /* SimpleCollectionViewModel.h */,
+				A4C50BC71DEFEE1200B41ACB /* SimpleCollectionViewModel.m */,
+			);
+			path = SimpleCollectionViewModel;
+			sourceTree = "<group>";
+		};
+		A4C50BC91DEFF06C00B41ACB /* UIViewController+CLViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4C50BCA1DEFF08200B41ACB /* UIViewController+CLViewController.h */,
+				A4C50BCB1DEFF08200B41ACB /* UIViewController+CLViewController.m */,
+			);
+			path = "UIViewController+CLViewController";
+			sourceTree = "<group>";
+		};
 		A4D1CB241DEC4250007B6E59 = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +495,7 @@
 		A4D1CB2F1DEC4251007B6E59 /* SimpleProject */ = {
 			isa = PBXGroup;
 			children = (
+				A4C50BC91DEFF06C00B41ACB /* UIViewController+CLViewController */,
 				A4795FC51DEE7B8800CEAA95 /* MJRefresh */,
 				A4D1CB931DED36A7007B6E59 /* UIColor+CLColor */,
 				A4D1CB961DED36A7007B6E59 /* UIDevice+CLDevice */,
@@ -382,10 +503,12 @@
 				A4D1CB6F1DED350B007B6E59 /* Masonry */,
 				A4D1CB6B1DEC4A70007B6E59 /* CLTitleView */,
 				A4D1CB631DEC48F3007B6E59 /* CLTableViewController */,
+				A4C50BAD1DEEFD9300B41ACB /* CLCollectionViewController */,
 				A4D1CB331DEC4251007B6E59 /* AppDelegate.h */,
 				A4D1CB341DEC4251007B6E59 /* AppDelegate.m */,
 				A4D1CB361DEC4251007B6E59 /* ViewController.h */,
 				A4D1CB371DEC4251007B6E59 /* ViewController.m */,
+				A4C50BBB1DEFEDE300B41ACB /* SimpleCollectionViewController */,
 				A47960131DEE94E700CEAA95 /* SimpleTableViewController */,
 				A4D1CB391DEC4251007B6E59 /* Main.storyboard */,
 				A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */,
@@ -671,7 +794,9 @@
 				A4795FFE1DEE7B8800CEAA95 /* MJRefreshBackStateFooter.m in Sources */,
 				A4D1CB6A1DEC490A007B6E59 /* CLTableViewController.m in Sources */,
 				A479601A1DEE94FC00CEAA95 /* SimpleTableViewController.m in Sources */,
+				A4C50BB71DEF33C100B41ACB /* CLCollectionViewBaseModel.m in Sources */,
 				A4D1CB9C1DED36A7007B6E59 /* UIColor+CLColor.m in Sources */,
+				A4C50BBA1DEF33CC00B41ACB /* CLCollectionViewDelegate.m in Sources */,
 				A47960031DEE7B8800CEAA95 /* MJRefreshConst.m in Sources */,
 				A479600F1DEE806600CEAA95 /* CLTableViewDelegate.m in Sources */,
 				A47960051DEE7B8800CEAA95 /* UIScrollView+MJExtension.m in Sources */,
@@ -682,10 +807,14 @@
 				A479601D1DEE950A00CEAA95 /* SimpleTableViewDelegate.m in Sources */,
 				A4795FFB1DEE7B8800CEAA95 /* MJRefreshAutoStateFooter.m in Sources */,
 				A4D1CB381DEC4251007B6E59 /* ViewController.m in Sources */,
+				A4C50BB41DEEFDA200B41ACB /* CLCollectionViewController.m in Sources */,
+				A4C50BC51DEFEE0B00B41ACB /* SimpleCollectionViewDelegate.m in Sources */,
 				A4D1CB351DEC4251007B6E59 /* AppDelegate.m in Sources */,
+				A4C50BC81DEFEE1200B41ACB /* SimpleCollectionViewModel.m in Sources */,
 				A47960071DEE7B8800CEAA95 /* UIView+MJExtension.m in Sources */,
 				A4795FF41DEE7B8800CEAA95 /* MJRefreshAutoFooter.m in Sources */,
 				A4D1CB6E1DEC4A7C007B6E59 /* CLTitleView.m in Sources */,
+				A4C50BC21DEFEDF700B41ACB /* SimpleCollectionViewController.m in Sources */,
 				A47960201DEE951C00CEAA95 /* SimpleTableViewModel.m in Sources */,
 				A4795FFC1DEE7B8800CEAA95 /* MJRefreshBackGifFooter.m in Sources */,
 				A4795FF81DEE7B8800CEAA95 /* MJRefreshHeader.m in Sources */,
@@ -696,6 +825,7 @@
 				A47960041DEE7B8800CEAA95 /* NSBundle+MJRefresh.m in Sources */,
 				A4795FFA1DEE7B8800CEAA95 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A4D1CB8D1DED350B007B6E59 /* MASViewAttribute.m in Sources */,
+				A4C50BCC1DEFF08200B41ACB /* UIViewController+CLViewController.m in Sources */,
 				A4D1CB8B1DED350B007B6E59 /* MASConstraintMaker.m in Sources */,
 				A4D1CB8F1DED350B007B6E59 /* NSArray+MASAdditions.m in Sources */,
 				A4D1CB921DED350B007B6E59 /* ViewController+MASAdditions.m in Sources */,
