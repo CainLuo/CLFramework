@@ -34,3 +34,21 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import <CLUIKit/UIScreen+CLScreen.h>
 #import <CLUIKit/UIDevice+CLDevice.h>
 #import <CLUIKit/UIViewController+CLViewController.h>
+
+#pragma mark - IQKeyboardManager
+#import <CLUIKit/IQKeyboardManager.h>
+#import <CLUIKit/IQKeyboardReturnKeyHandler.h>
+#import <CLUIKit/IQTextView.h>
+#import <CLUIKit/IQBarButtonItem.h>
+#import <CLUIKit/IQPreviousNextView.h>
+#import <CLUIKit/IQTitleBarButtonItem.h>
+#import <CLUIKit/IQToolbar.h>
+#import <CLUIKit/IQUIView+IQKeyboardToolbar.h>
+#import <CLUIKit/IQKeyboardManagerConstantsInternal.h>
+#import <CLUIKit/IQKeyboardManagerConstants.h>
+#import <CLUIKit/IQNSArray+Sort.h>
+#import <CLUIKit/IQUIScrollView+Additions.h>
+#import <CLUIKit/IQUITextFieldView+Additions.h>
+#import <CLUIKit/IQUIView+Hierarchy.h>
+#import <CLUIKit/IQUIViewController+Additions.h>
+#import <CLUIKit/IQUIWindow+Hierarchy.h>
