@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import "CLTableViewDelegate.h"
+#import <CLUIKit/CLUIKit.h>
 
 @interface SimpleTableViewDelegate : CLTableViewDelegate
 

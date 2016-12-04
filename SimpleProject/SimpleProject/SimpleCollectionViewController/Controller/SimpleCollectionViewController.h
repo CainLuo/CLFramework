@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import "CLCollectionViewController.h"
+#import <CLUIKit/CLUIKit.h>
 
 @interface SimpleCollectionViewController : CLCollectionViewController
 

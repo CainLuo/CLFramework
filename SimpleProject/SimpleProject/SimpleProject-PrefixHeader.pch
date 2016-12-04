@@ -1,0 +1,16 @@
+//
+//  SimpleProject-PrefixHeader.pch
+//  SimpleProject
+//
+//  Created by Cain on 2016/12/1.
+//  Copyright © 2016年 Cain Luo. All rights reserved.
+//
+
+#ifndef SimpleProject_PrefixHeader_pch
+#define SimpleProject_PrefixHeader_pch
+
+#import <CLUIKit/CLUIKit.h>
+
+#define AAAA 11111
+
+#endif /* SimpleProject_PrefixHeader_pch */

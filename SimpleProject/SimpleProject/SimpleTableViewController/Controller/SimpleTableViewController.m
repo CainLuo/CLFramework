@@ -9,7 +9,6 @@
 #import "SimpleTableViewController.h"
 #import "SimpleTableViewModel.h"
 #import "SimpleTableViewDelegate.h"
-#import "Masonry.h"
 
 @interface SimpleTableViewController ()
 

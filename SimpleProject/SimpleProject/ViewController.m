@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "SimpleTableViewController.h"
 #import "SimpleCollectionViewController.h"
-#import "UIViewController+CLViewController.h"
 
 @interface ViewController ()
 
@@ -18,7 +17,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];    
+    [super viewDidLoad];
 }
 
 - (IBAction)pushButton:(UIButton *)sender {

@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import "CLTableViewController.h"
+#import <CLUIKit/CLUIKit.h>
 
 @interface SimpleTableViewController : CLTableViewController
 

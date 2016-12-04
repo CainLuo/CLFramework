@@ -1,0 +1,37 @@
+//
+//  CLCollectionViewController.h
+//  SimpleProject
+//
+//  Created by Cain on 2016/11/30.
+//  Copyright © 2016年 Cain Luo. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+@interface CLCollectionViewController : UIViewController
+
+@property (nonatomic, strong, readonly) UICollectionView *cl_collectionView;
+@property (nonatomic, strong, readonly) UICollectionViewFlowLayout *cl_collectionViewFlowLayout;
+
+- (void)cl_removeRefresh;
+- (void)cl_removeHeaderRefresh;
+- (void)cl_removeFooterRefresh;
+
+- (void)cl_dropDownRefresh;
+- (void)cl_pullUpRefresh;
+
+- (void)cl_dropDownBeginRefresh;
+- (void)cl_dropDownEndRefresh;
+
+- (void)cl_pullUpBeginRefresh;
+- (void)cl_pullUpEndRefresh;
+
+- (void)cl_setCollectionViewDelegate:(_Nullable id <UICollectionViewDelegate>)delegate
+                          dataSource:(_Nullable id <UICollectionViewDataSource>)dataSource;
+
+- (void)cl_registerClass:(nullable Class)cellClass
+              identifier:(NSString *)identifier;
+
+@end
+NS_ASSUME_NONNULL_END
