@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CLFoundation-Aggregate.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>CLFoundation.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>A44835C11DF72B2A003B062C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A44835DD1DF72D4F003B062C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

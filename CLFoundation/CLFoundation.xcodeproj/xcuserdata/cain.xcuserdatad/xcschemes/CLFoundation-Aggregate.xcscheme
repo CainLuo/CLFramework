@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A44835B81DF72B29003B062C"
-               BuildableName = "CLFoundation.framework"
-               BlueprintName = "CLFoundation"
+               BlueprintIdentifier = "A44835DD1DF72D4F003B062C"
+               BuildableName = "CLFoundation-Aggregate"
+               BlueprintName = "CLFoundation-Aggregate"
                ReferencedContainer = "container:CLFoundation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A44835C11DF72B2A003B062C"
-               BuildableName = "CLFoundationTests.xctest"
-               BlueprintName = "CLFoundationTests"
-               ReferencedContainer = "container:CLFoundation.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A44835B81DF72B29003B062C"
-            BuildableName = "CLFoundation.framework"
-            BlueprintName = "CLFoundation"
-            ReferencedContainer = "container:CLFoundation.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A44835B81DF72B29003B062C"
-            BuildableName = "CLFoundation.framework"
-            BlueprintName = "CLFoundation"
+            BlueprintIdentifier = "A44835DD1DF72D4F003B062C"
+            BuildableName = "CLFoundation-Aggregate"
+            BlueprintName = "CLFoundation-Aggregate"
             ReferencedContainer = "container:CLFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A44835B81DF72B29003B062C"
-            BuildableName = "CLFoundation.framework"
-            BlueprintName = "CLFoundation"
+            BlueprintIdentifier = "A44835DD1DF72D4F003B062C"
+            BuildableName = "CLFoundation-Aggregate"
+            BlueprintName = "CLFoundation-Aggregate"
             ReferencedContainer = "container:CLFoundation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

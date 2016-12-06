@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		A44835DD1DF72D4F003B062C /* CLFoundation-Aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A44835DE1DF72D4F003B062C /* Build configuration list for PBXAggregateTarget "CLFoundation-Aggregate" */;
+			buildPhases = (
+				A44835E11DF72D5C003B062C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "CLFoundation-Aggregate";
+			productName = "CLFoundation-Aggregate";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		A44835C31DF72B2A003B062C /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44835B91DF72B29003B062C /* CLFoundation.framework */; };
 		A44835C81DF72B2A003B062C /* CLFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835C71DF72B2A003B062C /* CLFoundationTests.m */; };
@@ -170,6 +184,11 @@
 						DevelopmentTeam = M67UHY3N8U;
 						ProvisioningStyle = Automatic;
 					};
+					A44835DD1DF72D4F003B062C = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = M67UHY3N8U;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A44835B31DF72B29003B062C /* Build configuration list for PBXProject "CLFoundation" */;
@@ -186,6 +205,7 @@
 			targets = (
 				A44835B81DF72B29003B062C /* CLFoundation */,
 				A44835C11DF72B2A003B062C /* CLFoundationTests */,
+				A44835DD1DF72D4F003B062C /* CLFoundation-Aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -206,6 +226,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A44835E11DF72D5C003B062C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\nthen\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\nopen \"${SRCROOT}/Products\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A44835B41DF72B29003B062C /* Sources */ = {
@@ -393,6 +429,22 @@
 			};
 			name = Release;
 		};
+		A44835DF1DF72D4F003B062C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M67UHY3N8U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A44835E01DF72D4F003B062C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = M67UHY3N8U;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -418,6 +470,14 @@
 			buildConfigurations = (
 				A44835D11DF72B2A003B062C /* Debug */,
 				A44835D21DF72B2A003B062C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A44835DE1DF72D4F003B062C /* Build configuration list for PBXAggregateTarget "CLFoundation-Aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44835DF1DF72D4F003B062C /* Debug */,
+				A44835E01DF72D4F003B062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
