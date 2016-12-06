@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CLFoundation/CLFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CLUIKit/CLUIKit.xcodeproj">
    </FileRef>
 </Workspace>
