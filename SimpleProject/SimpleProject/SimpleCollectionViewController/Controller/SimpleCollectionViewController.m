@@ -29,6 +29,8 @@
                 identifier:@"UICollectionViewCell"];
     
     [self cl_dropDownBeginRefresh];
+    
+    NSLog(@"%@", [[NSLocale preferredLanguages] objectAtIndex:0]);
 }
 
 - (void)cl_dropDownRefresh {

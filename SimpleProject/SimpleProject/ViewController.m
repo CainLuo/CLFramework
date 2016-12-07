@@ -22,14 +22,15 @@
 
 - (IBAction)pushButton:(UIButton *)sender {
     
-    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
-    
-    [self.navigationController pushViewController:simpleTableViewController
-                                         animated:YES];
-    
-//    SimpleCollectionViewController *simpleCollectionViewController = [[SimpleCollectionViewController alloc] init];
+//    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
 //    
-//    [self.navigationController pushViewController:simpleCollectionViewController animated:YES];
+//    [self.navigationController pushViewController:simpleTableViewController
+//                                         animated:YES];
+    
+    SimpleCollectionViewController *simpleCollectionViewController = [[SimpleCollectionViewController alloc] init];
+    
+    [self.navigationController pushViewController:simpleCollectionViewController
+                                         animated:YES];
 }
 
 @end
