@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CLFoundation/PublicHeader.h>
 
+#pragma mark - NSString+CLRegular
+#import <CLFoundation/NSString+CLRegular.h>
 
+#import <CLFoundation/CLDefine.h>

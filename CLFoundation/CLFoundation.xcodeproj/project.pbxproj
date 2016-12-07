@@ -24,7 +24,7 @@
 		A44835C31DF72B2A003B062C /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44835B91DF72B29003B062C /* CLFoundation.framework */; };
 		A44835C81DF72B2A003B062C /* CLFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835C71DF72B2A003B062C /* CLFoundationTests.m */; };
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835D91DF72C24003B062C /* NSString+CLRegular.h */; };
+		A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835D91DF72C24003B062C /* NSString+CLRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835DA1DF72C25003B062C /* NSString+CLRegular.m */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4037C441DF7D26900C05F77 /* CLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
 		A44835B91DF72B29003B062C /* CLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44835BC1DF72B29003B062C /* CLFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFoundation.h; sourceTree = "<group>"; };
 		A44835BD1DF72B29003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
 				A44835BD1DF72B29003B062C /* Info.plist */,
+				A4037C441DF7D26900C05F77 /* CLDefine.h */,
 			);
 			path = CLFoundation;
 			sourceTree = "<group>";
@@ -464,6 +466,7 @@
 				A44835CF1DF72B2A003B062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A44835D01DF72B2A003B062C /* Build configuration list for PBXNativeTarget "CLFoundationTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +475,7 @@
 				A44835D21DF72B2A003B062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A44835DE1DF72D4F003B062C /* Build configuration list for PBXAggregateTarget "CLFoundation-Aggregate" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +484,7 @@
 				A44835E01DF72D4F003B062C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

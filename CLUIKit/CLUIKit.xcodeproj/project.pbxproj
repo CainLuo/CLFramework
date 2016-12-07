@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C4B1DF7D6E300C05F77 /* CLApplication.h */; };
+		A4037C4E1DF7D6E300C05F77 /* CLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C4C1DF7D6E300C05F77 /* CLApplication.m */; };
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
 		A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A43299EC1DF038870012DB71 /* CLUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -155,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4037C4B1DF7D6E300C05F77 /* CLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLApplication.h; sourceTree = "<group>"; };
+		A4037C4C1DF7D6E300C05F77 /* CLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLApplication.m; sourceTree = "<group>"; };
 		A43299E91DF038870012DB71 /* CLUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43299EC1DF038870012DB71 /* CLUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUIKit.h; sourceTree = "<group>"; };
 		A43299ED1DF038870012DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -300,6 +304,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4037C4A1DF7D6D500C05F77 /* UIApplication+CLApplication */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C4B1DF7D6E300C05F77 /* CLApplication.h */,
+				A4037C4C1DF7D6E300C05F77 /* CLApplication.m */,
+			);
+			path = "UIApplication+CLApplication";
+			sourceTree = "<group>";
+		};
 		A43299DF1DF038870012DB71 = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +334,7 @@
 		A43299EB1DF038870012DB71 /* CLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A4037C4A1DF7D6D500C05F77 /* UIApplication+CLApplication */,
 				A44835621DF46300003B062C /* IQKeyboardManager */,
 				A4329A031DF0389D0012DB71 /* CLCollectionViewController */,
 				A4329A0E1DF0389D0012DB71 /* CLTableViewController */,
@@ -733,6 +747,7 @@
 				A44835991DF46300003B062C /* IQTextView.h in Headers */,
 				A448358D1DF46300003B062C /* IQUIView+Hierarchy.h in Headers */,
 				A44835891DF46300003B062C /* IQUIScrollView+Additions.h in Headers */,
+				A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */,
 				A44835A31DF46300003B062C /* IQUIView+IQKeyboardToolbar.h in Headers */,
 				A44835931DF46300003B062C /* IQKeyboardManagerConstants.h in Headers */,
 				A448358B1DF46300003B062C /* IQUITextFieldView+Additions.h in Headers */,
@@ -931,6 +946,7 @@
 				A4329ABF1DF0389D0012DB71 /* UIView+MJExtension.m in Sources */,
 				A448358A1DF46300003B062C /* IQUIScrollView+Additions.m in Sources */,
 				A4329A7A1DF0389D0012DB71 /* CLTableViewBaseModel.m in Sources */,
+				A4037C4E1DF7D6E300C05F77 /* CLApplication.m in Sources */,
 				A4329A9F1DF0389D0012DB71 /* MJRefreshFooter.m in Sources */,
 				A4329AA11DF0389D0012DB71 /* MJRefreshHeader.m in Sources */,
 				A4329AB31DF0389D0012DB71 /* MJRefreshStateHeader.m in Sources */,

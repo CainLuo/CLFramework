@@ -16,7 +16,7 @@
 
  @return bool
  */
-- (BOOL)cal_isNumber;
+- (BOOL)cl_isNumber;
 
 /**
  当前字符是否为number位的数字
@@ -24,119 +24,149 @@
  @param quantity 限制数字的数量
  @return bool
  */
-- (BOOL)cal_checkMoreNumber:(NSInteger)quantity;
+- (BOOL)cl_checkMoreNumber:(NSInteger)quantity;
 
 /**
- 当前字符是否为 至少number位的数字
+ 当前字符是否为至少number位的数字
 
  @param quantity 至少数字的数量
  @return bool
  */
-- (BOOL)cal_checkAtLeastNumber:(NSInteger)quantity;
+- (BOOL)cl_checkAtLeastNumber:(NSInteger)quantity;
 
-/*!
- *	@brief  当前字符是否为 fistNumber-scondNumber位的数字
- *  @param  fistNumber  开始
- *  @param  lastNumber  结束
- */
-- (BOOL)cal_checkLimitsNumber:(NSInteger)fistNumber lastNumber:(NSInteger)lastNumber;
+/**
+ 当前字符是否为fistNumber-scondNumber位的数字
 
-/*!
-	@brief  当前字符是否为 非零开头的数字
- 
+ @param fistNumber 开始
+ @param lastNumber 结束
+ @return bool
  */
-- (BOOL)cal_isNonZeroStartNumber;
+- (BOOL)cl_checkLimitsNumber:(NSInteger)fistNumber lastNumber:(NSInteger)lastNumber;
 
-/*!
-	@brief  当前字符是否为 非零开头的最多带两位小数的数字
- 
- */
-- (BOOL)cal_isNonZeroStartNumberHaveOneOrTwoDecimal;
+/**
+ 当前字符是否为非零开头的数字
 
-/*!
-	@brief  当前字符是否为 带1-2位小数的正数或负数
- 
+ @return bool
  */
-- (BOOL)cal_isHaveOneOrTwoDecimalPositiveOrNegative;
+- (BOOL)cl_isNonZeroStartNumber;
 
-/*!
-	@brief  当前字符是否为 正数、负数、和小数
- 
- */
-- (BOOL)cal_realContainDecimal;
+/**
+ 当前字符是否为非零开头的最多带两位小数的数字
 
-/*!
-	@brief  当前字符是否为 有两位小数的正实数
- 
+ @return bool
  */
-- (BOOL)cal_isPositiveRealHaveTwoDecimal;
+- (BOOL)cl_isNonZeroStartNumberHaveOneOrTwoDecimal;
 
-/*!
-	@brief  当前字符是否为 有1~3位小数的正实数
- 
- */
-- (BOOL)cal_isHaveOneOrThreeDecimalPositiveOrNegative;
+/**
+ 当前字符是否为带1-2位小数的正数或负数
 
-/*!
-	@brief  当前字符是否为 非零的正整数
- 
+ @return bool
  */
-- (BOOL)cal_isNonZeroPositiveInteger;
+- (BOOL)cl_isHaveOneOrTwoDecimalPositiveOrNegative;
 
-/*!
-	@brief  当前字符是否为 非零的负整数
- 
- */
-- (BOOL)cal_isNonZeroNegativeInteger;
+/**
+ 当前字符是否为正数、负数、和小数
 
-/*!
-	@brief  当前字符是否为 非负整数
+ @return bool
  */
-- (BOOL)cal_isNonNegativeInteger;
+- (BOOL)cl_realContainDecimal;
 
-/*!
-	@brief  当前字符是否为 非正整数
+/**
+ 当前字符是否为有两位小数的正实数
+
+ @return bool
  */
-- (BOOL)cal_isNonPositiveInteger;
+- (BOOL)cl_isPositiveRealHaveTwoDecimal;
+
+/**
+ 当前字符是否为有1~3位小数的正实数
+
+ @return bool
+ */
+- (BOOL)cl_isHaveOneOrThreeDecimalPositiveOrNegative;
+
+
+/**
+ 当前字符是否为非零的正整数
+
+ @return bool
+ */
+- (BOOL)cl_isNonZeroPositiveInteger;
+
+
+/**
+ 当前字符是否为非零的负整数
+
+ @return bool
+ */
+- (BOOL)cl_isNonZeroNegativeInteger;
+
+/**
+ 当前字符是否为非负整数
+
+ @return bool
+ */
+- (BOOL)cl_isNonNegativeInteger;
+
+
+/**
+ 当前字符是否为非正整数
+
+ @return bool
+ */
+- (BOOL)cl_isNonPositiveInteger;
 
 #pragma mark - Test Float
+/**
+ 当前字符是否为非负浮点数
 
-/*!
-	@brief  当前字符是否为 非负浮点数
+ @return bool
  */
-- (BOOL)cal_isNonNegativeFloat;
+- (BOOL)cl_isNonNegativeFloat;
 
-/*!
-	@brief  当前字符是否为 非正浮点数
- */
-- (BOOL)cal_isNonPositiveFloat;
 
-/*!
-	@brief  当前字符是否为 正浮点数
- */
-- (BOOL)cal_isPositiveFloat;
+/**
+ 当前字符是否为非正浮点数
 
-/*!
-	@brief  当前字符是否为 负浮点数
+ @return bool
  */
-- (BOOL)cal_isNagativeFloat;
+- (BOOL)cl_isNonPositiveFloat;
 
-/*!
-	@brief  当前字符是否为 浮点数
+/**
+ 当前字符是否为正浮点数
+
+ @return bool
  */
-- (BOOL)cal_isFloat;
+- (BOOL)cl_isPositiveFloat;
+
+/**
+ 当前字符是否为负浮点数
+
+ @return bool
+ */
+- (BOOL)cl_isNagativeFloat;
+
+/**
+ 当前字符是否为浮点数
+ 
+ @return bool
+ */
+- (BOOL)cl_isFloat;
 
 #pragma mark - Test String
+/**
+ 当前字符是否为汉字
 
-/*!
-	@brief  当前字符是否为 汉字
+ @return bool
  */
-- (BOOL)cal_isChineseCharacter;
+- (BOOL)cl_isChineseCharacter;
 
-/*!
-	@brief  当前字符是否为 由数字和26个英文字母组成的字符串
+/**
+ 当前字符是否为由数字和26个英文字母组成的字符串
+
+ @return bool
  */
-- (BOOL)cal_isEnglishAndNumbers;
+- (BOOL)cl_isEnglishAndNumbers;
 
 /**
  当前字符是否为 长度为3-20的所有字符
@@ -145,7 +175,8 @@
  @param lastRange 结束的范围
  @return bool
  */
-- (BOOL)cal_limitinglength:(NSInteger)fistRange lastRange:(NSInteger)lastRange;
+- (BOOL)cl_limitinglength:(NSInteger)fistRange
+                 lastRange:(NSInteger)lastRange;
 
 /**
  当前字符长度是否位 length, 并且是由字母和数字所组成
@@ -153,200 +184,270 @@
  @param length length 字符的长度
  @return bool
  */
-- (BOOL)cal_checkString:(NSInteger)length;
+- (BOOL)cl_checkString:(NSInteger)length;
 
-/*!
-	@brief  当前字符是否为 由26个英文字母组成的字符串
- */
-- (BOOL)cal_isLettersString;
+/**
+ 当前字符是否为由26个英文字母组成的字符串
 
-/*!
-	@brief  当前字符是否为 由26个大写英文字母组成的字符串
+ @return bool
  */
-- (BOOL)cal_isCapitalLetters;
+- (BOOL)cl_isLettersString;
 
-/*!
-	@brief  当前字符是否为 由26个小写英文字母组成的字符串
- */
-- (BOOL)cal_isLowercaseLetters;
+/**
+ 当前字符是否为由26个大写英文字母组成的字符串
 
-/*!
-	@brief  当前字符是否为 由数字、26个英文字母或者下划线组成的字符串
+ @return bool
  */
-- (BOOL)cal_isNumbersAndLettersOrUnderlineString;
+- (BOOL)cl_isCapitalLetters;
 
-/*!
-	@brief  当前字符是否为 中文、英文、数字包括下划线
- */
-- (BOOL)cal_isChineseCharacterAndEnglishAndNumbersAndUnderlineString;
+/**
+ 当前字符是否为由26个小写英文字母组成的字符串
 
-/*!
-	@brief  当前字符是否为 中文、英文、数字但不包括下划线等符号
+ @return bool
  */
-- (BOOL)cal_isDoesNotContainUnderscoresChineseCharacterAndEnglishAndNumbersString;
+- (BOOL)cl_isLowercaseLetters;
 
-/*!
-	@brief  当前字符是否可以输入 含有^%&',;=?$\"等字符
- */
-- (BOOL)cal_isContainSpecialCharacterString;
+/**
+ 当前字符是否为由数字、26个英文字母或者下划线组成的字符串
 
-/*!
- *	@brief  当前字符是否禁止输入 含有charater的字符
- *  @param  charater  输入限制的字符
+ @return bool
  */
-- (BOOL)cal_isContainCharacter:(NSString *)charater;
+- (BOOL)cl_isNumbersAndLettersOrUnderlineString;
+
+/**
+ 当前字符是否为中文、英文、数字包括下划线
+
+ @return bool
+ */
+- (BOOL)cl_isChineseCharacterAndEnglishAndNumbersAndUnderlineString;
+
+/**
+ 当前字符是否为中文、英文、数字但不包括下划线等符号
+
+ @return bool
+ */
+- (BOOL)cl_isDoesNotContainUnderscoresChineseCharacterAndEnglishAndNumbersString;
+
+/**
+ 当前字符是否可以输入含有^%&',;=?$\"等字符
+
+ @return bool
+ */
+- (BOOL)cl_isContainSpecialCharacterString;
+
+/**
+ 当前字符是否禁止输入 含有charater的字符
+
+ @param charater 输入限制的字符
+ @return bool
+ */
+- (BOOL)cl_isContainCharacter:(NSString *)charater;
 
 /**
  *  判断当前字符串是否是字母开头
  *
  *  @return BOOL
  */
-- (BOOL)cal_isLetterStar;
+- (BOOL)cl_isLetterStar;
 
 /**
  *  判断当前字符串是否是字母, 数字及下划线的组合
  *
  *  @return BOOL
  */
-- (BOOL)cal_checkStringIsStrong;
+- (BOOL)cl_checkStringIsStrong;
 
 #pragma mark - Special Needs
+/**
+ 当前字符是否为 Email地址
 
-/*!
-	@brief  当前字符是否为 Email地址
+ @return bool
  */
-- (BOOL)cal_checkEmailAddress;
+- (BOOL)cl_checkEmailAddress;
 
-/*!
-	@brief  当前字符是否为 域名
- */
-- (BOOL)cal_checkDomainName;
+/**
+ 当前字符是否为域名
 
-/*!
-	@brief  当前字符是否为 InternetURL
+ @return bool
  */
-- (BOOL)cal_checkURL;
+- (BOOL)cl_checkDomainName;
 
-/*!
-	@brief  当前字符是否为 手机号码
- */
-- (BOOL)cal_checkPhoneNumber;
+/**
+ 当前字符是否为Internet URL
 
-/*!
-	@brief  当前字符是否为 中国移动手机号
+ @return bool
  */
-- (BOOL)cal_checkChinaMobelPhoneNumber;
+- (BOOL)cl_checkURL;
 
-/*!
-	@brief  当前字符是否为 中国联通手机号
- */
-- (BOOL)cal_checkChinaUnicomPhoneNumber;
+/**
+ 当前字符是否为手机号码
 
-/*!
-	@brief  当前字符是否为 中国电信手机号
+ @return bool
  */
-- (BOOL)cal_checkChinaTelecomPhoneNumber;
+- (BOOL)cl_checkPhoneNumber;
 
-/*!
-	@brief  当前字符是否为 电话号码("XXX-XXXXXXX"、"XXXX-XXXXXXXX"、"XXX-XXXXXXX"、"XXX-XXXXXXXX"、"XXXXXXX"和"XXXXXXXX)
- */
-- (BOOL)cal_checkTelePhoneNumber;
+/**
+ 当前字符是否为中国移动手机号
 
-/*!
-	@brief  当前字符是否为 国内电话号码(0511-4405222、021-87888822)
+ @return bool
  */
-- (BOOL)cal_checkDomesticPhoneNumber;
+- (BOOL)cl_checkChinaMobelPhoneNumber;
 
-/*!
-	@brief  当前字符是否为 身份证号(15位、18位数字)
- */
-- (BOOL)cal_checkIdentityCard;
+/**
+ 当前字符是否为中国联通手机号
 
-/*!
-	@brief  当前字符是否为 短身份证号码(数字、字母x结尾)
+ @return bool
  */
-- (BOOL)cal_checkShortIdentityCard;
+- (BOOL)cl_checkChinaUnicomPhoneNumber;
 
-/*!
-	@brief  当前字符是否为 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)
- */
-- (BOOL)cal_checkAccount;
+/**
+ 当前字符是否为中国电信手机号
 
-/*!
-	@brief  当前字符是否为 密码(以字母开头，长度在6~18之间, 并且密码是从0开始，只能包含字母、数字和下划线)
+ @return bool
  */
-- (BOOL)cal_checkPassword;
+- (BOOL)cl_checkChinaTelecomPhoneNumber;
 
-/*!
- *	@brief  当前字符是否为 强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：briefest指的是最短密码长度, longest指的时最长密码长度
- *  @param  briefest  密码最短的长度
- *  @param  longest   密码最长的长度
- */
-- (BOOL)cal_checkStrongPassword:(NSInteger)briefest longest:(NSInteger)longest;
+/**
+ 当前字符是否为 电话号码("XXX-XXXXXXX"、"XXXX-XXXXXXXX"、"XXX-XXXXXXX"、"XXX-XXXXXXXX"、"XXXXXXX"和"XXXXXXXX)
 
-/*!
-	@brief  当前字符是否为 中国日期格式
+ @return bool
  */
-- (BOOL)cal_checkChinaDateFormat;
+- (BOOL)cl_checkTelePhoneNumber;
 
-/*!
-	@brief  当前字符是否为 国外日期格式
- */
-- (BOOL)cal_checkAbroadDateFormat;
+/**
+ 当前字符是否为 国内电话号码(0511-4405222、021-87888822)
 
-/*!
-	@brief  当前字符是否为 一年的12个月(01～09和1～12)
+ @return bool
  */
-- (BOOL)cal_checkMonth;
+- (BOOL)cl_checkDomesticPhoneNumber;
 
-/*!
-	@brief  当前字符是否为 一个月的31天(01～09和1～31)
- */
-- (BOOL)cal_checkDay;
+/**
+ 当前字符是否为身份证号(15位、18位数字)
 
-/*!
-	@brief  当前字符是否为 xml文件
+ @return bool
  */
-- (BOOL)cal_checkXMLFile;
+- (BOOL)cl_checkIdentityCard;
 
-/*!
-	@brief  当前字符是否为 中文字符的正则表达式
- */
-- (BOOL)cal_checkChineseCharacter;
+/**
+ 当前字符是否为X结尾的身份证号码(数字、字母x结尾)
 
-/*!
-	@brief  当前字符是否为 双字节字符：(包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))
+ @return bool
  */
-- (BOOL)cal_checkDoubleByteCharacters;
+- (BOOL)cl_checkShortIdentityCard;
 
-/*!
-	@brief  当前字符是否为 空白行的正则表达式：(判断是否有空白行)
- */
-- (BOOL)cal_checkBlankLines;
+/**
+ 当前字符是否为帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)
 
-/*!
-	@brief  当前字符是否为 HTML标记的正则表达式：(网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)
+ @return bool
  */
-- (BOOL)cal_checkHTMLSign;
+- (BOOL)cl_checkAccount;
 
-/*!
-	@brief  当前字符是否为 首尾空白字符的正则表达式：(可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)
- */
-- (BOOL)cal_checkFirstAndLastSpaceCharacters;
+/**
+ 当前字符是否为密码(以字母开头，长度在6~18之间, 并且密码是从0开始，只能包含字母、数字和下划线)
 
-/*!
-	@brief  当前字符是否为 腾讯QQ号：(腾讯QQ号从10000开始)
+ @return bool
  */
-- (BOOL)cal_checkQQNumber;
+- (BOOL)cl_checkPassword;
 
-/*!
-	@brief  当前字符是否为 中国邮政编码：(中国邮政编码为6位数字)
- */
-- (BOOL)cal_checkPostalCode;
+/**
+ 当前字符是否为强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：briefest指的是最短密码长度, longest指的时最长密码长度
 
-/*!
-	@brief  当前字符是否为 IP地址
+ @param briefest 密码最短的长度
+ @param longest 密码最长的长度
+ @return bool
  */
-- (BOOL)cal_checkIPv4InternetProtocol;
+- (BOOL)cl_checkStrongPassword:(NSInteger)briefest
+                        longest:(NSInteger)longest;
+
+/**
+ 当前字符是否为中国日期格式
+
+ @return bool
+ */
+- (BOOL)cl_checkChinaDateFormat;
+
+/**
+ 当前字符是否为国外日期格式
+
+ @return bool
+ */
+- (BOOL)cl_checkAbroadDateFormat;
+
+/**
+ 当前字符是否为一年的12个月(01～09和1～12)
+
+ @return bool
+ */
+- (BOOL)cl_checkMonth;
+
+/**
+ 当前字符是否为一个月的31天(01～09和1～31)
+
+ @return bool
+ */
+- (BOOL)cl_checkDay;
+
+/**
+ 当前字符是否为xml文件
+
+ @return bool
+ */
+- (BOOL)cl_checkXMLFile;
+
+/**
+ 当前字符是否为中文字符的正则表达式
+
+ @return bool
+ */
+- (BOOL)cl_checkChineseCharacter;
+
+/**
+ 当前字符是否为双字节字符：(包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))
+
+ @return bool
+ */
+- (BOOL)cl_checkDoubleByteCharacters;
+
+/**
+ 当前字符是否为空白行的正则表达式：(判断是否有空白行)
+
+ @return bool
+ */
+- (BOOL)cl_checkBlankLines;
+
+/**
+ 当前字符是否为HTML标记的正则表达式：(网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)
+
+ @return bool
+ */
+- (BOOL)cl_checkHTMLSign;
+
+/**
+ 当前字符是否为首尾空白字符的正则表达式：(可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)
+
+ @return bool
+ */
+- (BOOL)cl_checkFirstAndLastSpaceCharacters;
+
+/**
+ 当前字符是否为腾讯QQ号：(腾讯QQ号从10000开始)
+
+ @return bool
+ */
+- (BOOL)cl_checkQQNumber;
+
+/**
+ 当前字符是否为中国邮政编码：(中国邮政编码为6位数字)
+
+ @return bool
+ */
+- (BOOL)cl_checkPostalCode;
+
+/**
+ 当前字符是否为IP地址
+
+ @return bool
+ */
+- (BOOL)cl_checkIPv4InternetProtocol;
 
 @end
