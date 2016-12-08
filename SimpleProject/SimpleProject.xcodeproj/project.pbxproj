@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4329AE31DF03AA90012DB71 /* SimpleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329AD01DF03AA90012DB71 /* SimpleCollectionViewController.m */; };
-		A4329AE41DF03AA90012DB71 /* SimpleCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329AD41DF03AA90012DB71 /* SimpleCollectionViewDelegate.m */; };
-		A4329AE51DF03AA90012DB71 /* SimpleCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329AD71DF03AA90012DB71 /* SimpleCollectionViewModel.m */; };
-		A4329AE61DF03AA90012DB71 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329ADB1DF03AA90012DB71 /* SimpleTableViewController.m */; };
-		A4329AE71DF03AA90012DB71 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329ADF1DF03AA90012DB71 /* SimpleTableViewDelegate.m */; };
-		A4329AE81DF03AA90012DB71 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4329AE21DF03AA90012DB71 /* SimpleTableViewModel.m */; };
-		A4D1CB351DEC4251007B6E59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB341DEC4251007B6E59 /* AppDelegate.m */; };
-		A4D1CB381DEC4251007B6E59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB371DEC4251007B6E59 /* ViewController.m */; };
-		A4D1CB3B1DEC4251007B6E59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB391DEC4251007B6E59 /* Main.storyboard */; };
+		A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C5F1DF96F9500C05F77 /* AppDelegate.m */; };
+		A4037C641DF96FAC00C05F77 /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; };
+		A4037C651DF96FAC00C05F77 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C631DF96FAC00C05F77 /* CLUIKit.framework */; };
+		A4037C661DF96FB500C05F77 /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; };
+		A4037C671DF96FB500C05F77 /* CLFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4037C681DF96FB500C05F77 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C631DF96FAC00C05F77 /* CLUIKit.framework */; };
+		A4037C691DF96FB500C05F77 /* CLUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C631DF96FAC00C05F77 /* CLUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */; };
+		A4037C821DF9749200C05F77 /* SimpleCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C721DF9749200C05F77 /* SimpleCollectionViewDelegate.m */; };
+		A4037C831DF9749200C05F77 /* SimpleCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C751DF9749200C05F77 /* SimpleCollectionViewModel.m */; };
+		A4037C841DF9749200C05F77 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C791DF9749200C05F77 /* SimpleTableViewController.m */; };
+		A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */; };
+		A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */; };
+		A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */; };
 		A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */; };
 		A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */; };
 		A4D1CB4B1DEC4251007B6E59 /* SimpleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB4A1DEC4251007B6E59 /* SimpleProjectTests.m */; };
 		A4D1CB561DEC4251007B6E59 /* SimpleProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */; };
-		A4E135F11DF0436B00C79278 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E135F01DF0436B00C79278 /* CLUIKit.framework */; };
-		A4E135F21DF0436E00C79278 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4E135F01DF0436B00C79278 /* CLUIKit.framework */; };
-		A4E135F31DF0436E00C79278 /* CLUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4E135F01DF0436B00C79278 /* CLUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4E135F61DF043AA00C79278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E135F51DF043AA00C79278 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +52,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A4E135F31DF0436E00C79278 /* CLUIKit.framework in Embed Frameworks */,
+				A4037C691DF96FB500C05F77 /* CLUIKit.framework in Embed Frameworks */,
+				A4037C671DF96FB500C05F77 /* CLFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,25 +61,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A4329ACF1DF03AA90012DB71 /* SimpleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewController.h; sourceTree = "<group>"; };
-		A4329AD01DF03AA90012DB71 /* SimpleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewController.m; sourceTree = "<group>"; };
-		A4329AD31DF03AA90012DB71 /* SimpleCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDelegate.h; sourceTree = "<group>"; };
-		A4329AD41DF03AA90012DB71 /* SimpleCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewDelegate.m; sourceTree = "<group>"; };
-		A4329AD61DF03AA90012DB71 /* SimpleCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewModel.h; sourceTree = "<group>"; };
-		A4329AD71DF03AA90012DB71 /* SimpleCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewModel.m; sourceTree = "<group>"; };
-		A4329ADA1DF03AA90012DB71 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
-		A4329ADB1DF03AA90012DB71 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
-		A4329ADE1DF03AA90012DB71 /* SimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewDelegate.h; sourceTree = "<group>"; };
-		A4329ADF1DF03AA90012DB71 /* SimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewDelegate.m; sourceTree = "<group>"; };
-		A4329AE11DF03AA90012DB71 /* SimpleTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewModel.h; sourceTree = "<group>"; };
-		A4329AE21DF03AA90012DB71 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
+		A4037C5E1DF96F9500C05F77 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A4037C5F1DF96F9500C05F77 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A4037C621DF96FAC00C05F77 /* CLFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLFoundation.framework; sourceTree = "<group>"; };
+		A4037C631DF96FAC00C05F77 /* CLUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLUIKit.framework; sourceTree = "<group>"; };
+		A4037C6D1DF9749200C05F77 /* SimpleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewController.h; sourceTree = "<group>"; };
+		A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewController.m; sourceTree = "<group>"; };
+		A4037C711DF9749200C05F77 /* SimpleCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDelegate.h; sourceTree = "<group>"; };
+		A4037C721DF9749200C05F77 /* SimpleCollectionViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewDelegate.m; sourceTree = "<group>"; };
+		A4037C741DF9749200C05F77 /* SimpleCollectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewModel.h; sourceTree = "<group>"; };
+		A4037C751DF9749200C05F77 /* SimpleCollectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewModel.m; sourceTree = "<group>"; };
+		A4037C781DF9749200C05F77 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		A4037C791DF9749200C05F77 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
+		A4037C7C1DF9749200C05F77 /* SimpleTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewDelegate.h; sourceTree = "<group>"; };
+		A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewDelegate.m; sourceTree = "<group>"; };
+		A4037C7F1DF9749200C05F77 /* SimpleTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewModel.h; sourceTree = "<group>"; };
+		A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
+		A4037C891DF9754A00C05F77 /* SimpleQRCodeImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleQRCodeImageViewController.h; sourceTree = "<group>"; };
+		A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleQRCodeImageViewController.m; sourceTree = "<group>"; };
 		A4329AEE1DF03AD20012DB71 /* SimpleProject-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleProject-PrefixHeader.pch"; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4D1CB331DEC4251007B6E59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A4D1CB341DEC4251007B6E59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4D1CB361DEC4251007B6E59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A4D1CB371DEC4251007B6E59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
-		A4D1CB3A1DEC4251007B6E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D1CB3F1DEC4251007B6E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4D1CB411DEC4251007B6E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +90,6 @@
 		A4D1CB511DEC4251007B6E59 /* SimpleProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleProjectUITests.m; sourceTree = "<group>"; };
 		A4D1CB571DEC4251007B6E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4E135F01DF0436B00C79278 /* CLUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLUIKit.framework; sourceTree = "<group>"; };
 		A4E135F51DF043AA00C79278 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +98,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4E135F21DF0436E00C79278 /* CLUIKit.framework in Frameworks */,
-				A4E135F11DF0436B00C79278 /* CLUIKit.framework in Frameworks */,
+				A4037C661DF96FB500C05F77 /* CLFoundation.framework in Frameworks */,
+				A4037C651DF96FAC00C05F77 /* CLUIKit.framework in Frameworks */,
+				A4037C681DF96FB500C05F77 /* CLUIKit.framework in Frameworks */,
+				A4037C641DF96FAC00C05F77 /* CLFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,94 +122,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A4329ACD1DF03AA90012DB71 /* SimpleCollectionViewController */ = {
+		A4037C5D1DF96F9500C05F77 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				A4329ACE1DF03AA90012DB71 /* Controller */,
-				A4329AD11DF03AA90012DB71 /* ViewModel */,
+				A4037C5E1DF96F9500C05F77 /* AppDelegate.h */,
+				A4037C5F1DF96F9500C05F77 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A4037C611DF96FAC00C05F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C621DF96FAC00C05F77 /* CLFoundation.framework */,
+				A4037C631DF96FAC00C05F77 /* CLUIKit.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4037C6A1DF9749200C05F77 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C871DF9752F00C05F77 /* SimpleQRCodeImageView */,
+				A4037C6B1DF9749200C05F77 /* SimpleCollectionViewController */,
+				A4037C761DF9749200C05F77 /* SimpleTableViewController */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		A4037C6B1DF9749200C05F77 /* SimpleCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C6C1DF9749200C05F77 /* Controller */,
+				A4037C6F1DF9749200C05F77 /* ViewModel */,
 			);
 			path = SimpleCollectionViewController;
 			sourceTree = "<group>";
 		};
-		A4329ACE1DF03AA90012DB71 /* Controller */ = {
+		A4037C6C1DF9749200C05F77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4329ACF1DF03AA90012DB71 /* SimpleCollectionViewController.h */,
-				A4329AD01DF03AA90012DB71 /* SimpleCollectionViewController.m */,
+				A4037C6D1DF9749200C05F77 /* SimpleCollectionViewController.h */,
+				A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		A4329AD11DF03AA90012DB71 /* ViewModel */ = {
+		A4037C6F1DF9749200C05F77 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4329AD21DF03AA90012DB71 /* SimpleCollectionViewDelegate */,
-				A4329AD51DF03AA90012DB71 /* SimpleCollectionViewModel */,
+				A4037C701DF9749200C05F77 /* SimpleCollectionViewDelegate */,
+				A4037C731DF9749200C05F77 /* SimpleCollectionViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A4329AD21DF03AA90012DB71 /* SimpleCollectionViewDelegate */ = {
+		A4037C701DF9749200C05F77 /* SimpleCollectionViewDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				A4329AD31DF03AA90012DB71 /* SimpleCollectionViewDelegate.h */,
-				A4329AD41DF03AA90012DB71 /* SimpleCollectionViewDelegate.m */,
+				A4037C711DF9749200C05F77 /* SimpleCollectionViewDelegate.h */,
+				A4037C721DF9749200C05F77 /* SimpleCollectionViewDelegate.m */,
 			);
 			path = SimpleCollectionViewDelegate;
 			sourceTree = "<group>";
 		};
-		A4329AD51DF03AA90012DB71 /* SimpleCollectionViewModel */ = {
+		A4037C731DF9749200C05F77 /* SimpleCollectionViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4329AD61DF03AA90012DB71 /* SimpleCollectionViewModel.h */,
-				A4329AD71DF03AA90012DB71 /* SimpleCollectionViewModel.m */,
+				A4037C741DF9749200C05F77 /* SimpleCollectionViewModel.h */,
+				A4037C751DF9749200C05F77 /* SimpleCollectionViewModel.m */,
 			);
 			path = SimpleCollectionViewModel;
 			sourceTree = "<group>";
 		};
-		A4329AD81DF03AA90012DB71 /* SimpleTableViewController */ = {
+		A4037C761DF9749200C05F77 /* SimpleTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A4329AD91DF03AA90012DB71 /* Controller */,
-				A4329ADC1DF03AA90012DB71 /* ViewModel */,
+				A4037C771DF9749200C05F77 /* Controller */,
+				A4037C7A1DF9749200C05F77 /* ViewModel */,
 			);
 			path = SimpleTableViewController;
 			sourceTree = "<group>";
 		};
-		A4329AD91DF03AA90012DB71 /* Controller */ = {
+		A4037C771DF9749200C05F77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A4329ADA1DF03AA90012DB71 /* SimpleTableViewController.h */,
-				A4329ADB1DF03AA90012DB71 /* SimpleTableViewController.m */,
+				A4037C781DF9749200C05F77 /* SimpleTableViewController.h */,
+				A4037C791DF9749200C05F77 /* SimpleTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		A4329ADC1DF03AA90012DB71 /* ViewModel */ = {
+		A4037C7A1DF9749200C05F77 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4329ADD1DF03AA90012DB71 /* SimpleTableViewDelegate */,
-				A4329AE01DF03AA90012DB71 /* SimpleTableViewModel */,
+				A4037C7B1DF9749200C05F77 /* SimpleTableViewDelegate */,
+				A4037C7E1DF9749200C05F77 /* SimpleTableViewModel */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		A4329ADD1DF03AA90012DB71 /* SimpleTableViewDelegate */ = {
+		A4037C7B1DF9749200C05F77 /* SimpleTableViewDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				A4329ADE1DF03AA90012DB71 /* SimpleTableViewDelegate.h */,
-				A4329ADF1DF03AA90012DB71 /* SimpleTableViewDelegate.m */,
+				A4037C7C1DF9749200C05F77 /* SimpleTableViewDelegate.h */,
+				A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */,
 			);
 			path = SimpleTableViewDelegate;
 			sourceTree = "<group>";
 		};
-		A4329AE01DF03AA90012DB71 /* SimpleTableViewModel */ = {
+		A4037C7E1DF9749200C05F77 /* SimpleTableViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A4329AE11DF03AA90012DB71 /* SimpleTableViewModel.h */,
-				A4329AE21DF03AA90012DB71 /* SimpleTableViewModel.m */,
+				A4037C7F1DF9749200C05F77 /* SimpleTableViewModel.h */,
+				A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */,
 			);
 			path = SimpleTableViewModel;
+			sourceTree = "<group>";
+		};
+		A4037C871DF9752F00C05F77 /* SimpleQRCodeImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C891DF9754A00C05F77 /* SimpleQRCodeImageViewController.h */,
+				A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */,
+			);
+			path = SimpleQRCodeImageView;
 			sourceTree = "<group>";
 		};
 		A4D1CB241DEC4250007B6E59 = {
@@ -230,17 +272,12 @@
 		A4D1CB2F1DEC4251007B6E59 /* SimpleProject */ = {
 			isa = PBXGroup;
 			children = (
-				A4E135F01DF0436B00C79278 /* CLUIKit.framework */,
-				A4329ACD1DF03AA90012DB71 /* SimpleCollectionViewController */,
-				A4329AD81DF03AA90012DB71 /* SimpleTableViewController */,
-				A4D1CB331DEC4251007B6E59 /* AppDelegate.h */,
-				A4D1CB341DEC4251007B6E59 /* AppDelegate.m */,
+				A4037C6A1DF9749200C05F77 /* Module */,
+				A4037C611DF96FAC00C05F77 /* Frameworks */,
+				A4037C5D1DF96F9500C05F77 /* AppDelegate */,
 				A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */,
 				A4D1CB411DEC4251007B6E59 /* Info.plist */,
 				A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */,
-				A4D1CB391DEC4251007B6E59 /* Main.storyboard */,
-				A4D1CB361DEC4251007B6E59 /* ViewController.h */,
-				A4D1CB371DEC4251007B6E59 /* ViewController.m */,
 				A4329AEE1DF03AD20012DB71 /* SimpleProject-PrefixHeader.pch */,
 				A4E135F51DF043AA00C79278 /* main.m */,
 			);
@@ -333,7 +370,7 @@
 				TargetAttributes = {
 					A4D1CB2C1DEC4250007B6E59 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K22U66A47Z;
+						DevelopmentTeam = M67UHY3N8U;
 						ProvisioningStyle = Automatic;
 					};
 					A4D1CB451DEC4251007B6E59 = {
@@ -377,7 +414,6 @@
 			files = (
 				A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */,
 				A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */,
-				A4D1CB3B1DEC4251007B6E59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,15 +438,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4329AE31DF03AA90012DB71 /* SimpleCollectionViewController.m in Sources */,
-				A4329AE41DF03AA90012DB71 /* SimpleCollectionViewDelegate.m in Sources */,
-				A4D1CB381DEC4251007B6E59 /* ViewController.m in Sources */,
-				A4329AE71DF03AA90012DB71 /* SimpleTableViewDelegate.m in Sources */,
-				A4D1CB351DEC4251007B6E59 /* AppDelegate.m in Sources */,
-				A4329AE51DF03AA90012DB71 /* SimpleCollectionViewModel.m in Sources */,
-				A4329AE61DF03AA90012DB71 /* SimpleTableViewController.m in Sources */,
+				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
+				A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */,
+				A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */,
+				A4037C831DF9749200C05F77 /* SimpleCollectionViewModel.m in Sources */,
+				A4037C821DF9749200C05F77 /* SimpleCollectionViewDelegate.m in Sources */,
+				A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */,
 				A4E135F61DF043AA00C79278 /* main.m in Sources */,
-				A4329AE81DF03AA90012DB71 /* SimpleTableViewModel.m in Sources */,
+				A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */,
+				A4037C841DF9749200C05F77 /* SimpleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,14 +482,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A4D1CB391DEC4251007B6E59 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4D1CB3A1DEC4251007B6E59 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -559,13 +587,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K22U66A47Z;
+				DEVELOPMENT_TEAM = M67UHY3N8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleProject",
+					"$(PROJECT_DIR)/SimpleProject/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SimpleProject/SimpleProject-PrefixHeader.pch";
 				INFOPLIST_FILE = SimpleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,13 +606,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = K22U66A47Z;
+				DEVELOPMENT_TEAM = M67UHY3N8U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleProject",
+					"$(PROJECT_DIR)/SimpleProject/Frameworks",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SimpleProject/SimpleProject-PrefixHeader.pch";
 				INFOPLIST_FILE = SimpleProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

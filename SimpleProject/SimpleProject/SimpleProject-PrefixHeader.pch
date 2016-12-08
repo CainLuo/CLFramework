@@ -10,7 +10,6 @@
 #define SimpleProject_PrefixHeader_pch
 
 #import <CLUIKit/CLUIKit.h>
-
-#define AAAA 11111
+#import <CLFoundation/CLFoundation.h>
 
 #endif /* SimpleProject_PrefixHeader_pch */

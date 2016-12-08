@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C5B1DF96E6D00C05F77 /* CLDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835C31DF72B2A003B062C /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44835B91DF72B29003B062C /* CLFoundation.framework */; };
 		A44835C81DF72B2A003B062C /* CLFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835C71DF72B2A003B062C /* CLFoundationTests.m */; };
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A4037C441DF7D26900C05F77 /* CLDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
+		A4037C5B1DF96E6D00C05F77 /* CLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
 		A44835B91DF72B29003B062C /* CLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44835BC1DF72B29003B062C /* CLFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFoundation.h; sourceTree = "<group>"; };
 		A44835BD1DF72B29003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,10 +91,10 @@
 		A44835BB1DF72B29003B062C /* CLFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				A4037C5B1DF96E6D00C05F77 /* CLDefine.h */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
 				A44835BD1DF72B29003B062C /* Info.plist */,
-				A4037C441DF7D26900C05F77 /* CLDefine.h */,
 			);
 			path = CLFoundation;
 			sourceTree = "<group>";
@@ -124,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */,
+				A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
