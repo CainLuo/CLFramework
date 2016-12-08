@@ -21,8 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C4B1DF7D6E300C05F77 /* CLApplication.h */; };
+		A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C4B1DF7D6E300C05F77 /* CLApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4037C4E1DF7D6E300C05F77 /* CLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C4C1DF7D6E300C05F77 /* CLApplication.m */; };
+		A4037C551DF933DD00C05F77 /* UIImageView+CLImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C531DF933DD00C05F77 /* UIImageView+CLImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4037C561DF933DD00C05F77 /* UIImageView+CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C541DF933DD00C05F77 /* UIImageView+CLImageView.m */; };
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
 		A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A43299EC1DF038870012DB71 /* CLUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -159,6 +161,8 @@
 /* Begin PBXFileReference section */
 		A4037C4B1DF7D6E300C05F77 /* CLApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLApplication.h; sourceTree = "<group>"; };
 		A4037C4C1DF7D6E300C05F77 /* CLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLApplication.m; sourceTree = "<group>"; };
+		A4037C531DF933DD00C05F77 /* UIImageView+CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CLImageView.h"; sourceTree = "<group>"; };
+		A4037C541DF933DD00C05F77 /* UIImageView+CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CLImageView.m"; sourceTree = "<group>"; };
 		A43299E91DF038870012DB71 /* CLUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43299EC1DF038870012DB71 /* CLUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUIKit.h; sourceTree = "<group>"; };
 		A43299ED1DF038870012DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -313,6 +317,15 @@
 			path = "UIApplication+CLApplication";
 			sourceTree = "<group>";
 		};
+		A4037C521DF933DD00C05F77 /* UIImageView+CLImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A4037C531DF933DD00C05F77 /* UIImageView+CLImageView.h */,
+				A4037C541DF933DD00C05F77 /* UIImageView+CLImageView.m */,
+			);
+			path = "UIImageView+CLImageView";
+			sourceTree = "<group>";
+		};
 		A43299DF1DF038870012DB71 = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +347,7 @@
 		A43299EB1DF038870012DB71 /* CLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A4037C521DF933DD00C05F77 /* UIImageView+CLImageView */,
 				A4037C4A1DF7D6D500C05F77 /* UIApplication+CLApplication */,
 				A44835621DF46300003B062C /* IQKeyboardManager */,
 				A4329A031DF0389D0012DB71 /* CLCollectionViewController */,
@@ -747,7 +761,6 @@
 				A44835991DF46300003B062C /* IQTextView.h in Headers */,
 				A448358D1DF46300003B062C /* IQUIView+Hierarchy.h in Headers */,
 				A44835891DF46300003B062C /* IQUIScrollView+Additions.h in Headers */,
-				A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */,
 				A44835A31DF46300003B062C /* IQUIView+IQKeyboardToolbar.h in Headers */,
 				A44835931DF46300003B062C /* IQKeyboardManagerConstants.h in Headers */,
 				A448358B1DF46300003B062C /* IQUITextFieldView+Additions.h in Headers */,
@@ -768,6 +781,8 @@
 				A4329AA41DF0389D0012DB71 /* MJRefreshAutoNormalFooter.h in Headers */,
 				A4329A9C1DF0389D0012DB71 /* MJRefreshComponent.h in Headers */,
 				A4329AB01DF0389D0012DB71 /* MJRefreshNormalHeader.h in Headers */,
+				A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */,
+				A4037C551DF933DD00C05F77 /* UIImageView+CLImageView.h in Headers */,
 				A4329A911DF0389D0012DB71 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
 				A4329AB81DF0389D0012DB71 /* NSBundle+MJRefresh.h in Headers */,
 				A4329A7D1DF0389D0012DB71 /* CLTitleView.h in Headers */,
@@ -936,6 +951,7 @@
 				A4329AAD1DF0389D0012DB71 /* MJRefreshBackStateFooter.m in Sources */,
 				A4329AC71DF0389D0012DB71 /* UIViewController+CLViewController.m in Sources */,
 				A4329AAF1DF0389D0012DB71 /* MJRefreshGifHeader.m in Sources */,
+				A4037C561DF933DD00C05F77 /* UIImageView+CLImageView.m in Sources */,
 				A4329AA91DF0389D0012DB71 /* MJRefreshBackGifFooter.m in Sources */,
 				A4329AB71DF0389D0012DB71 /* MJRefreshConst.m in Sources */,
 				A4329A721DF0389D0012DB71 /* CLCollectionViewController.m in Sources */,

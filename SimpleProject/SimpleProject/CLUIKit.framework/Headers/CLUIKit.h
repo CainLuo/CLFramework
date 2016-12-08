@@ -16,7 +16,10 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <CLUIKit/PublicHeader.h>
 
+#pragma mark - MJRefresh
 #import <CLUIKit/MJRefresh.h>
+
+#pragma mark - Masonry
 #import <CLUIKit/Masonry.h>
 
 #pragma mark - CLTableViewController
@@ -34,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import <CLUIKit/UIScreen+CLScreen.h>
 #import <CLUIKit/UIDevice+CLDevice.h>
 #import <CLUIKit/UIViewController+CLViewController.h>
+#import <CLUIKit/UIImageView+CLImageView.h>
 
 #pragma mark - IQKeyboardManager
 #import <CLUIKit/IQKeyboardManager.h>
