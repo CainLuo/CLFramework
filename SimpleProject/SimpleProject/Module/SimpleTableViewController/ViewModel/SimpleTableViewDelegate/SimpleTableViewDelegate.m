@@ -9,6 +9,7 @@
 #import "SimpleTableViewDelegate.h"
 #import "SimpleQRCodeImageViewController.h"
 #import "SimpleCollectionViewController.h"
+#import "SimpleImageViewController.h"
 
 @implementation SimpleTableViewDelegate
 
@@ -57,7 +58,16 @@
                                                                                      animated:YES];
         }
             break;
+        case 2: {
             
+            SimpleImageViewController *imageViewController = [[SimpleImageViewController alloc] init];
+            
+            imageViewController.hidesBottomBarWhenPushed = YES;
+            
+            [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:imageViewController
+                                                                                     animated:YES];
+        }
+            break;
         default:
             break;
     }

@@ -25,6 +25,8 @@
 		A4037C4E1DF7D6E300C05F77 /* CLApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C4C1DF7D6E300C05F77 /* CLApplication.m */; };
 		A4037C551DF933DD00C05F77 /* UIImageView+CLImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C531DF933DD00C05F77 /* UIImageView+CLImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4037C561DF933DD00C05F77 /* UIImageView+CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C541DF933DD00C05F77 /* UIImageView+CLImageView.m */; };
+		A42F3B6D1E88C31D005B74A5 /* UIImage+CLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A42F3B6B1E88C31D005B74A5 /* UIImage+CLImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42F3B6E1E88C31D005B74A5 /* UIImage+CLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F3B6C1E88C31D005B74A5 /* UIImage+CLImage.m */; };
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
 		A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A43299EC1DF038870012DB71 /* CLUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -163,6 +165,8 @@
 		A4037C4C1DF7D6E300C05F77 /* CLApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLApplication.m; sourceTree = "<group>"; };
 		A4037C531DF933DD00C05F77 /* UIImageView+CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CLImageView.h"; sourceTree = "<group>"; };
 		A4037C541DF933DD00C05F77 /* UIImageView+CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CLImageView.m"; sourceTree = "<group>"; };
+		A42F3B6B1E88C31D005B74A5 /* UIImage+CLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CLImage.h"; sourceTree = "<group>"; };
+		A42F3B6C1E88C31D005B74A5 /* UIImage+CLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CLImage.m"; sourceTree = "<group>"; };
 		A43299E91DF038870012DB71 /* CLUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43299EC1DF038870012DB71 /* CLUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLUIKit.h; sourceTree = "<group>"; };
 		A43299ED1DF038870012DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -326,6 +330,15 @@
 			path = "UIImageView+CLImageView";
 			sourceTree = "<group>";
 		};
+		A42F3B6A1E88C303005B74A5 /* UIImage+CLImage */ = {
+			isa = PBXGroup;
+			children = (
+				A42F3B6B1E88C31D005B74A5 /* UIImage+CLImage.h */,
+				A42F3B6C1E88C31D005B74A5 /* UIImage+CLImage.m */,
+			);
+			path = "UIImage+CLImage";
+			sourceTree = "<group>";
+		};
 		A43299DF1DF038870012DB71 = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +360,7 @@
 		A43299EB1DF038870012DB71 /* CLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A42F3B6A1E88C303005B74A5 /* UIImage+CLImage */,
 				A4037C521DF933DD00C05F77 /* UIImageView+CLImageView */,
 				A4037C4A1DF7D6D500C05F77 /* UIApplication+CLApplication */,
 				A44835621DF46300003B062C /* IQKeyboardManager */,
@@ -782,6 +796,7 @@
 				A4329A9C1DF0389D0012DB71 /* MJRefreshComponent.h in Headers */,
 				A4329AB01DF0389D0012DB71 /* MJRefreshNormalHeader.h in Headers */,
 				A4037C4D1DF7D6E300C05F77 /* CLApplication.h in Headers */,
+				A42F3B6D1E88C31D005B74A5 /* UIImage+CLImage.h in Headers */,
 				A4037C551DF933DD00C05F77 /* UIImageView+CLImageView.h in Headers */,
 				A4329A911DF0389D0012DB71 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */,
 				A4329AB81DF0389D0012DB71 /* NSBundle+MJRefresh.h in Headers */,
@@ -834,7 +849,7 @@
 		A43299E01DF038870012DB71 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Cain;
 				TargetAttributes = {
 					A43299E81DF038870012DB71 = {
@@ -920,6 +935,7 @@
 				A448359C1DF46300003B062C /* IQBarButtonItem.m in Sources */,
 				A44835A41DF46300003B062C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A4329AB91DF0389D0012DB71 /* NSBundle+MJRefresh.m in Sources */,
+				A42F3B6E1E88C31D005B74A5 /* UIImage+CLImage.m in Sources */,
 				A4329A941DF0389D0012DB71 /* View+MASAdditions.m in Sources */,
 				A4329AA51DF0389D0012DB71 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A4329AB11DF0389D0012DB71 /* MJRefreshNormalHeader.m in Sources */,
@@ -1007,6 +1023,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1059,6 +1076,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1091,7 +1109,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = M67UHY3N8U;
 				DYLIB_COMPATIBILITY_VERSION = 1;

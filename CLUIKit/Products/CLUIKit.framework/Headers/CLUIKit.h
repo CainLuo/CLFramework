@@ -45,6 +45,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import <CLUIKit/UIDevice+CLDevice.h>
 #import <CLUIKit/UIViewController+CLViewController.h>
 #import <CLUIKit/UIImageView+CLImageView.h>
+#import <CLUIKit/UIImage+CLImage.h>
 
 #pragma mark - IQKeyboardManager
 #import <CLUIKit/IQKeyboardManager.h>

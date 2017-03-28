@@ -21,6 +21,7 @@
 		A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */; };
 		A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */; };
 		A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */; };
+		A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */; };
 		A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */; };
 		A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */; };
 		A4D1CB4B1DEC4251007B6E59 /* SimpleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB4A1DEC4251007B6E59 /* SimpleProjectTests.m */; };
@@ -79,6 +80,8 @@
 		A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
 		A4037C891DF9754A00C05F77 /* SimpleQRCodeImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleQRCodeImageViewController.h; sourceTree = "<group>"; };
 		A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleQRCodeImageViewController.m; sourceTree = "<group>"; };
+		A42F3B731E88CA8B005B74A5 /* SimpleImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageViewController.h; sourceTree = "<group>"; };
+		A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageViewController.m; sourceTree = "<group>"; };
 		A4329AEE1DF03AD20012DB71 /* SimpleProject-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleProject-PrefixHeader.pch"; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		A4037C6A1DF9749200C05F77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */,
 				A4037C871DF9752F00C05F77 /* SimpleQRCodeImageView */,
 				A4037C6B1DF9749200C05F77 /* SimpleCollectionViewController */,
 				A4037C761DF9749200C05F77 /* SimpleTableViewController */,
@@ -247,6 +251,15 @@
 				A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */,
 			);
 			path = SimpleQRCodeImageView;
+			sourceTree = "<group>";
+		};
+		A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				A42F3B731E88CA8B005B74A5 /* SimpleImageViewController.h */,
+				A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */,
+			);
+			path = SimpleImageView;
 			sourceTree = "<group>";
 		};
 		A4D1CB241DEC4250007B6E59 = {
@@ -438,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
 				A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */,
 				A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */,

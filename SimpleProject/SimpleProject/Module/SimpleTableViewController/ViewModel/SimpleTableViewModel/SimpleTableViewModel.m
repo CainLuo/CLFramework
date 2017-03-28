@@ -13,7 +13,8 @@
 - (void)cl_tableViewHTTPRequest {
     
     NSArray *array = @[@"SimpleCollectionViewController",
-                       @"SimpleQRCodeImageViewController"];
+                       @"SimpleQRCodeImageViewController",
+                       @"SimpleImageViewController"];
     
     [self.cl_dataSource addObjectsFromArray:array];
     

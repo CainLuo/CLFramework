@@ -28,7 +28,7 @@
  创建一个二维码, 且可以添加中间的Logo图
 
  @param string 二维码内容
- @param logoName Logo图
+ @param logoName logo图 default size is 150 * 150
  */
 - (void)createQRCodeImageWithString:(NSString *)string
                                logo:(NSString *)logoName;
