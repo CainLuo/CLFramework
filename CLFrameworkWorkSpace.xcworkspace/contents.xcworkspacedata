@@ -10,4 +10,7 @@
    <FileRef
       location = "group:CLUIKit/CLUIKit.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CLFoundation/CLNetWork/CLNetWork.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -1,0 +1,6 @@
+framework module CLNetWork {
+  umbrella header "CLNetWork.h"
+
+  export *
+  module * { export * }
+}

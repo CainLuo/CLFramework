@@ -42,4 +42,12 @@
  */
 - (UIImage *)cl_animatedImageByScalingAndCroppingToSize:(CGSize)size;
 
+/**
+ 输入一张图片, 返回一张带高斯模糊的图片
+ 
+ @param blur 模糊值
+ @return 图片
+ */
+- (UIImage *)cl_blurImageWithBlur:(CGFloat)blur;
+
 @end
