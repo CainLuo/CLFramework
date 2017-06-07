@@ -5,6 +5,9 @@
       location = "group:CLUIKit/../SimpleProject/SimpleProject.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:OtherFramework/OtherFramework.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CLFoundation/CLFoundation.xcodeproj">
    </FileRef>
    <FileRef
