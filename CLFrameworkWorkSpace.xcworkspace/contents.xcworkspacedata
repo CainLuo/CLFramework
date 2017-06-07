@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:CLNetWork/CLNetWork.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CLUIKit/../SimpleProject/SimpleProject.xcodeproj">
    </FileRef>
    <FileRef
@@ -12,8 +15,5 @@
    </FileRef>
    <FileRef
       location = "group:CLUIKit/CLUIKit.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:CLFoundation/CLNetWork/CLNetWork.xcodeproj">
    </FileRef>
 </Workspace>

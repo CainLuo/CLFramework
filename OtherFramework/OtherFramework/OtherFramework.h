@@ -44,3 +44,6 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #import <OtherFramework/UIImageView+WebCache.h>
 #import <OtherFramework/UIView+WebCache.h>
 #import <OtherFramework/UIView+WebCacheOperation.h>
+
+// YYModel
+#import <OtherFramework/YYModel.h>
