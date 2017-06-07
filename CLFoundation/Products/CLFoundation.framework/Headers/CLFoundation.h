@@ -27,3 +27,6 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 #import <CLFoundation/NSString+CLRegular.h>
 
 #import <CLFoundation/CLDefine.h>
+
+// YYModel
+#import <CLFoundation/YYModel.h>

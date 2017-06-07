@@ -73,11 +73,6 @@
 		A46FBCBF1EE6EFF900BA0CC1 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A46FBC9C1EE6EFF800BA0CC1 /* UIView+WebCache.m */; };
 		A46FBCC01EE6EFF900BA0CC1 /* UIView+WebCacheOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = A46FBC9D1EE6EFF800BA0CC1 /* UIView+WebCacheOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A46FBCC11EE6EFF900BA0CC1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A46FBC9E1EE6EFF800BA0CC1 /* UIView+WebCacheOperation.m */; };
-		A4BA508E1EE7BC810042ECA9 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA50891EE7BC810042ECA9 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4BA508F1EE7BC810042ECA9 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA508A1EE7BC810042ECA9 /* NSObject+YYModel.m */; };
-		A4BA50901EE7BC810042ECA9 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA508B1EE7BC810042ECA9 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4BA50911EE7BC810042ECA9 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA508C1EE7BC810042ECA9 /* YYClassInfo.m */; };
-		A4BA50921EE7BC810042ECA9 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA508D1EE7BC810042ECA9 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,11 +141,6 @@
 		A46FBC9C1EE6EFF800BA0CC1 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		A46FBC9D1EE6EFF800BA0CC1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		A46FBC9E1EE6EFF800BA0CC1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		A4BA50891EE7BC810042ECA9 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
-		A4BA508A1EE7BC810042ECA9 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
-		A4BA508B1EE7BC810042ECA9 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
-		A4BA508C1EE7BC810042ECA9 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
-		A4BA508D1EE7BC810042ECA9 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +183,6 @@
 		A46FBC401EE6EE4500BA0CC1 /* OtherFramework */ = {
 			isa = PBXGroup;
 			children = (
-				A4BA50881EE7BC810042ECA9 /* YYModel */,
 				A46FBC7B1EE6EFF800BA0CC1 /* SDWebImage */,
 				A46FBC581EE6EE6600BA0CC1 /* SDCycleScrollView */,
 				A46FBC411EE6EE4500BA0CC1 /* OtherFramework.h */,
@@ -282,18 +271,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		A4BA50881EE7BC810042ECA9 /* YYModel */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA50891EE7BC810042ECA9 /* NSObject+YYModel.h */,
-				A4BA508A1EE7BC810042ECA9 /* NSObject+YYModel.m */,
-				A4BA508B1EE7BC810042ECA9 /* YYClassInfo.h */,
-				A4BA508C1EE7BC810042ECA9 /* YYClassInfo.m */,
-				A4BA508D1EE7BC810042ECA9 /* YYModel.h */,
-			);
-			path = YYModel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -324,9 +301,6 @@
 				A46FBCBE1EE6EFF900BA0CC1 /* UIView+WebCache.h in Headers */,
 				A46FBCB61EE6EFF900BA0CC1 /* UIImage+GIF.h in Headers */,
 				A46FBCA31EE6EFF800BA0CC1 /* SDImageCache.h in Headers */,
-				A4BA50921EE7BC810042ECA9 /* YYModel.h in Headers */,
-				A4BA508E1EE7BC810042ECA9 /* NSObject+YYModel.h in Headers */,
-				A4BA50901EE7BC810042ECA9 /* YYClassInfo.h in Headers */,
 				A46FBCA91EE6EFF900BA0CC1 /* SDWebImageDecoder.h in Headers */,
 				A46FBC701EE6EE6600BA0CC1 /* SDCollectionViewCell.h in Headers */,
 				A46FBC6A1EE6EE6600BA0CC1 /* TAAnimatedDotView.h in Headers */,
@@ -463,7 +437,6 @@
 				A46FBCA01EE6EFF800BA0CC1 /* NSData+ImageContentType.m in Sources */,
 				A46FBCB51EE6EFF900BA0CC1 /* UIButton+WebCache.m in Sources */,
 				A46FBCB31EE6EFF900BA0CC1 /* SDWebImagePrefetcher.m in Sources */,
-				A4BA508F1EE7BC810042ECA9 /* NSObject+YYModel.m in Sources */,
 				A46FBCBF1EE6EFF900BA0CC1 /* UIView+WebCache.m in Sources */,
 				A46FBCAE1EE6EFF900BA0CC1 /* SDWebImageDownloaderOperation.m in Sources */,
 				A46FBC731EE6EE6600BA0CC1 /* SDCycleScrollView.m in Sources */,
@@ -474,7 +447,6 @@
 				A46FBC711EE6EE6600BA0CC1 /* SDCollectionViewCell.m in Sources */,
 				A46FBC691EE6EE6600BA0CC1 /* TAAbstractDotView.m in Sources */,
 				A46FBCA21EE6EFF800BA0CC1 /* NSImage+WebCache.m in Sources */,
-				A4BA50911EE7BC810042ECA9 /* YYClassInfo.m in Sources */,
 				A46FBCB71EE6EFF900BA0CC1 /* UIImage+GIF.m in Sources */,
 				A46FBCAC1EE6EFF900BA0CC1 /* SDWebImageDownloader.m in Sources */,
 				A46FBCA41EE6EFF800BA0CC1 /* SDImageCache.m in Sources */,
