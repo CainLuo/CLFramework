@@ -11,6 +11,6 @@
 
 #import "CLUIKit.h"
 #import "OtherFramework.h"
-#import <CLFoundation/CLFoundation.h>
+#import "CLFoundation.h"
 
 #endif /* SimpleProject_PrefixHeader_pch */

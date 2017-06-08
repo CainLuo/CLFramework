@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import <CLUIKit/CLUIKit.h>
+#import "CLUIKit.h"
 
 @interface SimpleCollectionViewDelegate : CLCollectionViewDelegate
 

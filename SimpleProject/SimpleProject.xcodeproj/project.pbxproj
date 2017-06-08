@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C5F1DF96F9500C05F77 /* AppDelegate.m */; };
-		A4037C641DF96FAC00C05F77 /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; };
-		A4037C661DF96FB500C05F77 /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; };
-		A4037C671DF96FB500C05F77 /* CLFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4037C621DF96FAC00C05F77 /* CLFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */; };
 		A4037C821DF9749200C05F77 /* SimpleCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C721DF9749200C05F77 /* SimpleCollectionViewDelegate.m */; };
 		A4037C831DF9749200C05F77 /* SimpleCollectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C751DF9749200C05F77 /* SimpleCollectionViewModel.m */; };
@@ -102,6 +99,10 @@
 		A43874CE1EE9278D001F4BC9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874991EE9278D001F4BC9 /* UIImageView+WebCache.m */; };
 		A43874CF1EE9278D001F4BC9 /* UIView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A438749B1EE9278D001F4BC9 /* UIView+WebCache.m */; };
 		A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A438749D1EE9278D001F4BC9 /* UIView+WebCacheOperation.m */; };
+		A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */; };
+		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
+		A43874E41EE929E3001F4BC9 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */; };
+		A43874E51EE929E3001F4BC9 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */; };
 		A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */; };
 		A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */; };
 		A4D1CB4B1DEC4251007B6E59 /* SimpleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB4A1DEC4251007B6E59 /* SimpleProjectTests.m */; };
@@ -133,7 +134,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A4037C671DF96FB500C05F77 /* CLFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,7 +143,6 @@
 /* Begin PBXFileReference section */
 		A4037C5E1DF96F9500C05F77 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A4037C5F1DF96F9500C05F77 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4037C621DF96FAC00C05F77 /* CLFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CLFoundation.framework; sourceTree = "<group>"; };
 		A4037C6D1DF9749200C05F77 /* SimpleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewController.h; sourceTree = "<group>"; };
 		A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewController.m; sourceTree = "<group>"; };
 		A4037C711DF9749200C05F77 /* SimpleCollectionViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDelegate.h; sourceTree = "<group>"; };
@@ -336,6 +335,17 @@
 		A438749B1EE9278D001F4BC9 /* UIView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCache.m"; sourceTree = "<group>"; };
 		A438749C1EE9278D001F4BC9 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		A438749D1EE9278D001F4BC9 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		A43874D21EE929E3001F4BC9 /* CLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
+		A43874D31EE929E3001F4BC9 /* CLFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLFoundation.h; sourceTree = "<group>"; };
+		A43874D61EE929E3001F4BC9 /* NSBundle+CLBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CLBundle.h"; sourceTree = "<group>"; };
+		A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
+		A43874D91EE929E3001F4BC9 /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
+		A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
+		A43874DC1EE929E3001F4BC9 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		A43874DE1EE929E3001F4BC9 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		A43874E01EE929E3001F4BC9 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D1CB3F1DEC4251007B6E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -354,8 +364,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4037C661DF96FB500C05F77 /* CLFoundation.framework in Frameworks */,
-				A4037C641DF96FAC00C05F77 /* CLFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,14 +391,6 @@
 				A4037C5F1DF96F9500C05F77 /* AppDelegate.m */,
 			);
 			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		A4037C611DF96FAC00C05F77 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A4037C621DF96FAC00C05F77 /* CLFoundation.framework */,
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		A4037C6A1DF9749200C05F77 /* Module */ = {
@@ -515,6 +515,7 @@
 		A43873221EE926E3001F4BC9 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A43874D11EE929E3001F4BC9 /* CLFoundation */,
 				A43874281EE9278C001F4BC9 /* OtherFramework */,
 				A43873A51EE92776001F4BC9 /* CLUIKit */,
 			);
@@ -998,6 +999,48 @@
 			path = YYModel;
 			sourceTree = "<group>";
 		};
+		A43874D11EE929E3001F4BC9 /* CLFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
+				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
+				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
+				A43874DB1EE929E3001F4BC9 /* YYModel */,
+			);
+			path = CLFoundation;
+			sourceTree = "<group>";
+		};
+		A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */ = {
+			isa = PBXGroup;
+			children = (
+				A43874D61EE929E3001F4BC9 /* NSBundle+CLBundle.h */,
+				A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */,
+			);
+			path = "NSBundle+CLBundle";
+			sourceTree = "<group>";
+		};
+		A43874D81EE929E3001F4BC9 /* NSString+CLRegular */ = {
+			isa = PBXGroup;
+			children = (
+				A43874D91EE929E3001F4BC9 /* NSString+CLRegular.h */,
+				A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */,
+			);
+			path = "NSString+CLRegular";
+			sourceTree = "<group>";
+		};
+		A43874DB1EE929E3001F4BC9 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				A43874DC1EE929E3001F4BC9 /* NSObject+YYModel.h */,
+				A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */,
+				A43874DE1EE929E3001F4BC9 /* YYClassInfo.h */,
+				A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */,
+				A43874E01EE929E3001F4BC9 /* YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
 		A4D1CB241DEC4250007B6E59 = {
 			isa = PBXGroup;
 			children = (
@@ -1023,7 +1066,6 @@
 			children = (
 				A43873221EE926E3001F4BC9 /* Source */,
 				A4037C6A1DF9749200C05F77 /* Module */,
-				A4037C611DF96FAC00C05F77 /* Frameworks */,
 				A4037C5D1DF96F9500C05F77 /* AppDelegate */,
 				A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */,
 				A4D1CB411DEC4251007B6E59 /* Info.plist */,
@@ -1199,16 +1241,20 @@
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
 				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
+				A43874E41EE929E3001F4BC9 /* NSObject+YYModel.m in Sources */,
 				A43874A71EE9278D001F4BC9 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A43874AA1EE9278D001F4BC9 /* IQPreviousNextView.m in Sources */,
 				A438741D1EE92776001F4BC9 /* NSBundle+MJRefresh.m in Sources */,
+				A43874E51EE929E3001F4BC9 /* YYClassInfo.m in Sources */,
 				A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */,
+				A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */,
 				A43874C51EE9278D001F4BC9 /* SDWebImageDecoder.m in Sources */,
 				A43874A31EE9278D001F4BC9 /* IQUIView+Hierarchy.m in Sources */,
 				A43874A41EE9278D001F4BC9 /* IQUIViewController+Additions.m in Sources */,
 				A43874B61EE9278D001F4BC9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A43874131EE92776001F4BC9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A43874A81EE9278D001F4BC9 /* IQTextView.m in Sources */,
+				A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */,
 				A43874191EE92776001F4BC9 /* MJRefreshNormalHeader.m in Sources */,
 				A438740B1EE92776001F4BC9 /* CLTitleView.m in Sources */,
 				A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */,

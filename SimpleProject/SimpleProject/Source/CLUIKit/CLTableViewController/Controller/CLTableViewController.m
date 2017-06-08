@@ -45,8 +45,7 @@
         _cl_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
                                                                       0,
                                                                       [UIScreen mainScreen].bounds.size.width,
-                                                                      [UIScreen mainScreen].bounds.size.height)
-                                                     style:UITableViewStyleGrouped];
+                                                                      [UIScreen mainScreen].bounds.size.height)];
         
         _cl_tableView.backgroundColor = [UIColor whiteColor];
     }
