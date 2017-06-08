@@ -51,10 +51,8 @@
 }
 
 - (void)buttonAction {
-    
-    UIImage *image = [[UIImage alloc] init];
-    
-    _simpleImageView.image = [image getImageForScreen];
+        
+    _simpleImageView.image = [UIImage cl_getImageForView:self.view];
 }
 
 @end

@@ -9,7 +9,8 @@
 #ifndef SimpleProject_PrefixHeader_pch
 #define SimpleProject_PrefixHeader_pch
 
-#import <CLUIKit/CLUIKit.h>
+#import "CLUIKit.h"
+#import "OtherFramework.h"
 #import <CLFoundation/CLFoundation.h>
 
 #endif /* SimpleProject_PrefixHeader_pch */

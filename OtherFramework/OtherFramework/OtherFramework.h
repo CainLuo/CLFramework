@@ -50,19 +50,19 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #import <OtherFramework/Masonry.h>
 
 #pragma mark - IQKeyboardManager
-#import <CLUIKit/IQKeyboardManager.h>
-#import <CLUIKit/IQKeyboardReturnKeyHandler.h>
-#import <CLUIKit/IQTextView.h>
-#import <CLUIKit/IQBarButtonItem.h>
-#import <CLUIKit/IQPreviousNextView.h>
-#import <CLUIKit/IQTitleBarButtonItem.h>
-#import <CLUIKit/IQToolbar.h>
-#import <CLUIKit/IQUIView+IQKeyboardToolbar.h>
-#import <CLUIKit/IQKeyboardManagerConstantsInternal.h>
-#import <CLUIKit/IQKeyboardManagerConstants.h>
-#import <CLUIKit/IQNSArray+Sort.h>
-#import <CLUIKit/IQUIScrollView+Additions.h>
-#import <CLUIKit/IQUITextFieldView+Additions.h>
-#import <CLUIKit/IQUIView+Hierarchy.h>
-#import <CLUIKit/IQUIViewController+Additions.h>
-#import <CLUIKit/IQUIWindow+Hierarchy.h>
+#import <OtherFramework/IQKeyboardManager.h>
+#import <OtherFramework/IQKeyboardReturnKeyHandler.h>
+#import <OtherFramework/IQTextView.h>
+#import <OtherFramework/IQBarButtonItem.h>
+#import <OtherFramework/IQPreviousNextView.h>
+#import <OtherFramework/IQTitleBarButtonItem.h>
+#import <OtherFramework/IQToolbar.h>
+#import <OtherFramework/IQUIView+IQKeyboardToolbar.h>
+#import <OtherFramework/IQKeyboardManagerConstantsInternal.h>
+#import <OtherFramework/IQKeyboardManagerConstants.h>
+#import <OtherFramework/IQNSArray+Sort.h>
+#import <OtherFramework/IQUIScrollView+Additions.h>
+#import <OtherFramework/IQUITextFieldView+Additions.h>
+#import <OtherFramework/IQUIView+Hierarchy.h>
+#import <OtherFramework/IQUIViewController+Additions.h>
+#import <OtherFramework/IQUIWindow+Hierarchy.h>
