@@ -17,16 +17,18 @@
 
 @interface CLTitleView : UIView
 
+@property (nonatomic, strong, readonly) UIButton *cl_leftButton;
+@property (nonatomic, strong, readonly) UIButton *cl_rightButton;
+
+@property (nonatomic, strong, readonly) UILabel *cl_titleLabel;
+
 #pragma mark - Text Alignment
 @property(nonatomic) NSTextAlignment cl_textAlignment;
 
 #pragma mark - Title String
 @property (nonatomic, copy) NSString *cl_titleString;
 
-@property (nonatomic, strong, readonly) UIButton *cl_leftButton;
-@property (nonatomic, strong, readonly) UIButton *cl_rightButton;
-
-#pragma mark - Buttons
+#pragma mark - Need Buttons
 - (void)cl_needLeftButton;
 - (void)cl_needRightButton;
 

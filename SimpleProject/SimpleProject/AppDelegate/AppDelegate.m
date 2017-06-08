@@ -31,15 +31,15 @@
     
     tabbarController.tabBar.translucent = NO;
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
+
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:simpleTableViewController];
     
     navigationController.navigationBar.hidden = YES;
-    
-    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
 
     simpleTableViewController.title = @"1";
     
-    [tabbarController setViewControllers:@[simpleTableViewController]];
+    [tabbarController setViewControllers:@[navigationController]];
 
     self.window.rootViewController = tabbarController;
     

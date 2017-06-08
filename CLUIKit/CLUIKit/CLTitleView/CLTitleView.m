@@ -13,13 +13,17 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
+#define BUTTON_WIDTH [UIScreen cl_fitScreen:88]
+#define BUTTON_HEIGHT [UIScreen cl_fitScreen:88]
+
+#define LABEL_HEIGHT [UIScreen cl_fitScreen:88]
+
 #import "CLTitleView.h"
-#import "Masonry.h"
 #import "UIScreen+CLScreen.h"
 
 @interface CLTitleView ()
 
-@property (nonatomic, strong) UILabel *cl_titleLabel;
+@property (nonatomic, strong, readwrite) UILabel *cl_titleLabel;
 
 @property (nonatomic, strong, readwrite) UIButton *cl_leftButton;
 @property (nonatomic, strong, readwrite) UIButton *cl_rightButton;
@@ -34,7 +38,6 @@
     
     if (self) {
         
-        [self cl_addConstraintsWithSuperView];
     }
     
     return self;
@@ -46,7 +49,10 @@
     if (!_cl_titleLabel) {
         
         _cl_titleLabel = [[UILabel alloc] init];
-     }
+        _cl_titleLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [_cl_titleLabel sizeToFit];
+    }
     
     return _cl_titleLabel;
 }
@@ -54,6 +60,13 @@
 - (void)setCl_titleString:(NSString *)cl_titleString {
     
     self.cl_titleLabel.text = cl_titleString;
+    
+    [self addSubview:self.cl_titleLabel];
+    
+    self.cl_titleLabel.frame = CGRectMake(BUTTON_WIDTH,
+                                          [UIScreen cl_fitScreen:40],
+                                          [UIScreen cl_getScreenWidth] - (BUTTON_WIDTH * 2),
+                                          LABEL_HEIGHT);
 }
 
 - (void)setCl_textAlignment:(NSTextAlignment)cl_textAlignment {
@@ -79,16 +92,16 @@
     
     [self addSubview:self.cl_leftButton];
     
-    [self.cl_leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        (void)make.left.bottom;
-        make.height.width.mas_equalTo([UIScreen cl_fitScreen:88]);
-    }];
+    self.cl_leftButton.frame = CGRectMake(0,
+                                          [UIScreen cl_fitScreen:40],
+                                          BUTTON_WIDTH,
+                                          BUTTON_HEIGHT);
 }
 
 - (void)leftButtonAction:(UIButton *)sender {
     
     if (self.cl_titleViewLeftButtonBlock) {
+        
         self.cl_titleViewLeftButtonBlock(sender);
     }
 }
@@ -111,30 +124,18 @@
 - (void)cl_needRightButton {
     [self addSubview:self.cl_rightButton];
     
-    [self.cl_rightButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        (void)make.left.bottom;
-        make.height.width.mas_equalTo([UIScreen cl_fitScreen:88]);
-    }];
+    self.cl_rightButton.frame = CGRectMake([UIScreen cl_getScreenWidth] - BUTTON_WIDTH,
+                                           [UIScreen cl_fitScreen:40],
+                                           BUTTON_WIDTH,
+                                           BUTTON_HEIGHT);
 }
 
 - (void)rightButtonAction:(UIButton *)sender {
     
     if (self.cl_titleViewRightButtonBlock) {
+        
         self.cl_titleViewRightButtonBlock(sender);
     }
-}
-
-#pragma mark - Add Constraints With Super View
-- (void)cl_addConstraintsWithSuperView {
-    
-    [self addSubview:self.cl_titleLabel];
-    
-    [self.cl_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        (void)make.left.right.bottom;
-        make.top.mas_equalTo([UIScreen cl_fitScreen:40]);
-    }];
 }
 
 @end

@@ -29,25 +29,22 @@
 
 @implementation CLTableViewController
 
+#pragma mark - View Did Load
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self addRefresh];
+    [self cl_addRefresh];
 }
 
-#pragma mark - Table View
 - (UITableView *)cl_tableView {
     
     if (!_cl_tableView) {
         
-        _cl_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,
-                                                                      0,
-                                                                      [UIScreen mainScreen].bounds.size.width,
-                                                                      [UIScreen mainScreen].bounds.size.height)];
-        
-        _cl_tableView.backgroundColor = [UIColor whiteColor];
+        _cl_tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     }
     
     return _cl_tableView;
@@ -56,7 +53,7 @@
 - (void)cl_setTableViewDelegate:(id<UITableViewDelegate>)delegate
                      dataSource:(id<UITableViewDataSource>)dataSource {
     
-    self.cl_tableView.delegate = delegate;
+    self.cl_tableView.delegate   = delegate;
     self.cl_tableView.dataSource = dataSource;
 }
 
@@ -82,7 +79,7 @@
 }
 
 #pragma mark - Refresh
-- (void)addRefresh {
+- (void)cl_addRefresh {
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self cl_dropDownRefresh];

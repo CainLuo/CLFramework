@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) SimpleCollectionViewDelegate *simpleCollectionViewDelegate;
 @property (nonatomic, strong) SimpleCollectionViewModel *simpleCollectionViewModel;
+@property (nonatomic, strong) CLTitleView *simpleTitleView;
 
 @end
 
@@ -29,8 +30,28 @@
                 identifier:@"UICollectionViewCell"];
     
     [self cl_dropDownBeginRefresh];
+    [self cl_addConstraintsWithSuperView];
+}
+
+- (CLTitleView *)simpleTitleView {
     
-    NSLog(@"%@", [[NSLocale preferredLanguages] objectAtIndex:0]);
+    CL_GET_METHOD_RETURN_OBJC(_simpleTitleView);
+    CL_WEAK_SELF(weakSelf);
+    
+    _simpleTitleView = [[CLTitleView alloc] init];
+
+    [_simpleTitleView cl_needLeftButton];
+    [_simpleTitleView cl_needRightButton];
+    
+    _simpleTitleView.backgroundColor = [UIColor grayColor];
+    _simpleTitleView.cl_titleString = @"SimpleCollectionViewController";
+    
+    [_simpleTitleView setCl_titleViewLeftButtonBlock:^(UIButton *sender){
+        
+        [weakSelf.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    return _simpleTitleView;
 }
 
 - (void)cl_dropDownRefresh {
@@ -56,6 +77,23 @@
     }
     
     return _simpleCollectionViewDelegate;
+}
+
+- (void)cl_addConstraintsWithSuperView {
+    
+    [self.view addSubview:self.simpleTitleView];
+    
+    [self.simpleTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.left.right.equalTo(self.view);
+        make.height.mas_equalTo([UIScreen cl_fitScreen:128]);
+    }];
+    
+    [self.cl_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.bottom.right.equalTo(self.view);
+        make.top.equalTo(self.simpleTitleView.mas_bottom);
+    }];
 }
 
 @end

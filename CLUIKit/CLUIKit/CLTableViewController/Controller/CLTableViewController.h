@@ -35,6 +35,5 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)cl_setTableViewDelegate:(_Nullable id <UITableViewDelegate>)delegate
                      dataSource:(_Nullable id <UITableViewDataSource>)dataSource;
-
 @end
 NS_ASSUME_NONNULL_END

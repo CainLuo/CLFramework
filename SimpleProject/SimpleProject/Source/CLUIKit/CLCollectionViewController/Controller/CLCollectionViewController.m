@@ -33,11 +33,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.cl_collectionView];
     
-    [self addRefresh];
+    [self cl_addRefresh];
 }
 
 - (void)cl_setCollectionViewDelegate:(id<UICollectionViewDelegate>)delegate
@@ -110,7 +112,7 @@
 }
 
 #pragma mark - Refresh
-- (void)addRefresh {
+- (void)cl_addRefresh {
     
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self cl_dropDownRefresh];
