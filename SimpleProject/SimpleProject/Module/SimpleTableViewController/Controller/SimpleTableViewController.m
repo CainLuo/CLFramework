@@ -15,6 +15,8 @@
 @property (nonatomic, strong) SimpleTableViewModel *simpleTableViewModel;
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
 
+@property (nonatomic, strong) UIView *titleView;
+
 @end
 
 @implementation SimpleTableViewController
@@ -22,7 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self cl_addConstraintsWithSuperView];
     
     [self cl_setTableViewDelegate:self.simpleTableViewDelegate
                        dataSource:self.simpleTableViewDelegate];
@@ -59,6 +63,31 @@
 }
 
 - (void)cl_addConstraintsWithSuperView {
+    
+    [self.view addSubview:self.titleView];
+    
+    [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.left.right.equalTo(self.view);
+        make.height.mas_equalTo([UIScreen cl_fitScreen:128]);
+    }];
+    
+    [self.cl_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.equalTo(self.titleView.mas_bottom);
+        make.left.bottom.right.equalTo(self.view);
+    }];
+}
+
+- (UIView *)titleView {
+    
+    CL_GET_METHOD_RETURN_OBJC(_titleView);
+    
+    _titleView = [[UIView alloc] init];
+    
+    _titleView.backgroundColor = [UIColor grayColor];
+    
+    return _titleView;
 }
 
 @end

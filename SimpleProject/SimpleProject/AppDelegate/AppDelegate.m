@@ -27,14 +27,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[SimpleTableViewController alloc] init]];
-    
-    navigationController.tabBarItem.title = @"首页";
-    
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     
-    [tabbarController addChildViewController:navigationController];
+    tabbarController.tabBar.translucent = NO;
     
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    
+    navigationController.navigationBar.hidden = YES;
+    
+    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
+
+    simpleTableViewController.title = @"1";
+    
+    [tabbarController setViewControllers:@[simpleTableViewController]];
+
     self.window.rootViewController = tabbarController;
     
     [self.window makeKeyAndVisible];
