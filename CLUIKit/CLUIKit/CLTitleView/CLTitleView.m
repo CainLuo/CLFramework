@@ -65,7 +65,7 @@
     
     self.cl_titleLabel.frame = CGRectMake(BUTTON_WIDTH,
                                           [UIScreen cl_fitScreen:40],
-                                          [UIScreen cl_getScreenWidth] - (BUTTON_WIDTH * 2),
+                                          [UIScreen cl_getScreenWidth] - (BUTTON_WIDTH * 2 - [UIScreen cl_fitScreen:10]),
                                           LABEL_HEIGHT);
 }
 
@@ -92,7 +92,7 @@
     
     [self addSubview:self.cl_leftButton];
     
-    self.cl_leftButton.frame = CGRectMake(0,
+    self.cl_leftButton.frame = CGRectMake([UIScreen cl_fitScreen:5],
                                           [UIScreen cl_fitScreen:40],
                                           BUTTON_WIDTH,
                                           BUTTON_HEIGHT);
@@ -124,7 +124,7 @@
 - (void)cl_needRightButton {
     [self addSubview:self.cl_rightButton];
     
-    self.cl_rightButton.frame = CGRectMake([UIScreen cl_getScreenWidth] - BUTTON_WIDTH,
+    self.cl_rightButton.frame = CGRectMake([UIScreen cl_getScreenWidth] - BUTTON_WIDTH - [UIScreen cl_fitScreen:5],
                                            [UIScreen cl_fitScreen:40],
                                            BUTTON_WIDTH,
                                            BUTTON_HEIGHT);
