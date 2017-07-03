@@ -103,6 +103,7 @@
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
 		A43874E41EE929E3001F4BC9 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */; };
 		A43874E51EE929E3001F4BC9 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */; };
+		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
 		A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */; };
 		A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */; };
 		A4D1CB4B1DEC4251007B6E59 /* SimpleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB4A1DEC4251007B6E59 /* SimpleProjectTests.m */; };
@@ -346,6 +347,7 @@
 		A43874DE1EE929E3001F4BC9 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
 		A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
 		A43874E01EE929E3001F4BC9 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLTitleView.bundle; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D1CB3F1DEC4251007B6E59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -634,6 +636,7 @@
 		A43873BC1EE92776001F4BC9 /* CLTitleView */ = {
 			isa = PBXGroup;
 			children = (
+				A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */,
 				A43873BD1EE92776001F4BC9 /* CLTitleView.h */,
 				A43873BE1EE92776001F4BC9 /* CLTitleView.m */,
 			);
@@ -1208,6 +1211,7 @@
 				A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */,
 				A43874AE1EE9278D001F4BC9 /* IQKeyboardManager.bundle in Resources */,
 				A438741B1EE92776001F4BC9 /* MJRefresh.bundle in Resources */,
+				A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,14 @@
 #import "SimpleTableViewController.h"
 #import "SimpleTableViewModel.h"
 #import "SimpleTableViewDelegate.h"
+#import "CLTitleView.h"
 
 @interface SimpleTableViewController ()
 
 @property (nonatomic, strong) SimpleTableViewModel *simpleTableViewModel;
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
 
-@property (nonatomic, strong) UIView *titleView;
+@property (nonatomic, strong) CLTitleView *titleView;
 
 @end
 
@@ -79,13 +80,16 @@
     }];
 }
 
-- (UIView *)titleView {
+- (CLTitleView *)titleView {
     
     CL_GET_METHOD_RETURN_OBJC(_titleView);
     
-    _titleView = [[UIView alloc] init];
+    _titleView = [[CLTitleView alloc] init];
     
     _titleView.backgroundColor = [UIColor grayColor];
+    _titleView.cl_titleString  = @"SimpleTableViewController";
+    _titleView.cl_titleColor   = [UIColor whiteColor];
+    _titleView.cl_titleFont    = 10.0;
     
     return _titleView;
 }
