@@ -13,10 +13,10 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CLViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@interface CLCollectionViewController : UIViewController
+@interface CLCollectionViewController : CLViewController
 
 @property (nonatomic, strong, readonly) UICollectionView *cl_collectionView;
 @property (nonatomic, strong, readonly) UICollectionViewFlowLayout *cl_collectionViewFlowLayout;

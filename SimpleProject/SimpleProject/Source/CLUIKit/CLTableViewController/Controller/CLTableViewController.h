@@ -13,12 +13,14 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CLViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@interface CLTableViewController : UIViewController
+@interface CLTableViewController : CLViewController
 
 @property (nonatomic, strong, readonly) UITableView *cl_tableView;
+
+- (instancetype)initTableViewControllerWithStyle:(UITableViewStyle)style;
 
 - (void)cl_removeRefresh;
 - (void)cl_removeHeaderRefresh;

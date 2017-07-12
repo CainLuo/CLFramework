@@ -66,3 +66,14 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #import <OtherFramework/IQUIView+Hierarchy.h>
 #import <OtherFramework/IQUIViewController+Additions.h>
 #import <OtherFramework/IQUIWindow+Hierarchy.h>
+
+#pragma mark - CYLTabBarController
+#import <OtherFramework/CYLConstants.h>
+
+##pragma mark - JQFMDB
+#import <OtherFramework/JQFMDB.h>
+#import <OtherFramework/FMDB.h>
+
+#pragma mark - YYModel
+#import <OtherFramework/YYModel.h>
+

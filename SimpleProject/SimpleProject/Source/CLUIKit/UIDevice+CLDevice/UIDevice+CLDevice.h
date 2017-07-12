@@ -38,4 +38,36 @@
  */
 + (NSString *)cl_getDeviceModelType;
 
+/**
+ 获取设备的唯一标识符
+
+ @return 获取设备的唯一标识符, 格式是:"E621E1F8-C36C-495A-93FC-0C247A3E6E5F"
+ */
++ (NSString *)cl_getUUIDString;
+
+/**
+ 获取当前网络运营商的名称
+
+ @return 中国移动/中国联通/中国电信或者其他运营商
+ */
++ (NSString *)cl_getCarrierName;
+
+/**
+ 获取当前网络的类型
+
+ @return 2G/3G/4G/WiFi或者未来的一些网络类型
+ CTRadioAccessTechnologyGPRS            //介于2G和3G之间，也叫2.5G ,过度技术
+ CTRadioAccessTechnologyEdge            //EDGE为GPRS到第三代移动通信的过渡，EDGE俗称2.75G
+ CTRadioAccessTechnologyWCDMA           //
+ CTRadioAccessTechnologyHSDPA           //亦称为3.5G(3?G)
+ CTRadioAccessTechnologyHSUPA           //3G到4G的过度技术
+ CTRadioAccessTechnologyCDMA1x          //3G
+ CTRadioAccessTechnologyCDMAEVDORev0    //3G标准
+ CTRadioAccessTechnologyCDMAEVDORevA
+ CTRadioAccessTechnologyCDMAEVDORevB
+ CTRadioAccessTechnologyeHRPD           //电信使用的一种3G到4G的演进技术， 3.75G
+ CTRadioAccessTechnologyLTE             //接近4G
+ */
++ (NSString *)cl_getCurrentRadioAccessTechnology;
+
 @end

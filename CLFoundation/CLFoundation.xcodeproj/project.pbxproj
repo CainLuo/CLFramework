@@ -29,11 +29,6 @@
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835D91DF72C24003B062C /* NSString+CLRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835DA1DF72C25003B062C /* NSString+CLRegular.m */; };
-		A4BA50C21EE7C2DA0042ECA9 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA50BD1EE7C2DA0042ECA9 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4BA50C31EE7C2DA0042ECA9 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA50BE1EE7C2DA0042ECA9 /* NSObject+YYModel.m */; };
-		A4BA50C41EE7C2DA0042ECA9 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA50BF1EE7C2DA0042ECA9 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4BA50C51EE7C2DA0042ECA9 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BA50C01EE7C2DA0042ECA9 /* YYClassInfo.m */; };
-		A4BA50C61EE7C2DA0042ECA9 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A4BA50C11EE7C2DA0042ECA9 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +53,6 @@
 		A44835C91DF72B2A003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44835D91DF72C24003B062C /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A44835DA1DF72C25003B062C /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
-		A4BA50BD1EE7C2DA0042ECA9 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
-		A4BA50BE1EE7C2DA0042ECA9 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
-		A4BA50BF1EE7C2DA0042ECA9 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
-		A4BA50C01EE7C2DA0042ECA9 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
-		A4BA50C11EE7C2DA0042ECA9 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +106,6 @@
 			children = (
 				A4037C5B1DF96E6D00C05F77 /* CLDefine.h */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
-				A4BA50BC1EE7C2DA0042ECA9 /* YYModel */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
 				A44835BD1DF72B29003B062C /* Info.plist */,
@@ -142,18 +131,6 @@
 			path = "NSString+CLRegular";
 			sourceTree = "<group>";
 		};
-		A4BA50BC1EE7C2DA0042ECA9 /* YYModel */ = {
-			isa = PBXGroup;
-			children = (
-				A4BA50BD1EE7C2DA0042ECA9 /* NSObject+YYModel.h */,
-				A4BA50BE1EE7C2DA0042ECA9 /* NSObject+YYModel.m */,
-				A4BA50BF1EE7C2DA0042ECA9 /* YYClassInfo.h */,
-				A4BA50C01EE7C2DA0042ECA9 /* YYClassInfo.m */,
-				A4BA50C11EE7C2DA0042ECA9 /* YYModel.h */,
-			);
-			path = YYModel;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -163,9 +140,6 @@
 			files = (
 				A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */,
 				A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */,
-				A4BA50C61EE7C2DA0042ECA9 /* YYModel.h in Headers */,
-				A4BA50C21EE7C2DA0042ECA9 /* NSObject+YYModel.h in Headers */,
-				A4BA50C41EE7C2DA0042ECA9 /* YYClassInfo.h in Headers */,
 				A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
 			);
@@ -295,8 +269,6 @@
 			files = (
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,
-				A4BA50C51EE7C2DA0042ECA9 /* YYClassInfo.m in Sources */,
-				A4BA50C31EE7C2DA0042ECA9 /* NSObject+YYModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

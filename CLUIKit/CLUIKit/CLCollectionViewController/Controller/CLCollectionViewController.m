@@ -87,7 +87,7 @@
     
     if (!_cl_collectionViewDelegate) {
         
-        _cl_collectionViewDelegate = [[CLCollectionViewDelegate alloc] initCollectionViewWithViewModel:self.cl_collectionViewBaseModel];
+        _cl_collectionViewDelegate = [[CLCollectionViewDelegate alloc] initCollectionViewDelegateWithViewModel:self.cl_collectionViewBaseModel];
     }
     
     return _cl_collectionViewDelegate;

@@ -20,6 +20,8 @@
 
 @interface CLTableViewController ()
 
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
+
 @property (nonatomic, strong, readwrite) UITableView *cl_tableView;
 
 @property (nonatomic, strong) CLTableViewDelegate *cl_tableViewDelegate;
@@ -29,10 +31,23 @@
 
 @implementation CLTableViewController
 
+- (instancetype)initTableViewControllerWithStyle:(UITableViewStyle)style {
+    
+    self = [super init];
+    
+    if (self) {
+        
+        [self setTableViewStyle:style];
+    }
+    
+    return self;
+}
+
 #pragma mark - View Did Load
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.opaque = YES;
     self.automaticallyAdjustsScrollViewInsets = NO;
 
     self.view.backgroundColor = [UIColor whiteColor];
@@ -44,7 +59,10 @@
     
     if (!_cl_tableView) {
         
-        _cl_tableView = [[UITableView alloc] initWithFrame:self.view.frame];
+        _cl_tableView = [[UITableView alloc] initWithFrame:self.view.frame
+                                                     style:self.tableViewStyle];
+        
+        _cl_tableView.opaque = YES;
     }
     
     return _cl_tableView;
@@ -53,7 +71,7 @@
 - (void)cl_setTableViewDelegate:(id<UITableViewDelegate>)delegate
                      dataSource:(id<UITableViewDataSource>)dataSource {
     
-    self.cl_tableView.delegate = delegate;
+    self.cl_tableView.delegate   = delegate;
     self.cl_tableView.dataSource = dataSource;
 }
 

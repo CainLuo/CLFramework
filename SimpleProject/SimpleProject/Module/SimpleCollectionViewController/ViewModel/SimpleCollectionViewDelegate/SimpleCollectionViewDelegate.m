@@ -10,18 +10,10 @@
 
 @implementation SimpleCollectionViewDelegate
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return self.cl_collectionViewBaseModel.cl_dataSource.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    
-    cell.backgroundColor = [UIColor redColor];
-    
-    return cell;
+    NSLog(@"点击了: %ld", indexPath.row);
 }
 
 @end

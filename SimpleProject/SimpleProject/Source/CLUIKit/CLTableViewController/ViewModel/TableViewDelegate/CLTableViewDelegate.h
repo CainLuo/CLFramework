@@ -17,7 +17,7 @@
 #import <UIKit/UIKit.h>
 #import "CLTableViewBaseModel.h"
 
-@interface CLTableViewDelegate : NSObject <UITableViewDelegate, UITableViewDataSource>
+@interface CLTableViewDelegate : NSObject <UITableViewDelegate>
 
 @property (nonatomic, strong, readonly) CLTableViewBaseModel *cl_viewModel;
 

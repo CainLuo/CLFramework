@@ -6,21 +6,20 @@
 //  |  \__  |   __   |  _|  |_  |  |  \    |
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
-//  CLCollectionViewDelegate.h
+//  CLCollectionViewDataSource.h
 //  SimpleProject
 //
-//  Created by Cain on 2016/12/1.
-//  Copyright © 2016年 Cain Luo. All rights reserved.
+//  Created by Cain on 2017/7/12.
+//  Copyright © 2017年 Cain Luo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import "CLCollectionViewBaseModel.h"
 
-@interface CLCollectionViewDelegate : NSObject <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CLCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
 @property (nonatomic, strong, readonly) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
 
-- (instancetype)initCollectionViewWithViewModel:(CLCollectionViewBaseModel *)viewModel;
+- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewBaseModel *)viewModel;
 
 @end

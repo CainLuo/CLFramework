@@ -23,7 +23,7 @@
 
 @implementation CLCollectionViewDelegate
 
-- (instancetype)initCollectionViewWithViewModel:(CLCollectionViewBaseModel *)viewModel {
+- (instancetype)initCollectionViewDelegateWithViewModel:(CLCollectionViewBaseModel *)viewModel {
     
     self = [super init];
     
@@ -32,19 +32,6 @@
     }
     
     return self;
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView
-     numberOfItemsInSection:(NSInteger)section {
-    
-    return 0;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    
-    return cell;
 }
 
 @end

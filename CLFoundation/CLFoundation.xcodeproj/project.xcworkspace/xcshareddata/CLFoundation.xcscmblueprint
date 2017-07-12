@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "683D00B2287C3C916DE6CD67E4DB04DCFA06B2EF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7AB4801C3484AF5026971B3CE4BDADF0B2758447" : 9223372036854775807,
+    "683D00B2287C3C916DE6CD67E4DB04DCFA06B2EF" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C13EC457-85F8-4134-A672-4F04297BAB60",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7AB4801C3484AF5026971B3CE4BDADF0B2758447" : "",
+    "683D00B2287C3C916DE6CD67E4DB04DCFA06B2EF" : "CLFramework\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CLFoundation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CLFoundation\/CLFoundation.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/CainRun\/CLFramework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "683D00B2287C3C916DE6CD67E4DB04DCFA06B2EF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.oschina.net\/cainLuo\/yuyouzixun.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7AB4801C3484AF5026971B3CE4BDADF0B2758447"
+    }
+  ]
+}

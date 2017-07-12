@@ -19,7 +19,9 @@ typedef NS_ENUM(NSInteger, CLTitleViewType) {
     
     CLTitleViewTitleType = 0, // Default
     CLTitleViewBackType,
-    CLTItleViewShareType
+    CLTitleViewCloseType,
+    CLTitleViewShareType,
+    CLTitleViewRightAloneType
 };
 
 @interface CLTitleView : UIView
@@ -69,6 +71,13 @@ typedef NS_ENUM(NSInteger, CLTitleViewType) {
 #pragma mark - Need Buttons
 - (void)cl_needLeftButton;
 - (void)cl_needRightButton;
+
+#pragma mark - Change Buttons Image
+- (void)cl_changeLeftButtonWithImageName:(NSString *)imageName
+                       highImageName:(NSString *)highImageName;
+
+- (void)cl_changeRightButtonWithImageName:(NSString *)imageName
+                            highImageName:(NSString *)highImageName;
 
 #pragma mark - Buttons Action
 @property (nonatomic, copy) void(^cl_titleViewLeftButtonBlock)(UIButton *sender);

@@ -9,12 +9,15 @@
 #import "SimpleTableViewController.h"
 #import "SimpleTableViewModel.h"
 #import "SimpleTableViewDelegate.h"
+#import "SimpleTableViewDataSource.h"
+
 #import "CLTitleView.h"
 
 @interface SimpleTableViewController ()
 
 @property (nonatomic, strong) SimpleTableViewModel *simpleTableViewModel;
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
+@property (nonatomic, strong) SimpleTableViewDataSource *simpleTableViewDataSource;
 
 @property (nonatomic, strong) CLTitleView *titleView;
 
@@ -30,9 +33,13 @@
     [self cl_addConstraintsWithSuperView];
     
     [self cl_setTableViewDelegate:self.simpleTableViewDelegate
-                       dataSource:self.simpleTableViewDelegate];
+                       dataSource:self.simpleTableViewDataSource];
     
     [self cl_dropDownBeginRefresh];
+    
+    NSLog(@"%@", [UIDevice cl_getUUIDString]);
+    NSLog(@"%@", [UIDevice cl_getCarrierName]);
+    NSLog(@"%@", [UIDevice cl_getCurrentRadioAccessTechnology]);
 }
 
 - (void)cl_dropDownRefresh {
@@ -46,21 +53,29 @@
 
 - (SimpleTableViewModel *)simpleTableViewModel {
 
-    if (!_simpleTableViewModel) {
-        _simpleTableViewModel = [[SimpleTableViewModel alloc] initTableViewBaseModelWithController:self];
-    }
+    CL_GET_METHOD_RETURN_OBJC(_simpleTableViewModel);
+    
+    _simpleTableViewModel = [[SimpleTableViewModel alloc] initTableViewBaseModelWithController:self];
 
     return _simpleTableViewModel;
 }
 
 - (SimpleTableViewDelegate *)simpleTableViewDelegate {
     
-    if (!_simpleTableViewDelegate) {
-        
-        _simpleTableViewDelegate = [[SimpleTableViewDelegate alloc] initTableViewDelegateWithViewModel:self.simpleTableViewModel];
-    }
+    CL_GET_METHOD_RETURN_OBJC(_simpleTableViewDelegate);
+    
+    _simpleTableViewDelegate = [[SimpleTableViewDelegate alloc] initTableViewDelegateWithViewModel:self.simpleTableViewModel];
     
     return _simpleTableViewDelegate;
+}
+
+- (SimpleTableViewDataSource *)simpleTableViewDataSource {
+    
+    CL_GET_METHOD_RETURN_OBJC(_simpleTableViewDataSource);
+    
+    _simpleTableViewDataSource = [[SimpleTableViewDataSource alloc] initTableViewDataSourceWithViewModel:self.simpleTableViewModel];
+    
+    return _simpleTableViewDataSource;
 }
 
 - (void)cl_addConstraintsWithSuperView {

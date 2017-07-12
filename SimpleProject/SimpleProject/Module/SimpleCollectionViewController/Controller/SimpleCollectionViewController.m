@@ -9,11 +9,14 @@
 #import "SimpleCollectionViewController.h"
 #import "SimpleCollectionViewDelegate.h"
 #import "SimpleCollectionViewModel.h"
+#import "SimpleCollectionViewDataSource.h"
 
 @interface SimpleCollectionViewController ()
 
 @property (nonatomic, strong) SimpleCollectionViewDelegate *simpleCollectionViewDelegate;
+@property (nonatomic, strong) SimpleCollectionViewDataSource *simpleCollectionViewDataSource;
 @property (nonatomic, strong) SimpleCollectionViewModel *simpleCollectionViewModel;
+
 @property (nonatomic, strong) CLTitleView *simpleTitleView;
 
 @end
@@ -24,7 +27,7 @@
     [super viewDidLoad];
     
     [self cl_setCollectionViewDelegate:self.simpleCollectionViewDelegate
-                            dataSource:self.simpleCollectionViewDelegate];
+                            dataSource:self.simpleCollectionViewDataSource];
     
     [self cl_registerClass:[UICollectionViewCell class]
                 identifier:@"UICollectionViewCell"];
@@ -38,7 +41,7 @@
     CL_GET_METHOD_RETURN_OBJC(_simpleTitleView);
     CL_WEAK_SELF(weakSelf);
     
-    _simpleTitleView = [[CLTitleView alloc] init];
+    _simpleTitleView = [[CLTitleView alloc] initCLTitleViewWithType:CLTitleViewCloseType];
 
     [_simpleTitleView cl_needLeftButton];
     [_simpleTitleView cl_needRightButton];
@@ -73,10 +76,19 @@
     
     if (!_simpleCollectionViewDelegate) {
         
-        _simpleCollectionViewDelegate = [[SimpleCollectionViewDelegate alloc] initCollectionViewWithViewModel:self.simpleCollectionViewModel];
+        _simpleCollectionViewDelegate = [[SimpleCollectionViewDelegate alloc] initCollectionViewDelegateWithViewModel:self.simpleCollectionViewModel];
     }
     
     return _simpleCollectionViewDelegate;
+}
+
+- (SimpleCollectionViewDataSource *)simpleCollectionViewDataSource {
+    
+    CL_GET_METHOD_RETURN_OBJC(_simpleCollectionViewDataSource);
+    
+    _simpleCollectionViewDataSource = [[SimpleCollectionViewDataSource alloc] initCollectionViewDataSourceWithViewModel:self.simpleCollectionViewModel];
+    
+    return _simpleCollectionViewDataSource;
 }
 
 - (void)cl_addConstraintsWithSuperView {

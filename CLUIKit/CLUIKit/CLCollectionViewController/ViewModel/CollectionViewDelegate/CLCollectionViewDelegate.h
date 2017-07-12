@@ -17,10 +17,10 @@
 #import <UIKit/UIKit.h>
 #import "CLCollectionViewBaseModel.h"
 
-@interface CLCollectionViewDelegate : NSObject <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface CLCollectionViewDelegate : NSObject <UICollectionViewDelegate>
 
 @property (nonatomic, strong, readonly) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
 
-- (instancetype)initCollectionViewWithViewModel:(CLCollectionViewBaseModel *)viewModel;
+- (instancetype)initCollectionViewDelegateWithViewModel:(CLCollectionViewBaseModel *)viewModel;
 
 @end
