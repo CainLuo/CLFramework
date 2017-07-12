@@ -1,10 +1,9 @@
-# CLUIKit
-
-
+# CLUIKit介绍文档
 
 ## CLCollectionView
 
-	### CLCollectionViewController
+### CLCollectionViewController
+
 
 ​	主要是添加了`MJRefresh`, 并且默认提供了一个`UICollectionViewFlowLayout`, 使得刚开始就算没有`UICollectionViewFlowLayout`也不会造成`Crash`的问题.
 
