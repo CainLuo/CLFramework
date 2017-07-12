@@ -31,9 +31,9 @@
 #define CL_GET_IMAGE(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
 
 #ifdef DEBUG
-    #define CLLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+    #define NSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
-    #define CLLog(...)
+    #define NSLog(...)
 #endif
 
 #endif /* CLDefine_h */

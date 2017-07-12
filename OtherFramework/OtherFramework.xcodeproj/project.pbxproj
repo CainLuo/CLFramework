@@ -21,11 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A42AC5071F15CDC100DA0D58 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5021F15CDC100DA0D58 /* NSObject+YYModel.h */; };
+		A42AC5071F15CDC100DA0D58 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5021F15CDC100DA0D58 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC5081F15CDC100DA0D58 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC5031F15CDC100DA0D58 /* NSObject+YYModel.m */; };
-		A42AC5091F15CDC100DA0D58 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5041F15CDC100DA0D58 /* YYClassInfo.h */; };
+		A42AC5091F15CDC100DA0D58 /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5041F15CDC100DA0D58 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC50A1F15CDC100DA0D58 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC5051F15CDC100DA0D58 /* YYClassInfo.m */; };
-		A42AC50B1F15CDC100DA0D58 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5061F15CDC100DA0D58 /* YYModel.h */; };
+		A42AC50B1F15CDC100DA0D58 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC5061F15CDC100DA0D58 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4386E9B1EE8F163001F4BC9 /* IQNSArray+Sort.h in Headers */ = {isa = PBXBuildFile; fileRef = A4386E5E1EE8F163001F4BC9 /* IQNSArray+Sort.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4386E9C1EE8F163001F4BC9 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A4386E5F1EE8F163001F4BC9 /* IQNSArray+Sort.m */; };
 		A4386E9D1EE8F163001F4BC9 /* IQUIScrollView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = A4386E601EE8F163001F4BC9 /* IQUIScrollView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -669,7 +669,6 @@
 				A4386EA51EE8F163001F4BC9 /* IQUIWindow+Hierarchy.h in Headers */,
 				A4386EB51EE8F163001F4BC9 /* IQToolbar.h in Headers */,
 				A4386EB11EE8F163001F4BC9 /* IQPreviousNextView.h in Headers */,
-				A42AC5071F15CDC100DA0D58 /* NSObject+YYModel.h in Headers */,
 				A4386EA11EE8F163001F4BC9 /* IQUIView+Hierarchy.h in Headers */,
 				A4386EBC1EE8F163001F4BC9 /* MASConstraint+Private.h in Headers */,
 				A4386E9D1EE8F163001F4BC9 /* IQUIScrollView+Additions.h in Headers */,
@@ -702,7 +701,6 @@
 				A4C38D641F0B785000A52AB2 /* CYLPlusButton.h in Headers */,
 				A4C38D6E1F0B785000A52AB2 /* UIView+CYLTabBarControllerExtention.h in Headers */,
 				A46FBCB21EE6EFF900BA0CC1 /* SDWebImagePrefetcher.h in Headers */,
-				A42AC5091F15CDC100DA0D58 /* YYClassInfo.h in Headers */,
 				A46FBCA11EE6EFF800BA0CC1 /* NSImage+WebCache.h in Headers */,
 				A46FBCB81EE6EFF900BA0CC1 /* UIImage+MultiFormat.h in Headers */,
 				A4BA96971F14BAF700C3C613 /* FMDB.h in Headers */,
@@ -716,10 +714,12 @@
 				A46FBCBE1EE6EFF900BA0CC1 /* UIView+WebCache.h in Headers */,
 				A46FBCB61EE6EFF900BA0CC1 /* UIImage+GIF.h in Headers */,
 				A46FBCA31EE6EFF800BA0CC1 /* SDImageCache.h in Headers */,
+				A42AC5071F15CDC100DA0D58 /* NSObject+YYModel.h in Headers */,
+				A42AC5091F15CDC100DA0D58 /* YYClassInfo.h in Headers */,
+				A42AC50B1F15CDC100DA0D58 /* YYModel.h in Headers */,
 				A46FBCA91EE6EFF900BA0CC1 /* SDWebImageDecoder.h in Headers */,
 				A46FBC701EE6EE6600BA0CC1 /* SDCollectionViewCell.h in Headers */,
 				A46FBC6A1EE6EE6600BA0CC1 /* TAAnimatedDotView.h in Headers */,
-				A42AC50B1F15CDC100DA0D58 /* YYModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

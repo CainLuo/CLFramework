@@ -73,3 +73,7 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 ##pragma mark - JQFMDB
 #import <OtherFramework/JQFMDB.h>
 #import <OtherFramework/FMDB.h>
+
+#pragma mark - YYModel
+#import <OtherFramework/YYModel.h>
+

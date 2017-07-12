@@ -82,23 +82,23 @@
 		A42AC4B91F15C20900DA0D58 /* UIScreen+CLScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC46F1F15C20900DA0D58 /* UIScreen+CLScreen.m */; };
 		A42AC4BA1F15C20900DA0D58 /* UIViewController+CLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4711F15C20900DA0D58 /* UIViewController+CLViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4BB1F15C20900DA0D58 /* UIViewController+CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4721F15C20900DA0D58 /* UIViewController+CLViewController.m */; };
-		A42AC4C31F15C40500DA0D58 /* CLNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4C11F15C40500DA0D58 /* CLNavigationController.h */; };
+		A42AC4C31F15C40500DA0D58 /* CLNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4C11F15C40500DA0D58 /* CLNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4C41F15C40500DA0D58 /* CLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4C21F15C40500DA0D58 /* CLNavigationController.m */; };
-		A42AC4DB1F15C74400DA0D58 /* CLTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4CF1F15C74400DA0D58 /* CLTableViewController.h */; };
+		A42AC4DB1F15C74400DA0D58 /* CLTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4CF1F15C74400DA0D58 /* CLTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4DC1F15C74400DA0D58 /* CLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4D01F15C74400DA0D58 /* CLTableViewController.m */; };
-		A42AC4DD1F15C74400DA0D58 /* CLTableViewBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D31F15C74400DA0D58 /* CLTableViewBaseModel.h */; };
+		A42AC4DD1F15C74400DA0D58 /* CLTableViewBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D31F15C74400DA0D58 /* CLTableViewBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4DE1F15C74400DA0D58 /* CLTableViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4D41F15C74400DA0D58 /* CLTableViewBaseModel.m */; };
-		A42AC4DF1F15C74400DA0D58 /* CLTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D61F15C74400DA0D58 /* CLTableViewDataSource.h */; };
+		A42AC4DF1F15C74400DA0D58 /* CLTableViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D61F15C74400DA0D58 /* CLTableViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4E01F15C74400DA0D58 /* CLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4D71F15C74400DA0D58 /* CLTableViewDataSource.m */; };
-		A42AC4E11F15C74400DA0D58 /* CLTableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D91F15C74400DA0D58 /* CLTableViewDelegate.h */; };
+		A42AC4E11F15C74400DA0D58 /* CLTableViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4D91F15C74400DA0D58 /* CLTableViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4E21F15C74400DA0D58 /* CLTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4DA1F15C74400DA0D58 /* CLTableViewDelegate.m */; };
-		A42AC4F91F15CC6C00DA0D58 /* CLCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4ED1F15CC6C00DA0D58 /* CLCollectionViewController.h */; };
+		A42AC4F91F15CC6C00DA0D58 /* CLCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4ED1F15CC6C00DA0D58 /* CLCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4FA1F15CC6C00DA0D58 /* CLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4EE1F15CC6C00DA0D58 /* CLCollectionViewController.m */; };
-		A42AC4FB1F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F11F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h */; };
+		A42AC4FB1F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F11F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4FC1F15CC6C00DA0D58 /* CLCollectionViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4F21F15CC6C00DA0D58 /* CLCollectionViewBaseModel.m */; };
-		A42AC4FD1F15CC6C00DA0D58 /* CLCollectionViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F41F15CC6C00DA0D58 /* CLCollectionViewDataSource.h */; };
+		A42AC4FD1F15CC6C00DA0D58 /* CLCollectionViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F41F15CC6C00DA0D58 /* CLCollectionViewDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4FE1F15CC6C00DA0D58 /* CLCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4F51F15CC6C00DA0D58 /* CLCollectionViewDataSource.m */; };
-		A42AC4FF1F15CC6C00DA0D58 /* CLCollectionViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F71F15CC6C00DA0D58 /* CLCollectionViewDelegate.h */; };
+		A42AC4FF1F15CC6C00DA0D58 /* CLCollectionViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4F71F15CC6C00DA0D58 /* CLCollectionViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC5001F15CC6C00DA0D58 /* CLCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4F81F15CC6C00DA0D58 /* CLCollectionViewDelegate.m */; };
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
@@ -585,13 +585,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42AC4AC1F15C20900DA0D58 /* CLApplication.h in Headers */,
-				A42AC4FB1F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h in Headers */,
 				A42AC4AE1F15C20900DA0D58 /* UIButton+CLButton.h in Headers */,
-				A42AC4DF1F15C74400DA0D58 /* CLTableViewDataSource.h in Headers */,
 				A42AC4821F15C20900DA0D58 /* CLViewController.h in Headers */,
 				A42AC4961F15C20900DA0D58 /* MJRefreshBackNormalFooter.h in Headers */,
 				A42AC4A41F15C20900DA0D58 /* NSBundle+MJRefresh.h in Headers */,
-				A42AC4F91F15CC6C00DA0D58 /* CLCollectionViewController.h in Headers */,
 				A42AC4841F15C20900DA0D58 /* MJRefreshAutoFooter.h in Headers */,
 				A42AC49E1F15C20900DA0D58 /* MJRefreshStateHeader.h in Headers */,
 				A42AC4B61F15C20900DA0D58 /* UIImageView+CLImageView.h in Headers */,
@@ -599,7 +596,6 @@
 				A42AC4AA1F15C20900DA0D58 /* UIView+MJExtension.h in Headers */,
 				A42AC4A61F15C20900DA0D58 /* UIScrollView+MJExtension.h in Headers */,
 				A42AC4901F15C20900DA0D58 /* MJRefreshAutoNormalFooter.h in Headers */,
-				A42AC4FD1F15CC6C00DA0D58 /* CLCollectionViewDataSource.h in Headers */,
 				A42AC4881F15C20900DA0D58 /* MJRefreshComponent.h in Headers */,
 				A42AC4981F15C20900DA0D58 /* MJRefreshBackStateFooter.h in Headers */,
 				A42AC4A81F15C20900DA0D58 /* UIScrollView+MJRefresh.h in Headers */,
@@ -607,23 +603,27 @@
 				A42AC4B81F15C20900DA0D58 /* UIScreen+CLScreen.h in Headers */,
 				A42AC4921F15C20900DA0D58 /* MJRefreshAutoStateFooter.h in Headers */,
 				A42AC4A21F15C20900DA0D58 /* MJRefreshConst.h in Headers */,
-				A42AC4C31F15C40500DA0D58 /* CLNavigationController.h in Headers */,
-				A42AC4DD1F15C74400DA0D58 /* CLTableViewBaseModel.h in Headers */,
-				A42AC4FF1F15CC6C00DA0D58 /* CLCollectionViewDelegate.h in Headers */,
 				A42AC4941F15C20900DA0D58 /* MJRefreshBackGifFooter.h in Headers */,
 				A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */,
 				A42AC4801F15C20900DA0D58 /* CLTitleView.h in Headers */,
 				A42AC49C1F15C20900DA0D58 /* MJRefreshNormalHeader.h in Headers */,
 				A42AC48E1F15C20900DA0D58 /* MJRefreshAutoGifFooter.h in Headers */,
+				A42AC4FB1F15CC6C00DA0D58 /* CLCollectionViewBaseModel.h in Headers */,
+				A42AC4DF1F15C74400DA0D58 /* CLTableViewDataSource.h in Headers */,
+				A42AC4F91F15CC6C00DA0D58 /* CLCollectionViewController.h in Headers */,
+				A42AC4FD1F15CC6C00DA0D58 /* CLCollectionViewDataSource.h in Headers */,
+				A42AC4C31F15C40500DA0D58 /* CLNavigationController.h in Headers */,
+				A42AC4DD1F15C74400DA0D58 /* CLTableViewBaseModel.h in Headers */,
+				A42AC4FF1F15CC6C00DA0D58 /* CLCollectionViewDelegate.h in Headers */,
+				A42AC4E11F15C74400DA0D58 /* CLTableViewDelegate.h in Headers */,
+				A42AC4DB1F15C74400DA0D58 /* CLTableViewController.h in Headers */,
 				A42AC4861F15C20900DA0D58 /* MJRefreshBackFooter.h in Headers */,
 				A42AC4BA1F15C20900DA0D58 /* UIViewController+CLViewController.h in Headers */,
 				A42AC48A1F15C20900DA0D58 /* MJRefreshFooter.h in Headers */,
-				A42AC4E11F15C74400DA0D58 /* CLTableViewDelegate.h in Headers */,
 				A42AC4B01F15C20900DA0D58 /* UIColor+CLColor.h in Headers */,
 				A42AC49A1F15C20900DA0D58 /* MJRefreshGifHeader.h in Headers */,
 				A42AC4B21F15C20900DA0D58 /* UIDevice+CLDevice.h in Headers */,
 				A42AC4A11F15C20900DA0D58 /* MJRefresh.h in Headers */,
-				A42AC4DB1F15C74400DA0D58 /* CLTableViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
