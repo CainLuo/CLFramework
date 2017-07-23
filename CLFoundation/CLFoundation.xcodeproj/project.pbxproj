@@ -24,6 +24,10 @@
 		A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C5B1DF96E6D00C05F77 /* CLDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A4386F0D1EE91047001F4BC9 /* NSBundle+CLBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A4386F0E1EE91047001F4BC9 /* NSBundle+CLBundle.m */; };
+		A43C457F1F1A6FD7001B0FD5 /* NSDate+CLDate.h in Headers */ = {isa = PBXBuildFile; fileRef = A43C457A1F1A6FD7001B0FD5 /* NSDate+CLDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43C45801F1A6FD7001B0FD5 /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C457B1F1A6FD7001B0FD5 /* NSDate+CLDate.m */; };
+		A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A43C457D1F1A6FD7001B0FD5 /* NSURL+CLURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C457E1F1A6FD7001B0FD5 /* NSURL+CLURL.m */; };
 		A44835C31DF72B2A003B062C /* CLFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A44835B91DF72B29003B062C /* CLFoundation.framework */; };
 		A44835C81DF72B2A003B062C /* CLFoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835C71DF72B2A003B062C /* CLFoundationTests.m */; };
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -45,6 +49,10 @@
 		A4037C5B1DF96E6D00C05F77 /* CLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
 		A4386F0D1EE91047001F4BC9 /* NSBundle+CLBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CLBundle.h"; sourceTree = "<group>"; };
 		A4386F0E1EE91047001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
+		A43C457A1F1A6FD7001B0FD5 /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
+		A43C457B1F1A6FD7001B0FD5 /* NSDate+CLDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CLDate.m"; sourceTree = "<group>"; };
+		A43C457D1F1A6FD7001B0FD5 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
+		A43C457E1F1A6FD7001B0FD5 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A44835B91DF72B29003B062C /* CLFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CLFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44835BC1DF72B29003B062C /* CLFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLFoundation.h; sourceTree = "<group>"; };
 		A44835BD1DF72B29003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +91,24 @@
 			path = "NSBundle+CLBundle";
 			sourceTree = "<group>";
 		};
+		A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */ = {
+			isa = PBXGroup;
+			children = (
+				A43C457A1F1A6FD7001B0FD5 /* NSDate+CLDate.h */,
+				A43C457B1F1A6FD7001B0FD5 /* NSDate+CLDate.m */,
+			);
+			path = "NSDate+CLDate";
+			sourceTree = "<group>";
+		};
+		A43C457C1F1A6FD7001B0FD5 /* NSURL+CLURL */ = {
+			isa = PBXGroup;
+			children = (
+				A43C457D1F1A6FD7001B0FD5 /* NSURL+CLURL.h */,
+				A43C457E1F1A6FD7001B0FD5 /* NSURL+CLURL.m */,
+			);
+			path = "NSURL+CLURL";
+			sourceTree = "<group>";
+		};
 		A44835AF1DF72B29003B062C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				A4037C5B1DF96E6D00C05F77 /* CLDefine.h */,
+				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
+				A43C457C1F1A6FD7001B0FD5 /* NSURL+CLURL */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
@@ -140,6 +168,8 @@
 			files = (
 				A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */,
 				A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */,
+				A43C457F1F1A6FD7001B0FD5 /* NSDate+CLDate.h in Headers */,
+				A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */,
 				A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
 			);
@@ -268,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
+				A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,
+				A43C45801F1A6FD7001B0FD5 /* NSDate+CLDate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

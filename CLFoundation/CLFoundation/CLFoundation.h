@@ -29,5 +29,11 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 #pragma mark - NSBundle+CLBundle
 #import <CLFoundation/NSBundle+CLBundle.h>
 
+#pragma mark - NSDate+CLDate
+#import <CLFoundation/NSDate+CLDate.h>
+
+#pragma mark - NSURL+CLURL
+#import <CLFoundation/NSURL+CLURL.h>
+
 #pragma mark - CLDefine
 #import <CLFoundation/CLDefine.h>

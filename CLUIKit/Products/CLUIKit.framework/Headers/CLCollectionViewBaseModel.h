@@ -18,7 +18,7 @@
 
 @interface CLCollectionViewBaseModel : NSObject
 
-@property (nonatomic, strong, readonly) CLCollectionViewController *cl_collectionViewController;
+@property (nonatomic, weak, readonly) CLCollectionViewController *cl_collectionViewController;
 @property (nonatomic, strong) NSMutableArray *cl_dataSource;
 
 - (instancetype)initCollectionViewBaseModelWithController:(CLCollectionViewController *)viewController;

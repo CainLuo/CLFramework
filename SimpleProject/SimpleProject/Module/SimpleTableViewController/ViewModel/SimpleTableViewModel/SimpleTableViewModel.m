@@ -11,7 +11,7 @@
 @implementation SimpleTableViewModel
 
 - (void)cl_tableViewHTTPRequest {
-    
+
     NSArray *array = @[@"SimpleCollectionViewController",
                        @"SimpleQRCodeImageViewController",
                        @"SimpleImageViewController"];
@@ -20,6 +20,8 @@
     
     [self.cl_tableViewController.cl_tableView reloadData];
     [self.cl_tableViewController cl_dropDownEndRefresh];
+    
+    [self cl_configTableViewWithDataSource];
 }
 
 @end

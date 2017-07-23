@@ -19,10 +19,18 @@
 @interface CLTableViewBaseModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *cl_dataSource;
-@property (nonatomic, strong, readonly) CLTableViewController *cl_tableViewController;
+@property (nonatomic, weak, readonly) CLTableViewController *cl_tableViewController;
 
 - (instancetype)initTableViewBaseModelWithController:(CLTableViewController *)viewController;
 
+/**
+ 通过HTTP请求数据
+ */
 - (void)cl_tableViewHTTPRequest;
+
+/**
+ 配置TableView每一条Cell所显示的分割线
+ */
+- (void)cl_configTableViewWithDataSource;
 
 @end

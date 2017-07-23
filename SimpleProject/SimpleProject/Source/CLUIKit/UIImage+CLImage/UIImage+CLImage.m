@@ -19,14 +19,12 @@
  @return 图片
  */
 + (UIImage *)cl_getImageForView:(UIView *)view {
-
-        UIImage *imageRet = [[UIImage alloc] init];
     
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
     
         [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     
-        imageRet = UIGraphicsGetImageFromCurrentImageContext();
+        UIImage *imageRet = UIGraphicsGetImageFromCurrentImageContext();
     
         UIGraphicsEndImageContext();
     

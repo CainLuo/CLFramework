@@ -26,12 +26,21 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cl_removeHeaderRefresh;
 - (void)cl_removeFooterRefresh;
 
+/**
+ 下拉刷新方法/上拉加载方法
+ */
 - (void)cl_dropDownRefresh;
 - (void)cl_pullUpRefresh;
 
+/**
+ 开始执行下拉操作/结束下拉操作
+ */
 - (void)cl_dropDownBeginRefresh;
 - (void)cl_dropDownEndRefresh;
 
+/**
+ 开始执行上拉操作/结束上拉操作
+ */
 - (void)cl_pullUpBeginRefresh;
 - (void)cl_pullUpEndRefresh;
 

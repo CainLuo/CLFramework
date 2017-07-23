@@ -108,9 +108,8 @@
 		A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A438749D1EE9278D001F4BC9 /* UIView+WebCacheOperation.m */; };
 		A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */; };
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
-		A43874E41EE929E3001F4BC9 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */; };
-		A43874E51EE929E3001F4BC9 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
+		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
 		A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */; };
 		A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D1CB3E1DEC4251007B6E59 /* LaunchScreen.storyboard */; };
@@ -364,13 +363,10 @@
 		A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
 		A43874D91EE929E3001F4BC9 /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
-		A43874DC1EE929E3001F4BC9 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
-		A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
-		A43874DE1EE929E3001F4BC9 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
-		A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
-		A43874E01EE929E3001F4BC9 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
+		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
+		A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CLDate.m"; sourceTree = "<group>"; };
 		A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLTitleView.bundle; sourceTree = "<group>"; };
 		A4D1CB2D1DEC4251007B6E59 /* SimpleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D1CB3C1DEC4251007B6E59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1109,10 +1105,10 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
 				A4996E471F1306E300F99E40 /* NSURL+CLURL */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
-				A43874DB1EE929E3001F4BC9 /* YYModel */,
 			);
 			path = CLFoundation;
 			sourceTree = "<group>";
@@ -1135,18 +1131,6 @@
 			path = "NSString+CLRegular";
 			sourceTree = "<group>";
 		};
-		A43874DB1EE929E3001F4BC9 /* YYModel */ = {
-			isa = PBXGroup;
-			children = (
-				A43874DC1EE929E3001F4BC9 /* NSObject+YYModel.h */,
-				A43874DD1EE929E3001F4BC9 /* NSObject+YYModel.m */,
-				A43874DE1EE929E3001F4BC9 /* YYClassInfo.h */,
-				A43874DF1EE929E3001F4BC9 /* YYClassInfo.m */,
-				A43874E01EE929E3001F4BC9 /* YYModel.h */,
-			);
-			path = YYModel;
-			sourceTree = "<group>";
-		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -1154,6 +1138,15 @@
 				A4996E491F1306F100F99E40 /* NSURL+CLURL.m */,
 			);
 			path = "NSURL+CLURL";
+			sourceTree = "<group>";
+		};
+		A4A8EBB01F18779F006627DF /* NSDate+CLDate */ = {
+			isa = PBXGroup;
+			children = (
+				A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */,
+				A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */,
+			);
+			path = "NSDate+CLDate";
 			sourceTree = "<group>";
 		};
 		A4D1CB241DEC4250007B6E59 = {
@@ -1357,11 +1350,10 @@
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
 				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
-				A43874E41EE929E3001F4BC9 /* NSObject+YYModel.m in Sources */,
 				A43874A71EE9278D001F4BC9 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A43874AA1EE9278D001F4BC9 /* IQPreviousNextView.m in Sources */,
+				A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */,
 				A438741D1EE92776001F4BC9 /* NSBundle+MJRefresh.m in Sources */,
-				A43874E51EE929E3001F4BC9 /* YYClassInfo.m in Sources */,
 				A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */,
 				A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */,
 				A43874C51EE9278D001F4BC9 /* SDWebImageDecoder.m in Sources */,

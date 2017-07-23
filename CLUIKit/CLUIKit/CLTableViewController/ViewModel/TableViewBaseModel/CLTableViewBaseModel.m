@@ -10,7 +10,7 @@
 
 @interface CLTableViewBaseModel()
 
-@property (nonatomic, strong, readwrite) CLTableViewController *cl_tableViewController;
+@property (nonatomic, weak, readwrite) CLTableViewController *cl_tableViewController;
 
 @end
 
@@ -39,6 +39,14 @@
 
 - (void)cl_tableViewHTTPRequest {
     
+}
+
+- (void)cl_configTableViewWithDataSource {
+    
+    if (self.cl_dataSource.count > 0) {
+        
+        self.cl_tableViewController.cl_tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
 }
 
 @end

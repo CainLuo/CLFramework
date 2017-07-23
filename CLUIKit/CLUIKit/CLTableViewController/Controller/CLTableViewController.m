@@ -62,6 +62,11 @@
         _cl_tableView = [[UITableView alloc] initWithFrame:self.view.frame
                                                      style:self.tableViewStyle];
         
+        if (self.tableViewStyle == UITableViewStylePlain) {
+            
+            _cl_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        }
+        
         _cl_tableView.opaque = YES;
     }
     

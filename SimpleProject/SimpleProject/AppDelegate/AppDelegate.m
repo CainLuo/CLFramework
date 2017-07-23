@@ -31,7 +31,7 @@
     
     tabbarController.tabBar.translucent = NO;
     
-    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] initTableViewControllerWithStyle:UITableViewStyleGrouped];
+    SimpleTableViewController *simpleTableViewController = [[SimpleTableViewController alloc] init];
 
     CLNavigationController *navigationController = [[CLNavigationController alloc] initWithRootViewController:simpleTableViewController];
     

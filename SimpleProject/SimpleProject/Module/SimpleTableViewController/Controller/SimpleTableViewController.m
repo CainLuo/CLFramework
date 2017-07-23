@@ -104,7 +104,7 @@
     _titleView.backgroundColor = [UIColor grayColor];
     _titleView.cl_titleString  = @"SimpleTableViewController";
     _titleView.cl_titleColor   = [UIColor whiteColor];
-    _titleView.cl_titleFont    = 10.0;
+    _titleView.cl_titleFont    = 17;
     
     return _titleView;
 }

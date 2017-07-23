@@ -29,6 +29,3 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 
 #pragma mark - CLDefine
 #import "CLDefine.h"
-
-#pragma mark - YYModel
-#import "YYModel.h"
