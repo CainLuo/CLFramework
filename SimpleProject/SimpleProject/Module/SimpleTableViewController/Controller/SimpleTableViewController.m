@@ -40,6 +40,8 @@
     NSLog(@"%@", [UIDevice cl_getUUIDString]);
     NSLog(@"%@", [UIDevice cl_getCarrierName]);
     NSLog(@"%@", [UIDevice cl_getCurrentRadioAccessTechnology]);
+    
+    NSLog(@"%@", [NSDate cl_changeCureentTimeToTimeStamp]);
 }
 
 - (void)cl_dropDownRefresh {

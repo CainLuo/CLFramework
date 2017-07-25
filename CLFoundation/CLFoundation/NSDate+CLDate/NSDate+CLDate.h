@@ -16,8 +16,15 @@
  @param timeStamp 时间戳
  @return 与当前时间的差距, 比如一天前
  */
-+ (NSString *)compareCureentTimeWithDate:(NSTimeInterval)timeStamp;
++ (NSString *)cl_compareCureentTimeWithDate:(NSTimeInterval)timeStamp;
 
+
+/**
+ 把当前时间转换成时间戳
+
+ @return 时间戳
+ */
++ (NSString *)cl_changeCureentTimeToTimeStamp;
 
 /**
  通过传入的时间戳算出年月日
@@ -25,7 +32,7 @@
  @param timeStamp 时间戳
  @return 年月日, 默认格式xxxx年xx月xx日
  */
-+ (NSString *)displayTimeWithTimeStamp:(NSTimeInterval)timeStamp;
++ (NSString *)cl_displayTimeWithTimeStamp:(NSTimeInterval)timeStamp;
 
 
 /**
@@ -35,7 +42,7 @@
  @param formatter 时间显示格式
  @return 年月日
  */
-+ (NSString *)displayTimeWithTimeStamp:(NSTimeInterval)timeStamp
-                             formatter:(NSString *)formatter;
++ (NSString *)cl_displayTimeWithTimeStamp:(NSTimeInterval)timeStamp
+                                formatter:(NSString *)formatter;
 
 @end

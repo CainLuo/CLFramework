@@ -10,7 +10,7 @@
 
 @implementation NSDate (CLDate)
 
-+ (NSString *)compareCureentTimeWithDate:(NSTimeInterval)timeStamp {
++ (NSString *)cl_compareCureentTimeWithDate:(NSTimeInterval)timeStamp {
     
     NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeStamp / 1000];
     
@@ -74,7 +74,14 @@
     return  result;
 }
 
-+ (NSString *)displayTimeWithTimeStamp:(NSTimeInterval)timeStamp {
++ (NSString *)cl_changeCureentTimeToTimeStamp {
+    
+    NSDate *cureentDate = [NSDate date];
+    
+    return [NSString stringWithFormat:@"%ld", (long)[cureentDate timeIntervalSince1970]];
+}
+
++ (NSString *)cl_displayTimeWithTimeStamp:(NSTimeInterval)timeStamp {
     
     NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeStamp / 1000];
     
@@ -83,8 +90,8 @@
     NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
     NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     
-    NSDateComponents *referenceComponents=[calendar components:unitFlags
-                                                      fromDate:confromTimesp];
+    NSDateComponents *referenceComponents = [calendar components:unitFlags
+                                                        fromDate:confromTimesp];
     
     NSInteger referenceYear  = referenceComponents.year;
     NSInteger referenceMonth = referenceComponents.month;
@@ -94,8 +101,8 @@
 }
 
 
-+ (NSString *)displayTimeWithTimeStamp:(NSTimeInterval)timeStamp
-                             formatter:(NSString *)formatter {
++ (NSString *)cl_displayTimeWithTimeStamp:(NSTimeInterval)timeStamp
+                                formatter:(NSString *)formatter {
     
     if ([NSString stringWithFormat:@"%@", @(timeStamp)].length == 13) {
         

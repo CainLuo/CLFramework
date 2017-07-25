@@ -29,3 +29,5 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 
 #pragma mark - CLDefine
 #import "CLDefine.h"
+
+#import "NSDate+CLDate.h"

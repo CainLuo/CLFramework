@@ -20,6 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) UITableView *cl_tableView;
 
+/**
+ 初始化CLTableViewController
+
+ @param style UITableViewStyle, 默认是UITableViewStylePlain
+ @return CLTableViewController
+ */
 - (instancetype)initTableViewControllerWithStyle:(UITableViewStyle)style;
 
 - (void)cl_removeRefresh;
