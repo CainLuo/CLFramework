@@ -18,7 +18,6 @@
  */
 + (NSString *)cl_compareCureentTimeWithDate:(NSTimeInterval)timeStamp;
 
-
 /**
  把当前时间转换成时间戳
 

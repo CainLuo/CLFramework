@@ -42,6 +42,7 @@
     NSLog(@"%@", [UIDevice cl_getCurrentRadioAccessTechnology]);
     
     NSLog(@"%@", [NSDate cl_changeCureentTimeToTimeStamp]);
+    NSLog(@"%@", [NSDate cl_compareCureentTimeWithDate:1401170630]);
 }
 
 - (void)cl_dropDownRefresh {

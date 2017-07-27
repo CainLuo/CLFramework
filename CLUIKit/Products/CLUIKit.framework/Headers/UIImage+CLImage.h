@@ -50,4 +50,24 @@
  */
 - (UIImage *)cl_blurImageWithBlur:(CGFloat)blur;
 
+/**
+ 给图片增加圆角
+
+ @param radius 半径
+ @return 图片
+ */
+- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius;
+
+/**
+ 给图片增加圆角,边框, 边框的颜色.
+
+ @param radius 半径
+ @param borderWidth 边框的宽度
+ @param borderColor 边框的颜色
+ @return 图片
+ */
+- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor;
+
 @end

@@ -116,6 +116,7 @@
 		A4D1CB4B1DEC4251007B6E59 /* SimpleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB4A1DEC4251007B6E59 /* SimpleProjectTests.m */; };
 		A4D1CB561DEC4251007B6E59 /* SimpleProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */; };
 		A4E135F61DF043AA00C79278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E135F51DF043AA00C79278 /* main.m */; };
+		A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,6 +380,8 @@
 		A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleProjectUITests.m; sourceTree = "<group>"; };
 		A4D1CB571DEC4251007B6E59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4E135F51DF043AA00C79278 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScrollViewController.h; sourceTree = "<group>"; };
+		A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +421,7 @@
 		A4037C6A1DF9749200C05F77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A4FEF28C1F2792D60017F876 /* SimpleScrollViewController */,
 				A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */,
 				A4037C871DF9752F00C05F77 /* SimpleQRCodeImageView */,
 				A4037C6B1DF9749200C05F77 /* SimpleCollectionViewController */,
@@ -1202,6 +1206,23 @@
 			path = SimpleProjectUITests;
 			sourceTree = "<group>";
 		};
+		A4FEF28C1F2792D60017F876 /* SimpleScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4FEF28D1F2792D60017F876 /* Controller */,
+			);
+			path = SimpleScrollViewController;
+			sourceTree = "<group>";
+		};
+		A4FEF28D1F2792D60017F876 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */,
+				A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1341,6 +1362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */,
 				A43874081EE92776001F4BC9 /* CLTableViewController.m in Sources */,
 				A43874A11EE9278D001F4BC9 /* IQUIScrollView+Additions.m in Sources */,
 				A43874061EE92776001F4BC9 /* CLCollectionViewBaseModel.m in Sources */,

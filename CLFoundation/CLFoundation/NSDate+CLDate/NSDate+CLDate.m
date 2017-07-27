@@ -12,7 +12,7 @@
 
 + (NSString *)cl_compareCureentTimeWithDate:(NSTimeInterval)timeStamp {
     
-    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeStamp / 1000];
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:timeStamp];
     
     NSTimeInterval  timeInterval = [confromTimesp timeIntervalSinceNow];
     
@@ -27,8 +27,8 @@
     NSInteger unitFlags  = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday |
     NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
     
-    NSDateComponents*referenceComponents = [calendar components:unitFlags
-                                                       fromDate:confromTimesp];
+    NSDateComponents *referenceComponents = [calendar components:unitFlags
+                                                        fromDate:confromTimesp];
     
 //        NSInteger referenceYear  = referenceComponents.year;
 //        NSInteger referenceMonth = referenceComponents.month;

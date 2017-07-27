@@ -10,6 +10,7 @@
 #import "SimpleQRCodeImageViewController.h"
 #import "SimpleCollectionViewController.h"
 #import "SimpleImageViewController.h"
+#import "SimpleScrollViewController.h"
 
 @implementation SimpleTableViewDelegate
 
@@ -44,6 +45,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             imageViewController.hidesBottomBarWhenPushed = YES;
             
             [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:imageViewController
+                                                                                     animated:YES];
+        }
+            break;
+            
+        case 3: {
+            
+            SimpleScrollViewController *scrollViewController = [[SimpleScrollViewController alloc] init];
+            
+            scrollViewController.hidesBottomBarWhenPushed = YES;
+            
+            [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:scrollViewController
                                                                                      animated:YES];
         }
             break;
