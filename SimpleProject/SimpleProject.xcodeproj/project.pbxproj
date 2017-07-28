@@ -15,6 +15,9 @@
 		A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */; };
 		A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */; };
 		A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */; };
+		A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */; };
+		A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */; };
+		A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */; };
 		A42AC4051F152F4900DA0D58 /* UIButton+CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */; };
 		A42AC40E1F15354700DA0D58 /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC40D1F15354700DA0D58 /* CLViewController.m */; };
 		A42AC4BF1F15C32100DA0D58 /* CLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4BE1F15C32100DA0D58 /* CLNavigationController.m */; };
@@ -166,6 +169,12 @@
 		A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
 		A4037C891DF9754A00C05F77 /* SimpleQRCodeImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleQRCodeImageViewController.h; sourceTree = "<group>"; };
 		A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleQRCodeImageViewController.m; sourceTree = "<group>"; };
+		A40B9B391F2B403B00163EAC /* NSString+CLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLString.h"; sourceTree = "<group>"; };
+		A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLString.m"; sourceTree = "<group>"; };
+		A40B9B501F2B8D8700163EAC /* SimpleButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleButtonController.h; sourceTree = "<group>"; };
+		A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleButtonController.m; sourceTree = "<group>"; };
+		A40B9B551F2B90E000163EAC /* SimpleDrawCircleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDrawCircleController.h; sourceTree = "<group>"; };
+		A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDrawCircleController.m; sourceTree = "<group>"; };
 		A42AC4031F152F4900DA0D58 /* UIButton+CLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CLButton.h"; sourceTree = "<group>"; };
 		A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CLButton.m"; sourceTree = "<group>"; };
 		A42AC40C1F15354700DA0D58 /* CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
@@ -421,6 +430,8 @@
 		A4037C6A1DF9749200C05F77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A40B9B531F2B90D100163EAC /* SimpleDrawCircle */,
+				A40B9B4E1F2B8D7600163EAC /* SimpleButtonController */,
 				A4FEF28C1F2792D60017F876 /* SimpleScrollViewController */,
 				A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */,
 				A4037C871DF9752F00C05F77 /* SimpleQRCodeImageView */,
@@ -529,6 +540,49 @@
 				A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */,
 			);
 			path = SimpleQRCodeImageView;
+			sourceTree = "<group>";
+		};
+		A40B9B381F2B402600163EAC /* NSString+CLString */ = {
+			isa = PBXGroup;
+			children = (
+				A40B9B391F2B403B00163EAC /* NSString+CLString.h */,
+				A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */,
+			);
+			path = "NSString+CLString";
+			sourceTree = "<group>";
+		};
+		A40B9B4E1F2B8D7600163EAC /* SimpleButtonController */ = {
+			isa = PBXGroup;
+			children = (
+				A40B9B4F1F2B8D7600163EAC /* Controller */,
+			);
+			path = SimpleButtonController;
+			sourceTree = "<group>";
+		};
+		A40B9B4F1F2B8D7600163EAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A40B9B501F2B8D8700163EAC /* SimpleButtonController.h */,
+				A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A40B9B531F2B90D100163EAC /* SimpleDrawCircle */ = {
+			isa = PBXGroup;
+			children = (
+				A40B9B541F2B90D100163EAC /* Controller */,
+			);
+			path = SimpleDrawCircle;
+			sourceTree = "<group>";
+		};
+		A40B9B541F2B90D100163EAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A40B9B551F2B90E000163EAC /* SimpleDrawCircleController.h */,
+				A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A42AC4021F152F3900DA0D58 /* UIButton+CLButton */ = {
@@ -1109,10 +1163,11 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
-				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
-				A4996E471F1306E300F99E40 /* NSURL+CLURL */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
+				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
+				A40B9B381F2B402600163EAC /* NSString+CLString */,
+				A4996E471F1306E300F99E40 /* NSURL+CLURL */,
 			);
 			path = CLFoundation;
 			sourceTree = "<group>";
@@ -1363,12 +1418,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */,
+				A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */,
 				A43874081EE92776001F4BC9 /* CLTableViewController.m in Sources */,
 				A43874A11EE9278D001F4BC9 /* IQUIScrollView+Additions.m in Sources */,
 				A43874061EE92776001F4BC9 /* CLCollectionViewBaseModel.m in Sources */,
 				A43874BE1EE9278D001F4BC9 /* SDCycleScrollView.m in Sources */,
 				A43874CE1EE9278D001F4BC9 /* UIImageView+WebCache.m in Sources */,
 				A43874251EE92776001F4BC9 /* UIImageView+CLImageView.m in Sources */,
+				A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */,
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
 				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
@@ -1410,6 +1467,7 @@
 				A438741F1EE92776001F4BC9 /* UIScrollView+MJRefresh.m in Sources */,
 				A43874BC1EE9278D001F4BC9 /* TAPageControl.m in Sources */,
 				A438740F1EE92776001F4BC9 /* MJRefreshComponent.m in Sources */,
+				A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */,
 				A43874051EE92776001F4BC9 /* CLCollectionViewController.m in Sources */,
 				A438741E1EE92776001F4BC9 /* UIScrollView+MJExtension.m in Sources */,
 				A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */,

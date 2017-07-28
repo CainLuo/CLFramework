@@ -15,7 +15,9 @@
     NSArray *array = @[@"SimpleCollectionViewController",
                        @"SimpleQRCodeImageViewController",
                        @"SimpleImageViewController",
-                       @"SimpleScrollViewController"];
+                       @"SimpleScrollViewController",
+                       @"SimpleButtonController",
+                       @"SimpleDrawCircleController"];
     
     [self.cl_dataSource addObjectsFromArray:array];
     

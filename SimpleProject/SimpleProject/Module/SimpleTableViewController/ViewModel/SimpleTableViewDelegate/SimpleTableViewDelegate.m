@@ -11,6 +11,8 @@
 #import "SimpleCollectionViewController.h"
 #import "SimpleImageViewController.h"
 #import "SimpleScrollViewController.h"
+#import "SimpleButtonController.h"
+#import "SimpleDrawCircleController.h"
 
 @implementation SimpleTableViewDelegate
 
@@ -56,6 +58,26 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             scrollViewController.hidesBottomBarWhenPushed = YES;
             
             [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:scrollViewController
+                                                                                     animated:YES];
+        }
+            break;
+        case 4: {
+            
+            SimpleButtonController *simpleButtonController = [[SimpleButtonController alloc] init];
+            
+            simpleButtonController.hidesBottomBarWhenPushed = YES;
+            
+            [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:simpleButtonController
+                                                                                     animated:YES];
+        }
+            break;
+        case 5: {
+            
+            SimpleDrawCircleController *simpleDrawCircleController = [[SimpleDrawCircleController alloc] init];
+            
+            simpleDrawCircleController.hidesBottomBarWhenPushed = YES;
+            
+            [self.cl_viewModel.cl_tableViewController.navigationController pushViewController:simpleDrawCircleController
                                                                                      animated:YES];
         }
             break;

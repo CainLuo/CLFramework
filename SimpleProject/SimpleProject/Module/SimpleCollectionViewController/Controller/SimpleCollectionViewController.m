@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = NSStringFromClass([self class]);
+
     [self cl_setCollectionViewDelegate:self.simpleCollectionViewDelegate
                             dataSource:self.simpleCollectionViewDataSource];
     

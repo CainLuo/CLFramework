@@ -20,7 +20,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor redColor];
-    
+    self.title = NSStringFromClass([self class]);
+
     UIButton *button = [[UIButton alloc] init];
     
     [button setTitleColor:[UIColor blackColor]

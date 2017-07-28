@@ -35,9 +35,7 @@
 
     CLNavigationController *navigationController = [[CLNavigationController alloc] initWithRootViewController:simpleTableViewController];
     
-    navigationController.navigationBar.hidden = YES;
-
-    simpleTableViewController.title = @"1";
+    simpleTableViewController.title = @"simpleTableViewController";
     
     [tabbarController setViewControllers:@[navigationController]];
 

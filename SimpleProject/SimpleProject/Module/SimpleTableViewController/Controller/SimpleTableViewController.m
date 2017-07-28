@@ -19,8 +19,6 @@
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
 @property (nonatomic, strong) SimpleTableViewDataSource *simpleTableViewDataSource;
 
-@property (nonatomic, strong) CLTitleView *titleView;
-
 @end
 
 @implementation SimpleTableViewController
@@ -30,19 +28,13 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self cl_addConstraintsWithSuperView];
-    
+    [self cl_setNavigationBarTranslucentWithBOOL:NO];
     [self cl_setTableViewDelegate:self.simpleTableViewDelegate
                        dataSource:self.simpleTableViewDataSource];
     
     [self cl_dropDownBeginRefresh];
     
-    NSLog(@"%@", [UIDevice cl_getUUIDString]);
-    NSLog(@"%@", [UIDevice cl_getCarrierName]);
-    NSLog(@"%@", [UIDevice cl_getCurrentRadioAccessTechnology]);
-    
-    NSLog(@"%@", [NSDate cl_changeCureentTimeToTimeStamp]);
-    NSLog(@"%@", [NSDate cl_compareCureentTimeWithDate:1401170630]);
+    [self cl_addConstraintsWithSuperView];
 }
 
 - (void)cl_dropDownRefresh {
@@ -83,33 +75,9 @@
 
 - (void)cl_addConstraintsWithSuperView {
     
-    [self.view addSubview:self.titleView];
-    
-    [self.titleView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.left.right.equalTo(self.view);
-        make.height.mas_equalTo([UIScreen cl_fitScreen:128]);
-    }];
-    
     [self.cl_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.equalTo(self.titleView.mas_bottom);
-        make.left.bottom.right.equalTo(self.view);
+        (void)make.edges;
     }];
-}
-
-- (CLTitleView *)titleView {
-    
-    CL_GET_METHOD_RETURN_OBJC(_titleView);
-    
-    _titleView = [[CLTitleView alloc] init];
-    
-    _titleView.backgroundColor = [UIColor grayColor];
-    _titleView.cl_titleString  = @"SimpleTableViewController";
-    _titleView.cl_titleColor   = [UIColor whiteColor];
-    _titleView.cl_titleFont    = 17;
-    
-    return _titleView;
 }
 
 @end
