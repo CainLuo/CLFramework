@@ -18,11 +18,11 @@
 
 @interface CLToolBarListView()
 
-@property (nonatomic, strong) CALayer  *bottomLineLayer;
-@property (nonatomic, strong) CALayer  *selectedLineLayer;
-@property (nonatomic, strong) UIButton *currentButton;
+@property (nonatomic, strong) CALayer  *cl_bottomLineLayer;
+@property (nonatomic, strong) CALayer  *cl_selectedLineLayer;
+@property (nonatomic, strong) UIButton *cl_currentButton;
 
-@property (nonatomic, strong) NSMutableArray *buttonArray;
+@property (nonatomic, strong) NSMutableArray *cl_buttonArray;
 
 @end
 
@@ -33,20 +33,20 @@
 
     if (self = [super initWithFrame:frame]) {
         
-        _deselectColor   = [UIColor blackColor];
-        _selectedColor   = [UIColor redColor];
-        _bottomLineColor = [UIColor grayColor];
-        _buttonSpacing   = 10.f;
-        _textFont        = 16;
-        _toolBarStyle    = CLToolBarNormalStyle;
-        _titleAdjustsFontSizeToFitWidth = NO;
+        _cl_deselectColor   = [UIColor blackColor];
+        _cl_selectedColor   = [UIColor redColor];
+        _cl_bottomLineColor = [UIColor grayColor];
+        _cl_buttonSpacing   = 10.f;
+        _cl_textFont        = 16;
+        _cl_toolBarStyle    = CLToolBarNormalStyle;
+
+        _cl_titleAdjustsFontSizeToFitWidth = NO;
         
-        // CALToolBarSeparationStyle
-        _separationColor = [UIColor grayColor];
-        _separationWidth = 1;
+        _cl_separationColor = [UIColor grayColor];
+        _cl_separationWidth = 1;
         
-        [self.layer addSublayer:self.bottomLineLayer];
-        [self.layer addSublayer:self.selectedLineLayer];
+        [self.layer addSublayer:self.cl_bottomLineLayer];
+        [self.layer addSublayer:self.cl_selectedLineLayer];
 
         self.backgroundColor = [UIColor whiteColor];
     }
@@ -55,100 +55,100 @@
 }
 
 #pragma mark - 设置ToolBar显示的样式
-- (void)setToolBarStyle:(CLToolBarStyle)toolBarStyle {
-    _toolBarStyle = toolBarStyle;
+- (void)setCl_toolBarStyle:(CLToolBarStyle)cl_toolBarStyle {
+    _cl_toolBarStyle = cl_toolBarStyle;
 }
 
 #pragma mark - 设置未选中的按钮颜色
-- (void)setDeselectColor:(UIColor *)deselectColor {
-    _deselectColor = deselectColor;
+- (void)setCl_deselectColor:(UIColor *)cl_deselectColor {
+    _cl_deselectColor = cl_deselectColor;
 }
 
 #pragma mark - 设置选中的按钮颜色
-- (void)setSelectedColor:(UIColor *)selectedColor {
-    _selectedColor = selectedColor;
+- (void)setCl_SelectedColor:(UIColor *)cl_selectedColor {
+    _cl_selectedColor = cl_selectedColor;
 }
 
 #pragma mark - 设置ToolBar的背景颜色
-- (void)setBarBakcgroundColor:(UIColor *)barBakcgroundColor {
-    self.backgroundColor = barBakcgroundColor;
+- (void)setCl_barBakcgroundColor:(UIColor *)cl_barBakcgroundColor {
+    self.backgroundColor = cl_barBakcgroundColor;
 }
 
 #pragma mark - 设置底部线条的颜色
-- (void)setBottomLineColor:(UIColor *)bottomLineColor {
+- (void)setCl_bottomLineColor:(UIColor *)cl_bottomLineColor {
     
-    _bottomLineColor = bottomLineColor;
+    _cl_bottomLineColor = cl_bottomLineColor;
     
-    _bottomLineLayer.backgroundColor = bottomLineColor.CGColor;
+    _cl_bottomLineLayer.backgroundColor = cl_bottomLineColor.CGColor;
 }
 
 #pragma mark - 设置选中提示条的颜色
-- (void)setSelectedLineColor:(UIColor *)selectedLineColor {
+- (void)setCl_selectedLineColor:(UIColor *)cl_selectedLineColor {
     
-    _selectedLineColor = selectedLineColor;
+    _cl_selectedLineColor = cl_selectedLineColor;
     
-    _selectedLineLayer.backgroundColor = selectedLineColor.CGColor;
+    _cl_selectedLineLayer.backgroundColor = cl_selectedLineColor.CGColor;
 }
 
 #pragma mark - 设置按钮文字大小
-- (void)setTextFont:(NSInteger)textFont {
-    _textFont = textFont;
+- (void)setCl_textFont:(NSInteger)cl_textFont {
+    _cl_textFont = cl_textFont;
 }
 
 #pragma mark - 设置标题文字是否自动缩小
-- (void)setTitleAdjustsFontSizeToFitWidth:(BOOL)titleAdjustsFontSizeToFitWidth {
-    _titleAdjustsFontSizeToFitWidth = titleAdjustsFontSizeToFitWidth;
+- (void)setCl_titleAdjustsFontSizeToFitWidth:(BOOL)cl_titleAdjustsFontSizeToFitWidth {
+    _cl_titleAdjustsFontSizeToFitWidth = cl_titleAdjustsFontSizeToFitWidth;
 }
 
 #pragma mark - 设置按钮之间的间距
-- (void)setButtonSpacing:(CGFloat)buttonSpacing {
-    _buttonSpacing = buttonSpacing;
+- (void)setCl_ButtonSpacing:(CGFloat)cl_buttonSpacing {
+    _cl_buttonSpacing = cl_buttonSpacing;
 }
 
 #pragma mark - 是否需要底部线
-- (void)setIsNeedLine:(BOOL)isNeedLine {
-    _isNeedLine = isNeedLine;
+- (void)setCl_isNeedLine:(BOOL)cl_isNeedLine {
+    _cl_isNeedLine = cl_isNeedLine;
 }
 
 #pragma mark - 是否需要选中提示线
-- (void)setIsNeedSelectedLine:(BOOL)isNeedSelectedLine {
-    _isNeedSelectedLine = isNeedSelectedLine;
+- (void)setCl_isNeedSelectedLine:(BOOL)cl_isNeedSelectedLine {
+    _cl_isNeedSelectedLine = cl_isNeedSelectedLine;
 }
 
 #pragma mark - 获取当前点中的Button
-- (NSInteger)currentIndex {
-    return _currentIndex;
+- (NSInteger)cl_currentIndex {
+    return _cl_currentIndex;
 }
 
 #pragma mark - 默认选中指定的按钮
-- (void)didSelectedButton:(NSInteger)index {
+- (void)cl_didSelectedButton:(NSInteger)index {
     
-    if (self.buttonArray.count > 0) {
+    if (self.cl_buttonArray.count > 0) {
         
-        self.currentButton.selected = NO;
+        self.cl_currentButton.selected = NO;
 
-        UIButton *selecteButton = self.buttonArray[index];
+        UIButton *selecteButton = self.cl_buttonArray[index];
         
-        self.currentIndex = index;
+        self.cl_currentIndex = index;
         
-        self.currentButton = selecteButton;
+        self.cl_currentButton = selecteButton;
         
-        self.currentButton.selected = YES;
+        self.cl_currentButton.selected = YES;
         
         [UIView animateWithDuration:0.3f animations:^{
             
-            self.selectedLineLayer.frame = CGRectMake(selecteButton.frame.origin.x,
-                                                      self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
-                                                      selecteButton.frame.size.width,
-                                                      SELECTED_LINE_LAYER_HEIGHT);
+            self.cl_selectedLineLayer.frame = CGRectMake(selecteButton.frame.origin.x,
+                                                         self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
+                                                         selecteButton.frame.size.width,
+                                                         SELECTED_LINE_LAYER_HEIGHT);
         }];
     }
 }
 
 #pragma mark - 刷新整个BarList
-- (void)reloadData {
+- (void)cl_reloadData {
     
-    NSAssert(self.titleArray.count, @"你所传入的数组为空");
+    NSAssert(self.cl_titleArray.count, @"你所传入的数组为空");
 
     for (UIView *subView in self.subviews) {
         
@@ -168,53 +168,53 @@
 
     [self addSubview:layerBackgroundView];
     
-    for (NSInteger i = 0; i < self.titleArray.count; i++) {
+    for (NSInteger i = 0; i < self.cl_titleArray.count; i++) {
         
-        CGFloat buttonWidth = self.frame.size.width / _titleArray.count;
+        CGFloat buttonWidth = self.frame.size.width / _cl_titleArray.count;
         
         UIButton *titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        CGFloat buttonX = i == 0 ? i * buttonWidth + (_buttonSpacing / 2) : i * buttonWidth + _buttonSpacing - (_buttonSpacing / 2);
+        CGFloat buttonX = i == 0 ? i * buttonWidth + (_cl_buttonSpacing / 2) : i * buttonWidth + _cl_buttonSpacing - (_cl_buttonSpacing / 2);
         
         titleButton.frame = CGRectMake(buttonX,
                                        0,
-                                       buttonWidth - _buttonSpacing,
+                                       buttonWidth - _cl_buttonSpacing,
                                        self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT);
         titleButton.tag   = i;
         
-        titleButton.titleLabel.font = [UIFont systemFontOfSize:self.textFont];
-        titleButton.titleLabel.adjustsFontSizeToFitWidth = _titleAdjustsFontSizeToFitWidth;
+        titleButton.titleLabel.font = [UIFont systemFontOfSize:self.cl_textFont];
+        titleButton.titleLabel.adjustsFontSizeToFitWidth = _cl_titleAdjustsFontSizeToFitWidth;
         
         titleButton.backgroundColor = [UIColor clearColor];
         
         [titleButton setTintColor:[UIColor clearColor]];
         
-        [titleButton setTitle:_titleArray[i] forState:UIControlStateNormal];
-        [titleButton setTitle:_titleArray[i] forState:UIControlStateSelected];
+        [titleButton setTitle:_cl_titleArray[i] forState:UIControlStateNormal];
+        [titleButton setTitle:_cl_titleArray[i] forState:UIControlStateSelected];
         
-        [titleButton setTitleColor:_deselectColor forState:UIControlStateNormal];
-        [titleButton setTitleColor:_selectedColor forState:UIControlStateSelected];
+        [titleButton setTitleColor:_cl_deselectColor forState:UIControlStateNormal];
+        [titleButton setTitleColor:_cl_selectedColor forState:UIControlStateSelected];
         
         [titleButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
         
         if (i == 0) {
             
             titleButton.selected = YES;
-            self.currentButton = titleButton;
+            self.cl_currentButton = titleButton;
         }
         
         [self addSubview:titleButton];
-        [self.buttonArray addObject:titleButton];
+        [self.cl_buttonArray addObject:titleButton];
         
-        if (_toolBarStyle == CLToolBarSeparationStyle) {
+        if (_cl_toolBarStyle == CLToolBarSeparationStyle) {
             
             CALayer *separationLayer = [CALayer layer];
             
-            separationLayer.backgroundColor = _separationColor.CGColor;
+            separationLayer.backgroundColor = _cl_separationColor.CGColor;
             
             CGFloat separationLayerH = titleButton.frame.size.height - 15;
 
-            separationLayer.frame = CGRectMake(i * buttonWidth - 0.5, (titleButton.frame.size.height - separationLayerH) / 2, _separationWidth, separationLayerH);
+            separationLayer.frame = CGRectMake(i * buttonWidth - 0.5, (titleButton.frame.size.height - separationLayerH) / 2, _cl_separationWidth, separationLayerH);
             
             if (i != 0) {
                 [layerBackgroundView.layer addSublayer:separationLayer];
@@ -222,24 +222,24 @@
         }
     }
     
-    _selectedLineLayer.frame = CGRectMake(_buttonSpacing / 2,
+    _cl_selectedLineLayer.frame = CGRectMake(_cl_buttonSpacing / 2,
                                           self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
-                                          self.frame.size.width / self.titleArray.count - _buttonSpacing,
+                                          self.frame.size.width / self.cl_titleArray.count - _cl_buttonSpacing,
                                           SELECTED_LINE_LAYER_HEIGHT);
 }
 
 - (void)buttonAction:(UIButton *)sender {
     
-    if (self.clToolBarSelectedBlock) {
+    if (self.cl_toolBarSelectedBlock) {
         
-        self.currentButton.selected = NO;
+        self.cl_currentButton.selected = NO;
         
-        self.currentButton = sender;
-        self.currentIndex  = sender.tag;
+        self.cl_currentButton = sender;
+        self.cl_currentIndex  = sender.tag;
         
-        self.currentButton.selected = YES;
+        self.cl_currentButton.selected = YES;
 
-        self.clToolBarSelectedBlock(sender.tag);
+        self.cl_toolBarSelectedBlock(sender.tag);
 
         [self selectedLineLayerAnimaction];
     }
@@ -266,68 +266,69 @@
 //}
 
 #pragma mark - Init Bottom Line Layer
-- (CALayer *)bottomLineLayer {
+- (CALayer *)cl_bottomLineLayer {
     
-    if (!_bottomLineLayer) {
+    if (!_cl_bottomLineLayer) {
         
-        _bottomLineLayer = [CALayer layer];
+        _cl_bottomLineLayer = [CALayer layer];
         
-        _bottomLineLayer.frame = CGRectMake(0, self.frame.size.height - 0.5, self.frame.size.width, 0.5);
+        _cl_bottomLineLayer.frame = CGRectMake(0, self.frame.size.height - 0.5, self.frame.size.width, 0.5);
         
-        _bottomLineLayer.backgroundColor = [UIColor grayColor].CGColor;
+        _cl_bottomLineLayer.backgroundColor = [UIColor grayColor].CGColor;
     }
     
-    return _bottomLineLayer;
+    return _cl_bottomLineLayer;
 }
 
 #pragma mark - Init Selected Line Layer
-- (CALayer *)selectedLineLayer {
+- (CALayer *)cl_selectedLineLayer {
     
-    if (!_selectedLineLayer) {
+    if (!_cl_selectedLineLayer) {
         
-        _selectedLineLayer = [CALayer layer];
+        _cl_selectedLineLayer = [CALayer layer];
         
-        _selectedLineLayer.frame = CGRectMake(_buttonSpacing / 2,
-                                              self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
-                                              self.frame.size.width / _titleArray.count - _buttonSpacing,
-                                              SELECTED_LINE_LAYER_HEIGHT);
+        _cl_selectedLineLayer.frame = CGRectMake(_cl_buttonSpacing / 2,
+                                                 self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
+                                                 self.frame.size.width / _cl_titleArray.count - _cl_buttonSpacing,
+                                                 SELECTED_LINE_LAYER_HEIGHT);
         
-        _selectedLineLayer.backgroundColor = [UIColor blueColor].CGColor;
+        _cl_selectedLineLayer.backgroundColor = [UIColor blueColor].CGColor;
     }
     
-    return _selectedLineLayer;
+    return _cl_selectedLineLayer;
 }
 
 - (void)selectedLineLayerAnimaction {
     
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:0.3f
+                     animations:^{
         
-        self.selectedLineLayer.frame = CGRectMake(self.currentButton.frame.origin.x,
-                                                  self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
-                                                  self.frame.size.width / _titleArray.count - _buttonSpacing,
-                                                  SELECTED_LINE_LAYER_HEIGHT);
-    }];
+                         self.cl_selectedLineLayer.frame = CGRectMake(self.cl_currentButton.frame.origin.x,
+                                                                      self.frame.size.height - SELECTED_LINE_LAYER_HEIGHT,
+                                                                      self.frame.size.width / _cl_titleArray.count - _cl_buttonSpacing,
+                                                                      SELECTED_LINE_LAYER_HEIGHT);
+                     }];
 }
 
 #pragma mark - Init Button Array
-- (NSMutableArray *)buttonArray {
+- (NSMutableArray *)cl_buttonArray {
     
-    if (!_buttonArray) {
-        _buttonArray = [NSMutableArray array];
+    if (!_cl_buttonArray) {
+        _cl_buttonArray = [NSMutableArray array];
     }
     
-    return _buttonArray;
+    return _cl_buttonArray;
 }
 
 #pragma mark -  CALToolBarSeparationStyle
 #pragma mark - 设置Separation Color
-- (void)setSeparationColor:(UIColor *)separationColor {
-    _separationColor = separationColor;
+- (void)setCl_separationColor:(UIColor *)cl_separationColor {
+    _cl_separationColor = cl_separationColor;
 }
 
 #pragma mark - 设置Separation Width
-- (void)setSeparationWidth:(CGFloat)separationWidth {
-    _separationWidth = separationWidth;
+- (void)setCl_SeparationWidth:(CGFloat)cl_separationWidth {
+    _cl_separationWidth = cl_separationWidth;
 }
 
 @end

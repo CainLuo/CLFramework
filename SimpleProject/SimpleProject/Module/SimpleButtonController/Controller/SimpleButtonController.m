@@ -27,19 +27,19 @@
                                                                                                 250,
                                                                                                 self.view.frame.size.width,
                                                                                                 40)];
-    toolBarList.titleArray = titleArray;
-    toolBarList.barBakcgroundColor = [UIColor greenColor];
-    toolBarList.selectedLineColor  = [UIColor redColor];
-    toolBarList.bottomLineColor    = [UIColor blueColor];
-    toolBarList.toolBarStyle       = CLToolBarSeparationStyle;
-    toolBarList.separationColor    = [UIColor grayColor];
+    toolBarList.cl_titleArray = titleArray;
+    toolBarList.cl_barBakcgroundColor = [UIColor greenColor];
+    toolBarList.cl_selectedLineColor  = [UIColor redColor];
+    toolBarList.cl_bottomLineColor    = [UIColor blueColor];
+    toolBarList.cl_toolBarStyle       = CLToolBarSeparationStyle;
+    toolBarList.cl_separationColor    = [UIColor grayColor];
     
-    [toolBarList reloadData];
-    [toolBarList didSelectedButton:3];
+    [toolBarList cl_reloadData];
+    [toolBarList cl_didSelectedButton:3];
     
     NSLog(@"currentIndex: %zd", toolBarList.currentIndex);
     
-    [toolBarList setClToolBarSelectedBlock:^(NSInteger index) {
+    [toolBarList setCl_toolBarSelectedBlock:^(NSInteger index) {
         NSLog(@"index: %zd", index);
     }];
     
