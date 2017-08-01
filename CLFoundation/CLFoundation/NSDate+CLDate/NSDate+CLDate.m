@@ -1,6 +1,12 @@
 //
+// __    ______  ______      __     ___    _
+//   /  __)    /  \    (_    _) |    \  |  |
+//  |  /      /    \     |  |   |  |\ \ |  |
+//  | |      /  ()  \    |  |   |  | \ \|  |
+//  |  \__  |   __   |  _|  |_  |  |  \    |
+//  _\    )_|  (__)  |_(      )_|  |___\   |_
+//
 //  NSDate+CLDate.m
-//  SimpleProject
 //
 //  Created by Cain on 2017/7/14.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
@@ -30,11 +36,11 @@
     NSDateComponents *referenceComponents = [calendar components:unitFlags
                                                         fromDate:confromTimesp];
     
-//        NSInteger referenceYear  = referenceComponents.year;
-//        NSInteger referenceMonth = referenceComponents.month;
-//        NSInteger referenceDay   = referenceComponents.day;
+    //        NSInteger referenceYear  = referenceComponents.year;
+    //        NSInteger referenceMonth = referenceComponents.month;
+    //        NSInteger referenceDay   = referenceComponents.day;
     NSInteger referenceHour = referenceComponents.hour;
-//        NSInteger referemceMinute = referenceComponents.minute;
+    //        NSInteger referemceMinute = referenceComponents.minute;
     
     if (timeInterval < 60) {
         

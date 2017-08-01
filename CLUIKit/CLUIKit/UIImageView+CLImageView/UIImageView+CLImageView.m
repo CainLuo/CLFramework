@@ -7,7 +7,6 @@
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
 //  UIImageView+CLImageView.m
-//  SimpleProject
 //
 //  Created by Cain on 2016/12/8.
 //  Copyright © 2016年 Cain Luo. All rights reserved.

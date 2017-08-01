@@ -7,7 +7,6 @@
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
 //  CLTableViewController.h
-//  SimpleProject
 //
 //  Created by Cain Luo on 28/11/16.
 //  Copyright © 2016年 Cain Luo. All rights reserved.
@@ -20,6 +19,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly) UITableView *cl_tableView;
 
+/**
+ 初始化CLTableViewController
+
+ @param style UITableViewStyle, 默认是UITableViewStylePlain
+ @return CLTableViewController
+ */
 - (instancetype)initTableViewControllerWithStyle:(UITableViewStyle)style;
 
 - (void)cl_removeRefresh;

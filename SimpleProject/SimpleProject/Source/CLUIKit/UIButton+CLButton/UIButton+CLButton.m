@@ -1,6 +1,12 @@
 //
+// __    ______  ______      __     ___    _
+//   /  __)    /  \    (_    _) |    \  |  |
+//  |  /      /    \     |  |   |  |\ \ |  |
+//  | |      /  ()  \    |  |   |  | \ \|  |
+//  |  \__  |   __   |  _|  |_  |  |  \    |
+//  _\    )_|  (__)  |_(      )_|  |___\   |_
+//
 //  UIButton+CLButton.m
-//  SimpleProject
 //
 //  Created by Cain on 2017/7/12.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
@@ -46,6 +52,7 @@
     return CGRectContainsPoint(hitFrame, point);
 }
 
+#pragma mark - 倒计时方法
 - (void)cl_startButtonWithTime:(NSInteger)time {
     
     [self cl_startButtonWithTime:time
@@ -56,11 +63,41 @@
 }
 
 - (void)cl_startButtonWithTime:(NSInteger)time
+                   normalImage:(UIImage *)normalImage
+                  disableImage:(UIImage *)disableImage {
+
+    [self cl_startButtonWithTime:time
+                           title:self.titleLabel.text
+                     suffixTitle:@""
+                     normalColor:self.backgroundColor
+                     timingColor:self.backgroundColor
+                    disableImage:disableImage
+                     normalImage:normalImage];
+}
+
+- (void)cl_startButtonWithTime:(NSInteger)time
                          title:(NSString *)title
                    suffixTitle:(NSString *)suffixTitle
                    normalColor:(UIColor *)normalColor
                    timingColor:(UIColor *)timingColor {
-        
+    
+    [self cl_startButtonWithTime:time
+                           title:self.titleLabel.text
+                     suffixTitle:@""
+                     normalColor:self.backgroundColor
+                     timingColor:self.backgroundColor
+                    disableImage:[[UIImage alloc] init]
+                     normalImage:[[UIImage alloc] init]];
+}
+
+- (void)cl_startButtonWithTime:(NSInteger)time
+                         title:(NSString *)title
+                   suffixTitle:(NSString *)suffixTitle
+                   normalColor:(UIColor *)normalColor
+                   timingColor:(UIColor *)timingColor
+                  disableImage:(UIImage *)disableImage
+                   normalImage:(UIImage *)normalImage {
+    
     //倒计时时间
     __block NSInteger timeOut = time;
     
@@ -79,12 +116,15 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 
+                [self setBackgroundImage:normalImage
+                                forState:UIControlStateNormal];
+                
                 self.backgroundColor = normalColor;
                 
                 [self setTitle:title
                       forState:UIControlStateNormal];
                 
-                self.userInteractionEnabled = YES;
+                self.enabled = YES;
             });
             
         } else {
@@ -98,10 +138,13 @@
                 
                 self.backgroundColor = timingColor;
                 
+                [self setBackgroundImage:disableImage
+                                forState:UIControlStateNormal];
+
                 [self setTitle:[NSString stringWithFormat:@"%@%@", timeString, suffixTitle]
                       forState:UIControlStateNormal];
                 
-                self.userInteractionEnabled = NO;
+                self.enabled = NO;
             });
             
             timeOut--;

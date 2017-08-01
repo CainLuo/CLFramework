@@ -7,7 +7,6 @@
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
 //  CLApplication.m
-//  CLUIKit
 //
 //  Created by Cain on 2016/12/7.
 //  Copyright © 2016年 Cain. All rights reserved.

@@ -7,7 +7,6 @@
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
 //  CLDefine.h
-//  CLFoundation
 //
 //  Created by Cain on 2016/12/7.
 //  Copyright © 2016年 Cain. All rights reserved.
@@ -21,14 +20,8 @@
 
 #define CL_GET_METHOD_RETURN_OBJC(objc) if (objc) return objc
 
-#define CL_OBJC_IS_NIL(objc) ((objc) ? (NO) : (YES))
-
 #define CL_ANGLE_TO_RADIAN(x) (M_PI * (x) / 180.0)
 #define CL_RADIAN_TO_ANGLE(radian) (radian * 180.0) / (M_PI)
-
-#define CL_CURRENT_LANGUAGE ([[NSLocale preferredLanguages] objectAtIndex:0])
-
-#define CL_GET_IMAGE(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
 
 #ifdef DEBUG
     #define NSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])

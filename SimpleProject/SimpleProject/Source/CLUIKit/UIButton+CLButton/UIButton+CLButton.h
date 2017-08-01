@@ -1,6 +1,12 @@
 //
+// __    ______  ______      __     ___    _
+//   /  __)    /  \    (_    _) |    \  |  |
+//  |  /      /    \     |  |   |  |\ \ |  |
+//  | |      /  ()  \    |  |   |  | \ \|  |
+//  |  \__  |   __   |  _|  |_  |  |  \    |
+//  _\    )_|  (__)  |_(      )_|  |___\   |_
+//
 //  UIButton+CLButton.h
-//  SimpleProject
 //
 //  Created by Cain on 2017/7/12.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
@@ -22,6 +28,16 @@ NS_ASSUME_NONNULL_BEGIN
  @param time 倒计时的时间
  */
 - (void)cl_startButtonWithTime:(NSInteger)time;
+
+/**
+ Button倒计时方法
+
+ @param time 倒计时的时间
+ @param disableImage 倒计时时的背景图
+ */
+- (void)cl_startButtonWithTime:(NSInteger)time
+                   normalImage:(UIImage *)normalImage
+                  disableImage:(UIImage *)disableImage;
 
 /**
  Button倒计时方法

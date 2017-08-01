@@ -1,6 +1,6 @@
 //
 //  SimpleButtonController.m
-//  SimpleProject
+
 //
 //  Created by Cain on 2017/7/28.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
@@ -21,6 +21,30 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
 
+    NSArray *titleArray = @[@"标题一", @"标题二", @"标题三", @"标题四", @"标题五"];
+    
+    CLToolBarListView *toolBarList = [[CLToolBarListView alloc] initToolBarWithFrame:CGRectMake(0,
+                                                                                                250,
+                                                                                                self.view.frame.size.width,
+                                                                                                40)];
+    toolBarList.titleArray = titleArray;
+    toolBarList.barBakcgroundColor = [UIColor greenColor];
+    toolBarList.selectedLineColor  = [UIColor redColor];
+    toolBarList.bottomLineColor    = [UIColor blueColor];
+    toolBarList.toolBarStyle       = CLToolBarSeparationStyle;
+    toolBarList.separationColor    = [UIColor grayColor];
+    
+    [toolBarList reloadData];
+    [toolBarList didSelectedButton:3];
+    
+    NSLog(@"currentIndex: %zd", toolBarList.currentIndex);
+    
+    [toolBarList setClToolBarSelectedBlock:^(NSInteger index) {
+        NSLog(@"index: %zd", index);
+    }];
+    
+    [self.view addSubview:toolBarList];
+    
     [self cl_getCodeButton];
     [self cl_ButtonClike];
 }
@@ -30,7 +54,9 @@
     
     UIButton *button = [[UIButton alloc] init];
     
-    button.backgroundColor = [UIColor blueColor];
+//    button.backgroundColor = [UIColor blueColor];
+    [button setBackgroundImage:[UIImage imageNamed:@"buttonNormalImage"]
+                      forState:UIControlStateNormal];
     
     [button setTitle:@"获取验证码"
             forState:UIControlStateNormal];
@@ -48,7 +74,10 @@
 
 - (void)buttonAction:(UIButton *)sender {
     
-    [sender cl_startButtonWithTime:10];
+//    [sender cl_startButtonWithTime:10];
+    [sender cl_startButtonWithTime:10
+                       normalImage:[UIImage imageNamed:@"buttonNormalImage"]
+                      disableImage:[UIImage imageNamed:@"buttonDisableImage"]];
 }
 
 #pragma mark - 扩大按钮的点击区域

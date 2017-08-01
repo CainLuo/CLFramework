@@ -7,7 +7,6 @@
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
 //  UIScreen+CLScreen.m
-//  CLFoundation
 //
 //  Created by Cain Luo on 11/10/16.
 //  Copyright © 2016年 Cain Luo. All rights reserved.
