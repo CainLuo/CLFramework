@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C5B1DF96E6D00C05F77 /* CLDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A40B408B1F4F2F5600FDEF5C /* NSString+CLEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = A40B40891F4F2F5600FDEF5C /* NSString+CLEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A40B408C1F4F2F5600FDEF5C /* NSString+CLEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B408A1F4F2F5600FDEF5C /* NSString+CLEncryption.m */; };
 		A40B9B3F1F2B41A500163EAC /* NSString+CLString.h in Headers */ = {isa = PBXBuildFile; fileRef = A40B9B3D1F2B41A500163EAC /* NSString+CLString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A40B9B401F2B41A500163EAC /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B3E1F2B41A500163EAC /* NSString+CLString.m */; };
 		A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = A4386F0D1EE91047001F4BC9 /* NSBundle+CLBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		A4037C5B1DF96E6D00C05F77 /* CLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
+		A40B40891F4F2F5600FDEF5C /* NSString+CLEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLEncryption.h"; sourceTree = "<group>"; };
+		A40B408A1F4F2F5600FDEF5C /* NSString+CLEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLEncryption.m"; sourceTree = "<group>"; };
 		A40B9B3D1F2B41A500163EAC /* NSString+CLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLString.h"; sourceTree = "<group>"; };
 		A40B9B3E1F2B41A500163EAC /* NSString+CLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLString.m"; sourceTree = "<group>"; };
 		A4386F0D1EE91047001F4BC9 /* NSBundle+CLBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CLBundle.h"; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40B40881F4F2F5600FDEF5C /* NSString+CLEncryption */ = {
+			isa = PBXGroup;
+			children = (
+				A40B40891F4F2F5600FDEF5C /* NSString+CLEncryption.h */,
+				A40B408A1F4F2F5600FDEF5C /* NSString+CLEncryption.m */,
+			);
+			path = "NSString+CLEncryption";
+			sourceTree = "<group>";
+		};
 		A40B9B3C1F2B41A500163EAC /* NSString+CLString */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 				A44835BD1DF72B29003B062C /* Info.plist */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
 				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
+				A40B40881F4F2F5600FDEF5C /* NSString+CLEncryption */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A40B9B3C1F2B41A500163EAC /* NSString+CLString */,
 				A43C457C1F1A6FD7001B0FD5 /* NSURL+CLURL */,
@@ -183,6 +197,7 @@
 				A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */,
 				A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */,
 				A43C457F1F1A6FD7001B0FD5 /* NSDate+CLDate.h in Headers */,
+				A40B408B1F4F2F5600FDEF5C /* NSString+CLEncryption.h in Headers */,
 				A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */,
 				A40B9B3F1F2B41A500163EAC /* NSString+CLString.h in Headers */,
 				A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */,
@@ -313,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40B9B401F2B41A500163EAC /* NSString+CLString.m in Sources */,
+				A40B408C1F4F2F5600FDEF5C /* NSString+CLEncryption.m in Sources */,
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
 				A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,

@@ -76,8 +76,6 @@
 		A42AC4B31F15C20900DA0D58 /* UIDevice+CLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4661F15C20900DA0D58 /* UIDevice+CLDevice.m */; };
 		A42AC4B41F15C20900DA0D58 /* UIImage+CLImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4681F15C20900DA0D58 /* UIImage+CLImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4B51F15C20900DA0D58 /* UIImage+CLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4691F15C20900DA0D58 /* UIImage+CLImage.m */; };
-		A42AC4B61F15C20900DA0D58 /* UIImageView+CLImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC46B1F15C20900DA0D58 /* UIImageView+CLImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A42AC4B71F15C20900DA0D58 /* UIImageView+CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC46C1F15C20900DA0D58 /* UIImageView+CLImageView.m */; };
 		A42AC4B81F15C20900DA0D58 /* UIScreen+CLScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC46E1F15C20900DA0D58 /* UIScreen+CLScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A42AC4B91F15C20900DA0D58 /* UIScreen+CLScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC46F1F15C20900DA0D58 /* UIScreen+CLScreen.m */; };
 		A42AC4BA1F15C20900DA0D58 /* UIViewController+CLViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A42AC4711F15C20900DA0D58 /* UIViewController+CLViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -173,8 +171,6 @@
 		A42AC4661F15C20900DA0D58 /* UIDevice+CLDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CLDevice.m"; sourceTree = "<group>"; };
 		A42AC4681F15C20900DA0D58 /* UIImage+CLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CLImage.h"; sourceTree = "<group>"; };
 		A42AC4691F15C20900DA0D58 /* UIImage+CLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CLImage.m"; sourceTree = "<group>"; };
-		A42AC46B1F15C20900DA0D58 /* UIImageView+CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CLImageView.h"; sourceTree = "<group>"; };
-		A42AC46C1F15C20900DA0D58 /* UIImageView+CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CLImageView.m"; sourceTree = "<group>"; };
 		A42AC46E1F15C20900DA0D58 /* UIScreen+CLScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CLScreen.h"; sourceTree = "<group>"; };
 		A42AC46F1F15C20900DA0D58 /* UIScreen+CLScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CLScreen.m"; sourceTree = "<group>"; };
 		A42AC4711F15C20900DA0D58 /* UIViewController+CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CLViewController.h"; sourceTree = "<group>"; };
@@ -385,15 +381,6 @@
 			path = "UIImage+CLImage";
 			sourceTree = "<group>";
 		};
-		A42AC46A1F15C20900DA0D58 /* UIImageView+CLImageView */ = {
-			isa = PBXGroup;
-			children = (
-				A42AC46B1F15C20900DA0D58 /* UIImageView+CLImageView.h */,
-				A42AC46C1F15C20900DA0D58 /* UIImageView+CLImageView.m */,
-			);
-			path = "UIImageView+CLImageView";
-			sourceTree = "<group>";
-		};
 		A42AC46D1F15C20900DA0D58 /* UIScreen+CLScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -566,7 +553,6 @@
 				A42AC4611F15C20900DA0D58 /* UIColor+CLColor */,
 				A42AC4641F15C20900DA0D58 /* UIDevice+CLDevice */,
 				A42AC4671F15C20900DA0D58 /* UIImage+CLImage */,
-				A42AC46A1F15C20900DA0D58 /* UIImageView+CLImageView */,
 				A42AC46D1F15C20900DA0D58 /* UIScreen+CLScreen */,
 				A42AC4701F15C20900DA0D58 /* UIViewController+CLViewController */,
 			);
@@ -605,7 +591,6 @@
 				A42AC4A41F15C20900DA0D58 /* NSBundle+MJRefresh.h in Headers */,
 				A42AC4841F15C20900DA0D58 /* MJRefreshAutoFooter.h in Headers */,
 				A42AC49E1F15C20900DA0D58 /* MJRefreshStateHeader.h in Headers */,
-				A42AC4B61F15C20900DA0D58 /* UIImageView+CLImageView.h in Headers */,
 				A42AC48C1F15C20900DA0D58 /* MJRefreshHeader.h in Headers */,
 				A42AC4AA1F15C20900DA0D58 /* UIView+MJExtension.h in Headers */,
 				A42AC4A61F15C20900DA0D58 /* UIScrollView+MJExtension.h in Headers */,
@@ -789,7 +774,6 @@
 				A42AC4E01F15C74400DA0D58 /* CLTableViewDataSource.m in Sources */,
 				A42AC4DE1F15C74400DA0D58 /* CLTableViewBaseModel.m in Sources */,
 				A42AC4FE1F15CC6C00DA0D58 /* CLCollectionViewDataSource.m in Sources */,
-				A42AC4B71F15C20900DA0D58 /* UIImageView+CLImageView.m in Sources */,
 				A42AC4891F15C20900DA0D58 /* MJRefreshComponent.m in Sources */,
 				A42AC4991F15C20900DA0D58 /* MJRefreshBackStateFooter.m in Sources */,
 				A42AC4DC1F15C74400DA0D58 /* CLTableViewController.m in Sources */,

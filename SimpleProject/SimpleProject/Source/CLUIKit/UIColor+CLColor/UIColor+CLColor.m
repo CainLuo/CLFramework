@@ -60,4 +60,66 @@
                            alpha:1.0f];
 }
 
+#pragma mark - 字符串转颜色值
++ (UIColor *)cl_colorWithHexString:(NSString *)hexString {
+    
+    return [self cl_getColorWithHexString:hexString
+                                    alpha:1.0f];
+}
+
+
++ (UIColor *)cl_colorWithHexString:(NSString *)hexString
+                             alpha:(CGFloat)alphaValue {
+    
+    return [self cl_getColorWithHexString:hexString
+                                    alpha:alphaValue];
+}
+
++ (UIColor *)cl_getColorWithHexString:(NSString *)hexString
+                                alpha:(CGFloat)alphaValue {
+    
+    NSString *colorString = [[hexString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    if ([colorString length] < 6) {
+        
+        return [UIColor blackColor];
+    }
+    
+    if ([colorString hasPrefix:@"#"]) {
+        
+        colorString = [colorString substringFromIndex:1];
+    }
+    
+    if ([colorString length] != 6) {
+        
+        return [UIColor blackColor];
+    }
+    
+    NSRange range;
+    
+    range.location = 0;
+    range.length = 2;
+    
+    NSString *redString = [colorString substringWithRange:range];
+    
+    range.location = 2;
+    
+    NSString *greenString = [colorString substringWithRange:range];
+    
+    range.location = 4;
+    
+    NSString *blueString = [colorString substringWithRange:range];
+    
+    unsigned int red, green, blue;
+    
+    [[NSScanner scannerWithString:redString] scanHexInt:&red];
+    [[NSScanner scannerWithString:greenString] scanHexInt:&green];
+    [[NSScanner scannerWithString:blueString] scanHexInt:&blue];
+    
+    return [UIColor colorWithRed:((float) red / 255.0f)
+                           green:((float) green / 255.0f)
+                            blue:((float) blue / 255.0f)
+                           alpha:1.0f];
+}
+
 @end

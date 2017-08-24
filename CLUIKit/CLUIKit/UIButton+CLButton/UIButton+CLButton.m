@@ -30,7 +30,9 @@
     NSValue *value = objc_getAssociatedObject(self, @selector(cl_clickAreaEdgeInsets));
     
     if (value) {
+        
         UIEdgeInsets edgeInset = [value UIEdgeInsetsValue];
+        
         return edgeInset;
     }
     

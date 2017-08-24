@@ -46,7 +46,7 @@
     [self.view addSubview:toolBarList];
     
     [self cl_getCodeButton];
-    [self cl_ButtonClike];
+    [self cl_ButtonClike];    
 }
 
 #pragma mark - 获取验证码的按钮

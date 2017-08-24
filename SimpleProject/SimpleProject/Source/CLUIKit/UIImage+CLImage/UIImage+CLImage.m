@@ -18,6 +18,30 @@
 
 @implementation UIImage (CLImage)
 
+
++ (UIImage *)cl_getImageWithColor:(UIColor *)color {
+    
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    
+    UIGraphicsBeginImageContext(rect.size);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+    
+    image = [UIImage imageWithData:imageData];
+    
+    return image;
+}
+
 /**
  截取指定视图大小的截图
  
@@ -457,6 +481,83 @@
     UIGraphicsEndImageContext();
     
     return image;
+}
+
+
+#pragma mark - QR Code Image
+- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string {
+    
+    CIFilter *QRCodeImageFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    
+    [QRCodeImageFilter setDefaults];
+    
+    NSData *QRCodeImageData = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [QRCodeImageFilter setValue:QRCodeImageData
+                         forKey:@"inputMessage"];
+    [QRCodeImageFilter setValue:@"H"
+                         forKey:@"inputCorrectionLevel"];
+    
+    CIImage *QRCodeCIImage = [QRCodeImageFilter outputImage];
+    
+    QRCodeCIImage = [QRCodeCIImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)];
+    
+    UIImage *QRCodeUIImage = [UIImage imageWithCIImage:QRCodeCIImage];
+    
+    return QRCodeUIImage;
+}
+
+- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string
+                                       logo:(NSString *)logoName {
+    
+    [self cl_createQRCodeImageWithString:string];
+    
+    UIGraphicsBeginImageContext(self.size);
+    
+    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
+    
+    UIImage *sImage = [UIImage imageNamed:logoName];
+    
+    CGFloat sImageW = 150;
+    CGFloat sImageH= sImageW;
+    CGFloat sImageX = (self.size.width - sImageW) * 0.5;
+    CGFloat sImgaeY = (self.size.height - sImageH) * 0.5;
+    
+    [sImage drawInRect:CGRectMake(sImageX, sImgaeY, sImageW, sImageH)];
+    
+    UIImage *finalyImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return finalyImage;
+}
+
+#pragma mark - 128 Bar Code Image
+- (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string {
+    
+    return [self cl_create128BarcodeImageWithString:string
+                                              space:7];
+}
+
+- (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
+                                  space:(CGFloat)space {
+    
+    CIFilter *qrFilter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
+    
+    NSData *contentData = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    [qrFilter setValue:contentData
+                forKey:@"inputMessage"];
+    [qrFilter setValue:@(space)
+                forKey:@"inputQuietSpace"];
+    
+    CIImage *barCodeImage = qrFilter.outputImage;
+    
+    barCodeImage = [barCodeImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)];
+    
+    UIImage *barCodeUIImage = [UIImage imageWithCIImage:barCodeImage];
+    
+    return barCodeUIImage;
 }
 
 @end

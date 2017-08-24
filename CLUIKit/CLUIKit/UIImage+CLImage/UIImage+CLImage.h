@@ -17,6 +17,14 @@
 @interface UIImage (CLImage)
 
 /**
+ 根据给定的颜色生成一张图
+
+ @param color UIColor
+ @return UIImage
+ */
++ (UIImage *)cl_getImageWithColor:(UIColor *)color;
+
+/**
  截取指定视图大小的截图
 
  @param view 指定视图
@@ -75,5 +83,37 @@
 - (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
                           borderWidth:(CGFloat)borderWidth
                           borderColor:(UIColor *)borderColor;
+
+/**
+ 创建一个二维码
+ 
+ @param string 二维码的内容
+ */
+- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string;
+
+/**
+ 创建一个二维码, 且可以添加中间的Logo图
+ 
+ @param string 二维码内容
+ @param logoName logo图 default size is 150 * 150
+ */
+- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string
+                                       logo:(NSString *)logoName;
+
+/**
+ 创建一个条形码
+ 
+ @param string 条形码内容, 只能输入ASCII字符
+ */
+- (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string;
+
+/**
+ 创建一个条形码, 并且可以设置条形码与UIImageView两边的间距
+ 
+ @param string 条形码内容, 只能输入ASCII字符
+ @param space 与UIImageView两边的距离
+ */
+- (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
+                                          space:(CGFloat)space;
 
 @end

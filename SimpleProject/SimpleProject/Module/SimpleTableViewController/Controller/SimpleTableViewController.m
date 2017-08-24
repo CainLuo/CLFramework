@@ -75,6 +75,8 @@
 
 - (void)cl_addConstraintsWithSuperView {
     
+    self.cl_tableView.backgroundColor = [UIColor cl_colorWithHexString:@"#1874de"];
+    
     [self.cl_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.edges;
     }];

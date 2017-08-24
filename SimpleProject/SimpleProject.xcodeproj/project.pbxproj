@@ -15,6 +15,7 @@
 		A4037C851DF9749200C05F77 /* SimpleTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C7D1DF9749200C05F77 /* SimpleTableViewDelegate.m */; };
 		A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */; };
 		A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */; };
+		A40B40871F4F27D000FDEF5C /* NSString+CLEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B40861F4F27D000FDEF5C /* NSString+CLEncryption.m */; };
 		A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */; };
 		A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */; };
 		A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */; };
@@ -57,7 +58,6 @@
 		A43874221EE92776001F4BC9 /* UIColor+CLColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873F51EE92776001F4BC9 /* UIColor+CLColor.m */; };
 		A43874231EE92776001F4BC9 /* UIDevice+CLDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873F81EE92776001F4BC9 /* UIDevice+CLDevice.m */; };
 		A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873FB1EE92776001F4BC9 /* UIImage+CLImage.m */; };
-		A43874251EE92776001F4BC9 /* UIImageView+CLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873FE1EE92776001F4BC9 /* UIImageView+CLImageView.m */; };
 		A43874261EE92776001F4BC9 /* UIScreen+CLScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874011EE92776001F4BC9 /* UIScreen+CLScreen.m */; };
 		A43874271EE92776001F4BC9 /* UIViewController+CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874041EE92776001F4BC9 /* UIViewController+CLViewController.m */; };
 		A43874A01EE9278D001F4BC9 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A438742D1EE9278C001F4BC9 /* IQNSArray+Sort.m */; };
@@ -170,6 +170,8 @@
 		A4037C801DF9749200C05F77 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
 		A4037C891DF9754A00C05F77 /* SimpleQRCodeImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleQRCodeImageViewController.h; sourceTree = "<group>"; };
 		A4037C8A1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleQRCodeImageViewController.m; sourceTree = "<group>"; };
+		A40B40851F4F27D000FDEF5C /* NSString+CLEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLEncryption.h"; sourceTree = "<group>"; };
+		A40B40861F4F27D000FDEF5C /* NSString+CLEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLEncryption.m"; sourceTree = "<group>"; };
 		A40B9B391F2B403B00163EAC /* NSString+CLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLString.h"; sourceTree = "<group>"; };
 		A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLString.m"; sourceTree = "<group>"; };
 		A40B9B501F2B8D8700163EAC /* SimpleButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleButtonController.h; sourceTree = "<group>"; };
@@ -256,8 +258,6 @@
 		A43873F81EE92776001F4BC9 /* UIDevice+CLDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+CLDevice.m"; sourceTree = "<group>"; };
 		A43873FA1EE92776001F4BC9 /* UIImage+CLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CLImage.h"; sourceTree = "<group>"; };
 		A43873FB1EE92776001F4BC9 /* UIImage+CLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CLImage.m"; sourceTree = "<group>"; };
-		A43873FD1EE92776001F4BC9 /* UIImageView+CLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CLImageView.h"; sourceTree = "<group>"; };
-		A43873FE1EE92776001F4BC9 /* UIImageView+CLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CLImageView.m"; sourceTree = "<group>"; };
 		A43874001EE92776001F4BC9 /* UIScreen+CLScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CLScreen.h"; sourceTree = "<group>"; };
 		A43874011EE92776001F4BC9 /* UIScreen+CLScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CLScreen.m"; sourceTree = "<group>"; };
 		A43874031EE92776001F4BC9 /* UIViewController+CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CLViewController.h"; sourceTree = "<group>"; };
@@ -545,6 +545,15 @@
 			path = SimpleQRCodeImageView;
 			sourceTree = "<group>";
 		};
+		A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */ = {
+			isa = PBXGroup;
+			children = (
+				A40B40851F4F27D000FDEF5C /* NSString+CLEncryption.h */,
+				A40B40861F4F27D000FDEF5C /* NSString+CLEncryption.m */,
+			);
+			path = "NSString+CLEncryption";
+			sourceTree = "<group>";
+		};
 		A40B9B381F2B402600163EAC /* NSString+CLString */ = {
 			isa = PBXGroup;
 			children = (
@@ -686,7 +695,6 @@
 				A43873F31EE92776001F4BC9 /* UIColor+CLColor */,
 				A43873F61EE92776001F4BC9 /* UIDevice+CLDevice */,
 				A43873F91EE92776001F4BC9 /* UIImage+CLImage */,
-				A43873FC1EE92776001F4BC9 /* UIImageView+CLImageView */,
 				A43873FF1EE92776001F4BC9 /* UIScreen+CLScreen */,
 				A43874021EE92776001F4BC9 /* UIViewController+CLViewController */,
 			);
@@ -926,15 +934,6 @@
 			path = "UIImage+CLImage";
 			sourceTree = "<group>";
 		};
-		A43873FC1EE92776001F4BC9 /* UIImageView+CLImageView */ = {
-			isa = PBXGroup;
-			children = (
-				A43873FD1EE92776001F4BC9 /* UIImageView+CLImageView.h */,
-				A43873FE1EE92776001F4BC9 /* UIImageView+CLImageView.m */,
-			);
-			path = "UIImageView+CLImageView";
-			sourceTree = "<group>";
-		};
 		A43873FF1EE92776001F4BC9 /* UIScreen+CLScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1159,6 +1158,7 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
@@ -1429,7 +1429,7 @@
 				A43874061EE92776001F4BC9 /* CLCollectionViewBaseModel.m in Sources */,
 				A43874BE1EE9278D001F4BC9 /* SDCycleScrollView.m in Sources */,
 				A43874CE1EE9278D001F4BC9 /* UIImageView+WebCache.m in Sources */,
-				A43874251EE92776001F4BC9 /* UIImageView+CLImageView.m in Sources */,
+				A40B40871F4F27D000FDEF5C /* NSString+CLEncryption.m in Sources */,
 				A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */,
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
 				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
