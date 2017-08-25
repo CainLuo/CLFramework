@@ -101,7 +101,7 @@
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
 		A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A43299EC1DF038870012DB71 /* CLUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4DE8AB51F4F3A7800D19894 /* NSObject+CLAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DE8AB31F4F3A7800D19894 /* NSObject+CLAssert.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A4DE8AB51F4F3A7800D19894 /* NSObject+CLAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DE8AB31F4F3A7800D19894 /* NSObject+CLAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DE8AB61F4F3A7800D19894 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DE8AB41F4F3A7800D19894 /* NSObject+CLAssert.m */; };
 		A4DEC0381F30D42100AF4020 /* CLToolBarListView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DEC0391F30D42100AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */; };
