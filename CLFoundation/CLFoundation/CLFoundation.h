@@ -39,3 +39,6 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 
 #pragma mark - CLDefine
 #import <CLFoundation/CLDefine.h>
+
+#import <CLFoundation/NSObject+CLAssert.h>
+

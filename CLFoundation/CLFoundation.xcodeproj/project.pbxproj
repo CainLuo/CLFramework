@@ -37,6 +37,8 @@
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835D91DF72C24003B062C /* NSString+CLRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835DA1DF72C25003B062C /* NSString+CLRegular.m */; };
+		A4755CA91F4F34F200530AA4 /* NSObject+CLAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A4755CA71F4F34F200530AA4 /* NSObject+CLAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4755CAA1F4F34F200530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA81F4F34F200530AA4 /* NSObject+CLAssert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		A44835C91DF72B2A003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44835D91DF72C24003B062C /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A44835DA1DF72C25003B062C /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
+		A4755CA71F4F34F200530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
+		A4755CA81F4F34F200530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				A44835BD1DF72B29003B062C /* Info.plist */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
 				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
+				A4755CA61F4F34F200530AA4 /* NSObject+CLAssert */,
 				A40B40881F4F2F5600FDEF5C /* NSString+CLEncryption */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A40B9B3C1F2B41A500163EAC /* NSString+CLString */,
@@ -187,6 +192,15 @@
 			path = "NSString+CLRegular";
 			sourceTree = "<group>";
 		};
+		A4755CA61F4F34F200530AA4 /* NSObject+CLAssert */ = {
+			isa = PBXGroup;
+			children = (
+				A4755CA71F4F34F200530AA4 /* NSObject+CLAssert.h */,
+				A4755CA81F4F34F200530AA4 /* NSObject+CLAssert.m */,
+			);
+			path = "NSObject+CLAssert";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,6 +215,7 @@
 				A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */,
 				A40B9B3F1F2B41A500163EAC /* NSString+CLString.h in Headers */,
 				A4386F0F1EE91047001F4BC9 /* NSBundle+CLBundle.h in Headers */,
+				A4755CA91F4F34F200530AA4 /* NSObject+CLAssert.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +344,7 @@
 			files = (
 				A40B9B401F2B41A500163EAC /* NSString+CLString.m in Sources */,
 				A40B408C1F4F2F5600FDEF5C /* NSString+CLEncryption.m in Sources */,
+				A4755CAA1F4F34F200530AA4 /* NSObject+CLAssert.m in Sources */,
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
 				A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,

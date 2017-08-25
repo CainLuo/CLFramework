@@ -46,7 +46,6 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import "UIScreen+CLScreen.h"
 #import "UIDevice+CLDevice.h"
 #import "UIViewController+CLViewController.h"
-#import "UIImageView+CLImageView.h"
 #import "UIImage+CLImage.h"
 #import "UIButton+CLButton.h"
 

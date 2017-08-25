@@ -13,6 +13,7 @@
 //
 
 #import "NSString+CLString.h"
+#import "NSString+CLRegular.h"
 
 @implementation NSString (CLString)
 
@@ -80,6 +81,47 @@
 - (NSString *)cl_trimmedString {
     
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+}
+
++ (NSString *)cl_stringMobileFormat:(NSString *)phoneNumber {
+    
+    return [self cl_stringMobileFormat:phoneNumber
+                             separator:@" "];
+}
+
++ (NSString *)cl_stringMobileFormat:(NSString *)phoneNumber
+                          separator:(NSString *)separator {
+    
+    if ([phoneNumber cl_checkPhoneNumber]) {
+        
+        NSMutableString *value = [[NSMutableString alloc] initWithString:phoneNumber];
+        
+        [value insertString:separator
+                    atIndex:3];
+        [value insertString:separator
+                    atIndex:8];
+        
+        return value;
+    }
+    
+    return nil;
+}
+
++ (NSString *)cl_stringUnitFormat:(CGFloat)value
+                       unitString:(NSString *)unitString {
+    
+    if (value / 100000000 >= 1) {
+        
+        return [NSString stringWithFormat:@"%.0f%@", value / 100000000, unitString];
+        
+    } else if (value / 10000 >= 1 && value / 100000000 < 1) {
+        
+        return [NSString stringWithFormat:@"%.0f%@", value / 10000, unitString];
+        
+    } else {
+        
+        return [NSString stringWithFormat:@"%.0f", value];
+    }
 }
 
 @end

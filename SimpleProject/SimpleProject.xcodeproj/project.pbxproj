@@ -111,6 +111,7 @@
 		A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A438749D1EE9278D001F4BC9 /* UIView+WebCacheOperation.m */; };
 		A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */; };
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
+		A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -374,6 +375,8 @@
 		A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
 		A43874D91EE929E3001F4BC9 /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
+		A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
+		A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -1158,9 +1161,10 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
-				A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */,
+				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
+				A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
 				A40B9B381F2B402600163EAC /* NSString+CLString */,
 				A4996E471F1306E300F99E40 /* NSURL+CLURL */,
@@ -1184,6 +1188,15 @@
 				A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */,
 			);
 			path = "NSString+CLRegular";
+			sourceTree = "<group>";
+		};
+		A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */ = {
+			isa = PBXGroup;
+			children = (
+				A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */,
+				A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */,
+			);
+			path = "NSObject+CLAssert";
 			sourceTree = "<group>";
 		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
@@ -1444,6 +1457,7 @@
 				A43874C51EE9278D001F4BC9 /* SDWebImageDecoder.m in Sources */,
 				A42AC4BF1F15C32100DA0D58 /* CLNavigationController.m in Sources */,
 				A42AC40E1F15354700DA0D58 /* CLViewController.m in Sources */,
+				A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */,
 				A43874A31EE9278D001F4BC9 /* IQUIView+Hierarchy.m in Sources */,
 				A43874A41EE9278D001F4BC9 /* IQUIViewController+Additions.m in Sources */,
 				A43874B61EE9278D001F4BC9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,

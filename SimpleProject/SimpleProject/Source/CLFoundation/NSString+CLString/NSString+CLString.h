@@ -67,4 +67,32 @@
  */
 - (NSString *)cl_trimmedString;
 
+/**
+ 手机号格式化, 默认: 138 0013 8000
+
+ @param phoneNumber 手机号
+ @return NSString
+ */
++ (NSString *)cl_stringMobileFormat:(NSString *)phoneNumber;
+
+/**
+ 手机号格式化
+
+ @param phoneNumber 手机号
+ @param separator 号码分隔符, 比如: 138-0013-8000
+ @return NSString
+ */
++ (NSString *)cl_stringMobileFormat:(NSString *)phoneNumber
+                          separator:(NSString *)separator;
+
+/**
+ 字符串单位格式化
+
+ @param value 数值
+ @param unitString 单位, 比如亿, 万
+ @return NSString
+ */
++ (NSString *)cl_stringUnitFormat:(CGFloat)value
+                       unitString:(NSString *)unitString;
+
 @end
