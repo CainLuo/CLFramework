@@ -111,6 +111,7 @@
 		A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A438749D1EE9278D001F4BC9 /* UIView+WebCacheOperation.m */; };
 		A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */; };
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
+		A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */; };
 		A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
@@ -375,6 +376,8 @@
 		A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
 		A43874D91EE929E3001F4BC9 /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
+		A43A1E761F514E4F00BA81EF /* NSAttributedString+CLAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CLAttributedString.h"; sourceTree = "<group>"; };
+		A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CLAttributedString.m"; sourceTree = "<group>"; };
 		A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
 		A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
@@ -1161,6 +1164,7 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
@@ -1188,6 +1192,15 @@
 				A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */,
 			);
 			path = "NSString+CLRegular";
+			sourceTree = "<group>";
+		};
+		A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				A43A1E761F514E4F00BA81EF /* NSAttributedString+CLAttributedString.h */,
+				A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */,
+			);
+			path = "NSAttributedString+CLAttributedString";
 			sourceTree = "<group>";
 		};
 		A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */ = {
@@ -1518,6 +1531,7 @@
 				A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */,
 				A43874CC1EE9278D001F4BC9 /* UIImage+MultiFormat.m in Sources */,
 				A4037C841DF9749200C05F77 /* SimpleTableViewController.m in Sources */,
+				A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */,
 				A43874C71EE9278D001F4BC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				A438740D1EE92776001F4BC9 /* MJRefreshAutoFooter.m in Sources */,

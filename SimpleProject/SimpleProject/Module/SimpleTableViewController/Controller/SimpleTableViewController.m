@@ -19,6 +19,8 @@
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
 @property (nonatomic, strong) SimpleTableViewDataSource *simpleTableViewDataSource;
 
+@property (nonatomic, strong) NSString *string;
+
 @end
 
 @implementation SimpleTableViewController
@@ -35,6 +37,17 @@
     [self cl_dropDownBeginRefresh];
     
     [self cl_addConstraintsWithSuperView];
+    
+    
+//    dispatch_queue_t queue = dispatch_queue_create("parallel", DISPATCH_QUEUE_CONCURRENT);
+//    
+//    for (NSInteger i = 0; i < 10000; i++) {
+//        
+//        dispatch_async(queue, ^{
+//            
+//            self.string = [NSString stringWithFormat:@"abcdefg%ld", i];
+//        });
+//    }
 }
 
 - (void)cl_dropDownRefresh {
