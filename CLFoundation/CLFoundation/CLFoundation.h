@@ -41,4 +41,5 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 #import <CLFoundation/CLDefine.h>
 
 #import <CLFoundation/NSObject+CLAssert.h>
+#import <CLFoundation/NSAttributedString+CLAttributedString.h>
 
