@@ -30,6 +30,8 @@
 		A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A4386F0E1EE91047001F4BC9 /* NSBundle+CLBundle.m */; };
 		A43A1E7C1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = A43A1E7A1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A43A1E7D1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E7B1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m */; };
+		A43A1E851F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = A43A1E831F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43A1E861F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E841F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */; };
 		A43C457F1F1A6FD7001B0FD5 /* NSDate+CLDate.h in Headers */ = {isa = PBXBuildFile; fileRef = A43C457A1F1A6FD7001B0FD5 /* NSDate+CLDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A43C45801F1A6FD7001B0FD5 /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43C457B1F1A6FD7001B0FD5 /* NSDate+CLDate.m */; };
 		A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */ = {isa = PBXBuildFile; fileRef = A43C457D1F1A6FD7001B0FD5 /* NSURL+CLURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +65,8 @@
 		A4386F0E1EE91047001F4BC9 /* NSBundle+CLBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CLBundle.m"; sourceTree = "<group>"; };
 		A43A1E7A1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CLAttributedString.h"; sourceTree = "<group>"; };
 		A43A1E7B1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CLAttributedString.m"; sourceTree = "<group>"; };
+		A43A1E831F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CLMutableAttributedString.h"; sourceTree = "<group>"; };
+		A43A1E841F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLMutableAttributedString.m"; sourceTree = "<group>"; };
 		A43C457A1F1A6FD7001B0FD5 /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
 		A43C457B1F1A6FD7001B0FD5 /* NSDate+CLDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CLDate.m"; sourceTree = "<group>"; };
 		A43C457D1F1A6FD7001B0FD5 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 			path = "NSAttributedString+CLAttributedString";
 			sourceTree = "<group>";
 		};
+		A43A1E821F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				A43A1E831F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */,
+				A43A1E841F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */,
+			);
+			path = "NSMutableAttributedString+CLMutableAttributedString";
+			sourceTree = "<group>";
+		};
 		A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 				A4037C5B1DF96E6D00C05F77 /* CLDefine.h */,
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
 				A44835BD1DF72B29003B062C /* Info.plist */,
+				A43A1E821F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A43A1E791F515C7C00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
 				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
@@ -232,6 +246,7 @@
 				A43A1E7C1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.h in Headers */,
 				A4755CA91F4F34F200530AA4 /* NSObject+CLAssert.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
+				A43A1E851F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +378,7 @@
 				A43A1E7D1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
 				A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */,
+				A43A1E861F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,
 				A43C45801F1A6FD7001B0FD5 /* NSDate+CLDate.m in Sources */,
 			);

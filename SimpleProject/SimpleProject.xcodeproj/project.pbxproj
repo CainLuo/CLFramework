@@ -112,6 +112,7 @@
 		A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874D71EE929E3001F4BC9 /* NSBundle+CLBundle.m */; };
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
 		A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */; };
+		A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */; };
 		A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
@@ -378,6 +379,8 @@
 		A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
 		A43A1E761F514E4F00BA81EF /* NSAttributedString+CLAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CLAttributedString.h"; sourceTree = "<group>"; };
 		A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CLAttributedString.m"; sourceTree = "<group>"; };
+		A43A1E7F1F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CLMutableAttributedString.h"; sourceTree = "<group>"; };
+		A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLMutableAttributedString.m"; sourceTree = "<group>"; };
 		A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
 		A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
@@ -1164,6 +1167,7 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
@@ -1201,6 +1205,15 @@
 				A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */,
 			);
 			path = "NSAttributedString+CLAttributedString";
+			sourceTree = "<group>";
+		};
+		A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				A43A1E7F1F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */,
+				A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */,
+			);
+			path = "NSMutableAttributedString+CLMutableAttributedString";
 			sourceTree = "<group>";
 		};
 		A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */ = {
@@ -1473,6 +1486,7 @@
 				A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */,
 				A43874A31EE9278D001F4BC9 /* IQUIView+Hierarchy.m in Sources */,
 				A43874A41EE9278D001F4BC9 /* IQUIViewController+Additions.m in Sources */,
+				A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */,
 				A43874B61EE9278D001F4BC9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A43874131EE92776001F4BC9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A43874A81EE9278D001F4BC9 /* IQTextView.m in Sources */,
