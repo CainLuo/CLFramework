@@ -17,7 +17,7 @@
 
 + (void)cl_checkBundID {
     
-    NSString *bundleID = [NSBundle cl_getBundleIdentifier];
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
     
     NSArray *bundleIDArray = @[@"com.CainLuo.SimpleProject",
                                @"com.fishSwimInformation.FishSwimInformation"];
