@@ -125,7 +125,8 @@
                 
                 [self setTitle:title
                       forState:UIControlStateNormal];
-                
+                [self setTitleColor:[UIColor whiteColor]
+                           forState:UIControlStateNormal];
                 self.enabled = YES;
             });
             
@@ -142,7 +143,8 @@
                 
                 [self setBackgroundImage:disableImage
                                 forState:UIControlStateNormal];
-
+                [self setTitleColor:[UIColor blackColor]
+                           forState:UIControlStateNormal];
                 [self setTitle:[NSString stringWithFormat:@"%@%@", timeString, suffixTitle]
                       forState:UIControlStateNormal];
                 

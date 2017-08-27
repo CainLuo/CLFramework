@@ -67,7 +67,7 @@
 - (void)cl_startButtonWithTime:(NSInteger)time
                    normalImage:(UIImage *)normalImage
                   disableImage:(UIImage *)disableImage {
-
+    
     [self cl_startButtonWithTime:time
                            title:self.titleLabel.text
                      suffixTitle:@""
@@ -125,7 +125,8 @@
                 
                 [self setTitle:title
                       forState:UIControlStateNormal];
-                
+                [self setTitleColor:[UIColor whiteColor]
+                           forState:UIControlStateNormal];
                 self.enabled = YES;
             });
             
@@ -142,7 +143,8 @@
                 
                 [self setBackgroundImage:disableImage
                                 forState:UIControlStateNormal];
-
+                [self setTitleColor:[UIColor blackColor]
+                           forState:UIControlStateNormal];
                 [self setTitle:[NSString stringWithFormat:@"%@%@", timeString, suffixTitle]
                       forState:UIControlStateNormal];
                 
