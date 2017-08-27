@@ -66,3 +66,7 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #import "IQUIView+Hierarchy.h"
 #import "IQUIViewController+Additions.h"
 #import "IQUIWindow+Hierarchy.h"
+
+#pragma mark - SVProgressHUD
+#import "SVProgressHUD.h"
+

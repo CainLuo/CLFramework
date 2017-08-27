@@ -114,6 +114,11 @@
 		A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */; };
 		A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */; };
 		A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */; };
+		A488D6E51F526A02006CA2C0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */; };
+		A488D6E61F526A02006CA2C0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DE1F526A02006CA2C0 /* SVProgressAnimatedView.m */; };
+		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
+		A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */; };
+		A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -383,6 +388,16 @@
 		A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLMutableAttributedString.m"; sourceTree = "<group>"; };
 		A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
 		A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
+		A488D6DB1F526A02006CA2C0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A488D6DD1F526A02006CA2C0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		A488D6DE1F526A02006CA2C0 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		A488D6DF1F526A02006CA2C0 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A488D6E11F526A02006CA2C0 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A488D6E31F526A02006CA2C0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -964,6 +979,7 @@
 		A43874281EE9278C001F4BC9 /* OtherFramework */ = {
 			isa = PBXGroup;
 			children = (
+				A488D6DA1F526A02006CA2C0 /* SVProgressHUD */,
 				A438742A1EE9278C001F4BC9 /* IQKeyboardManager */,
 				A438744F1EE9278C001F4BC9 /* Masonry */,
 				A43874691EE9278D001F4BC9 /* OtherFramework.h */,
@@ -1225,6 +1241,23 @@
 			path = "NSObject+CLAssert";
 			sourceTree = "<group>";
 		};
+		A488D6DA1F526A02006CA2C0 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A488D6DB1F526A02006CA2C0 /* SVIndefiniteAnimatedView.h */,
+				A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */,
+				A488D6DD1F526A02006CA2C0 /* SVProgressAnimatedView.h */,
+				A488D6DE1F526A02006CA2C0 /* SVProgressAnimatedView.m */,
+				A488D6DF1F526A02006CA2C0 /* SVProgressHUD-Prefix.pch */,
+				A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */,
+				A488D6E11F526A02006CA2C0 /* SVProgressHUD.h */,
+				A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */,
+				A488D6E31F526A02006CA2C0 /* SVRadialGradientLayer.h */,
+				A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -1433,6 +1466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */,
+				A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */,
 				A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */,
 				A43874AE1EE9278D001F4BC9 /* IQKeyboardManager.bundle in Resources */,
 				A438741B1EE92776001F4BC9 /* MJRefresh.bundle in Resources */,
@@ -1471,6 +1505,7 @@
 				A40B40871F4F27D000FDEF5C /* NSString+CLEncryption.m in Sources */,
 				A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */,
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
+				A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */,
 				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
 				A43874A71EE9278D001F4BC9 /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -1492,6 +1527,7 @@
 				A43874A81EE9278D001F4BC9 /* IQTextView.m in Sources */,
 				A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */,
 				A43874191EE92776001F4BC9 /* MJRefreshNormalHeader.m in Sources */,
+				A488D6E61F526A02006CA2C0 /* SVProgressAnimatedView.m in Sources */,
 				A438740B1EE92776001F4BC9 /* CLTitleView.m in Sources */,
 				A4037C8B1DF9754A00C05F77 /* SimpleQRCodeImageViewController.m in Sources */,
 				A43874B41EE9278D001F4BC9 /* MASViewConstraint.m in Sources */,
@@ -1508,6 +1544,7 @@
 				A43874271EE92776001F4BC9 /* UIViewController+CLViewController.m in Sources */,
 				A43874BB1EE9278D001F4BC9 /* TADotView.m in Sources */,
 				A4E135F61DF043AA00C79278 /* main.m in Sources */,
+				A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */,
 				A42AC4EA1F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m in Sources */,
 				A43874121EE92776001F4BC9 /* MJRefreshAutoGifFooter.m in Sources */,
 				A43874161EE92776001F4BC9 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1571,6 +1608,7 @@
 				A43874A91EE9278D001F4BC9 /* IQBarButtonItem.m in Sources */,
 				A43874BD1EE9278D001F4BC9 /* SDCollectionViewCell.m in Sources */,
 				A43874C81EE9278D001F4BC9 /* SDWebImageManager.m in Sources */,
+				A488D6E51F526A02006CA2C0 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
