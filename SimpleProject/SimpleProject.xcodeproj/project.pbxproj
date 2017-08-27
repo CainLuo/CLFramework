@@ -119,7 +119,6 @@
 		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
 		A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */; };
 		A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */; };
-		A488D7061F527509006CA2C0 /* NSObject+CLUIException.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D7051F527509006CA2C0 /* NSObject+CLUIException.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -129,6 +128,7 @@
 		A4D1CB561DEC4251007B6E59 /* SimpleProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */; };
 		A4DEC0341F30A59000AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */; };
 		A4E135F61DF043AA00C79278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E135F51DF043AA00C79278 /* main.m */; };
+		A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */; };
 		A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -399,8 +399,6 @@
 		A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		A488D6E31F526A02006CA2C0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		A488D7041F527509006CA2C0 /* NSObject+CLUIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLUIException.h"; sourceTree = "<group>"; };
-		A488D7051F527509006CA2C0 /* NSObject+CLUIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLUIException.m"; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -419,6 +417,8 @@
 		A4DEC0321F30A59000AF4020 /* CLToolBarListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLToolBarListView.h; sourceTree = "<group>"; };
 		A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLToolBarListView.m; sourceTree = "<group>"; };
 		A4E135F51DF043AA00C79278 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4F378271F530C7200B1A8B8 /* NSArray+CLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLArray.h"; sourceTree = "<group>"; };
+		A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLArray.m"; sourceTree = "<group>"; };
 		A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScrollViewController.h; sourceTree = "<group>"; };
 		A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleScrollViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -716,7 +716,6 @@
 				A43873B11EE92776001F4BC9 /* CLTableViewController */,
 				A43873BC1EE92776001F4BC9 /* CLTitleView */,
 				A43873BF1EE92776001F4BC9 /* CLUIKit.h */,
-				A488D7031F527509006CA2C0 /* NSObject+CLUIException */,
 				A43873C11EE92776001F4BC9 /* MJRefresh */,
 				A43873F01EE92776001F4BC9 /* UIApplication+CLApplication */,
 				A42AC4021F152F3900DA0D58 /* UIButton+CLButton */,
@@ -1187,6 +1186,7 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */,
 				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
@@ -1260,15 +1260,6 @@
 				A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */,
 			);
 			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		A488D7031F527509006CA2C0 /* NSObject+CLUIException */ = {
-			isa = PBXGroup;
-			children = (
-				A488D7041F527509006CA2C0 /* NSObject+CLUIException.h */,
-				A488D7051F527509006CA2C0 /* NSObject+CLUIException.m */,
-			);
-			path = "NSObject+CLUIException";
 			sourceTree = "<group>";
 		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
@@ -1349,6 +1340,15 @@
 				A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */,
 			);
 			path = CLToolBarListView;
+			sourceTree = "<group>";
+		};
+		A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */ = {
+			isa = PBXGroup;
+			children = (
+				A4F378271F530C7200B1A8B8 /* NSArray+CLArray.h */,
+				A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */,
+			);
+			path = "NSArray+CLArray";
 			sourceTree = "<group>";
 		};
 		A4FEF28C1F2792D60017F876 /* SimpleScrollViewController */ = {
@@ -1535,7 +1535,6 @@
 				A43874A31EE9278D001F4BC9 /* IQUIView+Hierarchy.m in Sources */,
 				A43874A41EE9278D001F4BC9 /* IQUIViewController+Additions.m in Sources */,
 				A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */,
-				A488D7061F527509006CA2C0 /* NSObject+CLUIException.m in Sources */,
 				A43874B61EE9278D001F4BC9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A43874131EE92776001F4BC9 /* MJRefreshAutoNormalFooter.m in Sources */,
 				A43874A81EE9278D001F4BC9 /* IQTextView.m in Sources */,
@@ -1601,6 +1600,7 @@
 				A43874C71EE9278D001F4BC9 /* SDWebImageDownloaderOperation.m in Sources */,
 				A438740D1EE92776001F4BC9 /* MJRefreshAutoFooter.m in Sources */,
 				A43874A21EE9278D001F4BC9 /* IQUITextFieldView+Additions.m in Sources */,
+				A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */,
 				A43874C61EE9278D001F4BC9 /* SDWebImageDownloader.m in Sources */,
 				A42AC4E61F15CA6C00DA0D58 /* CLCollectionViewDataSource.m in Sources */,
 				A43874221EE92776001F4BC9 /* UIColor+CLColor.m in Sources */,

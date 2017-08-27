@@ -18,11 +18,20 @@
 
 + (void)cl_checkBundID {
     
-    if (![[NSBundle cl_getBundleIdentifier] isEqualToString:@"com.CainLuo.SimpleProject"]) {
+    NSString *bundleID = [NSBundle cl_getBundleIdentifier];
+    
+    NSArray *bundleIDArray = @[@"com.CainLuo.SimpleProject",
+                               @"com.fishSwimInformation.FishSwimInformation"];
+    
+    for (NSInteger i = 0; i < bundleIDArray.count; i++) {
         
-        @throw [NSException exceptionWithName:@"来自Framework的异常"
-                                       reason:@"您没有权限使用该框架"
-                                     userInfo:nil];
+        if (![bundleID isEqualToString:bundleIDArray[i]]) {
+            
+            @throw [NSException exceptionWithName:@"Exception from Framework"
+                                           reason:@"You do not have permission to use the framework"
+                                         userInfo:nil];
+            
+        }
     }
 }
 

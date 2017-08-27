@@ -101,8 +101,6 @@
 		A43299F31DF038870012DB71 /* CLUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43299E91DF038870012DB71 /* CLUIKit.framework */; };
 		A43299F81DF038870012DB71 /* CLUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A43299F71DF038870012DB71 /* CLUIKitTests.m */; };
 		A43299FA1DF038870012DB71 /* CLUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A43299EC1DF038870012DB71 /* CLUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A488D70A1F527513006CA2C0 /* NSObject+CLUIException.h in Headers */ = {isa = PBXBuildFile; fileRef = A488D7081F527513006CA2C0 /* NSObject+CLUIException.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A488D70B1F527513006CA2C0 /* NSObject+CLUIException.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D7091F527513006CA2C0 /* NSObject+CLUIException.m */; };
 		A4DEC0381F30D42100AF4020 /* CLToolBarListView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DEC0391F30D42100AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */; };
 /* End PBXBuildFile section */
@@ -201,8 +199,6 @@
 		A43299F21DF038870012DB71 /* CLUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43299F71DF038870012DB71 /* CLUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLUIKitTests.m; sourceTree = "<group>"; };
 		A43299F91DF038870012DB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A488D7081F527513006CA2C0 /* NSObject+CLUIException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLUIException.h"; sourceTree = "<group>"; };
-		A488D7091F527513006CA2C0 /* NSObject+CLUIException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLUIException.m"; sourceTree = "<group>"; };
 		A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLToolBarListView.h; sourceTree = "<group>"; };
 		A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLToolBarListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -551,7 +547,6 @@
 				A43299EC1DF038870012DB71 /* CLUIKit.h */,
 				A42AC4291F15C20900DA0D58 /* CLViewController */,
 				A43299ED1DF038870012DB71 /* Info.plist */,
-				A488D7071F527513006CA2C0 /* NSObject+CLUIException */,
 				A42AC42C1F15C20900DA0D58 /* MJRefresh */,
 				A42AC45B1F15C20900DA0D58 /* UIApplication+CLApplication */,
 				A42AC45E1F15C20900DA0D58 /* UIButton+CLButton */,
@@ -571,15 +566,6 @@
 				A43299F91DF038870012DB71 /* Info.plist */,
 			);
 			path = CLUIKitTests;
-			sourceTree = "<group>";
-		};
-		A488D7071F527513006CA2C0 /* NSObject+CLUIException */ = {
-			isa = PBXGroup;
-			children = (
-				A488D7081F527513006CA2C0 /* NSObject+CLUIException.h */,
-				A488D7091F527513006CA2C0 /* NSObject+CLUIException.m */,
-			);
-			path = "NSObject+CLUIException";
 			sourceTree = "<group>";
 		};
 		A4DEC0351F30D42100AF4020 /* CLToolBarListView */ = {
@@ -637,7 +623,6 @@
 				A42AC4B01F15C20900DA0D58 /* UIColor+CLColor.h in Headers */,
 				A42AC49A1F15C20900DA0D58 /* MJRefreshGifHeader.h in Headers */,
 				A42AC4B21F15C20900DA0D58 /* UIDevice+CLDevice.h in Headers */,
-				A488D70A1F527513006CA2C0 /* NSObject+CLUIException.h in Headers */,
 				A42AC4A11F15C20900DA0D58 /* MJRefresh.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -770,7 +755,6 @@
 				A42AC48F1F15C20900DA0D58 /* MJRefreshAutoGifFooter.m in Sources */,
 				A42AC49D1F15C20900DA0D58 /* MJRefreshNormalHeader.m in Sources */,
 				A42AC4A71F15C20900DA0D58 /* UIScrollView+MJExtension.m in Sources */,
-				A488D70B1F527513006CA2C0 /* NSObject+CLUIException.m in Sources */,
 				A42AC4AF1F15C20900DA0D58 /* UIButton+CLButton.m in Sources */,
 				A42AC4AD1F15C20900DA0D58 /* CLApplication.m in Sources */,
 				A42AC4B51F15C20900DA0D58 /* UIImage+CLImage.m in Sources */,

@@ -40,10 +40,7 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 #pragma mark - CLDefine
 #import <CLFoundation/CLDefine.h>
 
-#pragma mark - CLAssert
-#import <CLFoundation/NSObject+CLAssert.h>
-
 #pragma mark - CLAttributedString
 #import <CLFoundation/NSAttributedString+CLAttributedString.h>
-#import <CLFoundation/NSMutableAttributedString+CLMutableAttributedString.h?
+#import <CLFoundation/NSMutableAttributedString+CLMutableAttributedString.h>
 
