@@ -60,3 +60,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 
 #pragma mark - CLToolBarListView
 #import <CLUIKit/CLToolBarListView.h>
+
+#pragma mark - CLAssert
+#import <CLUIKit/NSObject+CLAssert.h>
+

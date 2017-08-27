@@ -70,7 +70,7 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #pragma mark - CYLTabBarController
 #import <OtherFramework/CYLConstants.h>
 
-##pragma mark - JQFMDB
+#pragma mark - JQFMDB
 #import <OtherFramework/JQFMDB.h>
 #import <OtherFramework/FMDB.h>
 

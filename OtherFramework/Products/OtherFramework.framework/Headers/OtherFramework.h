@@ -77,3 +77,6 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #pragma mark - YYModel
 #import <OtherFramework/YYModel.h>
 
+#pragma mark - SVProgressHUD
+#import <OtherFramework/SVProgressHUD.h>
+
