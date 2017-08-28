@@ -46,4 +46,8 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 
 #pragma mark - CLArray
 #import <CLFoundation/NSArray+CLArray.h>
+#import <CLFoundation/NSMutableArray+CLMutableArray.h>
 
+#pragma mark - CLDictionary
+#import <CLFoundation/NSDictionary+CLDictionary.h>
+#import <CLFoundation/NSMutableDictionary+CLMutableDictionary.h>
