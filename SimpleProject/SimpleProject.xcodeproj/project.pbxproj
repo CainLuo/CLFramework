@@ -129,6 +129,7 @@
 		A4DEC0341F30A59000AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */; };
 		A4E135F61DF043AA00C79278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E135F51DF043AA00C79278 /* main.m */; };
 		A4ED4F0F1F54576300B724FE /* NSMutableArray+CLMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */; };
+		A4ED4F181F54678900B724FE /* NSDictionary+CLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F171F54678900B724FE /* NSDictionary+CLDictionary.m */; };
 		A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */; };
 		A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */; };
 /* End PBXBuildFile section */
@@ -420,6 +421,8 @@
 		A4E135F51DF043AA00C79278 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4ED4F0D1F54576300B724FE /* NSMutableArray+CLMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLMutableArray.h"; sourceTree = "<group>"; };
 		A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CLMutableArray.m"; sourceTree = "<group>"; };
+		A4ED4F161F54678900B724FE /* NSDictionary+CLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CLDictionary.h"; sourceTree = "<group>"; };
+		A4ED4F171F54678900B724FE /* NSDictionary+CLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CLDictionary.m"; sourceTree = "<group>"; };
 		A4F378271F530C7200B1A8B8 /* NSArray+CLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLArray.h"; sourceTree = "<group>"; };
 		A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLArray.m"; sourceTree = "<group>"; };
 		A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScrollViewController.h; sourceTree = "<group>"; };
@@ -1193,6 +1196,7 @@
 				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
+				A4ED4F151F54677A00B724FE /* NSDictionary+CLDictionary */,
 				A4ED4F0C1F54574400B724FE /* NSMutableArray+CLMutableArray */,
 				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
@@ -1353,6 +1357,15 @@
 				A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */,
 			);
 			path = "NSMutableArray+CLMutableArray";
+			sourceTree = "<group>";
+		};
+		A4ED4F151F54677A00B724FE /* NSDictionary+CLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F161F54678900B724FE /* NSDictionary+CLDictionary.h */,
+				A4ED4F171F54678900B724FE /* NSDictionary+CLDictionary.m */,
+			);
+			path = "NSDictionary+CLDictionary";
 			sourceTree = "<group>";
 		};
 		A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */ = {
@@ -1636,6 +1649,7 @@
 				A43874A91EE9278D001F4BC9 /* IQBarButtonItem.m in Sources */,
 				A43874BD1EE9278D001F4BC9 /* SDCollectionViewCell.m in Sources */,
 				A43874C81EE9278D001F4BC9 /* SDWebImageManager.m in Sources */,
+				A4ED4F181F54678900B724FE /* NSDictionary+CLDictionary.m in Sources */,
 				A488D6E51F526A02006CA2C0 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
