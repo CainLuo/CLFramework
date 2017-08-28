@@ -128,6 +128,7 @@
 		A4D1CB561DEC4251007B6E59 /* SimpleProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4D1CB551DEC4251007B6E59 /* SimpleProjectUITests.m */; };
 		A4DEC0341F30A59000AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */; };
 		A4E135F61DF043AA00C79278 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E135F51DF043AA00C79278 /* main.m */; };
+		A4ED4F0F1F54576300B724FE /* NSMutableArray+CLMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */; };
 		A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */; };
 		A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */; };
 /* End PBXBuildFile section */
@@ -417,6 +418,8 @@
 		A4DEC0321F30A59000AF4020 /* CLToolBarListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLToolBarListView.h; sourceTree = "<group>"; };
 		A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLToolBarListView.m; sourceTree = "<group>"; };
 		A4E135F51DF043AA00C79278 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A4ED4F0D1F54576300B724FE /* NSMutableArray+CLMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLMutableArray.h"; sourceTree = "<group>"; };
+		A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CLMutableArray.m"; sourceTree = "<group>"; };
 		A4F378271F530C7200B1A8B8 /* NSArray+CLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLArray.h"; sourceTree = "<group>"; };
 		A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLArray.m"; sourceTree = "<group>"; };
 		A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScrollViewController.h; sourceTree = "<group>"; };
@@ -1187,11 +1190,12 @@
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
 				A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */,
-				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
-				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
 				A4A8EBB01F18779F006627DF /* NSDate+CLDate */,
+				A4ED4F0C1F54574400B724FE /* NSMutableArray+CLMutableArray */,
+				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
+				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
 				A40B9B381F2B402600163EAC /* NSString+CLString */,
@@ -1340,6 +1344,15 @@
 				A4DEC0331F30A59000AF4020 /* CLToolBarListView.m */,
 			);
 			path = CLToolBarListView;
+			sourceTree = "<group>";
+		};
+		A4ED4F0C1F54574400B724FE /* NSMutableArray+CLMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F0D1F54576300B724FE /* NSMutableArray+CLMutableArray.h */,
+				A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */,
+			);
+			path = "NSMutableArray+CLMutableArray";
 			sourceTree = "<group>";
 		};
 		A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */ = {
@@ -1579,6 +1592,7 @@
 				A43874CD1EE9278D001F4BC9 /* UIImageView+HighlightedWebCache.m in Sources */,
 				A42AC4051F152F4900DA0D58 /* UIButton+CLButton.m in Sources */,
 				A43874B01EE9278D001F4BC9 /* MASConstraint.m in Sources */,
+				A4ED4F0F1F54576300B724FE /* NSMutableArray+CLMutableArray.m in Sources */,
 				A43874151EE92776001F4BC9 /* MJRefreshBackGifFooter.m in Sources */,
 				A43874CA1EE9278D001F4BC9 /* UIButton+WebCache.m in Sources */,
 				A43874C11EE9278D001F4BC9 /* NSImage+WebCache.m in Sources */,

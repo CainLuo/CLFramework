@@ -41,6 +41,8 @@
 		A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835BC1DF72B29003B062C /* CLFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */ = {isa = PBXBuildFile; fileRef = A44835D91DF72C24003B062C /* NSString+CLRegular.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A44835DA1DF72C25003B062C /* NSString+CLRegular.m */; };
+		A4ED4F131F54597000B724FE /* NSMutableArray+CLMutableArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A4ED4F111F54597000B724FE /* NSMutableArray+CLMutableArray.h */; };
+		A4ED4F141F54597000B724FE /* NSMutableArray+CLMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F121F54597000B724FE /* NSMutableArray+CLMutableArray.m */; };
 		A4F3782D1F5313D300B1A8B8 /* NSArray+CLArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A4F3782B1F5313D300B1A8B8 /* NSArray+CLArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4F3782E1F5313D300B1A8B8 /* NSArray+CLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F3782C1F5313D300B1A8B8 /* NSArray+CLArray.m */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		A44835C91DF72B2A003B062C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A44835D91DF72C24003B062C /* NSString+CLRegular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLRegular.h"; sourceTree = "<group>"; };
 		A44835DA1DF72C25003B062C /* NSString+CLRegular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLRegular.m"; sourceTree = "<group>"; };
+		A4ED4F111F54597000B724FE /* NSMutableArray+CLMutableArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CLMutableArray.h"; sourceTree = "<group>"; };
+		A4ED4F121F54597000B724FE /* NSMutableArray+CLMutableArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CLMutableArray.m"; sourceTree = "<group>"; };
 		A4F3782B1F5313D300B1A8B8 /* NSArray+CLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLArray.h"; sourceTree = "<group>"; };
 		A4F3782C1F5313D300B1A8B8 /* NSArray+CLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLArray.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -190,10 +194,11 @@
 				A44835BC1DF72B29003B062C /* CLFoundation.h */,
 				A44835BD1DF72B29003B062C /* Info.plist */,
 				A4F3782A1F5313D300B1A8B8 /* NSArray+CLArray */,
-				A43A1E821F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A43A1E791F515C7C00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
 				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
+				A4ED4F101F54597000B724FE /* NSMutableArray+CLMutableArray */,
+				A43A1E821F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A40B40881F4F2F5600FDEF5C /* NSString+CLEncryption */,
 				A44835D81DF72C05003B062C /* NSString+CLRegular */,
 				A40B9B3C1F2B41A500163EAC /* NSString+CLString */,
@@ -220,6 +225,15 @@
 			path = "NSString+CLRegular";
 			sourceTree = "<group>";
 		};
+		A4ED4F101F54597000B724FE /* NSMutableArray+CLMutableArray */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F111F54597000B724FE /* NSMutableArray+CLMutableArray.h */,
+				A4ED4F121F54597000B724FE /* NSMutableArray+CLMutableArray.m */,
+			);
+			path = "NSMutableArray+CLMutableArray";
+			sourceTree = "<group>";
+		};
 		A4F3782A1F5313D300B1A8B8 /* NSArray+CLArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +252,7 @@
 			files = (
 				A44835DB1DF72C25003B062C /* NSString+CLRegular.h in Headers */,
 				A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */,
+				A4ED4F131F54597000B724FE /* NSMutableArray+CLMutableArray.h in Headers */,
 				A43C457F1F1A6FD7001B0FD5 /* NSDate+CLDate.h in Headers */,
 				A40B408B1F4F2F5600FDEF5C /* NSString+CLEncryption.h in Headers */,
 				A43C45811F1A6FD7001B0FD5 /* NSURL+CLURL.h in Headers */,
@@ -373,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40B9B401F2B41A500163EAC /* NSString+CLString.m in Sources */,
+				A4ED4F141F54597000B724FE /* NSMutableArray+CLMutableArray.m in Sources */,
 				A40B408C1F4F2F5600FDEF5C /* NSString+CLEncryption.m in Sources */,
 				A43A1E7D1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
