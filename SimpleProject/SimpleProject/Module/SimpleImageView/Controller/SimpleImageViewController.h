@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Cain Luo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CLViewController.h"
 
-@interface SimpleImageViewController : UIViewController
+@interface SimpleImageViewController : CLViewController
 
 @end

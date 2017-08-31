@@ -7,10 +7,13 @@
 //
 
 #import "SimpleImageViewController.h"
+#import "SimpleImageViewModel.h"
 
 @interface SimpleImageViewController ()
 
 @property (nonatomic, strong) UIImageView *simpleImageView;
+
+@property (nonatomic, strong) SimpleImageViewModel *simpleImageViewModel;
 
 @end
 
@@ -41,6 +44,8 @@
         make.height.mas_equalTo(50);
     }];
     
+    NSLog(@"%@", self);
+    
     _simpleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,
                                                                      64,
                                                                      [UIScreen cl_getScreenWidth],
@@ -49,6 +54,15 @@
     _simpleImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     [self.view addSubview:_simpleImageView];
+}
+
+- (SimpleImageViewModel *)simpleImageViewModel {
+    
+    CL_GET_METHOD_RETURN_OBJC(_simpleImageViewModel);
+    
+    _simpleImageViewModel = [[SimpleImageViewModel alloc] initViewControllerViewModelWithController:self];
+    
+    return _simpleImageViewModel;
 }
 
 - (void)buttonAction {

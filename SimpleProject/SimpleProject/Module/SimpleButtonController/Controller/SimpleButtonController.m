@@ -46,7 +46,30 @@
     [self.view addSubview:toolBarList];
     
     [self cl_getCodeButton];
-    [self cl_ButtonClike];    
+    [self cl_ButtonClike];
+    [self cl_getBaseBottom];
+}
+
+- (void)cl_getBaseBottom {
+    
+    CLButton *buttonOne = [[CLButton alloc] init];
+    
+    buttonOne.cl_imageSize        = CGSizeMake(20, 20);
+    buttonOne.cl_imageSpacing     = 50;
+    buttonOne.cl_buttomImageStyle = CLButtonImageTopStyle;
+    
+    [buttonOne setImage:[UIImage imageNamed:@"1"]
+               forState:UIControlStateNormal];
+    [buttonOne setTitle:@"获取验证码"
+               forState:UIControlStateNormal];
+
+    [self.view addSubview:buttonOne];
+    
+    [buttonOne mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.top.equalTo(self.view).offset(100);
+        make.height.width.mas_equalTo(150);
+    }];
 }
 
 #pragma mark - 获取验证码的按钮

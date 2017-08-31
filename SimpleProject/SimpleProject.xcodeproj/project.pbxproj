@@ -20,13 +20,11 @@
 		A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */; };
 		A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */; };
 		A42AC4051F152F4900DA0D58 /* UIButton+CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */; };
-		A42AC40E1F15354700DA0D58 /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC40D1F15354700DA0D58 /* CLViewController.m */; };
 		A42AC4BF1F15C32100DA0D58 /* CLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4BE1F15C32100DA0D58 /* CLNavigationController.m */; };
 		A42AC4C81F15C49C00DA0D58 /* CLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4C71F15C49C00DA0D58 /* CLTableViewDataSource.m */; };
 		A42AC4CC1F15C61600DA0D58 /* SimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4CB1F15C61600DA0D58 /* SimpleTableViewDataSource.m */; };
 		A42AC4E61F15CA6C00DA0D58 /* CLCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4E51F15CA6C00DA0D58 /* CLCollectionViewDataSource.m */; };
 		A42AC4EA1F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4E91F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m */; };
-		A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */; };
 		A43874051EE92776001F4BC9 /* CLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873A91EE92776001F4BC9 /* CLCollectionViewController.m */; };
 		A43874061EE92776001F4BC9 /* CLCollectionViewBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873AD1EE92776001F4BC9 /* CLCollectionViewBaseModel.m */; };
 		A43874071EE92776001F4BC9 /* CLCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873B01EE92776001F4BC9 /* CLCollectionViewDelegate.m */; };
@@ -113,7 +111,7 @@
 		A43874E31EE929E3001F4BC9 /* NSString+CLRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = A43874DA1EE929E3001F4BC9 /* NSString+CLRegular.m */; };
 		A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */; };
 		A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */; };
-		A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */; };
+		A43F81A21F5866AB0086A063 /* CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F81A11F5866AB0086A063 /* CLButton.m */; };
 		A488D6E51F526A02006CA2C0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */; };
 		A488D6E61F526A02006CA2C0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DE1F526A02006CA2C0 /* SVProgressAnimatedView.m */; };
 		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
@@ -131,6 +129,10 @@
 		A4ED4F0F1F54576300B724FE /* NSMutableArray+CLMutableArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F0E1F54576300B724FE /* NSMutableArray+CLMutableArray.m */; };
 		A4ED4F181F54678900B724FE /* NSDictionary+CLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F171F54678900B724FE /* NSDictionary+CLDictionary.m */; };
 		A4ED4F211F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F201F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.m */; };
+		A4ED4F2B1F54773D00B724FE /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F291F54773D00B724FE /* CLViewController.m */; };
+		A4ED4F2E1F54775E00B724FE /* CLViewControllerBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F2D1F54775E00B724FE /* CLViewControllerBaseModel.m */; };
+		A4ED4F331F54788300B724FE /* SimpleImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F311F54788300B724FE /* SimpleImageViewController.m */; };
+		A4ED4F361F54789600B724FE /* SimpleImageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4F351F54789600B724FE /* SimpleImageViewModel.m */; };
 		A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */; };
 		A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FEF28F1F2792E30017F876 /* SimpleScrollViewController.m */; };
 /* End PBXBuildFile section */
@@ -192,8 +194,6 @@
 		A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDrawCircleController.m; sourceTree = "<group>"; };
 		A42AC4031F152F4900DA0D58 /* UIButton+CLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CLButton.h"; sourceTree = "<group>"; };
 		A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CLButton.m"; sourceTree = "<group>"; };
-		A42AC40C1F15354700DA0D58 /* CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
-		A42AC40D1F15354700DA0D58 /* CLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
 		A42AC4BD1F15C32100DA0D58 /* CLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNavigationController.h; sourceTree = "<group>"; };
 		A42AC4BE1F15C32100DA0D58 /* CLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLNavigationController.m; sourceTree = "<group>"; };
 		A42AC4C61F15C49C00DA0D58 /* CLTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTableViewDataSource.h; sourceTree = "<group>"; };
@@ -204,8 +204,6 @@
 		A42AC4E51F15CA6C00DA0D58 /* CLCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewDataSource.m; sourceTree = "<group>"; };
 		A42AC4E81F15CB6400DA0D58 /* SimpleCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDataSource.h; sourceTree = "<group>"; };
 		A42AC4E91F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewDataSource.m; sourceTree = "<group>"; };
-		A42F3B731E88CA8B005B74A5 /* SimpleImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageViewController.h; sourceTree = "<group>"; };
-		A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageViewController.m; sourceTree = "<group>"; };
 		A4329AEE1DF03AD20012DB71 /* SimpleProject-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleProject-PrefixHeader.pch"; sourceTree = "<group>"; };
 		A43873A81EE92776001F4BC9 /* CLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewController.h; sourceTree = "<group>"; };
 		A43873A91EE92776001F4BC9 /* CLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewController.m; sourceTree = "<group>"; };
@@ -390,8 +388,8 @@
 		A43A1E771F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CLAttributedString.m"; sourceTree = "<group>"; };
 		A43A1E7F1F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+CLMutableAttributedString.h"; sourceTree = "<group>"; };
 		A43A1E801F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+CLMutableAttributedString.m"; sourceTree = "<group>"; };
-		A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CLAssert.h"; sourceTree = "<group>"; };
-		A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CLAssert.m"; sourceTree = "<group>"; };
+		A43F81A01F5866AB0086A063 /* CLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLButton.h; sourceTree = "<group>"; };
+		A43F81A11F5866AB0086A063 /* CLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLButton.m; sourceTree = "<group>"; };
 		A488D6DB1F526A02006CA2C0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		A488D6DD1F526A02006CA2C0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -426,6 +424,14 @@
 		A4ED4F171F54678900B724FE /* NSDictionary+CLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CLDictionary.m"; sourceTree = "<group>"; };
 		A4ED4F1F1F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CLMutableDictionary.h"; sourceTree = "<group>"; };
 		A4ED4F201F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CLMutableDictionary.m"; sourceTree = "<group>"; };
+		A4ED4F281F54773D00B724FE /* CLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewController.h; sourceTree = "<group>"; };
+		A4ED4F291F54773D00B724FE /* CLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
+		A4ED4F2C1F54775E00B724FE /* CLViewControllerBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewControllerBaseModel.h; sourceTree = "<group>"; };
+		A4ED4F2D1F54775E00B724FE /* CLViewControllerBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewControllerBaseModel.m; sourceTree = "<group>"; };
+		A4ED4F301F54788300B724FE /* SimpleImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageViewController.h; sourceTree = "<group>"; };
+		A4ED4F311F54788300B724FE /* SimpleImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageViewController.m; sourceTree = "<group>"; };
+		A4ED4F341F54789600B724FE /* SimpleImageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageViewModel.h; sourceTree = "<group>"; };
+		A4ED4F351F54789600B724FE /* SimpleImageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageViewModel.m; sourceTree = "<group>"; };
 		A4F378271F530C7200B1A8B8 /* NSArray+CLArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CLArray.h"; sourceTree = "<group>"; };
 		A4F378281F530C7200B1A8B8 /* NSArray+CLArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CLArray.m"; sourceTree = "<group>"; };
 		A4FEF28E1F2792E30017F876 /* SimpleScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleScrollViewController.h; sourceTree = "<group>"; };
@@ -645,8 +651,8 @@
 		A42AC40B1F15353C00DA0D58 /* CLViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A42AC40C1F15354700DA0D58 /* CLViewController.h */,
-				A42AC40D1F15354700DA0D58 /* CLViewController.m */,
+				A4ED4F271F54773D00B724FE /* Controller */,
+				A4ED4F2A1F54773D00B724FE /* ViewModel */,
 			);
 			path = CLViewController;
 			sourceTree = "<group>";
@@ -699,8 +705,8 @@
 		A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */ = {
 			isa = PBXGroup;
 			children = (
-				A42F3B731E88CA8B005B74A5 /* SimpleImageViewController.h */,
-				A42F3B741E88CA8B005B74A5 /* SimpleImageViewController.m */,
+				A4ED4F2F1F54788300B724FE /* Controller */,
+				A4ED4F321F54788300B724FE /* ViewModel */,
 			);
 			path = SimpleImageView;
 			sourceTree = "<group>";
@@ -718,13 +724,14 @@
 		A43873A51EE92776001F4BC9 /* CLUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				A4DEC0311F30A59000AF4020 /* CLToolBarListView */,
-				A42AC4BC1F15C30C00DA0D58 /* CLNavigationController */,
-				A42AC40B1F15353C00DA0D58 /* CLViewController */,
+				A43F819F1F58669A0086A063 /* CLButton */,
 				A43873A61EE92776001F4BC9 /* CLCollectionViewController */,
+				A42AC4BC1F15C30C00DA0D58 /* CLNavigationController */,
 				A43873B11EE92776001F4BC9 /* CLTableViewController */,
 				A43873BC1EE92776001F4BC9 /* CLTitleView */,
+				A4DEC0311F30A59000AF4020 /* CLToolBarListView */,
 				A43873BF1EE92776001F4BC9 /* CLUIKit.h */,
+				A42AC40B1F15353C00DA0D58 /* CLViewController */,
 				A43873C11EE92776001F4BC9 /* MJRefresh */,
 				A43873F01EE92776001F4BC9 /* UIApplication+CLApplication */,
 				A42AC4021F152F3900DA0D58 /* UIButton+CLButton */,
@@ -1203,7 +1210,6 @@
 				A4ED4F0C1F54574400B724FE /* NSMutableArray+CLMutableArray */,
 				A43A1E7E1F515DD900BA81EF /* NSMutableAttributedString+CLMutableAttributedString */,
 				A4ED4F1E1F54759B00B724FE /* NSMutableDictionary+CLMutableDictionary */,
-				A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */,
 				A40B40841F4F279D00FDEF5C /* NSString+CLEncryption */,
 				A43874D81EE929E3001F4BC9 /* NSString+CLRegular */,
 				A40B9B381F2B402600163EAC /* NSString+CLString */,
@@ -1248,13 +1254,13 @@
 			path = "NSMutableAttributedString+CLMutableAttributedString";
 			sourceTree = "<group>";
 		};
-		A4755C9E1F4F335000530AA4 /* NSObject+CLAssert */ = {
+		A43F819F1F58669A0086A063 /* CLButton */ = {
 			isa = PBXGroup;
 			children = (
-				A4755C9F1F4F335800530AA4 /* NSObject+CLAssert.h */,
-				A4755CA01F4F335800530AA4 /* NSObject+CLAssert.m */,
+				A43F81A01F5866AB0086A063 /* CLButton.h */,
+				A43F81A11F5866AB0086A063 /* CLButton.m */,
 			);
-			path = "NSObject+CLAssert";
+			path = CLButton;
 			sourceTree = "<group>";
 		};
 		A488D6DA1F526A02006CA2C0 /* SVProgressHUD */ = {
@@ -1379,6 +1385,42 @@
 				A4ED4F201F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.m */,
 			);
 			path = "NSMutableDictionary+CLMutableDictionary";
+			sourceTree = "<group>";
+		};
+		A4ED4F271F54773D00B724FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F281F54773D00B724FE /* CLViewController.h */,
+				A4ED4F291F54773D00B724FE /* CLViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4ED4F2A1F54773D00B724FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F2C1F54775E00B724FE /* CLViewControllerBaseModel.h */,
+				A4ED4F2D1F54775E00B724FE /* CLViewControllerBaseModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4ED4F2F1F54788300B724FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F301F54788300B724FE /* SimpleImageViewController.h */,
+				A4ED4F311F54788300B724FE /* SimpleImageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4ED4F321F54788300B724FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4ED4F341F54789600B724FE /* SimpleImageViewModel.h */,
+				A4ED4F351F54789600B724FE /* SimpleImageViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */ = {
@@ -1558,7 +1600,6 @@
 				A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */,
 				A43874241EE92776001F4BC9 /* UIImage+CLImage.m in Sources */,
 				A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */,
-				A42F3B751E88CA8B005B74A5 /* SimpleImageViewController.m in Sources */,
 				A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */,
 				A43874A71EE9278D001F4BC9 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A43874AA1EE9278D001F4BC9 /* IQPreviousNextView.m in Sources */,
@@ -1569,8 +1610,6 @@
 				A43874E21EE929E3001F4BC9 /* NSBundle+CLBundle.m in Sources */,
 				A43874C51EE9278D001F4BC9 /* SDWebImageDecoder.m in Sources */,
 				A42AC4BF1F15C32100DA0D58 /* CLNavigationController.m in Sources */,
-				A42AC40E1F15354700DA0D58 /* CLViewController.m in Sources */,
-				A4755CA11F4F335800530AA4 /* NSObject+CLAssert.m in Sources */,
 				A43874A31EE9278D001F4BC9 /* IQUIView+Hierarchy.m in Sources */,
 				A43874A41EE9278D001F4BC9 /* IQUIViewController+Additions.m in Sources */,
 				A43A1E811F515DE500BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */,
@@ -1592,11 +1631,13 @@
 				A4037C861DF9749200C05F77 /* SimpleTableViewModel.m in Sources */,
 				A43874B91EE9278D001F4BC9 /* TAAbstractDotView.m in Sources */,
 				A43874BF1EE9278D001F4BC9 /* UIView+SDExtension.m in Sources */,
+				A4ED4F2B1F54773D00B724FE /* CLViewController.m in Sources */,
 				A43874071EE92776001F4BC9 /* CLCollectionViewDelegate.m in Sources */,
 				A43874141EE92776001F4BC9 /* MJRefreshAutoStateFooter.m in Sources */,
 				A43874271EE92776001F4BC9 /* UIViewController+CLViewController.m in Sources */,
 				A43874BB1EE9278D001F4BC9 /* TADotView.m in Sources */,
 				A4E135F61DF043AA00C79278 /* main.m in Sources */,
+				A43F81A21F5866AB0086A063 /* CLButton.m in Sources */,
 				A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */,
 				A42AC4EA1F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m in Sources */,
 				A43874121EE92776001F4BC9 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -1628,7 +1669,9 @@
 				A43874261EE92776001F4BC9 /* UIScreen+CLScreen.m in Sources */,
 				A43874A01EE9278D001F4BC9 /* IQNSArray+Sort.m in Sources */,
 				A438741C1EE92776001F4BC9 /* MJRefreshConst.m in Sources */,
+				A4ED4F2E1F54775E00B724FE /* CLViewControllerBaseModel.m in Sources */,
 				A43874C91EE9278D001F4BC9 /* SDWebImagePrefetcher.m in Sources */,
+				A4ED4F361F54789600B724FE /* SimpleImageViewModel.m in Sources */,
 				A43874C41EE9278D001F4BC9 /* SDWebImageCompat.m in Sources */,
 				A43874A51EE9278D001F4BC9 /* IQUIWindow+Hierarchy.m in Sources */,
 				A438740A1EE92776001F4BC9 /* CLTableViewDelegate.m in Sources */,
@@ -1636,6 +1679,7 @@
 				A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */,
 				A43874CC1EE9278D001F4BC9 /* UIImage+MultiFormat.m in Sources */,
 				A4037C841DF9749200C05F77 /* SimpleTableViewController.m in Sources */,
+				A4ED4F331F54788300B724FE /* SimpleImageViewController.m in Sources */,
 				A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */,
 				A43874C71EE9278D001F4BC9 /* SDWebImageDownloaderOperation.m in Sources */,

@@ -29,6 +29,9 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #pragma mark - CLTitleView
 #import <CLUIKit/CLTitleView.h>
 
+#pragma mark - CLButton
+#import <CLUIKit/CLButton.h>
+
 #pragma mark - MJRefresh
 #import <CLUIKit/MJRefresh.h>
 
