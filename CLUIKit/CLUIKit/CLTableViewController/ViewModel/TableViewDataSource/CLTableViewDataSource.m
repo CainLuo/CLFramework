@@ -16,13 +16,13 @@
 
 @interface CLTableViewDataSource ()
 
-@property (nonatomic, strong, readwrite) CLTableViewBaseModel *cl_viewModel;
+@property (nonatomic, strong, readwrite) CLTableViewViewModel *cl_viewModel;
 
 @end
 
 @implementation CLTableViewDataSource
 
-- (instancetype)initTableViewDataSourceWithViewModel:(CLTableViewBaseModel *)viewModel {
+- (instancetype)initTableViewDataSourceWithViewModel:(CLTableViewViewModel *)viewModel {
     
     self = [super init];
     

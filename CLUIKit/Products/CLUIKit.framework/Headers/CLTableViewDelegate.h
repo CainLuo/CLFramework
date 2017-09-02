@@ -14,12 +14,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "CLTableViewBaseModel.h"
+#import "CLTableViewViewModel.h"
 
 @interface CLTableViewDelegate : NSObject <UITableViewDelegate>
 
-@property (nonatomic, strong, readonly) CLTableViewBaseModel *cl_viewModel;
+@property (nonatomic, strong, readonly) CLTableViewViewModel *cl_viewModel;
 
-- (instancetype)initTableViewDelegateWithViewModel:(CLTableViewBaseModel *)viewModel;
+- (instancetype)initTableViewDelegateWithViewModel:(CLTableViewViewModel *)viewModel;
 
 @end

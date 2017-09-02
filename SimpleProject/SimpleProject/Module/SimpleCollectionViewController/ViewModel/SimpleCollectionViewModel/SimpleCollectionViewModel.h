@@ -8,6 +8,6 @@
 
 #import "CLUIKit.h"
 
-@interface SimpleCollectionViewModel : CLCollectionViewBaseModel
+@interface SimpleCollectionViewModel : CLCollectionViewViewModel
 
 @end

@@ -12,15 +12,15 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import "CLTableViewBaseModel.h"
+#import "CLTableViewViewModel.h"
 
-@interface CLTableViewBaseModel()
+@interface CLTableViewViewModel()
 
 @property (nonatomic, weak, readwrite) CLTableViewController *cl_tableViewController;
 
 @end
 
-@implementation CLTableViewBaseModel
+@implementation CLTableViewViewModel
 
 - (instancetype)initTableViewBaseModelWithController:(CLTableViewController *)viewController {
     

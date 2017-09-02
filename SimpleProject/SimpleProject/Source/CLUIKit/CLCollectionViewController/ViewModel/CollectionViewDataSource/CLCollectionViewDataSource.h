@@ -13,12 +13,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLCollectionViewBaseModel.h"
+#import "CLCollectionViewViewModel.h"
 
 @interface CLCollectionViewDataSource : NSObject <UICollectionViewDataSource>
 
-@property (nonatomic, strong, readonly) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
+@property (nonatomic, strong, readonly) CLCollectionViewViewModel *cl_collectionViewBaseModel;
 
-- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewBaseModel *)viewModel;
+- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewViewModel *)viewModel;
 
 @end

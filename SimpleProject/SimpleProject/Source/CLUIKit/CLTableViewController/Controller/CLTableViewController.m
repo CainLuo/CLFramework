@@ -15,7 +15,7 @@
 #import "CLTableViewController.h"
 #import "MJRefresh.h"
 #import "CLTableViewDelegate.h"
-#import "CLTableViewBaseModel.h"
+#import "CLTableViewViewModel.h"
 
 @interface CLTableViewController ()
 
@@ -24,7 +24,7 @@
 @property (nonatomic, strong, readwrite) UITableView *cl_tableView;
 
 @property (nonatomic, strong) CLTableViewDelegate *cl_tableViewDelegate;
-@property (nonatomic, strong) CLTableViewBaseModel *cl_ableViewBaseModel;
+@property (nonatomic, strong) CLTableViewViewModel *cl_ableViewBaseModel;
 
 @end
 
@@ -91,10 +91,10 @@
 }
 
 #pragma mark - Table View Base Model
-- (CLTableViewBaseModel *)cl_ableViewBaseModel {
+- (CLTableViewViewModel *)cl_ableViewBaseModel {
     
     if (!_cl_ableViewBaseModel) {
-        _cl_ableViewBaseModel = [[CLTableViewBaseModel alloc] initTableViewBaseModelWithController:self];
+        _cl_ableViewBaseModel = [[CLTableViewViewModel alloc] initTableViewBaseModelWithController:self];
     }
     
     return _cl_ableViewBaseModel;

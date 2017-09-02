@@ -14,7 +14,7 @@
 
 #import "CLCollectionViewController.h"
 #import "MJRefresh.h"
-#import "CLCollectionViewBaseModel.h"
+#import "CLCollectionViewViewModel.h"
 #import "CLCollectionViewDelegate.h"
 
 @interface CLCollectionViewController ()
@@ -22,7 +22,7 @@
 @property (nonatomic, strong, readwrite) UICollectionView *cl_collectionView;
 @property (nonatomic, strong, readwrite) UICollectionViewFlowLayout *cl_collectionViewFlowLayout;
 
-@property (nonatomic, strong) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
+@property (nonatomic, strong) CLCollectionViewViewModel *cl_collectionViewBaseModel;
 @property (nonatomic, strong) CLCollectionViewDelegate *cl_collectionViewDelegate;
 
 @end
@@ -72,11 +72,11 @@
                forCellWithReuseIdentifier:identifier];
 }
 
-- (CLCollectionViewBaseModel *)cl_collectionViewBaseModel {
+- (CLCollectionViewViewModel *)cl_collectionViewBaseModel {
     
     if (!_cl_collectionViewBaseModel) {
         
-        _cl_collectionViewBaseModel = [[CLCollectionViewBaseModel alloc] initCollectionViewBaseModelWithController:self];
+        _cl_collectionViewBaseModel = [[CLCollectionViewViewModel alloc] initCollectionViewBaseModelWithController:self];
     }
     
     return _cl_collectionViewBaseModel;

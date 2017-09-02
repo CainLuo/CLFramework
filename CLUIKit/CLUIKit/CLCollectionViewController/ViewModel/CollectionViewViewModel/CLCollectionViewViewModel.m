@@ -12,15 +12,15 @@
 //  Copyright © 2016年 Cain Luo. All rights reserved.
 //
 
-#import "CLCollectionViewBaseModel.h"
+#import "CLCollectionViewViewModel.h"
 
-@interface CLCollectionViewBaseModel ()
+@interface CLCollectionViewViewModel ()
 
 @property (nonatomic, weak, readwrite) CLCollectionViewController *cl_collectionViewController;
 
 @end
 
-@implementation CLCollectionViewBaseModel
+@implementation CLCollectionViewViewModel
 
 - (instancetype)initCollectionViewBaseModelWithController:(CLCollectionViewController *)viewController {
     

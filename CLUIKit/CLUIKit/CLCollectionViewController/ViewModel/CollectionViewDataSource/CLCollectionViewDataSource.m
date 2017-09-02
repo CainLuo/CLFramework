@@ -16,13 +16,13 @@
 
 @interface CLCollectionViewDataSource ()
 
-@property (nonatomic, strong, readwrite) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
+@property (nonatomic, strong, readwrite) CLCollectionViewViewModel *cl_collectionViewBaseModel;
 
 @end
 
 @implementation CLCollectionViewDataSource
 
-- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewBaseModel *)viewModel {
+- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewViewModel *)viewModel {
     
     self = [super init];
     

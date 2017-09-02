@@ -6,19 +6,20 @@
 //  |  \__  |   __   |  _|  |_  |  |  \    |
 //  _\    )_|  (__)  |_(      )_|  |___\   |_
 //
-//  CLCollectionViewDataSource.h
+//  CLViewControllerViewModel.h
+//  SimpleProject
 //
-//  Created by Cain on 2017/7/12.
+//  Created by Cain on 2017/8/29.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CLCollectionViewViewModel.h"
+#import "CLViewController.h"
 
-@interface CLCollectionViewDataSource : NSObject <UICollectionViewDataSource>
+@interface CLViewControllerViewModel : NSObject
 
-@property (nonatomic, strong, readonly) CLCollectionViewViewModel *cl_collectionViewBaseModel;
+@property (nonatomic, weak, readonly) CLViewController *cl_viewController;
 
-- (instancetype)initCollectionViewDataSourceWithViewModel:(CLCollectionViewViewModel *)viewModel;
+- (instancetype)initViewControllerViewModelWithController:(CLViewController *)controller;
 
 @end

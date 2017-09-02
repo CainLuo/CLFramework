@@ -13,12 +13,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CLTableViewBaseModel.h"
+#import "CLTableViewViewModel.h"
 
 @interface CLTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, strong, readonly) CLTableViewBaseModel *cl_viewModel;
+@property (nonatomic, strong, readonly) CLTableViewViewModel *cl_viewModel;
 
-- (instancetype)initTableViewDataSourceWithViewModel:(CLTableViewBaseModel *)viewModel;
+- (instancetype)initTableViewDataSourceWithViewModel:(CLTableViewViewModel *)viewModel;
 
 @end

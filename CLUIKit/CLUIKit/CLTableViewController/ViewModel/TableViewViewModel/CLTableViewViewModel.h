@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 #import "CLTableViewController.h"
 
-@interface CLTableViewBaseModel : NSObject
+@interface CLTableViewViewModel : NSObject
 
 @property (nonatomic, strong) NSMutableArray *cl_dataSource;
 @property (nonatomic, weak, readonly) CLTableViewController *cl_tableViewController;

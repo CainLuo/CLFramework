@@ -16,13 +16,13 @@
 
 @interface CLCollectionViewDelegate ()
 
-@property (nonatomic, strong, readwrite) CLCollectionViewBaseModel *cl_collectionViewBaseModel;
+@property (nonatomic, strong, readwrite) CLCollectionViewViewModel *cl_collectionViewBaseModel;
 
 @end
 
 @implementation CLCollectionViewDelegate
 
-- (instancetype)initCollectionViewDelegateWithViewModel:(CLCollectionViewBaseModel *)viewModel {
+- (instancetype)initCollectionViewDelegateWithViewModel:(CLCollectionViewViewModel *)viewModel {
     
     self = [super init];
     

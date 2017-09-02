@@ -8,6 +8,6 @@
 
 #import "CLUIKit.h"
 
-@interface SimpleTableViewModel : CLTableViewBaseModel
+@interface SimpleTableViewModel : CLTableViewViewModel
 
 @end

@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 #import "CLCollectionViewController.h"
 
-@interface CLCollectionViewBaseModel : NSObject
+@interface CLCollectionViewViewModel : NSObject
 
 @property (nonatomic, weak, readonly) CLCollectionViewController *cl_collectionViewController;
 @property (nonatomic, strong) NSMutableArray *cl_dataSource;

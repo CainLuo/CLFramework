@@ -38,13 +38,13 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #pragma mark - CLTableViewController
 #import <CLUIKit/CLTableViewController.h>
 #import <CLUIKit/CLTableViewDataSource.h>
-#import <CLUIKit/CLTableViewBaseModel.h>
+#import <CLUIKit/CLTableViewViewModel.h>
 #import <CLUIKit/CLTableViewDelegate.h>
 
 #pragma mark - CLCollectionViewController
 #import <CLUIKit/CLCollectionViewController.h>
 #import <CLUIKit/CLCollectionViewDataSource.h>
-#import <CLUIKit/CLCollectionViewBaseModel.h>
+#import <CLUIKit/CLCollectionViewViewModel.h>
 #import <CLUIKit/CLCollectionViewDelegate.h>
 
 #pragma mark - Category
@@ -57,6 +57,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 
 #pragma mark - CLViewController
 #import <CLUIKit/CLViewController.h>
+#import <CLUIKit/CLViewControllerViewModel.h>
 
 #pragma mark - CLNavigationController
 #import <CLUIKit/CLNavigationController.h>

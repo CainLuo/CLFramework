@@ -16,13 +16,13 @@
 
 @interface CLTableViewDelegate ()
 
-@property (nonatomic, strong, readwrite) CLTableViewBaseModel *cl_viewModel;
+@property (nonatomic, strong, readwrite) CLTableViewViewModel *cl_viewModel;
 
 @end
 
 @implementation CLTableViewDelegate
 
-- (instancetype)initTableViewDelegateWithViewModel:(CLTableViewBaseModel *)viewModel {
+- (instancetype)initTableViewDelegateWithViewModel:(CLTableViewViewModel *)viewModel {
     
     self = [super init];
     
