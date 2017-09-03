@@ -19,6 +19,7 @@
 
 #import "CLTitleView.h"
 #import "UIScreen+CLScreen.h"
+#import "UIImage+CLImage.h"
 
 @interface CLTitleView ()
 
@@ -76,11 +77,11 @@
             
             break;
         case CLTitleViewCloseType:
-
+            
             [self cl_needLeftButton];
-
+            
             [self cl_changeLeftButtonWithImageName:@"close"
-                                     highImageName:@"closeHigh"];
+                                    hightImageName:@"closeHigh"];
             
             break;
         case CLTitleViewBackType:
@@ -99,7 +100,7 @@
             [self cl_needRightButton];
             
             [self cl_changeRightButtonWithImageName:@"settingImage"
-                                      highImageName:@"settingImageHigh"];
+                                     hightImageName:@"settingImageHigh"];
             
             break;
         default:
@@ -153,10 +154,8 @@
         
         _cl_leftButton = [[UIButton alloc] init];
         
-        [_cl_leftButton setImage:[self cl_setButtonImageWithString:@"backButtonImage"]
-                        forState:UIControlStateNormal];
-        [_cl_leftButton setImage:[self cl_setButtonImageWithString:@"backButtonImageHigh"]
-                        forState:UIControlStateHighlighted];
+        [self cl_changeLeftButtonWithImageName:@"backButtonImage"
+                                hightImageName:@"backButtonImageHigh"];
         [_cl_leftButton addTarget:self
                            action:@selector(leftButtonAction:)
                  forControlEvents:UIControlEventTouchUpInside];
@@ -190,10 +189,9 @@
         
         _cl_rightButton = [[UIButton alloc] init];
         
-        [_cl_rightButton setImage:[self cl_setButtonImageWithString:@"shareButtonImage"]
-                         forState:UIControlStateNormal];
-        [_cl_rightButton setImage:[self cl_setButtonImageWithString:@"shareButtonImageHigh"]
-                         forState:UIControlStateHighlighted];
+        [self cl_changeRightButtonWithImageName:@"shareButtonImage"
+                                 hightImageName:@"shareButtonImageHigh"];
+        
         [_cl_rightButton addTarget:self
                             action:@selector(rightButtonAction:)
                   forControlEvents:UIControlEventTouchUpInside];
@@ -203,7 +201,7 @@
 }
 
 - (void)cl_needRightButton {
-
+    
     [self addSubview:self.cl_rightButton];
     
     self.cl_rightButton.frame = CGRectMake([UIScreen cl_getScreenWidth] - BUTTON_WIDTH,
@@ -222,10 +220,15 @@
 
 #pragma mark - Change Buttons Image
 - (void)cl_changeLeftButtonWithImageName:(NSString *)imageName
-                           highImageName:(NSString *)highImageName {
+                          hightImageName:(NSString *)hightImageName {
     
-    UIImage *imageNormal = [self cl_setButtonImageWithString:imageName] ? [self cl_setButtonImageWithString:imageName] : [UIImage imageNamed:imageName];
-    UIImage *imageHigh = [self cl_setButtonImageWithString:highImageName] ? [self cl_setButtonImageWithString:highImageName] : [UIImage imageNamed:highImageName];
+    UIImage *bundleNormalImage = [UIImage cl_getImageWithBundleName:@"CLTitleView"
+                                                          imageName:imageName];
+    UIImage *bundleHightImage = [UIImage cl_getImageWithBundleName:@"CLTitleView"
+                                                         imageName:hightImageName];
+    
+    UIImage *imageNormal = bundleNormalImage ? bundleNormalImage :[UIImage imageNamed:imageName];
+    UIImage *imageHigh = bundleHightImage ? bundleHightImage :[UIImage imageNamed:hightImageName];
     
     [self.cl_leftButton setImage:imageNormal
                         forState:UIControlStateNormal];
@@ -234,35 +237,20 @@
 }
 
 - (void)cl_changeRightButtonWithImageName:(NSString *)imageName
-                            highImageName:(NSString *)highImageName {
-
-    UIImage *imageNormal = [self cl_setButtonImageWithString:imageName] ? [self cl_setButtonImageWithString:imageName] : [UIImage imageNamed:imageName];
-    UIImage *imageHigh = [self cl_setButtonImageWithString:highImageName] ? [self cl_setButtonImageWithString:highImageName] : [UIImage imageNamed:highImageName];
-
+                           hightImageName:(NSString *)hightImageName {
+    
+    UIImage *bundleNormalImage = [UIImage cl_getImageWithBundleName:@"CLTitleView"
+                                                          imageName:imageName];
+    UIImage *bundleHightImage = [UIImage cl_getImageWithBundleName:@"CLTitleView"
+                                                         imageName:hightImageName];
+    
+    UIImage *imageNormal = bundleNormalImage ? bundleNormalImage :[UIImage imageNamed:imageName];
+    UIImage *imageHigh = bundleHightImage ? bundleHightImage : [UIImage imageNamed:hightImageName];
+    
     [self.cl_rightButton setImage:imageNormal
                          forState:UIControlStateNormal];
     [self.cl_rightButton setImage:imageHigh
                          forState:UIControlStateHighlighted];
-}
-
-#pragma mark - Set Buttons Image
-- (UIImage *)cl_setButtonImageWithString:(NSString *)string {
-    
-    NSBundle *mainBundle = [NSBundle bundleForClass:[self class]];
-    
-    NSBundle *resourcesBundle = [NSBundle bundleWithPath:[mainBundle pathForResource:@"CLTitleView"
-                                                                              ofType:@"bundle"]];
-    
-    if (!resourcesBundle) {
-        
-        resourcesBundle = mainBundle;
-    }
-    
-    UIImage *image = [UIImage imageNamed:string
-                                inBundle:resourcesBundle
-           compatibleWithTraitCollection:nil];
-
-    return image;
 }
 
 @end

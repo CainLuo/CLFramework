@@ -50,20 +50,20 @@
  */
 + (UIImage *)cl_getImageForView:(UIView *)view {
     
-        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
     
-        [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     
-        UIImage *imageRet = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *imageRet = UIGraphicsGetImageFromCurrentImageContext();
     
-        UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();
     
-        return imageRet;
+    return imageRet;
 }
 
 /**
  加载指定名称的GIF图片
-
+ 
  @param name 图片名
  @return 图片
  */
@@ -111,7 +111,7 @@
 
 /**
  从NSData里加载GIF图片
-
+ 
  @param data 图片数据
  @return 图片
  */
@@ -172,7 +172,7 @@
 
 /**
  计算GIF图片播放的时间
-
+ 
  @param index 索引
  @param source 图片内容
  @return 计算时间
@@ -276,7 +276,7 @@
 
 /**
  输入一张图片, 返回一张带高斯模糊的图片
-
+ 
  @param blur 模糊值
  @return 图片
  */
@@ -540,7 +540,7 @@
 }
 
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
-                                  space:(CGFloat)space {
+                                          space:(CGFloat)space {
     
     CIFilter *qrFilter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
     
@@ -558,6 +558,27 @@
     UIImage *barCodeUIImage = [UIImage imageWithCIImage:barCodeImage];
     
     return barCodeUIImage;
+}
+
+#pragma mark - Set Buttons Image
++ (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
+                             imageName:(NSString *)imageName {
+    
+    NSBundle *mainBundle = [NSBundle bundleForClass:NSClassFromString(bundle)];
+    
+    NSBundle *resourcesBundle = [NSBundle bundleWithPath:[mainBundle pathForResource:bundle
+                                                                              ofType:@"bundle"]];
+    
+    if (!resourcesBundle) {
+        
+        resourcesBundle = mainBundle;
+    }
+    
+    UIImage *image = [UIImage imageNamed:imageName
+                                inBundle:resourcesBundle
+           compatibleWithTraitCollection:nil];
+    
+    return image;
 }
 
 @end

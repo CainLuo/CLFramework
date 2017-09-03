@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, CLTitleViewType) {
 
 /**
  Init CLTitlteView With Type
-
+ 
  @param titleViewType CLTitleViewType
  @return self
  */
@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, CLTitleViewType) {
 
 /**
  Init CLTitlteView With Type
-
+ 
  @param frame CGRect
  @param titleViewType CLTitleViewType
  @return self
@@ -73,10 +73,10 @@ typedef NS_ENUM(NSInteger, CLTitleViewType) {
 
 #pragma mark - Change Buttons Image
 - (void)cl_changeLeftButtonWithImageName:(NSString *)imageName
-                       highImageName:(NSString *)highImageName;
+                          hightImageName:(NSString *)highImageName;
 
 - (void)cl_changeRightButtonWithImageName:(NSString *)imageName
-                            highImageName:(NSString *)highImageName;
+                           hightImageName:(NSString *)highImageName;
 
 #pragma mark - Buttons Action
 @property (nonatomic, copy) void(^cl_titleViewLeftButtonBlock)(UIButton *sender);

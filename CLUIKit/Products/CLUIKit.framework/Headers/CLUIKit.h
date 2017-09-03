@@ -40,6 +40,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import <CLUIKit/CLTableViewDataSource.h>
 #import <CLUIKit/CLTableViewViewModel.h>
 #import <CLUIKit/CLTableViewDelegate.h>
+#import <CLUIKit/CLTableViewCell.h>
 
 #pragma mark - CLCollectionViewController
 #import <CLUIKit/CLCollectionViewController.h>
