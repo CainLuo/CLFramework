@@ -86,4 +86,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.row == 0) {
+        
+        return 50;
+    } else {
+        
+        return 80;
+    }
+}
+
 @end

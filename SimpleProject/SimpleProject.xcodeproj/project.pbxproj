@@ -25,6 +25,7 @@
 		A42AC4CC1F15C61600DA0D58 /* SimpleTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4CB1F15C61600DA0D58 /* SimpleTableViewDataSource.m */; };
 		A42AC4E61F15CA6C00DA0D58 /* CLCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4E51F15CA6C00DA0D58 /* CLCollectionViewDataSource.m */; };
 		A42AC4EA1F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4E91F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m */; };
+		A42DADA51F5C16FB00A97B16 /* CLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A42DADA41F5C16FB00A97B16 /* CLTableViewCell.m */; };
 		A43874051EE92776001F4BC9 /* CLCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873A91EE92776001F4BC9 /* CLCollectionViewController.m */; };
 		A43874071EE92776001F4BC9 /* CLCollectionViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873B01EE92776001F4BC9 /* CLCollectionViewDelegate.m */; };
 		A43874081EE92776001F4BC9 /* CLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A43873B41EE92776001F4BC9 /* CLTableViewController.m */; };
@@ -112,6 +113,8 @@
 		A43F81A21F5866AB0086A063 /* CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F81A11F5866AB0086A063 /* CLButton.m */; };
 		A459D6121F5A630B00254DC9 /* CLTableViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6111F5A630B00254DC9 /* CLTableViewViewModel.m */; };
 		A459D6161F5A631800254DC9 /* CLCollectionViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6151F5A631800254DC9 /* CLCollectionViewViewModel.m */; };
+		A46C1A891F5C38E800C323FC /* SimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */; };
+		A46C1A8B1F5C3CF400C323FC /* CLTableViewCell.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */; };
 		A488D6E51F526A02006CA2C0 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */; };
 		A488D6E61F526A02006CA2C0 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6DE1F526A02006CA2C0 /* SVProgressAnimatedView.m */; };
 		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
@@ -204,6 +207,8 @@
 		A42AC4E51F15CA6C00DA0D58 /* CLCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewDataSource.m; sourceTree = "<group>"; };
 		A42AC4E81F15CB6400DA0D58 /* SimpleCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCollectionViewDataSource.h; sourceTree = "<group>"; };
 		A42AC4E91F15CB6400DA0D58 /* SimpleCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCollectionViewDataSource.m; sourceTree = "<group>"; };
+		A42DADA31F5C16FB00A97B16 /* CLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTableViewCell.h; sourceTree = "<group>"; };
+		A42DADA41F5C16FB00A97B16 /* CLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewCell.m; sourceTree = "<group>"; };
 		A4329AEE1DF03AD20012DB71 /* SimpleProject-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleProject-PrefixHeader.pch"; sourceTree = "<group>"; };
 		A43873A81EE92776001F4BC9 /* CLCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewController.h; sourceTree = "<group>"; };
 		A43873A91EE92776001F4BC9 /* CLCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewController.m; sourceTree = "<group>"; };
@@ -390,6 +395,9 @@
 		A459D6111F5A630B00254DC9 /* CLTableViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewViewModel.m; sourceTree = "<group>"; };
 		A459D6141F5A631800254DC9 /* CLCollectionViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewViewModel.h; sourceTree = "<group>"; };
 		A459D6151F5A631800254DC9 /* CLCollectionViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewViewModel.m; sourceTree = "<group>"; };
+		A46C1A871F5C38E800C323FC /* SimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewCell.h; sourceTree = "<group>"; };
+		A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewCell.m; sourceTree = "<group>"; };
+		A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLTableViewCell.bundle; sourceTree = "<group>"; };
 		A488D6DB1F526A02006CA2C0 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		A488D6DC1F526A02006CA2C0 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		A488D6DD1F526A02006CA2C0 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
@@ -537,6 +545,7 @@
 			children = (
 				A4037C771DF9749200C05F77 /* Controller */,
 				A4037C7A1DF9749200C05F77 /* ViewModel */,
+				A46C1A861F5C38CD00C323FC /* Views */,
 			);
 			path = SimpleTableViewController;
 			sourceTree = "<group>";
@@ -702,6 +711,16 @@
 			path = SimpleCollectionViewDataSource;
 			sourceTree = "<group>";
 		};
+		A42DADA21F5C16EC00A97B16 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */,
+				A42DADA31F5C16FB00A97B16 /* CLTableViewCell.h */,
+				A42DADA41F5C16FB00A97B16 /* CLTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,6 +804,7 @@
 			isa = PBXGroup;
 			children = (
 				A43873B21EE92776001F4BC9 /* Controller */,
+				A42DADA21F5C16EC00A97B16 /* View */,
 				A43873B51EE92776001F4BC9 /* ViewModel */,
 			);
 			path = CLTableViewController;
@@ -1263,6 +1283,15 @@
 			path = CollectionViewViewModel;
 			sourceTree = "<group>";
 		};
+		A46C1A861F5C38CD00C323FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A46C1A871F5C38E800C323FC /* SimpleTableViewCell.h */,
+				A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A488D6DA1F526A02006CA2C0 /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1562,6 +1591,7 @@
 				A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */,
 				A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */,
 				A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */,
+				A46C1A8B1F5C3CF400C323FC /* CLTableViewCell.bundle in Resources */,
 				A43874AE1EE9278D001F4BC9 /* IQKeyboardManager.bundle in Resources */,
 				A438741B1EE92776001F4BC9 /* MJRefresh.bundle in Resources */,
 				A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */,
@@ -1662,6 +1692,7 @@
 				A43874B01EE9278D001F4BC9 /* MASConstraint.m in Sources */,
 				A4ED4F0F1F54576300B724FE /* NSMutableArray+CLMutableArray.m in Sources */,
 				A43874151EE92776001F4BC9 /* MJRefreshBackGifFooter.m in Sources */,
+				A46C1A891F5C38E800C323FC /* SimpleTableViewCell.m in Sources */,
 				A43874CA1EE9278D001F4BC9 /* UIButton+WebCache.m in Sources */,
 				A43874C11EE9278D001F4BC9 /* NSImage+WebCache.m in Sources */,
 				A43874CB1EE9278D001F4BC9 /* UIImage+GIF.m in Sources */,
@@ -1678,6 +1709,7 @@
 				A43874B71EE9278D001F4BC9 /* View+MASAdditions.m in Sources */,
 				A43874D01EE9278D001F4BC9 /* UIView+WebCacheOperation.m in Sources */,
 				A43874CC1EE9278D001F4BC9 /* UIImage+MultiFormat.m in Sources */,
+				A42DADA51F5C16FB00A97B16 /* CLTableViewCell.m in Sources */,
 				A4037C841DF9749200C05F77 /* SimpleTableViewController.m in Sources */,
 				A4ED4F331F54788300B724FE /* SimpleImageViewController.m in Sources */,
 				A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,

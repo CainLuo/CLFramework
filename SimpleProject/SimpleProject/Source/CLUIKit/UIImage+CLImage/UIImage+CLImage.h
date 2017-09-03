@@ -28,7 +28,7 @@
  截取指定视图大小的截图
 
  @param view 指定视图
- @return 图片
+ @return UIImage
  */
 + (UIImage *)cl_getImageForView:(UIView *)view;
 
@@ -36,7 +36,7 @@
  加载指定名称的GIF图片
  
  @param name 图片名
- @return 图片
+ @return UIImage
  */
 + (UIImage *)cl_loadGIFImageForName:(NSString *)name;
 
@@ -44,7 +44,7 @@
  从NSData里加载GIF图片
  
  @param data 图片数据
- @return 图片
+ @return UIImage
  */
 + (UIImage *)cl_loadGIFImageWithData:(NSData *)data;
 
@@ -52,7 +52,7 @@
  缩放指定比例的图片
 
  @param size 指定比例
- @return 图片
+ @return UIImage
  */
 - (UIImage *)cl_animatedImageByScalingAndCroppingToSize:(CGSize)size;
 
@@ -60,7 +60,7 @@
  输入一张图片, 返回一张带高斯模糊的图片
  
  @param blur 模糊值
- @return 图片
+ @return UIImage
  */
 - (UIImage *)cl_blurImageWithBlur:(CGFloat)blur;
 
@@ -68,7 +68,7 @@
  给图片增加圆角
 
  @param radius 半径
- @return 图片
+ @return UIImage
  */
 - (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius;
 
@@ -78,7 +78,7 @@
  @param radius 半径
  @param borderWidth 边框的宽度
  @param borderColor 边框的颜色
- @return 图片
+ @return UIImage
  */
 - (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
                           borderWidth:(CGFloat)borderWidth
@@ -88,6 +88,7 @@
  创建一个二维码
  
  @param string 二维码的内容
+ @return UIImage
  */
 - (UIImage *)cl_createQRCodeImageWithString:(NSString *)string;
 
@@ -96,6 +97,7 @@
  
  @param string 二维码内容
  @param logoName logo图 default size is 150 * 150
+ @return UIImage
  */
 - (UIImage *)cl_createQRCodeImageWithString:(NSString *)string
                                        logo:(NSString *)logoName;
@@ -104,6 +106,7 @@
  创建一个条形码
  
  @param string 条形码内容, 只能输入ASCII字符
+ @return UIImage
  */
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string;
 
@@ -112,8 +115,19 @@
  
  @param string 条形码内容, 只能输入ASCII字符
  @param space 与UIImageView两边的距离
+ @return UIImage
  */
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
                                           space:(CGFloat)space;
+
+/**
+ 从指定的Bundle包里获取对应的图片
+
+ @param bundle 资源包
+ @param imageName 图片名
+ @return UIImage
+ */
++ (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
+                             imageName:(NSString *)imageName;
 
 @end

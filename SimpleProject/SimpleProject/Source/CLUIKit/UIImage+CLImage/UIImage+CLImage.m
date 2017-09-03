@@ -560,4 +560,25 @@
     return barCodeUIImage;
 }
 
+#pragma mark - Set Buttons Image
++ (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
+                             imageName:(NSString *)imageName {
+    
+    NSBundle *mainBundle = [NSBundle bundleForClass:NSClassFromString(bundle)];
+    
+    NSBundle *resourcesBundle = [NSBundle bundleWithPath:[mainBundle pathForResource:bundle
+                                                                              ofType:@"bundle"]];
+    
+    if (!resourcesBundle) {
+        
+        resourcesBundle = mainBundle;
+    }
+    
+    UIImage *image = [UIImage imageNamed:imageName
+                                inBundle:resourcesBundle
+           compatibleWithTraitCollection:nil];
+    
+    return image;
+}
+
 @end

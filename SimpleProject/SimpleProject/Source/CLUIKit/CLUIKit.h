@@ -34,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import "CLTableViewDataSource.h"
 #import "CLTableViewViewModel.h"
 #import "CLTableViewDelegate.h"
+#import "CLTableViewCell.h"
 
 #pragma mark - CLCollectionViewController
 #import "CLCollectionViewController.h"

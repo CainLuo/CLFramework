@@ -105,6 +105,9 @@
 		A459D6091F5A616E00254DC9 /* CLTableViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6071F5A616E00254DC9 /* CLTableViewViewModel.m */; };
 		A459D60D1F5A61AC00254DC9 /* CLCollectionViewViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A459D60B1F5A61AC00254DC9 /* CLCollectionViewViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A459D60E1F5A61AC00254DC9 /* CLCollectionViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D60C1F5A61AC00254DC9 /* CLCollectionViewViewModel.m */; };
+		A46C1A971F5C490800C323FC /* CLTableViewCell.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46C1A941F5C490800C323FC /* CLTableViewCell.bundle */; };
+		A46C1A981F5C490800C323FC /* CLTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A46C1A951F5C490800C323FC /* CLTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46C1A991F5C490800C323FC /* CLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46C1A961F5C490800C323FC /* CLTableViewCell.m */; };
 		A4DEC0381F30D42100AF4020 /* CLToolBarListView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DEC0391F30D42100AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */; };
 /* End PBXBuildFile section */
@@ -207,6 +210,9 @@
 		A459D6071F5A616E00254DC9 /* CLTableViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewViewModel.m; sourceTree = "<group>"; };
 		A459D60B1F5A61AC00254DC9 /* CLCollectionViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewViewModel.h; sourceTree = "<group>"; };
 		A459D60C1F5A61AC00254DC9 /* CLCollectionViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewViewModel.m; sourceTree = "<group>"; };
+		A46C1A941F5C490800C323FC /* CLTableViewCell.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLTableViewCell.bundle; sourceTree = "<group>"; };
+		A46C1A951F5C490800C323FC /* CLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTableViewCell.h; sourceTree = "<group>"; };
+		A46C1A961F5C490800C323FC /* CLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewCell.m; sourceTree = "<group>"; };
 		A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLToolBarListView.h; sourceTree = "<group>"; };
 		A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLToolBarListView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -420,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				A42AC4CE1F15C74400DA0D58 /* Controller */,
+				A46C1A931F5C490800C323FC /* View */,
 				A42AC4D11F15C74400DA0D58 /* ViewModel */,
 			);
 			path = CLTableViewController;
@@ -604,6 +611,16 @@
 			path = CollectionViewViewModel;
 			sourceTree = "<group>";
 		};
+		A46C1A931F5C490800C323FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46C1A941F5C490800C323FC /* CLTableViewCell.bundle */,
+				A46C1A951F5C490800C323FC /* CLTableViewCell.h */,
+				A46C1A961F5C490800C323FC /* CLTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A4DEC0351F30D42100AF4020 /* CLToolBarListView */ = {
 			isa = PBXGroup;
 			children = (
@@ -661,6 +678,7 @@
 				A459D6081F5A616E00254DC9 /* CLTableViewViewModel.h in Headers */,
 				A459D60D1F5A61AC00254DC9 /* CLCollectionViewViewModel.h in Headers */,
 				A42AC4B21F15C20900DA0D58 /* UIDevice+CLDevice.h in Headers */,
+				A46C1A981F5C490800C323FC /* CLTableViewCell.h in Headers */,
 				A42AC4A11F15C20900DA0D58 /* MJRefresh.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +771,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42AC4A01F15C20900DA0D58 /* MJRefresh.bundle in Resources */,
+				A46C1A971F5C490800C323FC /* CLTableViewCell.bundle in Resources */,
 				A42AC47F1F15C20900DA0D58 /* CLTitleView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -797,6 +816,7 @@
 				A42AC4AD1F15C20900DA0D58 /* CLApplication.m in Sources */,
 				A42AC4B51F15C20900DA0D58 /* UIImage+CLImage.m in Sources */,
 				A42AC4931F15C20900DA0D58 /* MJRefreshAutoStateFooter.m in Sources */,
+				A46C1A991F5C490800C323FC /* CLTableViewCell.m in Sources */,
 				A42AC4A91F15C20900DA0D58 /* UIScrollView+MJRefresh.m in Sources */,
 				A42AC4A31F15C20900DA0D58 /* MJRefreshConst.m in Sources */,
 				A42AC4811F15C20900DA0D58 /* CLTitleView.m in Sources */,

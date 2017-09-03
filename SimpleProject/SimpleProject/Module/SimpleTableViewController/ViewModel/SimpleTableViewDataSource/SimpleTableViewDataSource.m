@@ -7,6 +7,7 @@
 //
 
 #import "SimpleTableViewDataSource.h"
+#import "SimpleTableViewCell.h"
 
 @implementation SimpleTableViewDataSource
 
@@ -16,14 +17,15 @@
     return self.cl_viewModel.cl_dataSource.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"];
+    SimpleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleTableViewCell"];
     
     if (!cell) {
         
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:@"UITableViewCell"];
+        cell = [[SimpleTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                          reuseIdentifier:@"SimpleTableViewCell"];
     }
     
     cell.textLabel.text = self.cl_viewModel.cl_dataSource[indexPath.row];
