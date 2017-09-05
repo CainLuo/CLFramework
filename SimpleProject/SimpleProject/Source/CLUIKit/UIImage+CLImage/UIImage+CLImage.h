@@ -130,4 +130,16 @@
 + (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
                              imageName:(NSString *)imageName;
 
+/**
+ 异步绘制图片
+
+ @param size 尺寸
+ @param fillColor 填充的颜色
+ @param opaque 是否是透明
+ @param completion 回调
+ */
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                          fillColor:(UIColor *)fillColor
+                             opaque:(BOOL)opaque
+                         completion:(void (^)(UIImage *))completion;
 @end

@@ -56,6 +56,7 @@
 }
 
 - (void)cl_pullUpRefresh {
+        
     [self cl_pullUpEndRefresh];
 }
 

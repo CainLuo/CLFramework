@@ -483,7 +483,6 @@
     return image;
 }
 
-
 #pragma mark - QR Code Image
 - (UIImage *)cl_createQRCodeImageWithString:(NSString *)string {
     
@@ -579,6 +578,47 @@
            compatibleWithTraitCollection:nil];
     
     return image;
+}
+
+#pragma mark - 异步绘制图片
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                          fillColor:(UIColor *)fillColor
+                             opaque:(BOOL)opaque
+                         completion:(void (^)(UIImage *))completion {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        UIGraphicsBeginImageContextWithOptions(size, opaque, 0);
+        
+        CGRect rect = CGRectMake(0, 0, size.width, size.height);
+        
+        if (opaque) {
+            
+            [fillColor setFill];
+            
+            UIRectFill(rect);
+        }
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
+        
+        [path addClip];
+        
+        if (self) {
+            [self drawInRect:rect];
+        }
+        
+        UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(result);
+            }
+        });
+    });
 }
 
 @end
