@@ -56,8 +56,8 @@
 }
 
 - (void)cl_pullUpRefresh {
-        
-    [self cl_pullUpEndRefresh];
+    
+    [self.simpleTableViewModel cl_tableViewPullUpHTTPRequest];    
 }
 
 - (SimpleTableViewModel *)simpleTableViewModel {

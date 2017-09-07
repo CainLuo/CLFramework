@@ -12,6 +12,8 @@
 
 - (void)cl_tableViewHTTPRequest {
 
+    [self.cl_dataSource removeAllObjects];
+    
     NSArray *array = @[@"SimpleCollectionViewController",
                        @"SimpleQRCodeImageViewController",
                        @"SimpleImageViewController",
@@ -25,6 +27,23 @@
     [self.cl_tableViewController cl_dropDownEndRefresh];
     
 //    [self cl_configTableViewWithDataSource];
+}
+
+- (void)cl_tableViewPullUpHTTPRequest {
+    
+    NSArray *array = @[@"SimpleCollectionViewController",
+                       @"SimpleQRCodeImageViewController",
+                       @"SimpleImageViewController",
+                       @"SimpleScrollViewController",
+                       @"SimpleButtonController",
+                       @"SimpleDrawCircleController"];
+    
+    [self.cl_dataSource addObjectsFromArray:array];
+    
+    [self.cl_tableViewController.cl_tableView reloadData];
+    [self.cl_tableViewController cl_pullUpEndRefresh];
+    
+    //    [self cl_configTableViewWithDataSource];
 }
 
 @end

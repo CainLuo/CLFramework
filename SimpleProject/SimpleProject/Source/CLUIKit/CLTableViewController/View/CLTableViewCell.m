@@ -20,7 +20,8 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
               reuseIdentifier:(NSString *)reuseIdentifier {
     
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    self = [super initWithStyle:style
+                reuseIdentifier:reuseIdentifier];
     
     if (self) {
         
@@ -55,7 +56,7 @@
                                                                toItem:self
                                                             attribute:NSLayoutAttributeLeft
                                                            multiplier:1
-                                                             constant:0];
+                                                             constant:0.1];
 
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.cl_lineImageView
                                                             attribute:NSLayoutAttributeRight
@@ -63,7 +64,7 @@
                                                                toItem:self
                                                             attribute:NSLayoutAttributeRight
                                                            multiplier:1
-                                                             constant:0];
+                                                             constant:0.1];
 
     NSLayoutConstraint *bottom = [NSLayoutConstraint constraintWithItem:self.cl_lineImageView
                                                               attribute:NSLayoutAttributeBottom
@@ -71,7 +72,7 @@
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeBottom
                                                              multiplier:1
-                                                               constant:1];
+                                                               constant:1.5];
     
     NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:self.cl_lineImageView
                                                               attribute:NSLayoutAttributeHeight
@@ -79,7 +80,7 @@
                                                                  toItem:nil
                                                               attribute:NSLayoutAttributeHeight
                                                              multiplier:1
-                                                               constant:1];
+                                                               constant:1.5];
     
     [self addConstraint:left];
     [self addConstraint:right];
