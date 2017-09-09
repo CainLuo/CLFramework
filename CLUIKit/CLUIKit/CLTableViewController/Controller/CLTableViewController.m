@@ -109,7 +109,7 @@
     
     self.cl_tableView.mj_header = header;
     
-    MJRefreshBackNormalFooter *refreshFooter = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    MJRefreshAutoNormalFooter *refreshFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         [self cl_pullUpRefresh];
     }];
     

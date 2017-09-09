@@ -14,10 +14,6 @@
 
 #import "CLViewController.h"
 
-@interface CLViewController ()
-
-@end
-
 @implementation CLViewController
 
 - (instancetype)initCLViewControllerWith:(CLViewControllerStyle)style {

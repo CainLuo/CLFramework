@@ -13,6 +13,9 @@
 //
 
 #import "UIViewController+CLViewController.h"
+#import <objc/runtime.h>
+
+static void *AlertControllerKey = &AlertControllerKey;
 
 @implementation UIViewController (CLViewController)
 
@@ -22,6 +25,77 @@
 
 - (void)cl_setTabBarTranslucentWithBOOL:(BOOL)bools {
     self.tabBarController.tabBar.translucent = bools;
+}
+
+#pragma mark - AlertController
+- (void)setCl_alertController:(UIAlertController *)cl_alertController {
+    
+    objc_setAssociatedObject(self, AlertControllerKey, cl_alertController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (UIAlertController *)cl_alertController {
+    
+    return objc_getAssociatedObject(self, AlertControllerKey);
+}
+
+- (void)cl_callPhoneWithPhoneNumber:(NSString *)phoneNumber
+                            message:(NSString *)message
+                             titile:(NSString *)title {
+    
+    NSMutableString *cl_tellPhoneNumber = [[NSMutableString alloc]initWithFormat:@"tel:%@", phoneNumber];
+    
+    UIAlertAction *cl_cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                              style:UIAlertActionStyleCancel
+                                                            handler:^(UIAlertAction *action) {}];
+    
+    UIAlertAction *cl_otherAction = [UIAlertAction actionWithTitle:@"呼叫"
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction *action) {
+                                                               
+                                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:cl_tellPhoneNumber]];
+                                                           }];
+    
+    [self cl_showAlertViewControllerWithTitle:title
+                                      message:[NSString stringWithFormat:@"%@%@", message, phoneNumber]
+                                      actions:@[cl_cancelAction, cl_otherAction]
+                               preferredStyle:UIAlertControllerStyleAlert];
+}
+
+- (void)cl_showAlertViewControllerWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                                buttonTitle:(NSString *)buttonTitle{
+    
+    UIAlertAction *cl_otherAction = [UIAlertAction actionWithTitle:buttonTitle
+                                                             style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction *action) {
+                                                           }];
+    
+    [self cl_showAlertViewControllerWithTitle:title
+                                      message:message
+                                      actions:@[cl_otherAction]
+                               preferredStyle:UIAlertControllerStyleAlert];
+}
+
+- (void)cl_showAlertViewControllerWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                                    actions:(NSArray<UIAlertAction *> *) actions
+                             preferredStyle:(UIAlertControllerStyle)preferredStyle {
+    
+    self.cl_alertController = [UIAlertController alertControllerWithTitle:title
+                                                                  message:message
+                                                           preferredStyle:preferredStyle];
+    
+    if (actions) {
+        
+        for (UIAlertAction *cl_alertAction in actions) {
+            
+            [self.cl_alertController addAction:cl_alertAction];
+        }
+    }
+    
+    [self presentViewController:self.cl_alertController
+                       animated:YES
+                     completion:nil];
 }
 
 @end

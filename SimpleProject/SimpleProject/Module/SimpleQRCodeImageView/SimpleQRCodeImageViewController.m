@@ -28,6 +28,10 @@
     imageView.image = [[[UIImage alloc] init] cl_createQRCodeImageWithString:@"https://cainrun.github.io"];
     
     [self.view addSubview:imageView];
+    
+    [self cl_showAlertViewControllerWithTitle:@"温馨提示"
+                                      message:@"进入了二维码控制器"
+                                  buttonTitle:@"好的"];
 }
 
 @end
