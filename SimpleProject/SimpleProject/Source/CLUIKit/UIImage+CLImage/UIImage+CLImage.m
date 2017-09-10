@@ -621,4 +621,97 @@
     });
 }
 
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                         completion:(void (^)(UIImage *))completion {
+    
+    [self cl_asyncCornerImageWithSize:size
+                          borderWidth:0
+                          borderColor:nil
+                           completion:completion];
+}
+
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                        borderWidth:(CGFloat)borderWidth
+                        borderColor:(UIColor *)borderColor
+                         completion:(void (^)(UIImage *))completion {
+    
+    [self cl_asyncCornerImageWithSize:size
+                              corners:UIRectCornerAllCorners
+                          borderWidth:borderWidth
+                          borderColor:borderColor
+                       borderLineJoin:kCGLineJoinMiter
+                           completion:completion];
+}
+
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                            corners:(UIRectCorner)corners
+                        borderWidth:(CGFloat)borderWidth
+                        borderColor:(UIColor *)borderColor
+                     borderLineJoin:(CGLineJoin)borderLineJoin
+                         completion:(void (^)(UIImage *))completion {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+
+        UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGRect rect = CGRectMake(0, 0, size.width, size.height);
+        
+        CGContextScaleCTM(context, 1, -1);
+        
+        CGContextTranslateCTM(context, 0, -rect.size.height);
+        
+        CGFloat minSize = MIN(self.size.width, self.size.height);
+        
+        if (borderWidth < minSize / 2) {
+            
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, borderWidth, borderWidth)
+                                                       byRoundingCorners:corners
+                                                             cornerRadii:CGSizeMake(size.width, borderWidth)];
+            [path closePath];
+            
+            CGContextSaveGState(context);
+            
+            [path addClip];
+            
+            CGContextDrawImage(context, rect, self.CGImage);
+            CGContextRestoreGState(context);
+        }
+        
+        if (borderColor && borderWidth < minSize / 2 && borderWidth > 0) {
+            
+            CGFloat strokeInset = (floor(borderWidth * self.scale) + 0.5) / self.scale;
+            
+            CGRect strokeRect = CGRectInset(rect, strokeInset, strokeInset);
+            
+            CGFloat strokeRadius = size.width > self.scale / 2 ? size.width - self.scale / 2 : 0;
+            
+            UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:strokeRect
+                                                       byRoundingCorners:corners
+                                                             cornerRadii:CGSizeMake(strokeRadius, borderWidth)];
+            [path closePath];
+            
+            path.lineWidth = borderWidth;
+            path.lineJoinStyle = borderLineJoin;
+            
+            [borderColor setStroke];
+            
+            [path stroke];
+        }
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+    
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(image);
+            }
+        });
+    });
+}
+
 @end

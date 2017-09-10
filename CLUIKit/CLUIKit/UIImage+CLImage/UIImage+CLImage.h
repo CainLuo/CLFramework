@@ -18,7 +18,7 @@
 
 /**
  根据给定的颜色生成一张图
- 
+
  @param color UIColor
  @return UIImage
  */
@@ -26,7 +26,7 @@
 
 /**
  截取指定视图大小的截图
- 
+
  @param view 指定视图
  @return UIImage
  */
@@ -50,7 +50,7 @@
 
 /**
  缩放指定比例的图片
- 
+
  @param size 指定比例
  @return UIImage
  */
@@ -66,7 +66,7 @@
 
 /**
  给图片增加圆角
- 
+
  @param radius 半径
  @return UIImage
  */
@@ -74,7 +74,7 @@
 
 /**
  给图片增加圆角,边框, 边框的颜色.
- 
+
  @param radius 半径
  @param borderWidth 边框的宽度
  @param borderColor 边框的颜色
@@ -122,7 +122,7 @@
 
 /**
  从指定的Bundle包里获取对应的图片
- 
+
  @param bundle 资源包
  @param imageName 图片名
  @return UIImage
@@ -132,7 +132,7 @@
 
 /**
  异步绘制图片
- 
+
  @param size 尺寸
  @param fillColor 填充的颜色
  @param opaque 是否是透明
@@ -141,5 +141,20 @@
 - (void)cl_asyncCornerImageWithSize:(CGSize)size
                           fillColor:(UIColor *)fillColor
                              opaque:(BOOL)opaque
+                         completion:(void (^)(UIImage *))completion;
+
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                         completion:(void (^)(UIImage *))completion;
+
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                        borderWidth:(CGFloat)borderWidth
+                        borderColor:(UIColor *)borderColor
+                         completion:(void (^)(UIImage *))completion;
+
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                            corners:(UIRectCorner)corners
+                        borderWidth:(CGFloat)borderWidth
+                        borderColor:(UIColor *)borderColor
+                     borderLineJoin:(CGLineJoin)borderLineJoin
                          completion:(void (^)(UIImage *))completion;
 @end

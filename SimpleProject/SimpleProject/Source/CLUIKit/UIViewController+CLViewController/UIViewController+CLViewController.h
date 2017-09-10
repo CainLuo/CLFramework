@@ -36,7 +36,8 @@
  @param phoneNumber 输入对应的手机号
  @param title 标题语
  */
-+ (void)cl_callPhoneWithPhoneNumber:(NSString *)phoneNumber
+- (void)cl_callPhoneWithPhoneNumber:(NSString *)phoneNumber
+                            message:(NSString *)message
                              titile:(NSString *)title;
 
 /**

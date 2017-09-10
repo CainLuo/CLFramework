@@ -24,19 +24,28 @@
 
     UIImageView *simpleProjectImageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     
-//    simpleProjectImageView.image = [[UIImage imageNamed:@"1"] cl_cornerImageWithRadius:100 / 2];
+    YYImageCache *cache = [YYWebImageManager sharedManager].cache;
+
+    [cache.memoryCache removeAllObjects];
+    [cache.diskCache removeAllObjects];
     
-    [simpleProjectImageView sd_setImageWithURL:[NSURL URLWithString:urlString]
-                                     completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-                                         
-                                         [simpleProjectImageView.image cl_asyncCornerImageWithSize:simpleProjectImageView.frame.size
-                                                                                         fillColor:nil
-                                                                                            opaque:NO
-                                                                                        completion:^(UIImage *image) {
-                                                                                            
-                                                                                            simpleProjectImageView.image = image;
-                                                                                        }];
-                                     }];
+    [simpleProjectImageView yy_setImageWithURL:[NSURL URLWithString:urlString]
+                                   placeholder:[UIImage imageNamed:@"1"]
+                                       options:YYWebImageOptionSetImageWithFadeAnimation
+                                      progress:nil
+     
+                                     transform:^UIImage * _Nullable(UIImage * _Nonnull image, NSURL * _Nonnull url) {
+        
+                                         image = [image yy_imageByResizeToSize:CGSizeMake(100, 100)
+                                                                   contentMode:UIViewContentModeCenter];
+
+                                         return [image yy_imageByRoundCornerRadius:50];
+                                      } completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+                                          
+                                          if (from == YYWebImageFromDiskCache) {
+                                              NSLog(@"load from disk cache");
+                                          }
+                                      }];
     
     [self.view addSubview:simpleProjectImageView];
 }
