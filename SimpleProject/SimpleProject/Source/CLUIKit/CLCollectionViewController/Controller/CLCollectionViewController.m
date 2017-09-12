@@ -119,9 +119,12 @@
     
     self.cl_collectionView.mj_header = header;
     
-    MJRefreshAutoNormalFooter *refreshFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+    MJRefreshAutoFooter *refreshFooter = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+        
         [self cl_pullUpRefresh];
     }];
+    
+    refreshFooter.automaticallyHidden = YES;
     
     self.cl_collectionView.mj_footer = refreshFooter;
 }
