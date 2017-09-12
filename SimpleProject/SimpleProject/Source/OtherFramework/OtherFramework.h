@@ -43,3 +43,5 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #pragma mark - SVProgressHUD
 #import "SVProgressHUD.h"
 
+#pragma mark - ZFPlayer
+#import "ZFPlayer.h"
