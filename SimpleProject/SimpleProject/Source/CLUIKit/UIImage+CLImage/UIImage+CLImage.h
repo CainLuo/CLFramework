@@ -151,10 +151,10 @@
                         borderColor:(UIColor *)borderColor
                          completion:(void (^)(UIImage *))completion;
 
-- (void)cl_asyncCornerImageWithRadius:(CGSize)size
-                              corners:(UIRectCorner)corners
-                          borderWidth:(CGFloat)borderWidth
-                          borderColor:(UIColor *)borderColor
-                       borderLineJoin:(CGLineJoin)borderLineJoin
-                           completion:(void (^)(UIImage *))completion;
+- (void)cl_asyncCornerImageWithSize:(CGSize)size
+                            corners:(UIRectCorner)corners
+                        borderWidth:(CGFloat)borderWidth
+                        borderColor:(UIColor *)borderColor
+                     borderLineJoin:(CGLineJoin)borderLineJoin
+                         completion:(void (^)(UIImage *))completion;
 @end

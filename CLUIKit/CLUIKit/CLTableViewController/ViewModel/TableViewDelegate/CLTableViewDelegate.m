@@ -16,7 +16,7 @@
 
 @interface CLTableViewDelegate ()
 
-@property (nonatomic, strong, readwrite) CLTableViewViewModel *cl_viewModel;
+@property (nonatomic, weak, readwrite) CLTableViewViewModel *cl_viewModel;
 
 @end
 

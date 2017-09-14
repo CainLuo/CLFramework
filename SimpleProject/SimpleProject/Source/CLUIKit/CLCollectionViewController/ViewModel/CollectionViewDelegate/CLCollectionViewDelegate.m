@@ -16,7 +16,7 @@
 
 @interface CLCollectionViewDelegate ()
 
-@property (nonatomic, strong, readwrite) CLCollectionViewViewModel *cl_collectionViewBaseModel;
+@property (nonatomic, weak, readwrite) CLCollectionViewViewModel *cl_collectionViewBaseModel;
 
 @end
 

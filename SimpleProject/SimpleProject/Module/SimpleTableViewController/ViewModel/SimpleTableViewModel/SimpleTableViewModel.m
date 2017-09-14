@@ -19,7 +19,8 @@
                        @"SimpleImageViewController",
                        @"SimpleScrollViewController",
                        @"SimpleButtonController",
-                       @"SimpleDrawCircleController"];
+                       @"SimpleDrawCircleController",
+                       @"SimpleTableViewController"];
     
     [self.cl_dataSource addObjectsFromArray:array];
     
@@ -36,7 +37,8 @@
                        @"SimpleImageViewController",
                        @"SimpleScrollViewController",
                        @"SimpleButtonController",
-                       @"SimpleDrawCircleController"];
+                       @"SimpleDrawCircleController",
+                       @"SimpleTableViewController"];
     
     [self.cl_dataSource addObjectsFromArray:array];
     

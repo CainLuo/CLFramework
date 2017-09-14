@@ -113,15 +113,17 @@
 #pragma mark - Refresh
 - (void)cl_addRefresh {
     
+    __weak typeof(self) weakSelf = self;
+
     MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self cl_dropDownRefresh];
+        [weakSelf cl_dropDownRefresh];
     }];
     
     self.cl_collectionView.mj_header = header;
     
     MJRefreshAutoFooter *refreshFooter = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
         
-        [self cl_pullUpRefresh];
+        [weakSelf cl_pullUpRefresh];
     }];
     
     refreshFooter.automaticallyHidden = YES;

@@ -17,6 +17,11 @@
 
 @implementation SimpleScrollViewController
 
+- (void)dealloc {
+    
+    NSLog(@"释放了");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

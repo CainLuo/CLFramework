@@ -13,6 +13,7 @@
 #import "SimpleScrollViewController.h"
 #import "SimpleButtonController.h"
 #import "SimpleDrawCircleController.h"
+#import "SimpleTableViewController.h"
 
 @implementation SimpleTableViewDelegate
 

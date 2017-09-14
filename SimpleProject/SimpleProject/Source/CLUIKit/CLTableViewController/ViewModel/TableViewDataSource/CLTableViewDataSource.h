@@ -17,7 +17,7 @@
 
 @interface CLTableViewDataSource : NSObject <UITableViewDataSource>
 
-@property (nonatomic, strong, readonly) CLTableViewViewModel *cl_viewModel;
+@property (nonatomic, weak, readonly) CLTableViewViewModel *cl_viewModel;
 
 - (instancetype)initTableViewDataSourceWithViewModel:(CLTableViewViewModel *)viewModel;
 

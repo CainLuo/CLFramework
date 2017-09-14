@@ -17,7 +17,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface CLTableViewController : CLViewController
 
-@property (nonatomic, strong, readonly) UITableView *cl_tableView;
+@property (nonatomic, strong, null_resettable, readonly) UITableView *cl_tableView;
 
 /**
  初始化CLTableViewController
