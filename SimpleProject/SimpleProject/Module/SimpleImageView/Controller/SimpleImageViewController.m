@@ -71,8 +71,12 @@
 }
 
 - (void)buttonAction {
+    
+    [UIImage cl_asyncGetImageForView:self.view
+                          completion:^(UIImage *image) {
         
-    _simpleImageView.image = [UIImage cl_getImageForView:self.view];
+                         self.simpleImageView.image = image;
+                     }];
 }
 
 @end

@@ -35,7 +35,7 @@
 // 图片路径
 #define ZFPlayerSrcName(file)               [@"ZFPlayer.bundle" stringByAppendingPathComponent:file]
 
-#define ZFPlayerFrameworkSrcName(file)      [@"Frameworks/ZFPlayer.framework/ZFPlayer.bundle" stringByAppendingPathComponent:file]
+#define ZFPlayerFrameworkSrcName(file)      [@"Frameworks/OtherFramework.framework/ZFPlayer.bundle" stringByAppendingPathComponent:file]
 
 #define ZFPlayerImage(file)                 [UIImage imageNamed:ZFPlayerSrcName(file)] ? :[UIImage imageNamed:ZFPlayerFrameworkSrcName(file)]
 

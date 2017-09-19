@@ -30,13 +30,18 @@
     imageView.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height / 2);
     imageView.bounds = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width);
     
-    imageView.image = [[[UIImage alloc] init] cl_createQRCodeImageWithString:@"https://cainrun.github.io"];
+    
+    [UIImage cl_asyncCreateQRCodeImageWithString:@"https://cainrun.github.io"
+                                      completion:^(UIImage *image) {
+                                          
+                                          imageView.image = image;
+                                      }];
     
     [self.view addSubview:imageView];
     
-    [self cl_showAlertViewControllerWithTitle:@"温馨提示"
-                                      message:@"进入了二维码控制器"
-                                  buttonTitle:@"好的"];
+//    [self cl_showAlertViewControllerWithTitle:@"温馨提示"
+//                                      message:@"进入了二维码控制器"
+//                                  buttonTitle:@"好的"];
 }
 
 @end

@@ -17,37 +17,40 @@
 @interface UIImage (CLImage)
 
 /**
- 根据给定的颜色生成一张图
-
+ 根据给定的颜色异步生成一张图
+ 
  @param color UIColor
- @return UIImage
+ @param completion 回调
  */
-+ (UIImage *)cl_getImageWithColor:(UIColor *)color;
++ (void)cl_asyncGetImageWithColor:(UIColor *)color
+                       completion:(void (^)(UIImage *))completion;
 
 /**
  截取指定视图大小的截图
 
  @param view 指定视图
- @return UIImage
+ @param completion 回调
  */
-+ (UIImage *)cl_getImageForView:(UIView *)view;
++ (void)cl_asyncGetImageForView:(UIView *)view
+                     completion:(void (^)(UIImage *))completion;
 
 /**
  加载指定名称的GIF图片
  
  @param name 图片名
- @return UIImage
+ @param completion 回调
  */
-+ (UIImage *)cl_loadGIFImageForName:(NSString *)name;
++ (void)cl_asyncLoadGIFImageForName:(NSString *)name
+                         completion:(void (^)(UIImage *))completion;
 
 /**
  从NSData里加载GIF图片
  
  @param data 图片数据
- @return UIImage
+ @param completion 回调
  */
-+ (UIImage *)cl_loadGIFImageWithData:(NSData *)data;
-
++ (void)cl_asyncLoadGIFImageWithData:(NSData *)data
+                          completion:(void (^)(UIImage *))completion;
 /**
  缩放指定比例的图片
 
@@ -85,22 +88,24 @@
                           borderColor:(UIColor *)borderColor;
 
 /**
- 创建一个二维码
+ 异步创建一个二维码
  
  @param string 二维码的内容
- @return UIImage
+ @param completion 回调
  */
-- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string;
++ (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
+                                 completion:(void (^)(UIImage *))completion;
 
 /**
  创建一个二维码, 且可以添加中间的Logo图
  
  @param string 二维码内容
  @param logoName logo图 default size is 150 * 150
- @return UIImage
+ @param completion 回调
  */
-- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string
-                                       logo:(NSString *)logoName;
++ (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
+                                       logo:(NSString *)logoName
+                                 completion:(void (^)(UIImage *))completion;
 
 /**
  创建一个条形码

@@ -25,6 +25,15 @@
 + (UIImage *)cl_getImageWithColor:(UIColor *)color;
 
 /**
+ 根据给定的颜色异步生成一张图
+ 
+ @param color UIColor
+ @param completion 回调
+ */
++ (void)cl_asyncGetImageWithColor:(UIColor *)color
+                       completion:(void (^)(UIImage *))completion;
+
+/**
  截取指定视图大小的截图
 
  @param view 指定视图
@@ -91,6 +100,15 @@
  @return UIImage
  */
 - (UIImage *)cl_createQRCodeImageWithString:(NSString *)string;
+
+/**
+ 异步创建一个二维码
+ 
+ @param string 二维码的内容
+ @param completion 回调
+ */
++ (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
+                                 completion:(void (^)(UIImage *))completion;
 
 /**
  创建一个二维码, 且可以添加中间的Logo图

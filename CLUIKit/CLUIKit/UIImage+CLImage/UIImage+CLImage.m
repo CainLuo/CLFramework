@@ -18,156 +18,203 @@
 
 @implementation UIImage (CLImage)
 
+#pragma mark - 根据指定的颜色异步生成对应的图片
++ (void)cl_asyncGetImageWithColor:(UIColor *)color
+                       completion:(void (^)(UIImage *))completion {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+        
+        UIGraphicsBeginImageContext(rect.size);
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        
+        CGContextFillRect(context, rect);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+        
+        image = [UIImage imageWithData:imageData];
 
-+ (UIImage *)cl_getImageWithColor:(UIColor *)color {
-    
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    
-    UIGraphicsBeginImageContext(rect.size);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, color.CGColor);
-    
-    CGContextFillRect(context, rect);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
-    
-    image = [UIImage imageWithData:imageData];
-    
-    return image;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(image);
+            }
+        });
+    });
 }
 
-/**
- 截取指定视图大小的截图
- 
- @param view 指定视图
- @return 图片
- */
-+ (UIImage *)cl_getImageForView:(UIView *)view {
+#pragma mark - 截取指定视图大小的截图
++ (void)cl_asyncGetImageForView:(UIView *)view
+                     completion:(void (^)(UIImage *))completion {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
     
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
-    
+        
         [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    
+        
         UIImage *imageRet = UIGraphicsGetImageFromCurrentImageContext();
-    
+        
         UIGraphicsEndImageContext();
-    
-        return imageRet;
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            completion(imageRet);
+        });
+    });
 }
 
-/**
- 加载指定名称的GIF图片
+#pragma mark - 加载指定名称的GIF图片
++ (void)cl_asyncLoadGIFImageForName:(NSString *)name
+                         completion:(void (^)(UIImage *))completion {
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        CGFloat scale = [UIScreen mainScreen].scale;
+        
+        if (scale > 1.0f) {
+            
+            NSString *retinaPath = [[NSBundle mainBundle] pathForResource:[name stringByAppendingString:@"@2x"]
+                                                                   ofType:@"gif"];
+            
+            NSData *data = [NSData dataWithContentsOfFile:retinaPath];
 
- @param name 图片名
- @return 图片
- */
-+ (UIImage *)cl_loadGIFImageForName:(NSString *)name {
-    
-    CGFloat scale = [UIScreen mainScreen].scale;
-    
-    if (scale > 1.0f) {
-        
-        NSString *retinaPath = [[NSBundle mainBundle] pathForResource:[name stringByAppendingString:@"@2x"]
-                                                               ofType:@"gif"];
-        
-        NSData *data = [NSData dataWithContentsOfFile:retinaPath];
-        
-        if (data) {
-            return [UIImage cl_loadGIFImageWithData:data];
+            if (completion) {
+
+                if (data) {
+                    
+                    [UIImage cl_asyncLoadGIFImageWithData:data
+                                               completion:^(UIImage *image) {
+                                                   
+                                                   completion(image);
+                                               }];
+                }
+            }
+            
+            NSString *path = [[NSBundle mainBundle] pathForResource:name
+                                                             ofType:@"gif"];
+            
+            data = [NSData dataWithContentsOfFile:path];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+
+                if (completion) {
+
+                    if (data) {
+                        
+                        [UIImage cl_asyncLoadGIFImageWithData:data
+                                                   completion:^(UIImage *image) {
+                                                       
+                                                       completion(image);
+                                                   }];
+                        
+                        return;
+                    }
+                    
+                    completion([UIImage imageNamed:name]);
+                }
+            });
+            
+        } else {
+            
+            NSString *path = [[NSBundle mainBundle] pathForResource:name
+                                                             ofType:@"gif"];
+            
+            NSData *data = [NSData dataWithContentsOfFile:path];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+
+                if (completion) {
+                    
+                    if (data) {
+                        
+                        [UIImage cl_asyncLoadGIFImageWithData:data
+                                                   completion:^(UIImage *image) {
+                            
+                                                       completion(image);
+                                                   }];
+                    }
+                    
+                    completion([UIImage imageNamed:name]);
+                }
+            });
         }
-        
-        NSString *path = [[NSBundle mainBundle] pathForResource:name
-                                                         ofType:@"gif"];
-        
-        data = [NSData dataWithContentsOfFile:path];
-        
-        if (data) {
-            return [UIImage cl_loadGIFImageWithData:data];
-        }
-        
-        return [UIImage imageNamed:name];
-        
-    } else {
-        
-        NSString *path = [[NSBundle mainBundle] pathForResource:name
-                                                         ofType:@"gif"];
-        
-        NSData *data = [NSData dataWithContentsOfFile:path];
-        
-        if (data) {
-            return [UIImage cl_loadGIFImageWithData:data];
-        }
-        
-        return [UIImage imageNamed:name];
-    }
+    });
 }
 
-
-/**
- 从NSData里加载GIF图片
-
- @param data 图片数据
- @return 图片
- */
-+ (UIImage *)cl_loadGIFImageWithData:(NSData *)data {
+#pragma mark - 从NSData里加载GIF图片
++ (void)cl_asyncLoadGIFImageWithData:(NSData *)data
+                          completion:(void (^)(UIImage *))completion {
     
-    if (!data) {
-        return nil;
-    }
-    
-    //获取数据源
-    CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data,
-                                                          NULL);
-    
-    // 获取图片数量(如果传入的是gif图的二进制，那么获取的是图片帧数)
-    size_t count = CGImageSourceGetCount(source);
-    
-    UIImage *animatedImage;
-    
-    if (count <= 1) {
-        animatedImage = [[UIImage alloc] initWithData:data];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
-    } else {
-        
-        NSMutableArray *images = [NSMutableArray array];
-        
-        NSTimeInterval duration = 0.0f;
-        
-        for (size_t i = 0; i < count; i++) {
-            
-            CGImageRef image = CGImageSourceCreateImageAtIndex(source,
-                                                               i,
-                                                               NULL);
-            
-            duration += [self cl_frameDurationAtIndex:i
-                                               source:source];
-            
-            [images addObject:[UIImage imageWithCGImage:image
-                                                  scale:[UIScreen mainScreen].scale
-                                            orientation:UIImageOrientationUp]];
-            
-            CGImageRelease(image);
+        if (!data) {
+            return;
         }
         
-        // 如果上面的计算播放时间方法没有成功，就按照下面方法计算
-        // 计算一次播放的总时间：每张图播放1/10秒 * 图片总数
-        if (!duration) {
-            duration = (1.0f / 10.0f) * count;
+        //获取数据源
+        CGImageSourceRef source = CGImageSourceCreateWithData((__bridge CFDataRef)data,
+                                                              NULL);
+        
+        // 获取图片数量(如果传入的是gif图的二进制，那么获取的是图片帧数)
+        size_t count = CGImageSourceGetCount(source);
+        
+        UIImage *animatedImage;
+        
+        if (count <= 1) {
+            animatedImage = [[UIImage alloc] initWithData:data];
+            
+        } else {
+            
+            NSMutableArray *images = [NSMutableArray array];
+            
+            NSTimeInterval duration = 0.0f;
+            
+            for (size_t i = 0; i < count; i++) {
+                
+                CGImageRef image = CGImageSourceCreateImageAtIndex(source,
+                                                                   i,
+                                                                   NULL);
+                
+                duration += [self cl_frameDurationAtIndex:i
+                                                   source:source];
+                
+                [images addObject:[UIImage imageWithCGImage:image
+                                                      scale:[UIScreen mainScreen].scale
+                                                orientation:UIImageOrientationUp]];
+                
+                CGImageRelease(image);
+            }
+            
+            // 如果上面的计算播放时间方法没有成功，就按照下面方法计算
+            // 计算一次播放的总时间：每张图播放1/10秒 * 图片总数
+            if (!duration) {
+                duration = (1.0f / 10.0f) * count;
+            }
+            
+            animatedImage = [UIImage animatedImageWithImages:images
+                                                    duration:duration];
         }
         
-        animatedImage = [UIImage animatedImageWithImages:images
-                                                duration:duration];
-    }
-    
-    CFRelease(source);
-    
-    return animatedImage;
+        CFRelease(source);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion) {
+                
+                completion(animatedImage);
+            }
+        });
+    });
 }
 
 /**
@@ -218,15 +265,11 @@
     }
     
     CFRelease(cfFrameProperties);
+    
     return frameDuration;
 }
 
-/**
- 缩放指定比例的图片
- 
- @param size 指定比例
- @return 图片
- */
+#pragma mark - 缩放指定比例的图片
 - (UIImage *)cl_animatedImageByScalingAndCroppingToSize:(CGSize)size {
     
     if (CGSizeEqualToSize(self.size, size) || CGSizeEqualToSize(size, CGSizeZero)) {
@@ -483,52 +526,81 @@
     return image;
 }
 
-#pragma mark - QR Code Image
-- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string {
+#pragma mark - 异步生成一个二维码
++ (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
+                                 completion:(void (^)(UIImage *))completion {
     
-    CIFilter *QRCodeImageFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
-    
-    [QRCodeImageFilter setDefaults];
-    
-    NSData *QRCodeImageData = [string dataUsingEncoding:NSUTF8StringEncoding];
-    
-    [QRCodeImageFilter setValue:QRCodeImageData
-                         forKey:@"inputMessage"];
-    [QRCodeImageFilter setValue:@"H"
-                         forKey:@"inputCorrectionLevel"];
-    
-    CIImage *QRCodeCIImage = [QRCodeImageFilter outputImage];
-    
-    QRCodeCIImage = [QRCodeCIImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)];
-    
-    UIImage *QRCodeUIImage = [UIImage imageWithCIImage:QRCodeCIImage];
-    
-    return QRCodeUIImage;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+
+        CIFilter *QRCodeImageFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+        
+        [QRCodeImageFilter setDefaults];
+        
+        NSData *QRCodeImageData = [string dataUsingEncoding:NSUTF8StringEncoding];
+        
+        [QRCodeImageFilter setValue:QRCodeImageData
+                             forKey:@"inputMessage"];
+        [QRCodeImageFilter setValue:@"H"
+                             forKey:@"inputCorrectionLevel"];
+        
+        CIImage *QRCodeCIImage = [QRCodeImageFilter outputImage];
+        
+        QRCodeCIImage = [QRCodeCIImage imageByApplyingTransform:CGAffineTransformMakeScale(20, 20)];
+        
+        UIImage *QRCodeUIImage = [UIImage imageWithCIImage:QRCodeCIImage];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(QRCodeUIImage);
+            }
+        });
+    });
 }
 
-- (UIImage *)cl_createQRCodeImageWithString:(NSString *)string
-                                       logo:(NSString *)logoName {
++ (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
+                                       logo:(NSString *)logoName
+                                 completion:(void (^)(UIImage *))completion {
     
-    [self cl_createQRCodeImageWithString:string];
-    
-    UIGraphicsBeginImageContext(self.size);
-    
-    [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
-    
-    UIImage *sImage = [UIImage imageNamed:logoName];
-    
-    CGFloat sImageW = 150;
-    CGFloat sImageH= sImageW;
-    CGFloat sImageX = (self.size.width - sImageW) * 0.5;
-    CGFloat sImgaeY = (self.size.height - sImageH) * 0.5;
-    
-    [sImage drawInRect:CGRectMake(sImageX, sImgaeY, sImageW, sImageH)];
-    
-    UIImage *finalyImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    return finalyImage;
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+        __block UIImage *QRCodeImage = [[UIImage alloc] init];
+        
+        [self cl_asyncCreateQRCodeImageWithString:string
+                                       completion:^(UIImage *image) {
+                                              
+                                           QRCodeImage = image;
+                                       }];
+        
+        UIGraphicsBeginImageContext(QRCodeImage.size);
+        
+        [QRCodeImage drawInRect:CGRectMake(0,
+                                           0,
+                                           QRCodeImage.size.width,
+                                           QRCodeImage.size.height)];
+        
+        UIImage *sImage = [UIImage imageNamed:logoName];
+        
+        CGFloat sImageW = 150;
+        CGFloat sImageH = sImageW;
+        CGFloat sImageX = (QRCodeImage.size.width - sImageW) * 0.5;
+        CGFloat sImgaeY = (QRCodeImage.size.height - sImageH) * 0.5;
+        
+        [sImage drawInRect:CGRectMake(sImageX, sImgaeY, sImageW, sImageH)];
+        
+        UIImage *finalyImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(finalyImage);
+            }
+        });
+    });
 }
 
 #pragma mark - 128 Bar Code Image
