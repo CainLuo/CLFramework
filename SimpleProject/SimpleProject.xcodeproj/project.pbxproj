@@ -111,6 +111,7 @@
 		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
 		A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */; };
 		A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */; };
+		A49905421F72AF320012AE21 /* CLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A49905411F72AF320012AE21 /* CLTextField.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -405,6 +406,8 @@
 		A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		A488D6E31F526A02006CA2C0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		A49905401F72AF320012AE21 /* CLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextField.h; sourceTree = "<group>"; };
+		A49905411F72AF320012AE21 /* CLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextField.m; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -790,6 +793,7 @@
 		A43873A51EE92776001F4BC9 /* CLUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				A499053F1F72AF250012AE21 /* CLTextField */,
 				A43F819F1F58669A0086A063 /* CLButton */,
 				A43873A61EE92776001F4BC9 /* CLCollectionViewController */,
 				A42AC4BC1F15C30C00DA0D58 /* CLNavigationController */,
@@ -1331,6 +1335,15 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		A499053F1F72AF250012AE21 /* CLTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A49905401F72AF320012AE21 /* CLTextField.h */,
+				A49905411F72AF320012AE21 /* CLTextField.m */,
+			);
+			path = CLTextField;
+			sourceTree = "<group>";
+		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -1831,6 +1844,7 @@
 				A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */,
 				A438740D1EE92776001F4BC9 /* MJRefreshAutoFooter.m in Sources */,
+				A49905421F72AF320012AE21 /* CLTextField.m in Sources */,
 				A459D6121F5A630B00254DC9 /* CLTableViewViewModel.m in Sources */,
 				A43874A21EE9278D001F4BC9 /* IQUITextFieldView+Additions.m in Sources */,
 				A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */,

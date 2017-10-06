@@ -38,16 +38,21 @@
     
     [self cl_addConstraintsWithSuperView];
     
+    dispatch_queue_t conCurrentQueue = dispatch_queue_create("MrRightGen.conCurrentQueue", DISPATCH_QUEUE_CONCURRENT);
     
-//    dispatch_queue_t queue = dispatch_queue_create("parallel", DISPATCH_QUEUE_CONCURRENT);
-//    
-//    for (NSInteger i = 0; i < 10000; i++) {
-//        
-//        dispatch_async(queue, ^{
-//            
-//            self.string = [NSString stringWithFormat:@"abcdefg%ld", i];
-//        });
-//    }
+    NSLog(@"current task");
+    
+    dispatch_sync(conCurrentQueue, ^{
+        
+        NSLog(@"先加入队列");
+        
+        dispatch_sync(conCurrentQueue, ^{
+            
+            NSLog(@"次加入队列");
+        });
+    });
+    
+    NSLog(@"next task");
 }
 
 - (void)cl_dropDownRefresh {
