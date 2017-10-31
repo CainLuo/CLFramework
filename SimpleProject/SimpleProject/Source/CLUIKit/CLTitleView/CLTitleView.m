@@ -39,7 +39,7 @@
     
     if (self) {
         
-        self.cl_titleViewType = titleViewType;
+        self.cl_titleViewType = titleViewType;        
     }
     
     return self;
@@ -129,7 +129,7 @@
     [self addSubview:self.cl_titleLabel];
     
     self.cl_titleLabel.frame = CGRectMake(BUTTON_WIDTH,
-                                          [UIScreen cl_fitScreen:40],
+                                          [UIScreen cl_getStatusBarHeight],
                                           [UIScreen cl_getScreenWidth] - (BUTTON_WIDTH * 2),
                                           LABEL_HEIGHT);
 }
@@ -169,7 +169,7 @@
     [self addSubview:self.cl_leftButton];
     
     self.cl_leftButton.frame = CGRectMake(0,
-                                          [UIScreen cl_fitScreen:40],
+                                          [UIScreen cl_getStatusBarHeight],
                                           BUTTON_WIDTH,
                                           BUTTON_HEIGHT);
 }
@@ -205,7 +205,7 @@
     [self addSubview:self.cl_rightButton];
     
     self.cl_rightButton.frame = CGRectMake([UIScreen cl_getScreenWidth] - BUTTON_WIDTH,
-                                           [UIScreen cl_fitScreen:40],
+                                           [UIScreen cl_getStatusBarHeight],
                                            BUTTON_WIDTH,
                                            BUTTON_HEIGHT);
 }

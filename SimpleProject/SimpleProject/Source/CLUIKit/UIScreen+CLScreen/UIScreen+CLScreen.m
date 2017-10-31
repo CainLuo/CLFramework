@@ -45,7 +45,7 @@
 
 #pragma mark - 获取导航栏的高度
 + (CGFloat)cl_getNavigationBarHeight {
-        
+    
     return 44.0f;
 }
 

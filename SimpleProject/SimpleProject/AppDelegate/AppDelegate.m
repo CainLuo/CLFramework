@@ -35,6 +35,7 @@
 
     CLNavigationController *navigationController = [[CLNavigationController alloc] initWithRootViewController:simpleTableViewController];
     
+    navigationController.navigationBar.prefersLargeTitles = YES;
     simpleTableViewController.title = @"simpleTableViewController";
     
     [tabbarController setViewControllers:@[navigationController]];

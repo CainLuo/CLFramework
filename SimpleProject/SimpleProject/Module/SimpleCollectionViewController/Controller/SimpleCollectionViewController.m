@@ -28,6 +28,20 @@
     NSLog(@"释放了");
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    
+    self.navigationController.navigationBar.hidden = NO;
+
+    [super viewWillDisappear:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -41,6 +55,8 @@
     
     [self cl_dropDownBeginRefresh];
     [self cl_addConstraintsWithSuperView];
+    
+    NSLog(@"%f", [UIScreen cl_getStatusBarHeight]);
 }
 
 - (CLTitleView *)simpleTitleView {
@@ -105,9 +121,12 @@
     [self.simpleTitleView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.left.right.equalTo(self.view);
-        make.height.mas_equalTo([UIScreen cl_fitScreen:128]);
+        make.height.mas_equalTo([UIScreen cl_fitScreen:184]);
     }];
     
+    NSLog(@"%f", [UIScreen cl_getStatusBarHeight] + [UIScreen cl_fitScreen:140]);
+    NSLog(@"%f", [UIScreen cl_fitScreen:184]);
+
     [self.cl_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.bottom.right.equalTo(self.view);

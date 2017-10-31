@@ -22,6 +22,7 @@
 
 #define CL_ANGLE_TO_RADIAN(x) (M_PI * (x) / 180.0)
 #define CL_RADIAN_TO_ANGLE(radian) (radian * 180.0) / (M_PI)
+#define CL_NAVIGATIONBAR_HEIGHT self.navigationController.navigationBar.frame.size.height
 
 #ifdef DEBUG
     #define NSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])

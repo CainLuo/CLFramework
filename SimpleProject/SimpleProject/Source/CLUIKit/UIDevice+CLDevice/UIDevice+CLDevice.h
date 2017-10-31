@@ -66,7 +66,16 @@
  CTRadioAccessTechnologyCDMAEVDORevB
  CTRadioAccessTechnologyeHRPD           //电信使用的一种3G到4G的演进技术， 3.75G
  CTRadioAccessTechnologyLTE             //接近4G
+ 
+ @return NSString
  */
 + (NSString *)cl_getCurrentRadioAccessTechnology;
+
+/**
+ 获取对应的设备名称
+
+ @return NSString
+ */
++ (NSString *)cl_getCurrentDeviceModelName;
 
 @end

@@ -38,21 +38,11 @@
     
     [self cl_addConstraintsWithSuperView];
     
-    dispatch_queue_t conCurrentQueue = dispatch_queue_create("MrRightGen.conCurrentQueue", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"导航栏%f", self.navigationController.navigationBar.frame.size.height);
+    NSLog(@"状态栏%f", [UIScreen cl_getStatusBarHeight]);
     
-    NSLog(@"current task");
     
-    dispatch_sync(conCurrentQueue, ^{
-        
-        NSLog(@"先加入队列");
-        
-        dispatch_sync(conCurrentQueue, ^{
-            
-            NSLog(@"次加入队列");
-        });
-    });
-    
-    NSLog(@"next task");
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceModelName]);
 }
 
 - (void)cl_dropDownRefresh {

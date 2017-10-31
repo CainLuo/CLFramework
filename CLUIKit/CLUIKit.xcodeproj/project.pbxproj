@@ -110,8 +110,6 @@
 		A46C1A991F5C490800C323FC /* CLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46C1A961F5C490800C323FC /* CLTableViewCell.m */; };
 		A4DEC0381F30D42100AF4020 /* CLToolBarListView.h in Headers */ = {isa = PBXBuildFile; fileRef = A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4DEC0391F30D42100AF4020 /* CLToolBarListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */; };
-		A4F5090F1F72BF5E00D616B2 /* CLTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A4F5090D1F72BF5E00D616B2 /* CLTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A4F509101F72BF5E00D616B2 /* CLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A4F5090E1F72BF5E00D616B2 /* CLTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,8 +215,6 @@
 		A46C1A961F5C490800C323FC /* CLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewCell.m; sourceTree = "<group>"; };
 		A4DEC0361F30D42100AF4020 /* CLToolBarListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLToolBarListView.h; sourceTree = "<group>"; };
 		A4DEC0371F30D42100AF4020 /* CLToolBarListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLToolBarListView.m; sourceTree = "<group>"; };
-		A4F5090D1F72BF5E00D616B2 /* CLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextField.h; sourceTree = "<group>"; };
-		A4F5090E1F72BF5E00D616B2 /* CLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -546,7 +542,6 @@
 				A42AC4EB1F15CC6C00DA0D58 /* CLCollectionViewController */,
 				A42AC4C01F15C40500DA0D58 /* CLNavigationController */,
 				A42AC4CD1F15C74400DA0D58 /* CLTableViewController */,
-				A4F5090C1F72BF5E00D616B2 /* CLTextField */,
 				A42AC4251F15C20900DA0D58 /* CLTitleView */,
 				A4DEC0351F30D42100AF4020 /* CLToolBarListView */,
 				A42AC4291F15C20900DA0D58 /* CLViewController */,
@@ -635,15 +630,6 @@
 			path = CLToolBarListView;
 			sourceTree = "<group>";
 		};
-		A4F5090C1F72BF5E00D616B2 /* CLTextField */ = {
-			isa = PBXGroup;
-			children = (
-				A4F5090D1F72BF5E00D616B2 /* CLTextField.h */,
-				A4F5090E1F72BF5E00D616B2 /* CLTextField.m */,
-			);
-			path = CLTextField;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -692,7 +678,6 @@
 				A459D6081F5A616E00254DC9 /* CLTableViewViewModel.h in Headers */,
 				A459D60D1F5A61AC00254DC9 /* CLCollectionViewViewModel.h in Headers */,
 				A42AC4B21F15C20900DA0D58 /* UIDevice+CLDevice.h in Headers */,
-				A4F5090F1F72BF5E00D616B2 /* CLTextField.h in Headers */,
 				A46C1A981F5C490800C323FC /* CLTableViewCell.h in Headers */,
 				A42AC4A11F15C20900DA0D58 /* MJRefresh.h in Headers */,
 			);
@@ -833,7 +818,6 @@
 				A42AC4931F15C20900DA0D58 /* MJRefreshAutoStateFooter.m in Sources */,
 				A46C1A991F5C490800C323FC /* CLTableViewCell.m in Sources */,
 				A42AC4A91F15C20900DA0D58 /* UIScrollView+MJRefresh.m in Sources */,
-				A4F509101F72BF5E00D616B2 /* CLTextField.m in Sources */,
 				A42AC4A31F15C20900DA0D58 /* MJRefreshConst.m in Sources */,
 				A42AC4811F15C20900DA0D58 /* CLTitleView.m in Sources */,
 				A42AC49B1F15C20900DA0D58 /* MJRefreshGifHeader.m in Sources */,
