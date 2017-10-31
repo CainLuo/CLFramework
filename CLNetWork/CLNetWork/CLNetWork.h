@@ -17,6 +17,7 @@ FOUNDATION_EXPORT const unsigned char CLNetWorkVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <CLNetWork/PublicHeader.h>
 
 
-#import <CLNetWork/AFNetworking.h>
-#import <CLNetWork/UIKit+AFNetworking.h>
-#import <CLNetWork/YTKNetwork.h>
+#import "AFNetworking.h"
+#import "UIKit+AFNetworking.h"
+#import "CLHTTPSessionManager.h"
+
