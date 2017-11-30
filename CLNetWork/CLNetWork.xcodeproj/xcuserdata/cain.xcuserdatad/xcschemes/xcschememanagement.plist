@@ -7,30 +7,12 @@
 		<key>CLNetWork-Aggregate.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>1</integer>
 		</dict>
 		<key>CLNetWork.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
-		</dict>
-	</dict>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>A45FD6CE1EA4D1FA009EE765</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A45FD6D71EA4D1FB009EE765</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A45FD7361EA4D44A009EE765</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>
