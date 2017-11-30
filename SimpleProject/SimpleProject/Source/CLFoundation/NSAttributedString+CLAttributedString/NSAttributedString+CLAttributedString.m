@@ -56,23 +56,23 @@
     return total_height;
 }
 
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                           suffixString:(NSString *)suffixString {
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                              suffixString:(NSString *)suffixString {
     
-    return [self attributeStringWithPrefixString:prefixString
-                                      prefixFont:0
-                                     prefixColor:0
-                                    suffixString:suffixString
-                                      suffixFont:0
-                                     suffixColor:0];
+    return [self cl_attributeStringWithPrefixString:prefixString
+                                         prefixFont:0
+                                        prefixColor:0
+                                       suffixString:suffixString
+                                         suffixFont:0
+                                        suffixColor:0];
 }
 
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                             prefixFont:(CGFloat)prefixFont
-                                            prefixColor:(UInt32)prefixColor
-                                           suffixString:(NSString *)suffixString
-                                             suffixFont:(CGFloat)suffixFont
-                                            suffixColor:(UInt32)suffixColor {
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                                prefixFont:(CGFloat)prefixFont
+                                               prefixColor:(UInt32)prefixColor
+                                              suffixString:(NSString *)suffixString
+                                                suffixFont:(CGFloat)suffixFont
+                                               suffixColor:(UInt32)suffixColor {
     
     NSInteger prefixLength = prefixString.length;
     NSInteger suffixLength = suffixString.length;

@@ -26,8 +26,8 @@
  @param suffixString 后缀字符串
  @return NSAttributedString
  */
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                           suffixString:(NSString *)suffixString;
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                              suffixString:(NSString *)suffixString;
 
 /**
  返回设置好的NSAttributedString
@@ -40,11 +40,11 @@
  @param suffixColor  尾缀字体颜色
  @return NSAttributedString
  */
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                             prefixFont:(CGFloat)prefixFont
-                                            prefixColor:(UInt32)prefixColor
-                                           suffixString:(NSString *)suffixString
-                                             suffixFont:(CGFloat)suffixFont
-                                            suffixColor:(UInt32)suffixColor;
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                                prefixFont:(CGFloat)prefixFont
+                                               prefixColor:(UInt32)prefixColor
+                                              suffixString:(NSString *)suffixString
+                                                suffixFont:(CGFloat)suffixFont
+                                               suffixColor:(UInt32)suffixColor;
 
 @end

@@ -1,6 +1,6 @@
 //
 //  CLHTTPSessionManager.m
-//  SimpleProject
+//  CLNetWork
 //
 //  Created by Cain Luo on 2017/10/31.
 //  Copyright © 2017年 Cain Luo. All rights reserved.
@@ -16,14 +16,14 @@
 
 @implementation CLHTTPSessionManager
 
-+ (CLHTTPSessionManager *)fs_shareInstance {
++ (CLHTTPSessionManager *)cl_shareInstance {
     
     static CLHTTPSessionManager *instance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
         
-        instance = [[self alloc] initWithBaseURL:[NSURL URLWithString:FS_BASE_URL]];
+        instance = [[self alloc] initWithBaseURL:[NSURL URLWithString:CL_BASE_URL]];
     });
     
     return instance;
@@ -42,13 +42,13 @@
 }
 
 #pragma mark - 带进度条的
-+ (void)fs_getRequestURLString:(NSString *)urlString
++ (void)cl_getRequestURLString:(NSString *)urlString
                     parameters:(NSDictionary *)parameters
-                      progress:(FSDownloadProgress)progress
-                       success:(FSSuccess)success
-                       failure:(FSError)failure {
+                      progress:(CLDownloadProgress)progress
+                       success:(CLSuccess)success
+                       failure:(CLFailure)failure {
     
-    [[CLHTTPSessionManager fs_shareInstance] GET:urlString
+    [[CLHTTPSessionManager cl_shareInstance] GET:urlString
                                       parameters:parameters
                                         progress:^(NSProgress * _Nonnull downloadProgress) {
                                             
@@ -72,13 +72,13 @@
                                         }];
 }
 
-+ (void)fs_postRequestURLString:(NSString *)urlString
++ (void)cl_postRequestURLString:(NSString *)urlString
                      parameters:(NSDictionary *)parameters
-                       progress:(FSDownloadProgress)progress
-                        success:(FSSuccess)success
-                        failure:(FSError)failure {
+                       progress:(CLDownloadProgress)progress
+                        success:(CLSuccess)success
+                        failure:(CLFailure)failure {
     
-    [[CLHTTPSessionManager fs_shareInstance] POST:urlString
+    [[CLHTTPSessionManager cl_shareInstance] POST:urlString
                                        parameters:parameters
                                          progress:^(NSProgress * _Nonnull downloadProgress) {
                                              
@@ -102,13 +102,12 @@
 }
 
 #pragma mark - 不带进度条的
-+ (void)fs_getRequestURLString:(NSString *)urlString
++ (void)cl_getRequestURLString:(NSString *)urlString
                     parameters:(NSDictionary *)parameters
-                       success:(FSSuccess)success
-                       failure:(FSError)failure {
+                       success:(CLSuccess)success
+                       failure:(CLFailure)failure {
     
-    
-    [self fs_getRequestURLString:urlString
+    [self cl_getRequestURLString:urlString
                       parameters:parameters
                         progress:nil
                          success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -127,12 +126,12 @@
                          }];
 }
 
-+ (void)fs_postRequestURLString:(NSString *)urlString
++ (void)cl_postRequestURLString:(NSString *)urlString
                      parameters:(NSDictionary *)parameters
-                        success:(FSSuccess)success
-                        failure:(FSError)failure {
+                        success:(CLSuccess)success
+                        failure:(CLFailure)failure {
     
-    [self fs_postRequestURLString:urlString
+    [self cl_postRequestURLString:urlString
                        parameters:parameters
                          progress:nil
                           success:^(NSURLSessionDataTask *task, id responseObject) {
@@ -152,3 +151,4 @@
 }
 
 @end
+

@@ -106,7 +106,6 @@
 		A46922441FA855B80055257F /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A46922331FA855B80055257F /* UIButton+AFNetworking.m */; };
 		A46922451FA855B80055257F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A46922341FA855B80055257F /* UIImageView+AFNetworking.m */; };
 		A46C1A891F5C38E800C323FC /* SimpleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */; };
-		A46C1A8B1F5C3CF400C323FC /* CLTableViewCell.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */; };
 		A475EAC41F6802F300D18220 /* ASValuePopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = A475EAA51F6802F300D18220 /* ASValuePopUpView.m */; };
 		A475EAC51F6802F300D18220 /* ASValueTrackingSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = A475EAA71F6802F300D18220 /* ASValueTrackingSlider.m */; };
 		A475EAC61F6802F300D18220 /* UIAlertController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A475EAAA1F6802F300D18220 /* UIAlertController+ZFPlayerRotation.m */; };
@@ -127,6 +126,7 @@
 		A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A488D6E01F526A02006CA2C0 /* SVProgressHUD.bundle */; };
 		A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */; };
 		A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */; };
+		A48DBB331FCFEAA10017D1A0 /* CLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBB321FCFEAA10017D1A0 /* CLTextField.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -415,7 +415,6 @@
 		A46922351FA855B80055257F /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
 		A46C1A871F5C38E800C323FC /* SimpleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewCell.h; sourceTree = "<group>"; };
 		A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewCell.m; sourceTree = "<group>"; };
-		A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CLTableViewCell.bundle; sourceTree = "<group>"; };
 		A475EAA41F6802F300D18220 /* ASValuePopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValuePopUpView.h; sourceTree = "<group>"; };
 		A475EAA51F6802F300D18220 /* ASValuePopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASValuePopUpView.m; sourceTree = "<group>"; };
 		A475EAA61F6802F300D18220 /* ASValueTrackingSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASValueTrackingSlider.h; sourceTree = "<group>"; };
@@ -457,6 +456,8 @@
 		A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		A488D6E31F526A02006CA2C0 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		A48DBB311FCFEAA10017D1A0 /* CLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextField.h; sourceTree = "<group>"; };
+		A48DBB321FCFEAA10017D1A0 /* CLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextField.m; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -810,14 +811,13 @@
 			path = SimpleCollectionViewDataSource;
 			sourceTree = "<group>";
 		};
-		A42DADA21F5C16EC00A97B16 /* View */ = {
+		A42DADA21F5C16EC00A97B16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A46C1A8A1F5C3CF400C323FC /* CLTableViewCell.bundle */,
 				A42DADA31F5C16FB00A97B16 /* CLTableViewCell.h */,
 				A42DADA41F5C16FB00A97B16 /* CLTableViewCell.m */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A42F3B6F1E88CA3F005B74A5 /* SimpleImageView */ = {
@@ -847,6 +847,7 @@
 				A43873A61EE92776001F4BC9 /* CLCollectionViewController */,
 				A42AC4BC1F15C30C00DA0D58 /* CLNavigationController */,
 				A43873B11EE92776001F4BC9 /* CLTableViewController */,
+				A48DBB301FCFEAA10017D1A0 /* CLTextField */,
 				A43873BC1EE92776001F4BC9 /* CLTitleView */,
 				A4DEC0311F30A59000AF4020 /* CLToolBarListView */,
 				A43873BF1EE92776001F4BC9 /* CLUIKit.h */,
@@ -867,7 +868,7 @@
 			isa = PBXGroup;
 			children = (
 				A43873A71EE92776001F4BC9 /* Controller */,
-				A43873AA1EE92776001F4BC9 /* ViewModel */,
+				A43873AA1EE92776001F4BC9 /* ViewModels */,
 			);
 			path = CLCollectionViewController;
 			sourceTree = "<group>";
@@ -881,14 +882,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		A43873AA1EE92776001F4BC9 /* ViewModel */ = {
+		A43873AA1EE92776001F4BC9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				A459D6131F5A631800254DC9 /* CollectionViewViewModel */,
 				A42AC4E31F15CA5C00DA0D58 /* CollectionViewDataSource */,
 				A43873AE1EE92776001F4BC9 /* CollectionViewDelegate */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A43873AE1EE92776001F4BC9 /* CollectionViewDelegate */ = {
@@ -904,8 +905,8 @@
 			isa = PBXGroup;
 			children = (
 				A43873B21EE92776001F4BC9 /* Controller */,
-				A42DADA21F5C16EC00A97B16 /* View */,
-				A43873B51EE92776001F4BC9 /* ViewModel */,
+				A43873B51EE92776001F4BC9 /* ViewModels */,
+				A42DADA21F5C16EC00A97B16 /* Views */,
 			);
 			path = CLTableViewController;
 			sourceTree = "<group>";
@@ -919,14 +920,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		A43873B51EE92776001F4BC9 /* ViewModel */ = {
+		A43873B51EE92776001F4BC9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				A459D60F1F5A630B00254DC9 /* TableViewViewModel */,
 				A42AC4C51F15C48600DA0D58 /* TableViewDataSource */,
 				A43873B91EE92776001F4BC9 /* TableViewDelegate */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A43873B91EE92776001F4BC9 /* TableViewDelegate */ = {
@@ -1451,6 +1452,15 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		A48DBB301FCFEAA10017D1A0 /* CLTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A48DBB311FCFEAA10017D1A0 /* CLTextField.h */,
+				A48DBB321FCFEAA10017D1A0 /* CLTextField.m */,
+			);
+			path = CLTextField;
+			sourceTree = "<group>";
+		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -1816,7 +1826,6 @@
 				A4D1CB401DEC4251007B6E59 /* LaunchScreen.storyboard in Resources */,
 				A488D6E71F526A02006CA2C0 /* SVProgressHUD.bundle in Resources */,
 				A4D1CB3D1DEC4251007B6E59 /* Assets.xcassets in Resources */,
-				A46C1A8B1F5C3CF400C323FC /* CLTableViewCell.bundle in Resources */,
 				A475EACF1F6802F300D18220 /* ZFPlayer.bundle in Resources */,
 				A43874AE1EE9278D001F4BC9 /* IQKeyboardManager.bundle in Resources */,
 				A438741B1EE92776001F4BC9 /* MJRefresh.bundle in Resources */,
@@ -1983,6 +1992,7 @@
 				A43874101EE92776001F4BC9 /* MJRefreshFooter.m in Sources */,
 				A469223E1FA855B80055257F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A43874111EE92776001F4BC9 /* MJRefreshHeader.m in Sources */,
+				A48DBB331FCFEAA10017D1A0 /* CLTextField.m in Sources */,
 				A475EAD11F6802F300D18220 /* ZFPlayerModel.m in Sources */,
 				A475EACA1F6802F300D18220 /* UIView+CustomControlView.m in Sources */,
 				A43874B51EE9278D001F4BC9 /* NSArray+MASAdditions.m in Sources */,

@@ -53,6 +53,7 @@
     [self cl_getCodeButton];
     [self cl_ButtonClike];
     [self cl_getBaseBottom];
+    [self cl_createTextField];
 }
 
 - (void)cl_getBaseBottom {
@@ -132,6 +133,25 @@
 - (void)clickbuttonAction:(UIButton *)sender {
     
     NSLog(@"点击了按钮");
+}
+
+- (void)cl_createTextField {
+    
+    CLTextField *cl_textField = [[CLTextField alloc] init];
+    
+    cl_textField.text = @"这是什么鬼";
+    cl_textField.cl_textFieldType = CLTextFieldBottomLineType;
+    
+    cl_textField.cl_lineColor = [UIColor blueColor];
+    
+    [self.view addSubview:cl_textField];
+    
+    [cl_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(150);
+        make.height.mas_equalTo(40);
+    }];
 }
 
 @end
