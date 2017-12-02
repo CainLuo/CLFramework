@@ -14,8 +14,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^CLImage)(UIImage *image);
+
 @interface UIImage (CLImage)
 
+#pragma mark - 生成指定颜色图片
 /**
  根据给定的颜色异步生成一张图
  
@@ -23,8 +26,20 @@
  @param completion 回调
  */
 + (void)cl_asyncGetImageWithColor:(UIColor *)color
-                       completion:(void (^)(UIImage *))completion;
+                       completion:(CLImage)completion;
 
+/**
+ 根据给定的颜色异步生成一张图
+
+ @param color UIColor
+ @param rect 指定大小
+ @param completion 回调
+ */
++ (void)cl_asyncGetImageWithColor:(UIColor *)color
+                             rect:(CGRect)rect
+                       completion:(CLImage)completion;
+
+#pragma mark - 截取指定视图大小的截图
 /**
  截取指定视图大小的截图
 
@@ -32,8 +47,21 @@
  @param completion 回调
  */
 + (void)cl_asyncGetImageForView:(UIView *)view
-                     completion:(void (^)(UIImage *))completion;
+                     completion:(CLImage)completion;
 
+#pragma mark - 缩放指定比例的图片
+/**
+ 给指定图片绘制指定大小
+
+ @param size Size
+ @param image 图片
+ @param completion 回调
+ */
++ (void)cl_asyncDrawImageToSize:(CGSize)size
+                          image:(UIImage *)image
+                     completion:(CLImage)completion;
+
+#pragma mark - 加载GIF图片
 /**
  加载指定名称的GIF图片
  
@@ -41,7 +69,7 @@
  @param completion 回调
  */
 + (void)cl_asyncLoadGIFImageForName:(NSString *)name
-                         completion:(void (^)(UIImage *))completion;
+                         completion:(CLImage)completion;
 
 /**
  从NSData里加载GIF图片
@@ -50,43 +78,9 @@
  @param completion 回调
  */
 + (void)cl_asyncLoadGIFImageWithData:(NSData *)data
-                          completion:(void (^)(UIImage *))completion;
-/**
- 缩放指定比例的图片
+                          completion:(CLImage)completion;
 
- @param size 指定比例
- @return UIImage
- */
-- (UIImage *)cl_animatedImageByScalingAndCroppingToSize:(CGSize)size;
-
-/**
- 输入一张图片, 返回一张带高斯模糊的图片
- 
- @param blur 模糊值
- @return UIImage
- */
-- (UIImage *)cl_blurImageWithBlur:(CGFloat)blur;
-
-/**
- 给图片增加圆角
-
- @param radius 半径
- @return UIImage
- */
-- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius;
-
-/**
- 给图片增加圆角,边框, 边框的颜色.
-
- @param radius 半径
- @param borderWidth 边框的宽度
- @param borderColor 边框的颜色
- @return UIImage
- */
-- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
-                          borderWidth:(CGFloat)borderWidth
-                          borderColor:(UIColor *)borderColor;
-
+#pragma mark - 生成二维码
 /**
  异步创建一个二维码
  
@@ -94,7 +88,7 @@
  @param completion 回调
  */
 + (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
-                                 completion:(void (^)(UIImage *))completion;
+                                 completion:(CLImage)completion;
 
 /**
  创建一个二维码, 且可以添加中间的Logo图
@@ -105,8 +99,8 @@
  */
 + (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
                                        logo:(NSString *)logoName
-                                 completion:(void (^)(UIImage *))completion;
-
+                                 completion:(CLImage)completion;
+#pragma mark - 生成条形码
 /**
  创建一个条形码
  
@@ -125,6 +119,7 @@
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
                                           space:(CGFloat)space;
 
+#pragma mark - 获取指定Bundle文件里的图片
 /**
  从指定的Bundle包里获取对应的图片
 
@@ -135,31 +130,42 @@
 + (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
                              imageName:(NSString *)imageName;
 
+#pragma mark - 图片高斯模糊处理
 /**
- 异步绘制图片
+ 输入一张图片, 返回一张带高斯模糊的图片
 
- @param size 尺寸
- @param fillColor 填充的颜色
- @param opaque 是否是透明
+ @param blur 模糊值
+ @param image 指定的图片
  @param completion 回调
  */
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                          fillColor:(UIColor *)fillColor
-                             opaque:(BOOL)opaque
-                         completion:(void (^)(UIImage *))completion;
++ (void)cl_asyncBlurImageWithBlur:(CGFloat)blur
+                            image:(UIImage *)image
+                       completion:(CLImage)completion;
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                         completion:(void (^)(UIImage *))completion;
+#pragma mark - 图片圆角处理
+/**
+ 给指定的图片添加圆角效果
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                        borderWidth:(CGFloat)borderWidth
-                        borderColor:(UIColor *)borderColor
-                         completion:(void (^)(UIImage *))completion;
+ @param radius 弧度
+ @param image 指定的图片
+ @param completion 回调
+ */
++ (void)cl_asyncCornerImageWithRadius:(CGFloat)radius
+                                image:(UIImage *)image
+                           completion:(CLImage)completion;
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                            corners:(UIRectCorner)corners
-                        borderWidth:(CGFloat)borderWidth
-                        borderColor:(UIColor *)borderColor
-                     borderLineJoin:(CGLineJoin)borderLineJoin
-                         completion:(void (^)(UIImage *))completion;
+/**
+ 给指定的图片增加圆角,边框, 边框的颜色.
+
+ @param radius 弧度
+ @param image 指定的图片
+ @param borderWidth 边框的宽度
+ @param borderColor 边框的颜色
+ @param completion 回调
+ */
++ (void)cl_asyncCornerImageWithRadius:(CGFloat)radius
+                                image:(UIImage *)image
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor
+                           completion:(CLImage)completion;
 @end

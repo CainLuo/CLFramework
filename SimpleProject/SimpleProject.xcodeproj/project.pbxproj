@@ -127,6 +127,9 @@
 		A488D6E81F526A02006CA2C0 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E21F526A02006CA2C0 /* SVProgressHUD.m */; };
 		A488D6E91F526A02006CA2C0 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */; };
 		A48DBB331FCFEAA10017D1A0 /* CLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBB321FCFEAA10017D1A0 /* CLTextField.m */; };
+		A48DBBC41FD2EA250017D1A0 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC31FD2EA250017D1A0 /* SimpleTableViewModel.m */; };
+		A48DBBCA1FD2EAF50017D1A0 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC51FD2EAF40017D1A0 /* YYClassInfo.m */; };
+		A48DBBCB1FD2EAF50017D1A0 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC61FD2EAF40017D1A0 /* NSObject+YYModel.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -458,6 +461,13 @@
 		A488D6E41F526A02006CA2C0 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		A48DBB311FCFEAA10017D1A0 /* CLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextField.h; sourceTree = "<group>"; };
 		A48DBB321FCFEAA10017D1A0 /* CLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextField.m; sourceTree = "<group>"; };
+		A48DBBC21FD2EA250017D1A0 /* SimpleTableDataViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableDataViewModel.h; sourceTree = "<group>"; };
+		A48DBBC31FD2EA250017D1A0 /* SimpleTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewModel.m; sourceTree = "<group>"; };
+		A48DBBC51FD2EAF40017D1A0 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		A48DBBC61FD2EAF40017D1A0 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		A48DBBC71FD2EAF40017D1A0 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		A48DBBC81FD2EAF40017D1A0 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
+		A48DBBC91FD2EAF40017D1A0 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -644,6 +654,7 @@
 			isa = PBXGroup;
 			children = (
 				A4037C771DF9749200C05F77 /* Controller */,
+				A48DBBC11FD2EA0D0017D1A0 /* Models */,
 				A4037C7A1DF9749200C05F77 /* ViewModel */,
 				A46C1A861F5C38CD00C323FC /* Views */,
 			);
@@ -1225,6 +1236,11 @@
 		A438749E1EE9278D001F4BC9 /* YYModel */ = {
 			isa = PBXGroup;
 			children = (
+				A48DBBC81FD2EAF40017D1A0 /* NSObject+YYModel.h */,
+				A48DBBC61FD2EAF40017D1A0 /* NSObject+YYModel.m */,
+				A48DBBC71FD2EAF40017D1A0 /* YYClassInfo.h */,
+				A48DBBC51FD2EAF40017D1A0 /* YYClassInfo.m */,
+				A48DBBC91FD2EAF40017D1A0 /* YYModel.h */,
 			);
 			path = YYModel;
 			sourceTree = "<group>";
@@ -1459,6 +1475,15 @@
 				A48DBB321FCFEAA10017D1A0 /* CLTextField.m */,
 			);
 			path = CLTextField;
+			sourceTree = "<group>";
+		};
+		A48DBBC11FD2EA0D0017D1A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A48DBBC21FD2EA250017D1A0 /* SimpleTableDataViewModel.h */,
+				A48DBBC31FD2EA250017D1A0 /* SimpleTableViewModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
@@ -1857,6 +1882,7 @@
 				A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */,
 				A4FD32721F64F0BD003E59E5 /* YYDiskCache.m in Sources */,
 				A4FD32761F64F0BD003E59E5 /* CALayer+YYWebImage.m in Sources */,
+				A48DBBC41FD2EA250017D1A0 /* SimpleTableViewModel.m in Sources */,
 				A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */,
 				A43874081EE92776001F4BC9 /* CLTableViewController.m in Sources */,
 				A4FD327E1F64F0BD003E59E5 /* YYImageCoder.m in Sources */,
@@ -1892,6 +1918,7 @@
 				A43874191EE92776001F4BC9 /* MJRefreshNormalHeader.m in Sources */,
 				A488D6E61F526A02006CA2C0 /* SVProgressAnimatedView.m in Sources */,
 				A4ED4F211F5475B400B724FE /* NSMutableDictionary+CLMutableDictionary.m in Sources */,
+				A48DBBCA1FD2EAF50017D1A0 /* YYClassInfo.m in Sources */,
 				A438740B1EE92776001F4BC9 /* CLTitleView.m in Sources */,
 				A475EAC81F6802F300D18220 /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				A475EAC91F6802F300D18220 /* UITabBarController+ZFPlayerRotation.m in Sources */,
@@ -1963,6 +1990,7 @@
 				A46922381FA855B80055257F /* AFHTTPSessionManager.m in Sources */,
 				A43874A51EE9278D001F4BC9 /* IQUIWindow+Hierarchy.m in Sources */,
 				A438740A1EE92776001F4BC9 /* CLTableViewDelegate.m in Sources */,
+				A48DBBCB1FD2EAF50017D1A0 /* NSObject+YYModel.m in Sources */,
 				A4FD32771F64F0BD003E59E5 /* MKAnnotationView+YYWebImage.m in Sources */,
 				A43874B71EE9278D001F4BC9 /* View+MASAdditions.m in Sources */,
 				A42DADA51F5C16FB00A97B16 /* CLTableViewCell.m in Sources */,

@@ -19,6 +19,8 @@ FOUNDATION_EXPORT const unsigned char OtherFrameworkVersionString[];
 #pragma mark - YYWebImage
 #import "YYWebImage.h"
 
+#import "YYModel.h"
+
 #pragma mark - Masonry
 #import "Masonry.h"
 

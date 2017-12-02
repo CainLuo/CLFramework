@@ -10,4 +10,12 @@
 
 @implementation SimpleTableViewCell
 
+- (void)configSimpleTableViewCellWithModel:(SimpleTableDataViewModel *)model {
+    
+    if (model) {
+        
+        self.textLabel.text = model.title;
+    }
+}
+
 @end

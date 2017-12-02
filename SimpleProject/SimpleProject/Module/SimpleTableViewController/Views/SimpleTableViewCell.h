@@ -7,7 +7,10 @@
 //
 
 #import "CLTableViewCell.h"
+#import "SimpleTableDataViewModel.h"
 
 @interface SimpleTableViewCell : CLTableViewCell
+
+- (void)configSimpleTableViewCellWithModel:(SimpleTableDataViewModel *)model;
 
 @end

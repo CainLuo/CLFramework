@@ -7,6 +7,7 @@
 //
 
 #import "SimpleTableViewModel.h"
+#import "SimpleTableDataViewModel.h"
 
 @implementation SimpleTableViewModel
 
@@ -14,38 +15,26 @@
 
     [self.cl_dataSource removeAllObjects];
     
-    NSArray *array = @[@"SimpleCollectionViewController",
-                       @"SimpleQRCodeImageViewController",
-                       @"SimpleImageViewController",
-                       @"SimpleScrollViewController",
-                       @"SimpleButtonController",
-                       @"SimpleDrawCircleController",
-                       @"SimpleTableViewController"];
+    NSArray *array = @[@{@"title":@"SimpleCollectionViewController",
+                         @"controllerName":@"SimpleCollectionViewController"},
+                       @{@"title":@"SimpleQRCodeImageViewController",
+                         @"controllerName":@"SimpleQRCodeImageViewController"},
+                       @{@"title":@"SimpleImageViewController",
+                         @"controllerName":@"SimpleImageViewController"},
+                       @{@"title":@"SimpleScrollViewController",
+                         @"controllerName":@"SimpleScrollViewController"},
+                       @{@"title":@"SimpleButtonController",
+                         @"controllerName":@"SimpleButtonController"},
+                       @{@"title":@"SimpleDrawCircleController",
+                         @"controllerName":@"SimpleDrawCircleController"},
+                       @{@"title":@"SimpleTableViewController",
+                         @"controllerName":@"SimpleTableViewController"}];
     
-    [self.cl_dataSource addObjectsFromArray:array];
-    
-    [self.cl_tableViewController.cl_tableView reloadData];
-    [self.cl_tableViewController cl_dropDownEndRefresh];
-    
-//    [self cl_configTableViewWithDataSource];
-}
-
-- (void)cl_tableViewPullUpHTTPRequest {
-    
-    NSArray *array = @[@"SimpleCollectionViewController",
-                       @"SimpleQRCodeImageViewController",
-                       @"SimpleImageViewController",
-                       @"SimpleScrollViewController",
-                       @"SimpleButtonController",
-                       @"SimpleDrawCircleController",
-                       @"SimpleTableViewController"];
-    
-    [self.cl_dataSource addObjectsFromArray:array];
+    [self.cl_dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[SimpleTableDataViewModel class]
+                                                                       json:array]];
     
     [self.cl_tableViewController.cl_tableView reloadData];
-    [self.cl_tableViewController cl_pullUpEndRefresh];
-    
-    //    [self cl_configTableViewWithDataSource];
+    [self.cl_tableViewController cl_dropDownEndRefresh];    
 }
 
 @end

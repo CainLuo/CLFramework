@@ -18,11 +18,11 @@
 
 @implementation UIImage (CLImage)
 
-#pragma mark - 根据指定的颜色异步生成对应的图片
+#pragma mark - 生成指定颜色图片
 + (void)cl_asyncGetImageWithColor:(UIColor *)color
-                       completion:(void (^)(UIImage *))completion {
+                       completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
         
@@ -52,11 +52,43 @@
     });
 }
 
++ (void)cl_asyncGetImageWithColor:(UIColor *)color
+                             rect:(CGRect)rect
+                       completion:(CLImage)completion {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+        UIGraphicsBeginImageContext(rect.size);
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, color.CGColor);
+        
+        CGContextFillRect(context, rect);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+        
+        image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion != nil) {
+                
+                completion(image);
+            }
+        });
+    });
+}
+
 #pragma mark - 截取指定视图大小的截图
 + (void)cl_asyncGetImageForView:(UIView *)view
-                     completion:(void (^)(UIImage *))completion {
+                     completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
     
         UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0.0);
         
@@ -73,11 +105,36 @@
     });
 }
 
-#pragma mark - 加载指定名称的GIF图片
-+ (void)cl_asyncLoadGIFImageForName:(NSString *)name
-                         completion:(void (^)(UIImage *))completion {
+#pragma mark - 缩放指定比例的图片
++ (void)cl_asyncDrawImageToSize:(CGSize)size
+                          image:(UIImage *)image
+                     completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+       
+        UIGraphicsBeginImageContext(size);
+        
+        [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+        
+        UIImage *drawImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            if (completion) {
+                
+                completion(drawImage);
+            }
+        });
+    });
+}
+
+#pragma mark - 加载GIF图片
++ (void)cl_asyncLoadGIFImageForName:(NSString *)name
+                         completion:(CLImage)completion {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         CGFloat scale = [UIScreen mainScreen].scale;
         
@@ -151,11 +208,10 @@
     });
 }
 
-#pragma mark - 从NSData里加载GIF图片
 + (void)cl_asyncLoadGIFImageWithData:(NSData *)data
-                          completion:(void (^)(UIImage *))completion {
+                          completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         if (!data) {
             return;
@@ -269,268 +325,11 @@
     return frameDuration;
 }
 
-#pragma mark - 缩放指定比例的图片
-- (UIImage *)cl_animatedImageByScalingAndCroppingToSize:(CGSize)size {
-    
-    if (CGSizeEqualToSize(self.size, size) || CGSizeEqualToSize(size, CGSizeZero)) {
-        return self;
-    }
-    
-    CGSize scaledSize = size;
-    CGPoint thumbnailPoint = CGPointZero;
-    
-    CGFloat widthFactor = size.width / self.size.width;
-    CGFloat heightFactor = size.height / self.size.height;
-    CGFloat scaleFactor = (widthFactor > heightFactor) ? widthFactor : heightFactor;
-    
-    scaledSize.width = self.size.width * scaleFactor;
-    scaledSize.height = self.size.height * scaleFactor;
-    
-    if (widthFactor > heightFactor) {
-        
-        thumbnailPoint.y = (size.height - scaledSize.height) * 0.5;
-        
-    } else if (widthFactor < heightFactor) {
-        
-        thumbnailPoint.x = (size.width - scaledSize.width) * 0.5;
-    }
-    
-    NSMutableArray *scaledImages = [NSMutableArray array];
-    
-    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
-    
-    for (UIImage *image in self.images) {
-        
-        [image drawInRect:CGRectMake(thumbnailPoint.x,
-                                     thumbnailPoint.y,
-                                     scaledSize.width,
-                                     scaledSize.height)];
-        
-        UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-        
-        [scaledImages addObject:newImage];
-    }
-    
-    UIGraphicsEndImageContext();
-    
-    return [UIImage animatedImageWithImages:scaledImages
-                                   duration:self.duration];
-}
-
-/**
- 输入一张图片, 返回一张带高斯模糊的图片
-
- @param blur 模糊值
- @return 图片
- */
-- (UIImage *)cl_blurImageWithBlur:(CGFloat)blur {
-    
-    NSData *imageData  = UIImageJPEGRepresentation(self, 1); // convert to jpeg
-    UIImage *destImage = [UIImage imageWithData:imageData];
-    
-    if (blur < 0.f || blur > 1.f) {
-        blur = 0.5f;
-    }
-    
-    int boxSize = (int)(blur * 40);
-    
-    boxSize = boxSize - (boxSize % 2) + 1;
-    
-    CGImageRef img = destImage.CGImage;
-    
-    vImage_Buffer inBuffer, outBuffer;
-    
-    vImage_Error error;
-    
-    void *pixelBuffer;
-    
-    //create vImage_Buffer with data from CGImageRef
-    
-    CGDataProviderRef inProvider = CGImageGetDataProvider(img);
-    CFDataRef inBitmapData = CGDataProviderCopyData(inProvider);
-    
-    inBuffer.width    = CGImageGetWidth(img);
-    inBuffer.height   = CGImageGetHeight(img);
-    inBuffer.rowBytes = CGImageGetBytesPerRow(img);
-    
-    inBuffer.data = (void *)CFDataGetBytePtr(inBitmapData);
-    
-    //create vImage_Buffer for output
-    
-    pixelBuffer = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
-    
-    if(pixelBuffer == NULL) {
-        
-        NSLog(@"No pixelbuffer");
-    }
-    
-    outBuffer.data     = pixelBuffer;
-    outBuffer.width    = CGImageGetWidth(img);
-    outBuffer.height   = CGImageGetHeight(img);
-    outBuffer.rowBytes = CGImageGetBytesPerRow(img);
-    
-    // Create a third buffer for intermediate processing
-    void *pixelBuffer2 = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
-    
-    vImage_Buffer outBuffer2;
-    
-    outBuffer2.data     = pixelBuffer2;
-    outBuffer2.width    = CGImageGetWidth(img);
-    outBuffer2.height   = CGImageGetHeight(img);
-    outBuffer2.rowBytes = CGImageGetBytesPerRow(img);
-    
-    //perform convolution
-    error = vImageBoxConvolve_ARGB8888(&inBuffer,
-                                       &outBuffer2,
-                                       NULL,
-                                       0,
-                                       0,
-                                       boxSize,
-                                       boxSize,
-                                       NULL,
-                                       kvImageEdgeExtend);
-    
-    if (error) {
-        NSLog(@"error from convolution %ld", error);
-    }
-    
-    error = vImageBoxConvolve_ARGB8888(&outBuffer2,
-                                       &inBuffer,
-                                       NULL,
-                                       0,
-                                       0,
-                                       boxSize,
-                                       boxSize,
-                                       NULL,
-                                       kvImageEdgeExtend);
-    
-    if (error) {
-        NSLog(@"error from convolution %ld", error);
-    }
-    
-    error = vImageBoxConvolve_ARGB8888(&inBuffer,
-                                       &outBuffer,
-                                       NULL,
-                                       0,
-                                       0,
-                                       boxSize,
-                                       boxSize,
-                                       NULL,
-                                       kvImageEdgeExtend);
-    
-    if (error) {
-        NSLog(@"error from convolution %ld", error);
-    }
-    
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef ctx = CGBitmapContextCreate(outBuffer.data,
-                                             outBuffer.width,
-                                             outBuffer.height,
-                                             8,
-                                             outBuffer.rowBytes,
-                                             colorSpace,
-                                             (CGBitmapInfo)kCGImageAlphaNoneSkipLast);
-    
-    CGImageRef imageRef = CGBitmapContextCreateImage (ctx);
-    UIImage *returnImage = [UIImage imageWithCGImage:imageRef];
-    
-    //clean up
-    CGContextRelease(ctx);
-    CGColorSpaceRelease(colorSpace);
-    
-    free(pixelBuffer);
-    free(pixelBuffer2);
-    CFRelease(inBitmapData);
-    
-    CGImageRelease(imageRef);
-    
-    return returnImage;
-}
-
-- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius {
-    
-    return [self cl_cornerImageWithRadius:radius
-                              borderWidth:0
-                              borderColor:nil];
-}
-
-- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
-                          borderWidth:(CGFloat)borderWidth
-                          borderColor:(UIColor *)borderColor {
-    
-    return [self cl_cornerImageWithRadius:radius
-                                  corners:UIRectCornerAllCorners
-                              borderWidth:borderWidth
-                              borderColor:borderColor
-                           borderLineJoin:kCGLineJoinMiter];
-}
-
-- (UIImage *)cl_cornerImageWithRadius:(CGFloat)radius
-                              corners:(UIRectCorner)corners
-                          borderWidth:(CGFloat)borderWidth
-                          borderColor:(UIColor *)borderColor
-                       borderLineJoin:(CGLineJoin)borderLineJoin {
-    
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    
-    CGContextScaleCTM(context, 1, -1);
-    
-    CGContextTranslateCTM(context, 0, -rect.size.height);
-    
-    CGFloat minSize = MIN(self.size.width, self.size.height);
-    
-    if (borderWidth < minSize / 2) {
-        
-        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, borderWidth, borderWidth)
-                                                   byRoundingCorners:corners
-                                                         cornerRadii:CGSizeMake(radius, borderWidth)];
-        [path closePath];
-        
-        CGContextSaveGState(context);
-        
-        [path addClip];
-        
-        CGContextDrawImage(context, rect, self.CGImage);
-        CGContextRestoreGState(context);
-    }
-    
-    if (borderColor && borderWidth < minSize / 2 && borderWidth > 0) {
-        
-        CGFloat strokeInset = (floor(borderWidth * self.scale) + 0.5) / self.scale;
-        
-        CGRect strokeRect = CGRectInset(rect, strokeInset, strokeInset);
-        
-        CGFloat strokeRadius = radius > self.scale / 2 ? radius - self.scale / 2 : 0;
-        
-        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:strokeRect
-                                                   byRoundingCorners:corners
-                                                         cornerRadii:CGSizeMake(strokeRadius, borderWidth)];
-        [path closePath];
-        
-        path.lineWidth = borderWidth;
-        path.lineJoinStyle = borderLineJoin;
-        
-        [borderColor setStroke];
-        
-        [path stroke];
-    }
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
-
 #pragma mark - 异步生成一个二维码
 + (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
-                                 completion:(void (^)(UIImage *))completion {
+                                 completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         CIFilter *QRCodeImageFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
         
@@ -561,9 +360,9 @@
 
 + (void)cl_asyncCreateQRCodeImageWithString:(NSString *)string
                                        logo:(NSString *)logoName
-                                 completion:(void (^)(UIImage *))completion {
+                                 completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
        
         __block UIImage *QRCodeImage = [[UIImage alloc] init];
         
@@ -603,7 +402,7 @@
     });
 }
 
-#pragma mark - 128 Bar Code Image
+#pragma mark - 生成条形码
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string {
     
     return [self cl_create128BarcodeImageWithString:string
@@ -611,7 +410,7 @@
 }
 
 - (UIImage *)cl_create128BarcodeImageWithString:(NSString *)string
-                                  space:(CGFloat)space {
+                                          space:(CGFloat)space {
     
     CIFilter *qrFilter = [CIFilter filterWithName:@"CICode128BarcodeGenerator"];
     
@@ -629,9 +428,9 @@
     UIImage *barCodeUIImage = [UIImage imageWithCIImage:barCodeImage];
     
     return barCodeUIImage;
-}
+} 
 
-#pragma mark - Set Buttons Image
+#pragma mark - 获取指定Bundle文件里的图片
 + (UIImage *)cl_getImageWithBundleName:(NSString *)bundle
                              imageName:(NSString *)imageName {
     
@@ -652,112 +451,215 @@
     return image;
 }
 
-#pragma mark - 异步绘制图片
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                          fillColor:(UIColor *)fillColor
-                             opaque:(BOOL)opaque
-                         completion:(void (^)(UIImage *))completion {
+#pragma mark - 图片高斯模糊处理
++ (void)cl_asyncBlurImageWithBlur:(CGFloat)blur
+                            image:(UIImage *)image
+                       completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+    __block CGFloat blurValue = blur;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        UIGraphicsBeginImageContextWithOptions(size, opaque, 0);
+        NSData *imageData  = UIImageJPEGRepresentation(image, 1); // convert to jpeg
+        UIImage *destImage = [UIImage imageWithData:imageData];
         
-        CGRect rect = CGRectMake(0, 0, size.width, size.height);
-        
-        if (opaque) {
-            
-            [fillColor setFill];
-            
-            UIRectFill(rect);
+        if (blurValue < 0.f || blurValue > 1.f) {
+            blurValue = 0.5f;
         }
         
-        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
+        int boxSize = (int)(blur * 40);
         
-        [path addClip];
+        boxSize = boxSize - (boxSize % 2) + 1;
         
-        if (self) {
-            [self drawInRect:rect];
+        CGImageRef img = destImage.CGImage;
+        
+        vImage_Buffer inBuffer, outBuffer;
+        
+        vImage_Error error;
+        
+        void *pixelBuffer;
+        
+        //create vImage_Buffer with data from CGImageRef
+        
+        CGDataProviderRef inProvider = CGImageGetDataProvider(img);
+        CFDataRef inBitmapData = CGDataProviderCopyData(inProvider);
+        
+        inBuffer.width    = CGImageGetWidth(img);
+        inBuffer.height   = CGImageGetHeight(img);
+        inBuffer.rowBytes = CGImageGetBytesPerRow(img);
+        
+        inBuffer.data = (void *)CFDataGetBytePtr(inBitmapData);
+        
+        //create vImage_Buffer for output
+        
+        pixelBuffer = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
+        
+        if(pixelBuffer == NULL) {
+            
+            NSLog(@"No pixelbuffer");
         }
         
-        UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+        outBuffer.data     = pixelBuffer;
+        outBuffer.width    = CGImageGetWidth(img);
+        outBuffer.height   = CGImageGetHeight(img);
+        outBuffer.rowBytes = CGImageGetBytesPerRow(img);
         
-        UIGraphicsEndImageContext();
+        // Create a third buffer for intermediate processing
+        void *pixelBuffer2 = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
+        
+        vImage_Buffer outBuffer2;
+        
+        outBuffer2.data     = pixelBuffer2;
+        outBuffer2.width    = CGImageGetWidth(img);
+        outBuffer2.height   = CGImageGetHeight(img);
+        outBuffer2.rowBytes = CGImageGetBytesPerRow(img);
+        
+        //perform convolution
+        error = vImageBoxConvolve_ARGB8888(&inBuffer,
+                                           &outBuffer2,
+                                           NULL,
+                                           0,
+                                           0,
+                                           boxSize,
+                                           boxSize,
+                                           NULL,
+                                           kvImageEdgeExtend);
+        
+        if (error) {
+            NSLog(@"error from convolution %ld", error);
+        }
+        
+        error = vImageBoxConvolve_ARGB8888(&outBuffer2,
+                                           &inBuffer,
+                                           NULL,
+                                           0,
+                                           0,
+                                           boxSize,
+                                           boxSize,
+                                           NULL,
+                                           kvImageEdgeExtend);
+        
+        if (error) {
+            NSLog(@"error from convolution %ld", error);
+        }
+        
+        error = vImageBoxConvolve_ARGB8888(&inBuffer,
+                                           &outBuffer,
+                                           NULL,
+                                           0,
+                                           0,
+                                           boxSize,
+                                           boxSize,
+                                           NULL,
+                                           kvImageEdgeExtend);
+        
+        if (error) {
+            NSLog(@"error from convolution %ld", error);
+        }
+        
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        CGContextRef ctx = CGBitmapContextCreate(outBuffer.data,
+                                                 outBuffer.width,
+                                                 outBuffer.height,
+                                                 8,
+                                                 outBuffer.rowBytes,
+                                                 colorSpace,
+                                                 (CGBitmapInfo)kCGImageAlphaNoneSkipLast);
+        
+        CGImageRef imageRef = CGBitmapContextCreateImage (ctx);
+        UIImage *returnImage = [UIImage imageWithCGImage:imageRef];
+        
+        //clean up
+        CGContextRelease(ctx);
+        CGColorSpaceRelease(colorSpace);
+        
+        free(pixelBuffer);
+        free(pixelBuffer2);
+        CFRelease(inBitmapData);
+        
+        CGImageRelease(imageRef);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            if (completion != nil) {
+            if (completion) {
                 
-                completion(result);
+                completion(returnImage);
             }
         });
     });
 }
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                         completion:(void (^)(UIImage *))completion {
+#pragma mark - 图片圆角处理
++ (void)cl_asyncCornerImageWithRadius:(CGFloat)radius
+                                image:(UIImage *)image
+                           completion:(CLImage)completion {
     
-    [self cl_asyncCornerImageWithSize:size
-                          borderWidth:0
-                          borderColor:nil
-                           completion:completion];
+    [UIImage cl_asyncCornerImageWithRadius:radius
+                                     image:image
+                               borderWidth:0
+                               borderColor:nil
+                                completion:completion];
 }
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                        borderWidth:(CGFloat)borderWidth
-                        borderColor:(UIColor *)borderColor
-                         completion:(void (^)(UIImage *))completion {
++ (void)cl_asyncCornerImageWithRadius:(CGFloat)radius
+                                image:(UIImage *)image
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor
+                           completion:(CLImage)completion {
     
-    [self cl_asyncCornerImageWithSize:size
-                              corners:UIRectCornerAllCorners
-                          borderWidth:borderWidth
-                          borderColor:borderColor
-                       borderLineJoin:kCGLineJoinMiter
-                           completion:completion];
+    [UIImage cl_asyncCornerImageWithRadius:radius
+                                     image:image
+                                   corners:UIRectCornerAllCorners
+                               borderWidth:borderWidth
+                               borderColor:borderColor
+                            borderLineJoin:kCGLineJoinMiter
+                                completion:completion];
 }
 
-- (void)cl_asyncCornerImageWithSize:(CGSize)size
-                            corners:(UIRectCorner)corners
-                        borderWidth:(CGFloat)borderWidth
-                        borderColor:(UIColor *)borderColor
-                     borderLineJoin:(CGLineJoin)borderLineJoin
-                         completion:(void (^)(UIImage *))completion {
++ (void)cl_asyncCornerImageWithRadius:(CGFloat)radius
+                                image:(UIImage *)image
+                              corners:(UIRectCorner)corners
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor
+                       borderLineJoin:(CGLineJoin)borderLineJoin
+                           completion:(CLImage)completion {
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-
-        UIGraphicsBeginImageContextWithOptions(size, NO, self.scale);
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
         
         CGContextRef context = UIGraphicsGetCurrentContext();
         
-        CGRect rect = CGRectMake(0, 0, size.width, size.height);
+        CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
         
         CGContextScaleCTM(context, 1, -1);
         
         CGContextTranslateCTM(context, 0, -rect.size.height);
         
-        CGFloat minSize = MIN(self.size.width, self.size.height);
+        CGFloat minSize = MIN(image.size.width, image.size.height);
         
         if (borderWidth < minSize / 2) {
             
             UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, borderWidth, borderWidth)
                                                        byRoundingCorners:corners
-                                                             cornerRadii:CGSizeMake(size.width, borderWidth)];
+                                                             cornerRadii:CGSizeMake(radius, borderWidth)];
             [path closePath];
             
             CGContextSaveGState(context);
             
             [path addClip];
             
-            CGContextDrawImage(context, rect, self.CGImage);
+            CGContextDrawImage(context, rect, image.CGImage);
             CGContextRestoreGState(context);
         }
         
         if (borderColor && borderWidth < minSize / 2 && borderWidth > 0) {
             
-            CGFloat strokeInset = (floor(borderWidth * self.scale) + 0.5) / self.scale;
+            CGFloat strokeInset = (floor(borderWidth * image.scale) + 0.5) / image.scale;
             
             CGRect strokeRect = CGRectInset(rect, strokeInset, strokeInset);
             
-            CGFloat strokeRadius = size.width > self.scale / 2 ? size.width - self.scale / 2 : 0;
+            CGFloat strokeRadius = radius > image.scale / 2 ? radius - image.scale / 2 : 0;
             
             UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:strokeRect
                                                        byRoundingCorners:corners
@@ -775,10 +677,10 @@
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         
         UIGraphicsEndImageContext();
-    
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            if (completion != nil) {
+            if (completion) {
                 
                 completion(image);
             }

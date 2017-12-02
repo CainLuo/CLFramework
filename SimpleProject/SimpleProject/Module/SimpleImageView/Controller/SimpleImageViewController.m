@@ -56,7 +56,22 @@
                                                                      [UIScreen cl_getScreenWidth],
                                                                      200)];
     _simpleImageView.backgroundColor = [UIColor whiteColor];
-    _simpleImageView.contentMode = UIViewContentModeScaleAspectFit;
+    _simpleImageView.contentMode     = UIViewContentModeScaleAspectFit;
+    _simpleImageView.image           = [UIImage imageNamed:@"1"];
+
+//    [UIImage cl_asyncBlurImageWithBlur:0.3
+//                                 image:[UIImage imageNamed:@"1"]
+//                            completion:^(UIImage *image) {
+//
+//                                self.simpleImageView.image = image;
+//                            }];
+    
+//    [UIImage cl_asyncCornerImageWithRadius:40
+//                                     image:[UIImage imageNamed:@"1"]
+//                                completion:^(UIImage *image) {
+//
+//                                    self.simpleImageView.image = image;
+//                                }];
     
     [self.view addSubview:_simpleImageView];
 }
@@ -72,11 +87,38 @@
 
 - (void)buttonAction {
     
-    [UIImage cl_asyncGetImageForView:self.view
+//    [UIImage cl_asyncGetImageForView:self.view
+//                          completion:^(UIImage *image) {
+//
+//                         self.simpleImageView.image = image;
+//                     }];
+    
+//    cl_asyncCornerImageWithSize
+    
+    self.simpleImageView.image = [self.simpleImageView.image cl_animatedImageByScalingAndCroppingToSize:CGSizeMake(10, 10)];
+    
+    [UIImage cl_asyncDrawImageToSize:CGSizeMake(50, 50)
+                               image:[UIImage imageNamed:@"1"]
                           completion:^(UIImage *image) {
         
-                         self.simpleImageView.image = image;
-                     }];
+                              self.simpleImageView.image = image;
+                          }];
+    
+//    [UIImage cl_asyncCornerImageWithSize:CGSizeMake(100, 100)
+//                                   image:self.simpleImageView.image
+//                             borderWidth:2
+//                             borderColor:[UIColor redColor]
+//                              completion:^(UIImage *image) {
+//
+//                                  self.simpleImageView.image = image;
+//                              }];
+    
+//    [UIImage cl_asyncBlurImageWithBlur:0.3
+//                                 image:[UIImage imageNamed:@"1"]
+//                            completion:^(UIImage *image) {
+//
+//                                self.simpleImageView.image = image;
+//                            }];
 }
 
 @end

@@ -11,12 +11,6 @@
 
 @implementation SimpleTableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section {
-    
-    return self.cl_viewModel.cl_dataSource.count;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -28,7 +22,7 @@
                                           reuseIdentifier:@"SimpleTableViewCell"];
     }
     
-    cell.textLabel.text = self.cl_viewModel.cl_dataSource[indexPath.row];
+    [cell configSimpleTableViewCellWithModel:self.cl_viewModel.cl_dataSource[indexPath.row]];
     
     return cell;
 }
