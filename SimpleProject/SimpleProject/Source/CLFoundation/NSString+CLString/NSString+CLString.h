@@ -95,4 +95,36 @@
 + (NSString *)cl_stringUnitFormat:(CGFloat)value
                        unitString:(NSString *)unitString;
 
+/**
+ 获取指定字符串的尺寸
+
+ @param string 字符串
+ @param font 字体
+ @return CGFloat
+ */
++ (CGSize)cl_measureSinglelineStringSize:(NSString *)string
+                                    font:(UIFont *)font;
+
+/**
+ 获取指定字符串的宽度
+
+ @param string 字符串
+ @param font 字体
+ @return CGFloat
+ */
++ (CGFloat)cl_measureSinglelineStringWidth:(NSString *)string
+                                      font:(UIFont *)font;
+
+/**
+ 获取指定字符串的高度
+
+ @param string 字符串
+ @param font 字体
+ @param width 宽度
+ @return CGFloat
+ */
++ (CGFloat)cl_measureMutilineStringHeight:(NSString *)string
+                                     font:(UIFont *)font
+                                    width:(CGFloat)width;
+
 @end

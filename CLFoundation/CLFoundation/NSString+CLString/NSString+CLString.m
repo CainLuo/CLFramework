@@ -124,4 +124,45 @@
     }
 }
 
+
++ (CGSize)cl_measureSinglelineStringSize:(NSString *)string
+                                    font:(UIFont *)font {
+    
+    if (string == nil) return CGSizeZero;
+    
+    CGSize measureSize = [string boundingRectWithSize:CGSizeMake(0, 0)
+                                              options:NSStringDrawingUsesFontLeading
+                                           attributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil]
+                                              context:nil].size;
+
+    return measureSize;
+}
+
++ (CGFloat)cl_measureSinglelineStringWidth:(NSString *)string
+                                      font:(UIFont *)font {
+ 
+    if (string == nil) return 0;
+    
+    CGSize measureSize = [string boundingRectWithSize:CGSizeMake(0, 0)
+                                              options:NSStringDrawingUsesFontLeading
+                                           attributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil]
+                                              context:nil].size;
+
+    return ceil(measureSize.width);
+}
+
++ (CGFloat)cl_measureMutilineStringHeight:(NSString *)string
+                                     font:(UIFont *)font
+                                    width:(CGFloat)width {
+    
+    if (string == nil || width <= 0) return 0;
+    
+    CGSize measureSize = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+                                              options:NSStringDrawingUsesLineFragmentOrigin
+                                           attributes:[NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil]
+                                              context:nil].size;
+
+    return ceil(measureSize.height);
+}
+
 @end
