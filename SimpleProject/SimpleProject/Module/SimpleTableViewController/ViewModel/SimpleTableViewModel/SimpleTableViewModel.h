@@ -10,6 +10,4 @@
 
 @interface SimpleTableViewModel : CLTableViewViewModel
 
-- (void)cl_tableViewPullUpHTTPRequest;
-
 @end

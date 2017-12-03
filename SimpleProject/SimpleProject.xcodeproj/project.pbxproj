@@ -130,6 +130,7 @@
 		A48DBBC41FD2EA250017D1A0 /* SimpleTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC31FD2EA250017D1A0 /* SimpleTableViewModel.m */; };
 		A48DBBCA1FD2EAF50017D1A0 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC51FD2EAF40017D1A0 /* YYClassInfo.m */; };
 		A48DBBCB1FD2EAF50017D1A0 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBC61FD2EAF40017D1A0 /* NSObject+YYModel.m */; };
+		A48DBBFD1FD40E950017D1A0 /* SimpleAttributeStringController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBBFC1FD40E950017D1A0 /* SimpleAttributeStringController.m */; };
 		A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = A4996E491F1306F100F99E40 /* NSURL+CLURL.m */; };
 		A4A8EBB31F1877AC006627DF /* NSDate+CLDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A8EBB21F1877AC006627DF /* NSDate+CLDate.m */; };
 		A4C38D361F0A369400A52AB2 /* CLTitleView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C38D351F0A369400A52AB2 /* CLTitleView.bundle */; };
@@ -468,6 +469,8 @@
 		A48DBBC71FD2EAF40017D1A0 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
 		A48DBBC81FD2EAF40017D1A0 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		A48DBBC91FD2EAF40017D1A0 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		A48DBBFB1FD40E950017D1A0 /* SimpleAttributeStringController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAttributeStringController.h; sourceTree = "<group>"; };
+		A48DBBFC1FD40E950017D1A0 /* SimpleAttributeStringController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAttributeStringController.m; sourceTree = "<group>"; };
 		A4996E481F1306F100F99E40 /* NSURL+CLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CLURL.h"; sourceTree = "<group>"; };
 		A4996E491F1306F100F99E40 /* NSURL+CLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CLURL.m"; sourceTree = "<group>"; };
 		A4A8EBB11F1877AC006627DF /* NSDate+CLDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CLDate.h"; sourceTree = "<group>"; };
@@ -593,6 +596,7 @@
 		A4037C6A1DF9749200C05F77 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A48DBBFA1FD40E770017D1A0 /* SimpleAttributeString */,
 				A40B9B531F2B90D100163EAC /* SimpleDrawCircle */,
 				A40B9B4E1F2B8D7600163EAC /* SimpleButtonController */,
 				A4FEF28C1F2792D60017F876 /* SimpleScrollViewController */,
@@ -1486,6 +1490,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		A48DBBFA1FD40E770017D1A0 /* SimpleAttributeString */ = {
+			isa = PBXGroup;
+			children = (
+				A48DBBFB1FD40E950017D1A0 /* SimpleAttributeStringController.h */,
+				A48DBBFC1FD40E950017D1A0 /* SimpleAttributeStringController.m */,
+			);
+			path = SimpleAttributeString;
+			sourceTree = "<group>";
+		};
 		A4996E471F1306E300F99E40 /* NSURL+CLURL */ = {
 			isa = PBXGroup;
 			children = (
@@ -2025,6 +2038,7 @@
 				A475EACA1F6802F300D18220 /* UIView+CustomControlView.m in Sources */,
 				A43874B51EE9278D001F4BC9 /* NSArray+MASAdditions.m in Sources */,
 				A438741A1EE92776001F4BC9 /* MJRefreshStateHeader.m in Sources */,
+				A48DBBFD1FD40E950017D1A0 /* SimpleAttributeStringController.m in Sources */,
 				A43874AD1EE9278D001F4BC9 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A43874A91EE9278D001F4BC9 /* IQBarButtonItem.m in Sources */,
 				A4ED4F181F54678900B724FE /* NSDictionary+CLDictionary.m in Sources */,

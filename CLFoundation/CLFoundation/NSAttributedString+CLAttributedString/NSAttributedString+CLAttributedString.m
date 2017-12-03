@@ -56,23 +56,75 @@
     return total_height;
 }
 
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                           suffixString:(NSString *)suffixString {
+#pragma mark - 修改字符串颜色
++ (NSAttributedString *)cl_attributeStringWithString:(NSString *)string
+                                               color:(UIColor *)color
+                                               range:(NSRange)range {
     
-    return [self attributeStringWithPrefixString:prefixString
-                                      prefixFont:0
-                                     prefixColor:0
-                                    suffixString:suffixString
-                                      suffixFont:0
-                                     suffixColor:0];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+
+    [attributedString addAttributes:@{NSForegroundColorAttributeName: color}
+                              range:range];
+
+    return attributedString;
 }
 
-+ (NSAttributedString *)attributeStringWithPrefixString:(NSString *)prefixString
-                                             prefixFont:(CGFloat)prefixFont
-                                            prefixColor:(UInt32)prefixColor
-                                           suffixString:(NSString *)suffixString
-                                             suffixFont:(CGFloat)suffixFont
-                                            suffixColor:(UInt32)suffixColor {
++ (NSAttributedString *)cl_attributeStringWithAttributedString:(NSAttributedString *)attributedString
+                                                         color:(UIColor *)color
+                                                         range:(NSRange)range {
+    
+    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
+    
+    [mutableAttributedString addAttributes:@{NSForegroundColorAttributeName: color}
+                                     range:range];
+    
+    return mutableAttributedString;
+}
+
+#pragma mark - 修改字符串字体
++ (NSAttributedString *)cl_attributeStringWithString:(NSString *)string
+                                                font:(UIFont *)font
+                                               range:(NSRange)range {
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    [attributedString addAttributes:@{NSFontAttributeName: font}
+                              range:range];
+    
+    return attributedString;
+}
+
++ (NSAttributedString *)cl_attributeStringWithAttributedString:(NSAttributedString *)attributedString
+                                                          font:(UIFont *)font
+                                                         range:(NSRange)range {
+    
+    NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedString];
+    
+    [mutableAttributedString addAttributes:@{NSFontAttributeName: font}
+                                     range:range];
+    
+    return mutableAttributedString;
+}
+
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                                prefixFont:(UIFont *)prefixFont
+                                              suffixString:(NSString *)suffixString
+                                                suffixFont:(UIFont *)suffixFont {
+    
+    return [NSAttributedString cl_attributeStringWithPrefixString:prefixString
+                                                       prefixFont:prefixFont
+                                                      prefixColor:nil
+                                                     suffixString:suffixString
+                                                       suffixFont:suffixFont
+                                                      suffixColor:nil];
+}
+
++ (NSAttributedString *)cl_attributeStringWithPrefixString:(NSString *)prefixString
+                                                prefixFont:(UIFont *)prefixFont
+                                               prefixColor:(UIColor *)prefixColor
+                                              suffixString:(NSString *)suffixString
+                                                suffixFont:(UIFont *)suffixFont
+                                               suffixColor:(UIColor *)suffixColor {
     
     NSInteger prefixLength = prefixString.length;
     NSInteger suffixLength = suffixString.length;
@@ -91,9 +143,8 @@
         
     } else {
         
-        [attributedString addAttributes:@{NSForegroundColorAttributeName: [self colorWithHex:prefixColor],
-                                          NSFontAttributeName: [UIFont systemFontOfSize:prefixFont]
-                                          }
+        [attributedString addAttributes:@{NSForegroundColorAttributeName: prefixColor,
+                                          NSFontAttributeName: prefixFont}
                                   range:NSMakeRange(0, prefixLength)];
     }
     
@@ -104,8 +155,8 @@
     } else {
         
         
-        [attributedString addAttributes:@{NSFontAttributeName: [UIFont systemFontOfSize:suffixFont],
-                                          NSForegroundColorAttributeName: [self colorWithHex:suffixColor]}
+        [attributedString addAttributes:@{NSFontAttributeName: suffixFont,
+                                          NSForegroundColorAttributeName: suffixColor}
                                   range:NSMakeRange(prefixLength, suffixLength)];
     }
     
@@ -114,10 +165,26 @@
 
 + (UIColor *)colorWithHex:(NSInteger)hexValue {
     
-    return [UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0
-                           green:((float)((hexValue & 0xFF00) >> 8))/255.0
-                            blue:((float)(hexValue & 0xFF))/255.0 alpha:1.0];
+    return [UIColor colorWithRed:((CGFloat)((hexValue & 0xFF0000) >> 16))/255.0
+                           green:((CGFloat)((hexValue & 0xFF00) >> 8))/255.0
+                            blue:((CGFloat)(hexValue & 0xFF))/255.0
+                           alpha:1.0];
 }
 
++ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
+                                                 lineSpacing:(CGFloat)lineSpacing {
+    
+    NSMutableAttributedString *cl_attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    
+    [paragraphStyle setLineSpacing:lineSpacing];
+    
+    [cl_attributedString addAttribute:NSParagraphStyleAttributeName
+                                value:paragraphStyle
+                                range:NSMakeRange(0, [string length])];
+    
+    return cl_attributedString;
+}
 
 @end

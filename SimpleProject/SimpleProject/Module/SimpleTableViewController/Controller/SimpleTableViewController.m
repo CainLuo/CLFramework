@@ -50,11 +50,6 @@
     [self.simpleTableViewModel cl_tableViewHTTPRequest];
 }
 
-- (void)cl_pullUpRefresh {
-    
-    [self.simpleTableViewModel cl_tableViewPullUpHTTPRequest];    
-}
-
 - (SimpleTableViewModel *)simpleTableViewModel {
 
     CL_GET_METHOD_RETURN_OBJC(_simpleTableViewModel);

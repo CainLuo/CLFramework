@@ -94,9 +94,7 @@
 //                     }];
     
 //    cl_asyncCornerImageWithSize
-    
-    self.simpleImageView.image = [self.simpleImageView.image cl_animatedImageByScalingAndCroppingToSize:CGSizeMake(10, 10)];
-    
+        
     [UIImage cl_asyncDrawImageToSize:CGSizeMake(50, 50)
                                image:[UIImage imageNamed:@"1"]
                           completion:^(UIImage *image) {

@@ -28,7 +28,9 @@
                        @{@"title":@"SimpleDrawCircleController",
                          @"controllerName":@"SimpleDrawCircleController"},
                        @{@"title":@"SimpleTableViewController",
-                         @"controllerName":@"SimpleTableViewController"}];
+                         @"controllerName":@"SimpleTableViewController"},
+                       @{@"title":@"SimpleAttributeStringController",
+                         @"controllerName":@"SimpleAttributeStringController"}];
     
     [self.cl_dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[SimpleTableDataViewModel class]
                                                                        json:array]];
