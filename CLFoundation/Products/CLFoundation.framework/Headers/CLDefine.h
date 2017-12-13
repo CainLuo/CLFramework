@@ -24,7 +24,7 @@
 #define CL_RADIAN_TO_ANGLE(radian) (radian * 180.0) / (M_PI)
 
 #ifdef DEBUG
-    #define NSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+    #define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
 #else
     #define NSLog(...)
 #endif
