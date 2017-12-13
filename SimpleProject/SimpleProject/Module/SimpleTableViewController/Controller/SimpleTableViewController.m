@@ -43,6 +43,12 @@
     
     
     NSLog(@"%@", [UIDevice cl_getCurrentDeviceModelName]);
+    NSLog(@"%ld", [UIDevice cl_getCurrentDeviceCPUCount]);
+    NSLog(@"%f", [UIDevice cl_getCurrentDeviceAllCoreCPUUse]);
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceSingleCoreCPUUse]);
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddresses]);
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddressWithWiFi]);
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddressWithCell]);
 }
 
 - (void)cl_dropDownRefresh {
