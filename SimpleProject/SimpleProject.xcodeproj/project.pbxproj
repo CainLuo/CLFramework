@@ -89,6 +89,7 @@
 		A43F81A21F5866AB0086A063 /* CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A43F81A11F5866AB0086A063 /* CLButton.m */; };
 		A459D6121F5A630B00254DC9 /* CLTableViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6111F5A630B00254DC9 /* CLTableViewViewModel.m */; };
 		A459D6161F5A631800254DC9 /* CLCollectionViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6151F5A631800254DC9 /* CLCollectionViewViewModel.m */; };
+		A45ABA591FE81D09005CCFD3 /* UIFont+CLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A45ABA581FE81D09005CCFD3 /* UIFont+CLFont.m */; };
 		A46922361FA855B80055257F /* CLHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A46922111FA855B80055257F /* CLHTTPSessionManager.m */; };
 		A46922371FA855B80055257F /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A46922131FA855B80055257F /* AFSecurityPolicy.m */; };
 		A46922381FA855B80055257F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A46922151FA855B80055257F /* AFHTTPSessionManager.m */; };
@@ -381,6 +382,8 @@
 		A459D6111F5A630B00254DC9 /* CLTableViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTableViewViewModel.m; sourceTree = "<group>"; };
 		A459D6141F5A631800254DC9 /* CLCollectionViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLCollectionViewViewModel.h; sourceTree = "<group>"; };
 		A459D6151F5A631800254DC9 /* CLCollectionViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewViewModel.m; sourceTree = "<group>"; };
+		A45ABA571FE81D09005CCFD3 /* UIFont+CLFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+CLFont.h"; sourceTree = "<group>"; };
+		A45ABA581FE81D09005CCFD3 /* UIFont+CLFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CLFont.m"; sourceTree = "<group>"; };
 		A46922101FA855B80055257F /* CLHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLHTTPSessionManager.h; sourceTree = "<group>"; };
 		A46922111FA855B80055257F /* CLHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLHTTPSessionManager.m; sourceTree = "<group>"; };
 		A46922131FA855B80055257F /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
@@ -872,6 +875,7 @@
 				A42AC4021F152F3900DA0D58 /* UIButton+CLButton */,
 				A43873F31EE92776001F4BC9 /* UIColor+CLColor */,
 				A43873F61EE92776001F4BC9 /* UIDevice+CLDevice */,
+				A45ABA561FE81CF0005CCFD3 /* UIFont+CLFont */,
 				A43873F91EE92776001F4BC9 /* UIImage+CLImage */,
 				A43873FF1EE92776001F4BC9 /* UIScreen+CLScreen */,
 				A43874021EE92776001F4BC9 /* UIViewController+CLViewController */,
@@ -1331,6 +1335,15 @@
 				A459D6151F5A631800254DC9 /* CLCollectionViewViewModel.m */,
 			);
 			path = CollectionViewViewModel;
+			sourceTree = "<group>";
+		};
+		A45ABA561FE81CF0005CCFD3 /* UIFont+CLFont */ = {
+			isa = PBXGroup;
+			children = (
+				A45ABA571FE81D09005CCFD3 /* UIFont+CLFont.h */,
+				A45ABA581FE81D09005CCFD3 /* UIFont+CLFont.m */,
+			);
+			path = "UIFont+CLFont";
 			sourceTree = "<group>";
 		};
 		A469220E1FA855B80055257F /* CLNetWork */ = {
@@ -2004,6 +2017,7 @@
 				A43874A51EE9278D001F4BC9 /* IQUIWindow+Hierarchy.m in Sources */,
 				A438740A1EE92776001F4BC9 /* CLTableViewDelegate.m in Sources */,
 				A48DBBCB1FD2EAF50017D1A0 /* NSObject+YYModel.m in Sources */,
+				A45ABA591FE81D09005CCFD3 /* UIFont+CLFont.m in Sources */,
 				A4FD32771F64F0BD003E59E5 /* MKAnnotationView+YYWebImage.m in Sources */,
 				A43874B71EE9278D001F4BC9 /* View+MASAdditions.m in Sources */,
 				A42DADA51F5C16FB00A97B16 /* CLTableViewCell.m in Sources */,

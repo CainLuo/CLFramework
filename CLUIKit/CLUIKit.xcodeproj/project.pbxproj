@@ -93,6 +93,8 @@
 		A459D6021F5A60F000254DC9 /* CLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D5FD1F5A60F000254DC9 /* CLViewController.m */; };
 		A459D6031F5A60F000254DC9 /* CLViewControllerViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = A459D5FF1F5A60F000254DC9 /* CLViewControllerViewModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A459D6041F5A60F000254DC9 /* CLViewControllerViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A459D6001F5A60F000254DC9 /* CLViewControllerViewModel.m */; };
+		A45ABA5D1FE824F8005CCFD3 /* UIFont+CLFont.h in Headers */ = {isa = PBXBuildFile; fileRef = A45ABA5B1FE824F8005CCFD3 /* UIFont+CLFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A45ABA5E1FE824F8005CCFD3 /* UIFont+CLFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A45ABA5C1FE824F8005CCFD3 /* UIFont+CLFont.m */; };
 		A48DBB371FCFEB7B0017D1A0 /* CLTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A48DBB351FCFEB7B0017D1A0 /* CLTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A48DBB381FCFEB7B0017D1A0 /* CLTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBB361FCFEB7B0017D1A0 /* CLTextField.m */; };
 		A48DBB431FCFF7970017D1A0 /* CLCollectionViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A48DBB3B1FCFF7970017D1A0 /* CLCollectionViewViewModel.m */; };
@@ -199,6 +201,8 @@
 		A459D5FD1F5A60F000254DC9 /* CLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewController.m; sourceTree = "<group>"; };
 		A459D5FF1F5A60F000254DC9 /* CLViewControllerViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLViewControllerViewModel.h; sourceTree = "<group>"; };
 		A459D6001F5A60F000254DC9 /* CLViewControllerViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLViewControllerViewModel.m; sourceTree = "<group>"; };
+		A45ABA5B1FE824F8005CCFD3 /* UIFont+CLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CLFont.h"; sourceTree = "<group>"; };
+		A45ABA5C1FE824F8005CCFD3 /* UIFont+CLFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CLFont.m"; sourceTree = "<group>"; };
 		A48DBB351FCFEB7B0017D1A0 /* CLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTextField.h; sourceTree = "<group>"; };
 		A48DBB361FCFEB7B0017D1A0 /* CLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTextField.m; sourceTree = "<group>"; };
 		A48DBB3B1FCFF7970017D1A0 /* CLCollectionViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLCollectionViewViewModel.m; sourceTree = "<group>"; };
@@ -497,6 +501,7 @@
 				A42AC45E1F15C20900DA0D58 /* UIButton+CLButton */,
 				A42AC4611F15C20900DA0D58 /* UIColor+CLColor */,
 				A42AC4641F15C20900DA0D58 /* UIDevice+CLDevice */,
+				A45ABA5A1FE824F8005CCFD3 /* UIFont+CLFont */,
 				A42AC4671F15C20900DA0D58 /* UIImage+CLImage */,
 				A42AC46D1F15C20900DA0D58 /* UIScreen+CLScreen */,
 				A42AC4701F15C20900DA0D58 /* UIViewController+CLViewController */,
@@ -538,6 +543,15 @@
 				A459D6001F5A60F000254DC9 /* CLViewControllerViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A45ABA5A1FE824F8005CCFD3 /* UIFont+CLFont */ = {
+			isa = PBXGroup;
+			children = (
+				A45ABA5B1FE824F8005CCFD3 /* UIFont+CLFont.h */,
+				A45ABA5C1FE824F8005CCFD3 /* UIFont+CLFont.m */,
+			);
+			path = "UIFont+CLFont";
 			sourceTree = "<group>";
 		};
 		A48DBB341FCFEB7B0017D1A0 /* CLTextField */ = {
@@ -690,6 +704,7 @@
 				A43F81A61F586E780086A063 /* CLButton.h in Headers */,
 				A459D6031F5A60F000254DC9 /* CLViewControllerViewModel.h in Headers */,
 				A459D6011F5A60F000254DC9 /* CLViewController.h in Headers */,
+				A45ABA5D1FE824F8005CCFD3 /* UIFont+CLFont.h in Headers */,
 				A42AC4B21F15C20900DA0D58 /* UIDevice+CLDevice.h in Headers */,
 				A48DBB371FCFEB7B0017D1A0 /* CLTextField.h in Headers */,
 				A42AC4A11F15C20900DA0D58 /* MJRefresh.h in Headers */,
@@ -827,6 +842,7 @@
 				A42AC4AF1F15C20900DA0D58 /* UIButton+CLButton.m in Sources */,
 				A42AC4AD1F15C20900DA0D58 /* CLApplication.m in Sources */,
 				A42AC4B51F15C20900DA0D58 /* UIImage+CLImage.m in Sources */,
+				A45ABA5E1FE824F8005CCFD3 /* UIFont+CLFont.m in Sources */,
 				A48DBB571FCFF7A20017D1A0 /* CLTableViewCell.m in Sources */,
 				A42AC4931F15C20900DA0D58 /* MJRefreshAutoStateFooter.m in Sources */,
 				A48DBB471FCFF7970017D1A0 /* CLCollectionViewDelegate.m in Sources */,
