@@ -16,7 +16,27 @@
 
 @interface UIDevice (CLDevice)
 
-#pragma mark - 设备相关
+/**
+ 获取App的名字
+ 
+ @return App的名字
+ */
++ (NSString *)cl_getApplicationName;
+
+/**
+ 获取App的版本号
+ 
+ @return App版本号
+ */
++ (NSString *)cl_getApplicationVersion;
+
+/**
+ 获取App的Build号
+ 
+ @return App版本号
+ */
++ (NSString *)cl_getApplicationBundleVersion;
+
 /**
  获取系统版本号
  
@@ -30,13 +50,6 @@
  @return 返回真机或模拟器设备名称
  */
 + (NSString *)cl_getDeviceName;
-
-/**
- 获取对应的设备型号
- 
- @return NSString
- */
-+ (NSString *)cl_getCurrentDeviceModelName;
 
 /**
  获取设备类型
@@ -60,36 +73,6 @@
 + (NSString *)cl_getCarrierName;
 
 /**
- 获取当前设备上次重启的时间
- 
- @return NSDate
- */
-+ (NSDate *)cl_getCurrentDeviceSystemUpTime;
-
-#pragma mark - CPU相关
-/**
- 获取当前设备的CPU数量
- 
- @return NSUInteger
- */
-+ (NSUInteger)cl_getCurrentDeviceCPUCount;
-
-/**
- 获取当前设备CPU总的使用百分比
- 
- @return CGFloat
- */
-+ (CGFloat)cl_getCurrentDeviceAllCoreCPUUse;
-
-/**
- 获取当前设备单个CPU使用的百分比
- 
- @return NSArray;
- */
-+ (NSArray *)cl_getCurrentDeviceSingleCoreCPUUse;
-
-#pragma mark - 网络相关
-/**
  获取当前网络的类型
  
  @return 2G/3G/4G/WiFi或者未来的一些网络类型
@@ -110,25 +93,11 @@
 + (NSString *)cl_getCurrentRadioAccessTechnology;
 
 /**
- 获取当前设备的IP地址
+ 获取对应的设备名称
  
  @return NSString
  */
-+ (NSString *)cl_getCurrentDeviceIPAddresses;
-
-/**
- 获取当前设备的WiFi地址
- 
- @return NSString
- */
-+ (NSString *)cl_getCurrentDeviceIPAddressWithWiFi;
-
-/**
- 获取当前设备的单元网络地址
- 
- @return NSString
- */
-+ (NSString *)cl_getCurrentDeviceIPAddressWithCell;
++ (NSString *)cl_getCurrentDeviceModelName;
 
 @end
 
