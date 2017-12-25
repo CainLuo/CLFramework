@@ -13,7 +13,7 @@
 
 /**
  根据富文本的宽度返回文字的高度
-
+ 
  @param width 宽度
  @return CGFloat
  */
@@ -21,7 +21,7 @@
 
 /**
  修改指定Range字符串的颜色
-
+ 
  @param string 字符串
  @param color 颜色
  @param range NSRange
@@ -67,7 +67,7 @@
                                                          range:(NSRange)range;
 /**
  返回设置好的NSAttributedString
-
+ 
  @param prefixString 前缀String
  @param prefixFont   前缀字体大小
  @param suffixString 尾缀String
@@ -80,7 +80,7 @@
                                                 suffixFont:(UIFont *)suffixFont;
 /**
  返回设置好的NSAttributedString
-
+ 
  @param prefixString 前缀String
  @param prefixFont   前缀字体大小
  @param prefixColor  前缀字体颜色
@@ -96,14 +96,5 @@
                                                 suffixFont:(UIFont *)suffixFont
                                                suffixColor:(UIColor *)suffixColor;
 
-/**
- 给指定字符串设置行距
-
- @param string 字符串
- @param lineSpacing 行距
- @return NSMutableAttributedString
- */
-+ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
-                                                 lineSpacing:(CGFloat)lineSpacing;
-
 @end
+

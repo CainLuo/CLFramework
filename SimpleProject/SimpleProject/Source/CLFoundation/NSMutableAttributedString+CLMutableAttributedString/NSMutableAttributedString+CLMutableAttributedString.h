@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSMutableAttributedString (CLMutableAttributedString)
 
@@ -30,4 +31,23 @@
 + (NSMutableAttributedString *)cl_attributeStringWithSubffixString:(NSString *)subffixString
                                                    prefixImageName:(NSString *)prefixImageName;
 
+/**
+ 给指定字符串设置行距
+ 
+ @param string 字符串
+ @param lineSpacing 行距
+ @return NSMutableAttributedString
+ */
++ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
+                                                 lineSpacing:(CGFloat)lineSpacing;
+
+/**
+ 给指定字符串设置行距
+
+ @param attributedString NSAttributedString
+ @param lineSpacing 行距
+ @return NSMutableAttributedString
+ */
++ (NSMutableAttributedString *)cl_attributedStringWithAttributedString:(NSAttributedString *)attributedString
+                                                           lineSpacing:(CGFloat)lineSpacing;
 @end

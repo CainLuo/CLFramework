@@ -34,7 +34,7 @@
     if(linesArray.count == 0) {
         return 0;
     }
-        
+    
     CGPoint origins[[linesArray count]];
     
     CTFrameGetLineOrigins(textFrame, CFRangeMake(0, 0), origins);
@@ -62,10 +62,10 @@
                                                range:(NSRange)range {
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
-
+    
     [attributedString addAttributes:@{NSForegroundColorAttributeName: color}
                               range:range];
-
+    
     return attributedString;
 }
 
@@ -171,20 +171,5 @@
                            alpha:1.0];
 }
 
-+ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
-                                                 lineSpacing:(CGFloat)lineSpacing {
-    
-    NSMutableAttributedString *cl_attributedString = [[NSMutableAttributedString alloc] initWithString:string];
-    
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    
-    [paragraphStyle setLineSpacing:lineSpacing];
-    
-    [cl_attributedString addAttribute:NSParagraphStyleAttributeName
-                                value:paragraphStyle
-                                range:NSMakeRange(0, [string length])];
-    
-    return cl_attributedString;
-}
-
 @end
+

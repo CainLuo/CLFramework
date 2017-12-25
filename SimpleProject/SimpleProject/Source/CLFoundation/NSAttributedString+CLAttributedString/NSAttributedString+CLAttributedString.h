@@ -96,14 +96,4 @@
                                                 suffixFont:(UIFont *)suffixFont
                                                suffixColor:(UIColor *)suffixColor;
 
-/**
- 给指定字符串设置行距
-
- @param string 字符串
- @param lineSpacing 行距
- @return NSMutableAttributedString
- */
-+ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
-                                                 lineSpacing:(CGFloat)lineSpacing;
-
 @end

@@ -171,20 +171,4 @@
                            alpha:1.0];
 }
 
-+ (NSMutableAttributedString *)cl_attributedStringWithString:(NSString *)string
-                                                 lineSpacing:(CGFloat)lineSpacing {
-    
-    NSMutableAttributedString *cl_attributedString = [[NSMutableAttributedString alloc] initWithString:string];
-    
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    
-    [paragraphStyle setLineSpacing:lineSpacing];
-    
-    [cl_attributedString addAttribute:NSParagraphStyleAttributeName
-                                value:paragraphStyle
-                                range:NSMakeRange(0, [string length])];
-    
-    return cl_attributedString;
-}
-
 @end
