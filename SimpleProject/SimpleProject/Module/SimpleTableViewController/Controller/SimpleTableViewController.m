@@ -48,7 +48,7 @@
     NSLog(@"%@", [UIDevice cl_getCurrentDeviceSingleCoreCPUUse]);
     NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddresses]);
     NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddressWithWiFi]);
-    NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddressWithCell]);    
+    NSLog(@"%@", [UIDevice cl_getCurrentDeviceIPAddressWithCell]);
 }
 
 - (void)cl_dropDownRefresh {
