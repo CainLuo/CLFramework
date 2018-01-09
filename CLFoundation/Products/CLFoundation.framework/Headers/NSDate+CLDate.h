@@ -50,4 +50,12 @@
 + (NSString *)cl_displayTimeWithTimeStamp:(NSTimeInterval)timeStamp
                                 formatter:(NSString *)formatter;
 
+/**
+ 通过传入的NSDate计算出是今天/明天/后天
+
+ @param timeDate NSDate
+ @return 今天/明天/后天
+ */
++ (NSString *)cl_getDays:(NSDate *)timeDate;
+
 @end

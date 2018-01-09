@@ -126,4 +126,37 @@
     return dateString;
 }
 
++ (NSString *)cl_getDays:(NSDate *)timeDate {
+    
+    NSDate *toDate = [NSDate date];
+    
+    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
+    
+    NSDateComponents *comps_today = [calender components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
+                                                fromDate:toDate];
+    NSDateComponents *comps_other = [calender components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
+                                                fromDate:timeDate];
+    
+    if (comps_today.year == comps_other.year &&
+        comps_today.month == comps_other.month &&
+        comps_today.day == comps_other.day) {
+        
+        return @"今天";
+        
+    } else if (comps_today.year == comps_other.year &&
+              comps_today.month == comps_other.month &&
+              (comps_today.day - comps_other.day) == -1 ) {
+        
+        return @"明天";
+        
+    } else if (comps_today.year == comps_other.year &&
+              comps_today.month == comps_other.month &&
+              (comps_today.day - comps_other.day) == -2) {
+        
+        return @"后天";
+    }
+    
+    return @"";
+}
+
 @end

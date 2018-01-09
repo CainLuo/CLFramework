@@ -44,7 +44,7 @@
 #pragma mark - 带进度条的
 + (void)cl_getRequestURLString:(NSString *)urlString
                     parameters:(NSDictionary *)parameters
-                      progress:(CLDownloadProgress)progress
+                      progress:(CLProgress)progress
                        success:(CLSuccess)success
                        failure:(CLFailure)failure {
     
@@ -55,14 +55,12 @@
                                             if (progress) {
                                                 progress(downloadProgress);
                                             }
-                                            
                                         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                                             
                                             if (success) {
                                                 
                                                 success(task, responseObject);
                                             }
-                                            
                                         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                             
                                             if (failure) {
@@ -74,7 +72,7 @@
 
 + (void)cl_postRequestURLString:(NSString *)urlString
                      parameters:(NSDictionary *)parameters
-                       progress:(CLDownloadProgress)progress
+                       progress:(CLProgress)progress
                         success:(CLSuccess)success
                         failure:(CLFailure)failure {
     
@@ -91,7 +89,6 @@
                                                  
                                                  success(task, responseObject);
                                              }
-                                             
                                          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                                              
                                              if (failure) {
@@ -99,6 +96,42 @@
                                                  failure(task, error);
                                              }
                                          }];
+}
+
++ (void)cl_upTheFileWithURLString:(NSString *)urlString
+                       parameters:(NSDictionary *)parameters
+                 constructingBody:(CLFormData)constructingBody
+                         progress:(CLProgress)progress
+                          success:(CLSuccess)success
+                          failure:(CLFailure)failure {
+    
+    [[CLHTTPSessionManager cl_shareInstance] POST:urlString
+                                       parameters:parameters
+                        constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+                            
+                            if (constructingBody) {
+                                constructingBody(formData);
+                            }
+                            
+                        } progress:^(NSProgress * _Nonnull uploadProgress) {
+                            
+                            if (progress) {
+                                progress(uploadProgress);
+                            }
+                        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                            
+                            if (success) {
+                                
+                                success(task, responseObject);
+                            }
+                            
+                        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                            
+                            if (failure) {
+                                
+                                failure(task, error);
+                            }
+                        }];
 }
 
 #pragma mark - 不带进度条的
@@ -116,7 +149,6 @@
                                  
                                  success(task, responseObject);
                              }
-                             
                          } failure:^(NSURLSessionDataTask *task, NSError *error) {
                              
                              if (failure) {
@@ -148,6 +180,35 @@
                                   failure(task, error);
                               }
                           }];
+}
+
++ (void)cl_upTheFileWithURLString:(NSString *)urlString
+                       parameters:(NSDictionary *)parameters
+                 constructingBody:(CLFormData)constructingBody
+                          success:(CLSuccess)success
+                          failure:(CLFailure)failure {
+    
+    [self cl_upTheFileWithURLString:urlString
+                         parameters:parameters
+                   constructingBody:^(id<AFMultipartFormData> formData) {
+        
+                       if (constructingBody) {
+                           constructingBody(formData);
+                       }
+                  } progress:nil
+                            success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+                                if (success) {
+                                    
+                                    success(task, responseObject);
+                                }
+                            } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+                                if (failure) {
+                                    
+                                    failure(task, error);
+                                }
+                            }];
 }
 
 @end

@@ -8,9 +8,6 @@
       location = "group:CLNetWork/CLNetWork.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:OtherFramework/OtherFramework.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:CLFoundation/CLFoundation.xcodeproj">
    </FileRef>
    <FileRef
