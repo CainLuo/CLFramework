@@ -67,4 +67,20 @@
  */
 + (NSInteger)cl_getDateTimeDifferenceWithBeginDate:(NSDate *)beginDate
                                            endDate:(NSDate *)endDate;
+/**
+ 通过传入的NSDate计算出是今天/明天/后天
+ 
+ @param timeDate NSDate
+ @return 今天/明天/后天
+ */
++ (NSString *)cl_getDays:(NSDate *)date;
+
+/**
+ 传入指定的时间判断是否为今天
+
+ @param date 指定时间
+ @return BOOL
+ */
++ (BOOL)cl_checkTodayWithDate:(NSDate *)date;
+
 @end

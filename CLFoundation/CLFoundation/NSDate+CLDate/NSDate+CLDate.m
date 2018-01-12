@@ -149,4 +149,53 @@
     return cl_dateComponents.day;
 }
 
+
++ (NSString *)cl_getDays:(NSDate *)date {
+    
+    NSDate *cl_currentDate = [NSDate date];
+    
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+
+    NSDateComponents *comps_today = [cl_calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
+                                                   fromDate:cl_currentDate];
+    NSDateComponents *comps_other = [cl_calendar components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
+                                                   fromDate:date];
+    
+    if (comps_today.year == comps_other.year &&
+        comps_today.month == comps_other.month &&
+        comps_today.day == comps_other.day) {
+        
+        return @"今天";
+        
+    } else if (comps_today.year == comps_other.year &&
+               comps_today.month == comps_other.month &&
+              (comps_today.day - comps_other.day) == -1 ) {
+        
+        return @"明天";
+        
+    } else if (comps_today.year == comps_other.year &&
+               comps_today.month == comps_other.month &&
+              (comps_today.day - comps_other.day) == -2) {
+        
+        return @"后天";
+    }
+    
+    return @"";
+}
+
++ (BOOL)cl_checkTodayWithDate:(NSDate *)date {
+    
+    NSCalendar *cl_calendar   = [NSCalendar currentCalendar];
+    NSInteger cl_calendarUnit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear;
+    
+    NSDateComponents *cl_nowDateComponents = [cl_calendar components:cl_calendarUnit
+                                                            fromDate:date];
+    NSDateComponents *cl_currentDateComponents = [cl_calendar components:cl_calendarUnit
+                                                                fromDate:self];
+    
+    return (cl_currentDateComponents.year == cl_nowDateComponents.year) &&
+           (cl_currentDateComponents.month == cl_nowDateComponents.month) &&
+           (cl_currentDateComponents.day == cl_nowDateComponents.day);
+}
+
 @end
