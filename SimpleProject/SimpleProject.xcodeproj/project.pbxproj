@@ -1378,7 +1378,7 @@
 				TargetAttributes = {
 					A4D1CB2C1DEC4250007B6E59 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = QWAH5XNHF3;
+						DevelopmentTeam = J26ST3TDCL;
 						ProvisioningStyle = Automatic;
 					};
 					A4D1CB451DEC4251007B6E59 = {
@@ -1741,7 +1741,7 @@
 			baseConfigurationReference = A2C16D5B25F8FD1B3EFD329C /* Pods-SimpleProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QWAH5XNHF3;
+				DEVELOPMENT_TEAM = J26ST3TDCL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleProject",
@@ -1751,7 +1751,7 @@
 				INFOPLIST_FILE = SimpleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1761,7 +1761,7 @@
 			baseConfigurationReference = 0C6D52C99BF1CFA06F240654 /* Pods-SimpleProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QWAH5XNHF3;
+				DEVELOPMENT_TEAM = J26ST3TDCL;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SimpleProject",
@@ -1771,7 +1771,7 @@
 				INFOPLIST_FILE = SimpleProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CainLuo.SimpleProjects;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

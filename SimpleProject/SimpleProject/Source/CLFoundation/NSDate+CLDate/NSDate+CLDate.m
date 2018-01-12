@@ -126,4 +126,27 @@
     return dateString;
 }
 
++ (NSInteger)cl_getWeekdayStringFromDate:(NSDate *)date {
+    
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+        
+    NSDateComponents *theComponents = [cl_calendar components:NSCalendarUnitWeekday
+                                                     fromDate:date];
+    
+    return theComponents.weekday;
+}
+
++ (NSInteger)cl_getDateTimeDifferenceWithBeginDate:(NSDate *)beginDate
+                                           endDate:(NSDate *)endDate {
+    
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *cl_dateComponents = [cl_calendar components:NSCalendarUnitDay
+                                                         fromDate:beginDate
+                                                           toDate:endDate
+                                                          options:0];
+    
+    return cl_dateComponents.day;
+}
+
 @end

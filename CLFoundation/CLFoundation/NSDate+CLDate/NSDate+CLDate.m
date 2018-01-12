@@ -126,37 +126,27 @@
     return dateString;
 }
 
-+ (NSString *)cl_getDays:(NSDate *)timeDate {
++ (NSInteger)cl_getWeekdayStringFromDate:(NSDate *)date {
     
-    NSDate *toDate = [NSDate date];
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+        
+    NSDateComponents *theComponents = [cl_calendar components:NSCalendarUnitWeekday
+                                                     fromDate:date];
     
-    NSCalendar *calender = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierChinese];
+    return theComponents.weekday;
+}
+
++ (NSInteger)cl_getDateTimeDifferenceWithBeginDate:(NSDate *)beginDate
+                                           endDate:(NSDate *)endDate {
     
-    NSDateComponents *comps_today = [calender components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
-                                                fromDate:toDate];
-    NSDateComponents *comps_other = [calender components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay)
-                                                fromDate:timeDate];
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
     
-    if (comps_today.year == comps_other.year &&
-        comps_today.month == comps_other.month &&
-        comps_today.day == comps_other.day) {
-        
-        return @"今天";
-        
-    } else if (comps_today.year == comps_other.year &&
-              comps_today.month == comps_other.month &&
-              (comps_today.day - comps_other.day) == -1 ) {
-        
-        return @"明天";
-        
-    } else if (comps_today.year == comps_other.year &&
-              comps_today.month == comps_other.month &&
-              (comps_today.day - comps_other.day) == -2) {
-        
-        return @"后天";
-    }
+    NSDateComponents *cl_dateComponents = [cl_calendar components:NSCalendarUnitDay
+                                                         fromDate:beginDate
+                                                           toDate:endDate
+                                                          options:0];
     
-    return @"";
+    return cl_dateComponents.day;
 }
 
 @end

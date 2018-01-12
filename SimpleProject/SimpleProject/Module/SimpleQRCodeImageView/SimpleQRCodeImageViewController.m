@@ -42,6 +42,33 @@
 //    [self cl_showAlertViewControllerWithTitle:@"温馨提示"
 //                                      message:@"进入了二维码控制器"
 //                                  buttonTitle:@"好的"];
+        
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *date = [dateFormatter dateFromString:@"2018-01-14"];
+    
+    NSLog(@"%ld", [NSDate cl_getWeekdayStringFromDate:date]);
+    
+    NSLog(@"this day is %@", [self getTheDayOfTheWeekByDateString:date]);
 }
 
+
+- (NSString *)getTheDayOfTheWeekByDateString:(NSDate *)date {
+    
+    NSDateFormatter *inputFormatter = [[NSDateFormatter alloc] init];
+    
+    [inputFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    
+    [outputFormatter setDateFormat:@"EEEE-MMMM-d"];
+    
+    NSString *outputDateStr = [outputFormatter stringFromDate:date];
+    
+    NSArray *weekArray = [outputDateStr componentsSeparatedByString:@"-"];
+    
+    return weekArray.firstObject;
+}
 @end

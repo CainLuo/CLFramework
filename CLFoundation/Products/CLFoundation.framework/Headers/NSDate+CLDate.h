@@ -51,11 +51,20 @@
                                 formatter:(NSString *)formatter;
 
 /**
- 通过传入的NSDate计算出是今天/明天/后天
+ 通过传入的NSDate计算出星期几, PS: 1代表的是周日, 2代表的是周一, 以此类推
 
- @param timeDate NSDate
- @return 今天/明天/后天
+ @param date NSDate
+ @return NSInteger
  */
-+ (NSString *)cl_getDays:(NSDate *)timeDate;
++ (NSInteger)cl_getWeekdayStringFromDate:(NSDate *)date;
 
+/**
+ 通过传入两组时间, 计算出相差的天数
+
+ @param beginDate 开始的时间
+ @param endDate 结束的时间
+ @return return NSInteger
+ */
++ (NSInteger)cl_getDateTimeDifferenceWithBeginDate:(NSDate *)beginDate
+                                           endDate:(NSDate *)endDate;
 @end
