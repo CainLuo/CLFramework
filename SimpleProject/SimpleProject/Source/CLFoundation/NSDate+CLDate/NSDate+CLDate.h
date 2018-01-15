@@ -52,7 +52,7 @@
 
 /**
  通过传入的NSDate计算出星期几, PS: 1代表的是周日, 2代表的是周一, 以此类推
-
+ 
  @param date NSDate
  @return NSInteger
  */
@@ -60,7 +60,7 @@
 
 /**
  通过传入两组时间, 计算出相差的天数
-
+ 
  @param beginDate 开始的时间
  @param endDate 结束的时间
  @return return NSInteger
@@ -70,17 +70,36 @@
 /**
  通过传入的NSDate计算出是今天/明天/后天
  
- @param timeDate NSDate
+ @param date NSDate
  @return 今天/明天/后天
  */
 + (NSString *)cl_getDays:(NSDate *)date;
 
 /**
  传入指定的时间判断是否为今天
-
+ 
  @param date 指定时间
  @return BOOL
  */
 + (BOOL)cl_checkTodayWithDate:(NSDate *)date;
 
+/**
+ 通过传入指定的时间获取第二天的日期
+ 
+ @param date NSDate
+ @return NSDate
+ */
++ (NSDate *)cl_getTomorrowDay:(NSDate *)date;
+
+/**
+ 通过传入指定的时间获取第N天的日期
+ 
+ @param date NSDate
+ @param days NSInteger, 多少天
+ @return NSDate
+ */
++ (NSDate *)cl_getDays:(NSDate *)date
+                  days:(NSInteger)days;
+
 @end
+

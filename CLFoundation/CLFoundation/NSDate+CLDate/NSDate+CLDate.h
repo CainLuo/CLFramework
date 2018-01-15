@@ -70,7 +70,7 @@
 /**
  通过传入的NSDate计算出是今天/明天/后天
  
- @param timeDate NSDate
+ @param date NSDate
  @return 今天/明天/后天
  */
 + (NSString *)cl_getDays:(NSDate *)date;
@@ -82,5 +82,23 @@
  @return BOOL
  */
 + (BOOL)cl_checkTodayWithDate:(NSDate *)date;
+
+/**
+ 通过传入指定的时间获取第二天的日期
+
+ @param date NSDate
+ @return NSDate
+ */
++ (NSDate *)cl_getTomorrowDay:(NSDate *)date;
+
+/**
+ 通过传入指定的时间获取第N天的日期
+
+ @param date NSDate
+ @param days NSInteger, 多少天
+ @return NSDate
+ */
++ (NSDate *)cl_getDays:(NSDate *)date
+                  days:(NSInteger)days;
 
 @end

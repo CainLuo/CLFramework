@@ -191,11 +191,36 @@
     NSDateComponents *cl_nowDateComponents = [cl_calendar components:cl_calendarUnit
                                                             fromDate:date];
     NSDateComponents *cl_currentDateComponents = [cl_calendar components:cl_calendarUnit
-                                                                fromDate:self];
+                                                                fromDate:[NSDate date]];
     
     return (cl_currentDateComponents.year == cl_nowDateComponents.year) &&
            (cl_currentDateComponents.month == cl_nowDateComponents.month) &&
            (cl_currentDateComponents.day == cl_nowDateComponents.day);
+}
+
++ (NSDate *)cl_getTomorrowDay:(NSDate *)date {
+    
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *cl_dateComponents = [cl_calendar components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                                  fromDate:date];
+    
+    cl_dateComponents.day = cl_dateComponents.day + 1;
+        
+    return [cl_calendar dateFromComponents:cl_dateComponents];
+}
+
++ (NSDate *)cl_getDays:(NSDate *)date
+                  days:(NSInteger)days {
+    
+    NSCalendar *cl_calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents *cl_dateComponents = [cl_calendar components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                                         fromDate:date];
+    
+    cl_dateComponents.day = cl_dateComponents.day + days;
+    
+    return [cl_calendar dateFromComponents:cl_dateComponents];
 }
 
 @end
