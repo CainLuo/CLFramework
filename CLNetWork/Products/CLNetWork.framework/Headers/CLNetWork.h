@@ -2,8 +2,8 @@
 //  CLNetWork.h
 //  CLNetWork
 //
-//  Created by Cain Luo on 2017/11/30.
-//  Copyright © 2017年 Cain Luo. All rights reserved.
+//  Created by Mac on 2018/1/16.
+//  Copyright © 2018年 CainLuo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char CLNetWorkVersionString[];
 #import <CLNetWork/CLHTTPSessionManager.h>
 #import <CLNetWork/AFNetworking.h>
 #import <CLNetWork/UIKit+AFNetworking.h>
+

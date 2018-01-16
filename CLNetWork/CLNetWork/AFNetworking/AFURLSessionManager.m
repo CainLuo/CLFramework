@@ -149,13 +149,9 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
             [weakTask suspend];
         };
         if ([progress respondsToSelector:@selector(setResumingHandler:)]) {
-            if (@available(iOS 9.0, *)) {
-                progress.resumingHandler = ^{
-                    [weakTask resume];
-                };
-            } else {
-                // Fallback on earlier versions
-            }
+            progress.resumingHandler = ^{
+                [weakTask resume];
+            };
         }
         [progress addObserver:self
                    forKeyPath:NSStringFromSelector(@selector(fractionCompleted))
