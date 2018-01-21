@@ -20,6 +20,9 @@
 		A40B9B3B1F2B403B00163EAC /* NSString+CLString.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B3A1F2B403B00163EAC /* NSString+CLString.m */; };
 		A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */; };
 		A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */; };
+		A42061B620139048009C0E72 /* UITableView+CLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42061B520139048009C0E72 /* UITableView+CLTableView.m */; };
+		A42061BB20149B15009C0E72 /* SimpleTableViewPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42061BA20149B15009C0E72 /* SimpleTableViewPlaceholderView.m */; };
+		A42061BF2014AAD4009C0E72 /* UICollectionView+CLCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A42061BE2014AAD4009C0E72 /* UICollectionView+CLCollectionView.m */; };
 		A42AC4051F152F4900DA0D58 /* UIButton+CLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */; };
 		A42AC4BF1F15C32100DA0D58 /* CLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4BE1F15C32100DA0D58 /* CLNavigationController.m */; };
 		A42AC4C81F15C49C00DA0D58 /* CLTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A42AC4C71F15C49C00DA0D58 /* CLTableViewDataSource.m */; };
@@ -170,6 +173,12 @@
 		A40B9B511F2B8D8700163EAC /* SimpleButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleButtonController.m; sourceTree = "<group>"; };
 		A40B9B551F2B90E000163EAC /* SimpleDrawCircleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleDrawCircleController.h; sourceTree = "<group>"; };
 		A40B9B561F2B90E000163EAC /* SimpleDrawCircleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDrawCircleController.m; sourceTree = "<group>"; };
+		A42061B420139048009C0E72 /* UITableView+CLTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+CLTableView.h"; sourceTree = "<group>"; };
+		A42061B520139048009C0E72 /* UITableView+CLTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CLTableView.m"; sourceTree = "<group>"; };
+		A42061B920149B15009C0E72 /* SimpleTableViewPlaceholderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewPlaceholderView.h; sourceTree = "<group>"; };
+		A42061BA20149B15009C0E72 /* SimpleTableViewPlaceholderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewPlaceholderView.m; sourceTree = "<group>"; };
+		A42061BD2014AAD4009C0E72 /* UICollectionView+CLCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+CLCollectionView.h"; sourceTree = "<group>"; };
+		A42061BE2014AAD4009C0E72 /* UICollectionView+CLCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+CLCollectionView.m"; sourceTree = "<group>"; };
 		A42AC4031F152F4900DA0D58 /* UIButton+CLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CLButton.h"; sourceTree = "<group>"; };
 		A42AC4041F152F4900DA0D58 /* UIButton+CLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CLButton.m"; sourceTree = "<group>"; };
 		A42AC4BD1F15C32100DA0D58 /* CLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLNavigationController.h; sourceTree = "<group>"; };
@@ -566,6 +575,42 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		A42061B320139032009C0E72 /* UITableView+CLTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A42061B420139048009C0E72 /* UITableView+CLTableView.h */,
+				A42061B520139048009C0E72 /* UITableView+CLTableView.m */,
+			);
+			path = "UITableView+CLTableView";
+			sourceTree = "<group>";
+		};
+		A42061B720149AEF009C0E72 /* SimpleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A46C1A871F5C38E800C323FC /* SimpleTableViewCell.h */,
+				A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */,
+			);
+			path = SimpleTableViewCell;
+			sourceTree = "<group>";
+		};
+		A42061B820149AF9009C0E72 /* SimpleTableViewPlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				A42061B920149B15009C0E72 /* SimpleTableViewPlaceholderView.h */,
+				A42061BA20149B15009C0E72 /* SimpleTableViewPlaceholderView.m */,
+			);
+			path = SimpleTableViewPlaceholderView;
+			sourceTree = "<group>";
+		};
+		A42061BC2014AAB1009C0E72 /* UICollectionView+CLCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A42061BD2014AAD4009C0E72 /* UICollectionView+CLCollectionView.h */,
+				A42061BE2014AAD4009C0E72 /* UICollectionView+CLCollectionView.m */,
+			);
+			path = "UICollectionView+CLCollectionView";
+			sourceTree = "<group>";
+		};
 		A42AC4021F152F3900DA0D58 /* UIButton+CLButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,11 +717,13 @@
 				A43873C11EE92776001F4BC9 /* MJRefresh */,
 				A43873F01EE92776001F4BC9 /* UIApplication+CLApplication */,
 				A42AC4021F152F3900DA0D58 /* UIButton+CLButton */,
+				A42061BC2014AAB1009C0E72 /* UICollectionView+CLCollectionView */,
 				A43873F31EE92776001F4BC9 /* UIColor+CLColor */,
 				A43873F61EE92776001F4BC9 /* UIDevice+CLDevice */,
 				A45ABA561FE81CF0005CCFD3 /* UIFont+CLFont */,
 				A43873F91EE92776001F4BC9 /* UIImage+CLImage */,
 				A43873FF1EE92776001F4BC9 /* UIScreen+CLScreen */,
+				A42061B320139032009C0E72 /* UITableView+CLTableView */,
 				A43874021EE92776001F4BC9 /* UIViewController+CLViewController */,
 			);
 			path = CLUIKit;
@@ -1079,8 +1126,8 @@
 		A46C1A861F5C38CD00C323FC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A46C1A871F5C38E800C323FC /* SimpleTableViewCell.h */,
-				A46C1A881F5C38E800C323FC /* SimpleTableViewCell.m */,
+				A42061B820149AF9009C0E72 /* SimpleTableViewPlaceholderView */,
+				A42061B720149AEF009C0E72 /* SimpleTableViewCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1497,6 +1544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4FEF2901F2792E30017F876 /* SimpleScrollViewController.m in Sources */,
+				A42061B620139048009C0E72 /* UITableView+CLTableView.m in Sources */,
 				A48DBBC41FD2EA250017D1A0 /* SimpleTableViewModel.m in Sources */,
 				A40B9B571F2B90E000163EAC /* SimpleDrawCircleController.m in Sources */,
 				A43874081EE92776001F4BC9 /* CLTableViewController.m in Sources */,
@@ -1523,6 +1571,7 @@
 				A459D6161F5A631800254DC9 /* CLCollectionViewViewModel.m in Sources */,
 				A46922451FA855B80055257F /* UIImageView+AFNetworking.m in Sources */,
 				A4037C831DF9749200C05F77 /* SimpleCollectionViewModel.m in Sources */,
+				A42061BB20149B15009C0E72 /* SimpleTableViewPlaceholderView.m in Sources */,
 				A4037C821DF9749200C05F77 /* SimpleCollectionViewDelegate.m in Sources */,
 				A469223A1FA855B80055257F /* AFURLSessionManager.m in Sources */,
 				A46922401FA855B80055257F /* AFAutoPurgingImageCache.m in Sources */,
@@ -1568,6 +1617,7 @@
 				A4ED4F331F54788300B724FE /* SimpleImageViewController.m in Sources */,
 				A43A1E781F514E4F00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A4996E4A1F1306F100F99E40 /* NSURL+CLURL.m in Sources */,
+				A42061BF2014AAD4009C0E72 /* UICollectionView+CLCollectionView.m in Sources */,
 				A438740D1EE92776001F4BC9 /* MJRefreshAutoFooter.m in Sources */,
 				A459D6121F5A630B00254DC9 /* CLTableViewViewModel.m in Sources */,
 				A4F378291F530C7200B1A8B8 /* NSArray+CLArray.m in Sources */,

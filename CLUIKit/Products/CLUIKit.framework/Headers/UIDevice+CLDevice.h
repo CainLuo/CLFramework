@@ -16,6 +16,7 @@
 
 @interface UIDevice (CLDevice)
 
+#pragma mark - Application相关
 /**
  获取App的名字
  
@@ -44,6 +45,7 @@
  */
 + (NSString *)cl_getSystemVersion;
 
+#pragma mark - 设备相关
 /**
  获取设备名称
  
@@ -65,6 +67,37 @@
  */
 + (NSString *)cl_getUUIDString;
 
+/**
+ 获取对应的设备名称
+ 
+ @return NSString
+ */
++ (NSString *)cl_getCurrentDeviceModelName;
+
+
+#pragma mark - CPU相关
+/**
+ 获取当前设备的CPU数量
+ 
+ @return NSUInteger
+ */
++ (NSUInteger)cl_getCurrentDeviceCPUCount;
+
+/**
+ 获取当前设备CPU总的使用百分比
+ 
+ @return CGFloat
+ */
++ (CGFloat)cl_getCurrentDeviceAllCoreCPUUse;
+
+/**
+ 获取当前设备单个CPU使用的百分比
+ 
+ @return NSArray;
+ */
++ (NSArray *)cl_getCurrentDeviceSingleCoreCPUUse;
+
+#pragma mark - 网络相关
 /**
  获取当前网络运营商的名称
  
@@ -93,11 +126,24 @@
 + (NSString *)cl_getCurrentRadioAccessTechnology;
 
 /**
- 获取对应的设备名称
+ 获取当前设备的IP地址
  
  @return NSString
  */
-+ (NSString *)cl_getCurrentDeviceModelName;
++ (NSString *)cl_getCurrentDeviceIPAddresses;
 
+/**
+ 获取当前设备的WiFi地址
+ 
+ @return NSString
+ */
++ (NSString *)cl_getCurrentDeviceIPAddressWithWiFi;
+
+/**
+ 获取当前设备的单元网络地址
+ 
+ @return NSString
+ */
++ (NSString *)cl_getCurrentDeviceIPAddressWithCell;
 @end
 

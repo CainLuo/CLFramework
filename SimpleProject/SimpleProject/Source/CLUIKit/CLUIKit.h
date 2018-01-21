@@ -54,6 +54,7 @@ FOUNDATION_EXPORT const unsigned char CLUIKitVersionString[];
 #import "UIButton+CLButton.h"
 #import "UIFont+CLFont.h"
 #import "CLButton.h"
+#import "UITableView+CLTableView.h"
 
 #pragma mark - CLViewController
 #import "CLViewController.h"

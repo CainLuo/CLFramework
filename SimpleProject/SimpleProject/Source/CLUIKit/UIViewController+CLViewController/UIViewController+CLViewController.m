@@ -15,7 +15,7 @@
 #import "UIViewController+CLViewController.h"
 #import <objc/runtime.h>
 
-static void *AlertControllerKey = &AlertControllerKey;
+static void *CLAlertControllerKey = &CLAlertControllerKey;
 
 @implementation UIViewController (CLViewController)
 
@@ -30,12 +30,12 @@ static void *AlertControllerKey = &AlertControllerKey;
 #pragma mark - AlertController
 - (void)setCl_alertController:(UIAlertController *)cl_alertController {
     
-    objc_setAssociatedObject(self, AlertControllerKey, cl_alertController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, CLAlertControllerKey, cl_alertController, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIAlertController *)cl_alertController {
     
-    return objc_getAssociatedObject(self, AlertControllerKey);
+    return objc_getAssociatedObject(self, CLAlertControllerKey);
 }
 
 - (void)cl_callPhoneWithPhoneNumber:(NSString *)phoneNumber
