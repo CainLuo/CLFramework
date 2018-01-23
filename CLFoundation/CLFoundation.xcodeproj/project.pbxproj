@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		04A2AF122017519500557742 /* NSData+CLData.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A2AF102017519500557742 /* NSData+CLData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04A2AF132017519500557742 /* NSData+CLData.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2AF112017519500557742 /* NSData+CLData.m */; };
 		A4037C5C1DF96E6D00C05F77 /* CLDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A4037C5B1DF96E6D00C05F77 /* CLDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A40B408B1F4F2F5600FDEF5C /* NSString+CLEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = A40B40891F4F2F5600FDEF5C /* NSString+CLEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A40B408C1F4F2F5600FDEF5C /* NSString+CLEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = A40B408A1F4F2F5600FDEF5C /* NSString+CLEncryption.m */; };
@@ -62,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A2AF102017519500557742 /* NSData+CLData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CLData.h"; sourceTree = "<group>"; };
+		04A2AF112017519500557742 /* NSData+CLData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CLData.m"; sourceTree = "<group>"; };
 		A4037C5B1DF96E6D00C05F77 /* CLDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDefine.h; sourceTree = "<group>"; };
 		A40B40891F4F2F5600FDEF5C /* NSString+CLEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CLEncryption.h"; sourceTree = "<group>"; };
 		A40B408A1F4F2F5600FDEF5C /* NSString+CLEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CLEncryption.m"; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A2AF0F2017517000557742 /* NSData+CLData */ = {
+			isa = PBXGroup;
+			children = (
+				04A2AF102017519500557742 /* NSData+CLData.h */,
+				04A2AF112017519500557742 /* NSData+CLData.m */,
+			);
+			path = "NSData+CLData";
+			sourceTree = "<group>";
+		};
 		A40B40881F4F2F5600FDEF5C /* NSString+CLEncryption */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 				A4F3782A1F5313D300B1A8B8 /* NSArray+CLArray */,
 				A43A1E791F515C7C00BA81EF /* NSAttributedString+CLAttributedString */,
 				A4386F0C1EE91035001F4BC9 /* NSBundle+CLBundle */,
+				04A2AF0F2017517000557742 /* NSData+CLData */,
 				A43C45791F1A6FD7001B0FD5 /* NSDate+CLDate */,
 				A4ED4F191F54733500B724FE /* NSDictionary+CLDictionary */,
 				A4ED4F101F54597000B724FE /* NSMutableArray+CLMutableArray */,
@@ -289,6 +303,7 @@
 				A4ED4F131F54597000B724FE /* NSMutableArray+CLMutableArray.h in Headers */,
 				A4ED4F1C1F54733500B724FE /* NSDictionary+CLDictionary.h in Headers */,
 				A4ED4F251F54765500B724FE /* NSMutableDictionary+CLMutableDictionary.h in Headers */,
+				04A2AF122017519500557742 /* NSData+CLData.h in Headers */,
 				A4F3782D1F5313D300B1A8B8 /* NSArray+CLArray.h in Headers */,
 				A44835CA1DF72B2A003B062C /* CLFoundation.h in Headers */,
 				A43A1E851F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.h in Headers */,
@@ -424,6 +439,7 @@
 				A43A1E7D1F515C7C00BA81EF /* NSAttributedString+CLAttributedString.m in Sources */,
 				A44835DC1DF72C25003B062C /* NSString+CLRegular.m in Sources */,
 				A43C45821F1A6FD7001B0FD5 /* NSURL+CLURL.m in Sources */,
+				04A2AF132017519500557742 /* NSData+CLData.m in Sources */,
 				A43A1E861F5173DD00BA81EF /* NSMutableAttributedString+CLMutableAttributedString.m in Sources */,
 				A4386F101EE91047001F4BC9 /* NSBundle+CLBundle.m in Sources */,
 				A43C45801F1A6FD7001B0FD5 /* NSDate+CLDate.m in Sources */,
@@ -578,7 +594,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cainLuo.CLFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -599,7 +615,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cainLuo.CLFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7 armv7s i386";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
