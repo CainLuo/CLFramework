@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A2AF172017542200557742 /* NSData+CLData.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2AF162017542200557742 /* NSData+CLData.m */; };
 		7122B4F61501BD7F2F0899EE /* Pods_SimpleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73482175C9D984FA37B6BA00 /* Pods_SimpleProject.framework */; };
 		A4037C601DF96F9500C05F77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C5F1DF96F9500C05F77 /* AppDelegate.m */; };
 		A4037C811DF9749200C05F77 /* SimpleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4037C6E1DF9749200C05F77 /* SimpleCollectionViewController.m */; };
@@ -146,6 +147,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04A2AF152017542200557742 /* NSData+CLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CLData.h"; sourceTree = "<group>"; };
+		04A2AF162017542200557742 /* NSData+CLData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CLData.m"; sourceTree = "<group>"; };
 		0C6D52C99BF1CFA06F240654 /* Pods-SimpleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProject/Pods-SimpleProject.release.xcconfig"; sourceTree = "<group>"; };
 		73482175C9D984FA37B6BA00 /* Pods_SimpleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2C16D5B25F8FD1B3EFD329C /* Pods-SimpleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleProject/Pods-SimpleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +399,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A2AF142017542200557742 /* NSData+CLData */ = {
+			isa = PBXGroup;
+			children = (
+				04A2AF152017542200557742 /* NSData+CLData.h */,
+				04A2AF162017542200557742 /* NSData+CLData.m */,
+			);
+			path = "NSData+CLData";
+			sourceTree = "<group>";
+		};
 		A4037C5D1DF96F9500C05F77 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,6 +980,7 @@
 			children = (
 				A43874D21EE929E3001F4BC9 /* CLDefine.h */,
 				A43874D31EE929E3001F4BC9 /* CLFoundation.h */,
+				04A2AF142017542200557742 /* NSData+CLData */,
 				A4F378261F530C5D00B1A8B8 /* NSArray+CLArray */,
 				A43A1E751F514E3D00BA81EF /* NSAttributedString+CLAttributedString */,
 				A43874D51EE929E3001F4BC9 /* NSBundle+CLBundle */,
@@ -1590,6 +1603,7 @@
 				A438741F1EE92776001F4BC9 /* UIScrollView+MJRefresh.m in Sources */,
 				A438740F1EE92776001F4BC9 /* MJRefreshComponent.m in Sources */,
 				A40B9B521F2B8D8700163EAC /* SimpleButtonController.m in Sources */,
+				04A2AF172017542200557742 /* NSData+CLData.m in Sources */,
 				A43874051EE92776001F4BC9 /* CLCollectionViewController.m in Sources */,
 				A438741E1EE92776001F4BC9 /* UIScrollView+MJExtension.m in Sources */,
 				A46922431FA855B80055257F /* UIActivityIndicatorView+AFNetworking.m in Sources */,

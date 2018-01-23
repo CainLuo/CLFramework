@@ -33,3 +33,5 @@ FOUNDATION_EXPORT const unsigned char CLFoundationVersionString[];
 #import "NSString+CLString.h"
 
 #import "NSAttributedString+CLAttributedString.h"
+
+#import "NSData+CLData.h"
