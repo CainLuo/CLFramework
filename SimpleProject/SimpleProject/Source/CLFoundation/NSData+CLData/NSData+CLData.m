@@ -10,34 +10,33 @@
 
 @implementation NSData (CLData)
 
-+ (NSData *)sh_compressOriginalImage:(UIImage *)image
++ (NSData *)cl_compressOriginalImage:(UIImage *)image
                   compressionQuality:(CGFloat)compressionQuality {
     
-    NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
+    NSData *cl_data = UIImageJPEGRepresentation(image, compressionQuality);
     
-    CGFloat dataKBytes = data.length / 1000.0;
-    CGFloat maxQuality = 0.9f;
-    CGFloat lastData   = dataKBytes;
+    CGFloat cl_dataKBytes = cl_data.length / 1000.0;
+    CGFloat cl_maxQuality = 0.9f;
+    CGFloat cl_lastData   = cl_dataKBytes;
     
-    while (dataKBytes > compressionQuality && maxQuality > 0.01f) {
+    while (cl_dataKBytes > compressionQuality && cl_maxQuality > 0.01f) {
         
-        maxQuality = maxQuality - 0.01f;
+        cl_maxQuality = cl_maxQuality - 0.01f;
         
-        data = UIImageJPEGRepresentation(image, maxQuality);
+        cl_data = UIImageJPEGRepresentation(image, cl_maxQuality);
         
-        dataKBytes = data.length / 1000.0;
+        cl_dataKBytes = cl_data.length / 1000.0;
         
-        if (lastData == dataKBytes) {
+        if (cl_lastData == cl_dataKBytes) {
             
             break;
             
         } else {
             
-            lastData = dataKBytes;
+            cl_lastData = cl_dataKBytes;
         }
     }
     
-    return data;
+    return cl_data;
 }
-
 @end

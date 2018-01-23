@@ -11,7 +11,7 @@
 
 @interface NSData (CLData)
 
-+ (NSData *)sh_compressOriginalImage:(UIImage *)image
++ (NSData *)cl_compressOriginalImage:(UIImage *)image
                   compressionQuality:(CGFloat)compressionQuality;
 
 @end
