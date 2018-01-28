@@ -98,4 +98,39 @@ static void *CLAlertControllerKey = &CLAlertControllerKey;
                      completion:nil];
 }
 
+- (void)cl_showSheetViewControllerWithTitle:(NSString *)title
+                                    message:(NSString *)message
+                               actionTitles:(NSArray<NSString *> *)actionTitles
+                                    handler:(void (^)(UIAlertAction *action))handler {
+    
+    self.cl_alertController = [UIAlertController alertControllerWithTitle:title
+                                                                  message:message
+                                                           preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [actionTitles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        UIAlertAction *fs_sheetAction = [UIAlertAction actionWithTitle:obj
+                                                                 style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * _Nonnull action) {
+                                                                   
+                                                                   if (handler) {
+                                                                       
+                                                                       handler(action);
+                                                                   }
+                                                               }];
+        
+        [self.cl_alertController addAction:fs_sheetAction];
+    }];
+    
+    UIAlertAction *fs_cancelAlertAction = [UIAlertAction actionWithTitle:@"取消"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:nil];
+    
+    [self.cl_alertController addAction:fs_cancelAlertAction];
+    
+    [self presentViewController:self.cl_alertController
+                       animated:YES
+                     completion:nil];
+}
+
 @end

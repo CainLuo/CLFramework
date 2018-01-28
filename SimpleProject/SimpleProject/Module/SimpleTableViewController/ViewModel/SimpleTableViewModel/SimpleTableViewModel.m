@@ -50,8 +50,9 @@
         self.is_empty = YES;
     }
     
+//    self.cl_tableViewController.cl_tableView.cl_scrollEnabled = NO;
     
-    [self.cl_tableViewController.cl_tableView reloadData];
+    [self.cl_tableViewController.cl_tableView cl_reloadData];
     [self.cl_tableViewController cl_dropDownEndRefresh];    
 }
 

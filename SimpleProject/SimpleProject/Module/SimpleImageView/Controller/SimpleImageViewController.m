@@ -94,13 +94,21 @@
 //                     }];
     
 //    cl_asyncCornerImageWithSize
+
+    [self cl_showSheetViewControllerWithTitle:@"马勒戈壁"
+                                      message:@"操你大爷"
+                                 actionTitles:@[@"1", @"2"]
+                                      handler:^(UIAlertAction *action) {
         
-    [UIImage cl_asyncDrawImageToSize:CGSizeMake(50, 50)
-                               image:[UIImage imageNamed:@"1"]
-                          completion:^(UIImage *image) {
-        
-                              self.simpleImageView.image = image;
-                          }];
+                                          NSLog(@"%@", action.title);
+                                      }];
+    
+//    [UIImage cl_asyncDrawImageToSize:CGSizeMake(50, 50)
+//                               image:[UIImage imageNamed:@"1"]
+//                          completion:^(UIImage *image) {
+//
+//                              self.simpleImageView.image = image;
+//                          }];
     
 //    [UIImage cl_asyncCornerImageWithSize:CGSizeMake(100, 100)
 //                                   image:self.simpleImageView.image

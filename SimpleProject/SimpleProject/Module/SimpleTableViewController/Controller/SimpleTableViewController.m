@@ -91,26 +91,20 @@
     
     CL_GET_METHOD_RETURN_OBJC(_simpleTableViewPlaceholderView);
     
-    CGFloat cl_height = [UIScreen cl_getScreenHeight] - CGRectGetHeight(self.navigationController.navigationBar.frame) - CGRectGetHeight(self.tabBarController.tabBar.frame) - 20;
-    
-    _simpleTableViewPlaceholderView = [[SimpleTableViewPlaceholderView alloc] initWithFrame:CGRectMake(0,
-                                                                                                       0,
-                                                                                                       [UIScreen cl_getScreenWidth],
-                                                                                                       cl_height)];
+    _simpleTableViewPlaceholderView = [[SimpleTableViewPlaceholderView alloc] init];
     
     return _simpleTableViewPlaceholderView;
 }
 
 - (void)cl_addConstraintsWithSuperView {
     
-    self.cl_tableView.backgroundColor = [UIColor cl_colorWithHexString:@"#1874de"];
+    self.cl_tableView.backgroundColor    = [UIColor cl_colorWithHexString:@"#1874de"];
     self.cl_tableView.cl_placeholderView = self.simpleTableViewPlaceholderView;
-
+    
     [self.cl_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.edges;
     }];
 }
-
 
 - (void)dealloc {
     
