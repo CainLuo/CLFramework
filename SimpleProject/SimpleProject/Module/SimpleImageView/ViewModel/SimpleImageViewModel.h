@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Cain Luo. All rights reserved.
 //
 
-#import "CLViewControllerBaseModel.h"
+#import "CLViewControllerViewModel.h"
 
-@interface SimpleImageViewModel : CLViewControllerBaseModel
+@interface SimpleImageViewModel : CLViewControllerViewModel
 
 - (void)cl_log;
 

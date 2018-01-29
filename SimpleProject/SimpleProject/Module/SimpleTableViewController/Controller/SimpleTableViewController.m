@@ -12,8 +12,6 @@
 #import "SimpleTableViewDataSource.h"
 #import "SimpleTableViewPlaceholderView.h"
 
-#import "CLTitleView.h"
-
 @interface SimpleTableViewController ()
 
 @property (nonatomic, strong) SimpleTableViewModel *simpleTableViewModel;
@@ -21,7 +19,6 @@
 @property (nonatomic, strong) SimpleTableViewDataSource *simpleTableViewDataSource;
 
 @property (nonatomic, strong) SimpleTableViewPlaceholderView *simpleTableViewPlaceholderView;
-
 
 @property (nonatomic, strong) NSString *string;
 

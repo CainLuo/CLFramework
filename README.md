@@ -2,11 +2,19 @@
 
 CLFoundation是对系统的Foundation库的一些扩充, 比如NSString.
 
+### Pods管理
 
+> pod 'CLFoundation'
+
+CLFoundation最新的地址
 
 # CLUIKit
 
 `CLUIKit`是对系统`UIKit`库的一些扩充, 比如`UIColor`, `UIDevice`, `UIScreen`, 同时这里也有其他第三方的开源库,
+
+### Pods管理
+
+> pod 'CLUIKit'
 
 [CLUIKit介绍文档](https://github.com/CainRun/CLFramework/blob/master/CLUIKit/CLUIKitDocument.md)
 
