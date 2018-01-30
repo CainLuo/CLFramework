@@ -4,7 +4,7 @@ CLFoundation是对系统的Foundation库的一些扩充, 比如NSString.
 
 ### Pods管理
 
-> pod 'CLFoundation'
+> pod <CLFoundation/CLFoundation.h>
 
 CLFoundation最新的地址
 
@@ -14,7 +14,7 @@ CLFoundation最新的地址
 
 ### Pods管理
 
-> pod 'CLUIKit'
+> pod <CLUIKit/CLUIKit.h>
 
 [CLUIKit介绍文档](https://github.com/CainRun/CLFramework/blob/master/CLUIKit/CLUIKitDocument.md)
 
