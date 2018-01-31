@@ -10,7 +10,6 @@
 #import "SimpleTableViewModel.h"
 #import "SimpleTableViewDelegate.h"
 #import "SimpleTableViewDataSource.h"
-#import "SimpleTableViewPlaceholderView.h"
 
 #import "CLTitleView.h"
 
@@ -20,10 +19,10 @@
 @property (nonatomic, strong) SimpleTableViewDelegate *simpleTableViewDelegate;
 @property (nonatomic, strong) SimpleTableViewDataSource *simpleTableViewDataSource;
 
-@property (nonatomic, strong) SimpleTableViewPlaceholderView *simpleTableViewPlaceholderView;
-
-
 @property (nonatomic, strong) NSString *string;
+
+@property (nonatomic, strong) UIView *cl_headerView;
+@property (nonatomic, strong) UIView *cl_footerView;
 
 @end
 
@@ -87,20 +86,40 @@
     return _simpleTableViewDataSource;
 }
 
-- (SimpleTableViewPlaceholderView *)simpleTableViewPlaceholderView {
+- (UIView *)cl_headerView {
     
-    CL_GET_METHOD_RETURN_OBJC(_simpleTableViewPlaceholderView);
+    CL_GET_METHOD_RETURN_OBJC(_cl_headerView);
     
-    _simpleTableViewPlaceholderView = [[SimpleTableViewPlaceholderView alloc] init];
+    _cl_headerView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                              0,
+                                                              [UIScreen cl_getScreenWidth],
+                                                              [UIScreen cl_fitScreen:365])];
     
-    return _simpleTableViewPlaceholderView;
+    _cl_headerView.backgroundColor = [UIColor blackColor];
+    
+    return _cl_headerView;
+}
+
+- (UIView *)cl_footerView {
+    
+    CL_GET_METHOD_RETURN_OBJC(_cl_footerView);
+    
+    _cl_footerView = [[UIView alloc] initWithFrame:CGRectMake(0,
+                                                              0,
+                                                              [UIScreen cl_getScreenWidth],
+                                                              [UIScreen cl_fitScreen:100])];
+    
+    _cl_footerView.backgroundColor = [UIColor greenColor];
+    
+    return _cl_footerView;
 }
 
 - (void)cl_addConstraintsWithSuperView {
     
-    self.cl_tableView.backgroundColor    = [UIColor cl_colorWithHexString:@"#1874de"];
-    self.cl_tableView.cl_placeholderView = self.simpleTableViewPlaceholderView;
-    
+    self.cl_tableView.backgroundColor = [UIColor cl_colorWithHexString:@"#1874de"];
+    self.cl_tableView.tableHeaderView = self.cl_headerView;
+//    self.cl_tableView.tableFooterView = self.cl_footerView;
+
     [self.cl_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         (void)make.edges;
     }];

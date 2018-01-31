@@ -8,6 +8,6 @@
 
 #import "CLUIKit.h"
 
-@interface SimpleTableViewDelegate : CLTableViewDelegate
+@interface SimpleTableViewDelegate : CLTableViewDelegate <CLTableViewPlaceholderDelegate>
 
 @end

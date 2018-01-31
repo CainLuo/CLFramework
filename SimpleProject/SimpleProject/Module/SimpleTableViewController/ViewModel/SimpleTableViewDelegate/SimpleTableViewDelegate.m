@@ -9,6 +9,14 @@
 #import "SimpleTableViewDelegate.h"
 #import "SimpleTableDataViewModel.h"
 
+#import "SimpleTableViewPlaceholderView.h"
+
+@interface SimpleTableViewDelegate ()
+
+@property (nonatomic, strong) SimpleTableViewPlaceholderView *simpleTableViewPlaceholderView;
+
+@end
+
 @implementation SimpleTableViewDelegate
 
 - (void)tableView:(UITableView *)tableView
@@ -41,6 +49,30 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
         
         return 80;
     }
+}
+
+- (SimpleTableViewPlaceholderView *)simpleTableViewPlaceholderView {
+    
+    _simpleTableViewPlaceholderView = [[SimpleTableViewPlaceholderView alloc] init];
+    
+    _simpleTableViewPlaceholderView.backgroundColor = [UIColor redColor];
+    
+    return _simpleTableViewPlaceholderView;
+}
+
+- (UIView *)cl_placeholderView {
+    
+    return self.simpleTableViewPlaceholderView;
+}
+
+- (BOOL)cl_calculateTableViewHeaderViewFrame {
+    
+    return YES;
+}
+
+- (BOOL)cl_scrollEnabledWithShowPlaceholderView {
+    
+    return YES;
 }
 
 @end

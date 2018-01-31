@@ -8,6 +8,36 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol CLTableViewPlaceholderDelegate <NSObject>
+
+@required
+
+/**
+ 设置一个UITableView占位图
+
+ @return UIView
+ */
+- (UIView *)cl_placeholderView;
+
+@optional
+
+/**
+ 是否要计算UITableViewHeaderView的Frame
+
+ @return BOOL
+ */
+- (BOOL)cl_calculateTableViewHeaderViewFrame;
+
+/**
+ 出现占位图的时候是否允许滑动
+
+ @return BOOL
+ */
+- (BOOL)cl_scrollEnabledWithShowPlaceholderView;
+
+@end
+
 @interface UITableView (CLTableView)
 
 /**
