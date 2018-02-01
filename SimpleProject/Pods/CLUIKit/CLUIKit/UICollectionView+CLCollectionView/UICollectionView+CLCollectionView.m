@@ -12,6 +12,12 @@
 
 static void *CLPlaceholderView = &CLPlaceholderView;
 
+@interface UICollectionView (CLCollectionView)
+
+@property (nonatomic, strong) UIView *cl_placeholderView;
+
+@end
+
 @implementation UICollectionView (CLCollectionView)
 
 #pragma mark - CLPlaceholderView
@@ -41,7 +47,7 @@ static void *CLPlaceholderView = &CLPlaceholderView;
     
     NSInteger cl_sections = 1;
     
-    if ([cl_dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)]) {
+    if ([cl_dataSource respondsToSelector:@selector(numberOfSectionsInCollectionView:)]) {
         
         cl_sections = [cl_dataSource numberOfSectionsInCollectionView:self];
     }
@@ -63,7 +69,7 @@ static void *CLPlaceholderView = &CLPlaceholderView;
             
             self.scrollEnabled = [self cl_responseScrollEnabledWithShowPlaceholderView];
             
-            self.cl_placeholderView = [self cl_responseTableViewPlaceholderView];
+            self.cl_placeholderView = [self cl_responseCollectionViewPlaceholderView];
             
             self.cl_placeholderView.frame = self.frame;
             
@@ -86,7 +92,7 @@ static void *CLPlaceholderView = &CLPlaceholderView;
 }
 
 #pragma mark - Response Delegate Method
-- (UIView *)cl_responseTableViewPlaceholderView {
+- (UIView *)cl_responseCollectionViewPlaceholderView {
     
     if ([self.delegate respondsToSelector:@selector(cl_placeholderView)]) {
         
@@ -106,11 +112,15 @@ static void *CLPlaceholderView = &CLPlaceholderView;
     
     if ([self.delegate respondsToSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)]) {
         
-        return [self.delegate performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)];
+        BOOL cl_scrollEnable = [[self.delegate performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)] boolValue];
+        
+        return cl_scrollEnable;
         
     } else if ([self respondsToSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)]) {
         
-        return [self performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)];
+        BOOL cl_scrollEnable = [[self.delegate performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)] boolValue];
+
+        return cl_scrollEnable;
         
     } else {
         

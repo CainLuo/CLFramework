@@ -11,6 +11,12 @@
 
 static void *CLPlaceholderView = &CLPlaceholderView;
 
+@interface UITableView (CLTableView)
+
+@property (nonatomic, strong) UIView *cl_placeholderView;
+
+@end
+
 @implementation UITableView (CLTableView)
 
 #pragma mark - CLPlaceholderView
@@ -106,11 +112,15 @@ static void *CLPlaceholderView = &CLPlaceholderView;
     
     if ([self.delegate respondsToSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)]) {
         
-        return [self.delegate performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)];
+        BOOL cl_scrollEnable = [[self.delegate performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)] boolValue];
+        
+        return cl_scrollEnable;
         
     } else if ([self respondsToSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)]) {
 
-        return [self performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)];
+        BOOL cl_scrollEnable = [[self performSelector:@selector(cl_scrollEnabledWithShowPlaceholderView)] boolValue];
+        
+        return cl_scrollEnable;
 
     } else {
 
