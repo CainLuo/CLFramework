@@ -11,8 +11,6 @@
 #import "SimpleTableViewDelegate.h"
 #import "SimpleTableViewDataSource.h"
 
-#import "CLTitleView.h"
-
 @interface SimpleTableViewController ()
 
 @property (nonatomic, strong) SimpleTableViewModel *simpleTableViewModel;

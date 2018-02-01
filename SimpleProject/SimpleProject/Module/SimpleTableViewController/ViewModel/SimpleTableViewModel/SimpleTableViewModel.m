@@ -9,21 +9,15 @@
 #import "SimpleTableViewModel.h"
 #import "SimpleTableDataViewModel.h"
 
-@interface SimpleTableViewModel ()
-
-@property (nonatomic, assign) BOOL is_empty;
-
-@end
-
 @implementation SimpleTableViewModel
 
 - (void)cl_tableViewHTTPRequest {
     
-    [self.cl_dataSource removeAllObjects];
-
-    if (self.is_empty) {
+    if (self.cl_dataSource.count) {
         
-        self.is_empty = NO;
+        [self.cl_dataSource removeAllObjects];
+
+    } else {
         
         NSArray *array = @[@{@"title":@"SimpleCollectionViewController",
                              @"controllerName":@"SimpleCollectionViewController"},
@@ -44,13 +38,7 @@
         
         [self.cl_dataSource addObjectsFromArray:[NSArray yy_modelArrayWithClass:[SimpleTableDataViewModel class]
                                                                            json:array]];
-
-    } else {
-        
-        self.is_empty = YES;
     }
-    
-//    self.cl_tableViewController.cl_tableView.cl_scrollEnabled = NO;
     
     [self.cl_tableViewController.cl_tableView cl_reloadData];
     [self.cl_tableViewController cl_dropDownEndRefresh];    

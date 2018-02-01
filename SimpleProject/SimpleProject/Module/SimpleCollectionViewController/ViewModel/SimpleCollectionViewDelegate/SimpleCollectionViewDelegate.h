@@ -8,6 +8,6 @@
 
 #import "CLUIKit.h"
 
-@interface SimpleCollectionViewDelegate : CLCollectionViewDelegate
+@interface SimpleCollectionViewDelegate : CLCollectionViewDelegate <CLCollectionViewPlaceholderDelegate>
 
 @end

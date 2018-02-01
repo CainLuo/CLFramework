@@ -26,20 +26,6 @@
     NSLog(@"释放了");
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    self.navigationController.navigationBar.hidden = YES;
-    
-    [super viewWillAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated{
-    
-    self.navigationController.navigationBar.hidden = NO;
-
-    [super viewWillDisappear:animated];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -51,8 +37,10 @@
     [self cl_registerClass:[UICollectionViewCell class]
                 identifier:@"UICollectionViewCell"];
     
-    [self cl_dropDownBeginRefresh];
+//    [self cl_dropDownBeginRefresh];
     [self cl_addConstraintsWithSuperView];
+    
+    [self.cl_collectionView cl_reloadData];
     
     NSLog(@"%f", [UIScreen cl_getStatusBarHeight]);
 }

@@ -12,12 +12,19 @@
 
 - (void)cl_collectionViewHTTPRequest {
     
-    for (NSInteger i = 0; i < 20; i++) {
+    if (self.cl_dataSource.count) {
         
-        [self.cl_dataSource addObject:[NSString stringWithFormat:@"%zd", i]];
+        [self.cl_dataSource removeAllObjects];
+        
+    } else {
+     
+        for (NSInteger i = 0; i < 20; i++) {
+            
+            [self.cl_dataSource addObject:[NSString stringWithFormat:@"%zd", i]];
+        }
     }
     
-    [self.cl_collectionViewController.cl_collectionView reloadData];
+    [self.cl_collectionViewController.cl_collectionView cl_reloadData];
     [self.cl_collectionViewController cl_dropDownEndRefresh];
 }
 

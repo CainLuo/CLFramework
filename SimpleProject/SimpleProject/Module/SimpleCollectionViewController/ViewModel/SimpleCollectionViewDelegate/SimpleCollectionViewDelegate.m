@@ -8,12 +8,21 @@
 
 #import "SimpleCollectionViewDelegate.h"
 
-@implementation SimpleCollectionViewDelegate
+@implementation SimpleCollectionViewDelegate 
 
 - (void)collectionView:(UICollectionView *)collectionView
 didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"点击了: %ld", indexPath.row);
+}
+
+- (UIView *)cl_placeholderView {
+    
+    UIView *cl_placeholderView = [[UIView alloc] init];
+    
+    cl_placeholderView.backgroundColor = [UIColor cyanColor];
+    
+    return cl_placeholderView;
 }
 
 @end
