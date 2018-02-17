@@ -4,9 +4,9 @@ CLFoundation是对系统的Foundation库的一些扩充, 比如NSString.
 
 ### Pods管理
 
-> pod <CLFoundation/CLFoundation.h>
+> pod 'CLFoundation', '~> 1.4.0'
 
-CLFoundation最新的地址
+CLFoundation最新的地址: https://github.com/CainLuo/CLFoundation
 
 # CLUIKit
 
@@ -14,10 +14,9 @@ CLFoundation最新的地址
 
 ### Pods管理
 
-> pod <CLUIKit/CLUIKit.h>
+> pod 'CLUIKit', '~> 1.5.5'
 
-[CLUIKit介绍文档](https://github.com/CainRun/CLFramework/blob/master/CLUIKit/CLUIKitDocument.md)
-
+CLUIKit最新的地址: https://github.com/CainLuo/CLUIKit
 
 
 # ~~OtherFramework(已删, 第三方库改用Pod)~~
@@ -115,4 +114,4 @@ done
 
 # 注意
 
-​	本框架纯属是为了自己增加自己的项目开发速度而封装的, 同时也是为了可以和大家交流, 如需进行商业行为, 或者转发, 请联系作者, 否则一旦发现, 将追究法律责任.
+​	本框架纯属是为了快自己的项目开发速度而封装的, 同时也是为了可以和大家交流, 如需进行商业行为, 或者转发, 请联系作者, 否则一旦发现, 将追究法律责任.
