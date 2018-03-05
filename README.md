@@ -1,47 +1,40 @@
 # CLFoundation
 
-CLFoundation是对系统的Foundation库的一些扩充, 比如NSString.
+CLFoundation是对系统的Foundation库的一些扩充, 比如NSString, NSArray这些常用的类.
 
-### Pods管理
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CLFoundation.svg)](https://img.shields.io/cocoapods/v/CLFoundation.svg) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Platform](https://img.shields.io/cocoapods/p/CLFoundation.svg?style=flat)](http://cocoadocs.org/docsets/CLFoundation) [![Language](https://img.shields.io/badge/language-ObjC-blue.svg)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html) 
 
-> pod 'CLFoundation', '~> 1.4.0'
+###Pods管理
 
-CLFoundation最新的地址: https://github.com/CainLuo/CLFoundation
+> pod 'CLFoundation'
+
+**CLFoundation**最新的地址: https://github.com/CainLuo/CLFoundation
+
+
+
+###Exmaple Demo
+
+**CLFoundationExmaple**是一个简单的示例**Demo**, 有关于**CLFoundation**的使用方法, 都会在这里有所展示.
+
+
 
 # CLUIKit
 
-`CLUIKit`是对系统`UIKit`库的一些扩充, 比如`UIColor`, `UIDevice`, `UIScreen`, 同时这里也有其他第三方的开源库,
+`CLUIKit`是对系统`UIKit`库的一些扩充, 比如`UIColor`, `UIDevice`, `UIScreen`, 同时这里也有其他第三方的开源库.
 
-### Pods管理
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/CLUIKit.svg)](https://img.shields.io/cocoapods/v/CLUIKit.svg) [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Platform](https://img.shields.io/cocoapods/p/CLUIKit.svg?style=flat)](http://cocoadocs.org/docsets/CLUIKit) [![Language](https://img.shields.io/badge/language-ObjC-blue.svg)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 
-> pod 'CLUIKit', '~> 1.5.5'
+###Pods管理
 
-CLUIKit最新的地址: https://github.com/CainLuo/CLUIKit
+> pod 'CLUIKit'
+
+**CLUIKit**最新的地址: https://github.com/CainLuo/CLUIKit
 
 
-# ~~OtherFramework(已删, 第三方库改用Pod)~~
 
-`OtherFramework`都是第三方开源库, 并没有纳入到`CLKit`库里, 目前有的第三方开源库:
+###Exmaple Demo
 
-[CYLTabBarController](https://github.com/ChenYilong/CYLTabBarController)
-
-[IQKeyboardManager](https://github.com/hackiftekhar/IQKeyboardManager)
-
-[JQFMDB](https://github.com/gaojunquan/JQFMDB)
-
-[Masonry](https://github.com/SnapKit/Masonry)
-
-[SDCycleScrollView](https://github.com/gsdios/SDCycleScrollView)
-
-[SDWebImage](https://github.com/rs/SDWebImage)
-
-[YYModel](https://github.com/ibireme/YYModel)
-
-感谢以上各位大神的无私分享, 无关排名.
-
-# SimpleProject
-
-SimpleProject是一个简单的事例Demo, 一些比较复杂的使用, 都会在这里有所展示.
+**CLUIKitExample**是一个简单的示例**Demo**, 有关于**CLUIKit**的使用方法, 都会在这里有所展示.
 
 
 
