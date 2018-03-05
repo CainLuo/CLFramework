@@ -38,6 +38,11 @@ CLFoundation是对系统的Foundation库的一些扩充, 比如NSString, NSArray
 
 
 
+## 支助
+如果您觉得挺赞的话, 可以给我打赏打赏, 谢谢啦~
+
+![支付宝](https://raw.githubusercontent.com/CainRun/PayProject/master/WeChatPay-Objective-C/Images/支付宝QRC.jpg)
+
 # 合并脚本
 
 让`Framework`可以在模拟器与真机上运行, 所以这里我们需要借助一个脚本:
